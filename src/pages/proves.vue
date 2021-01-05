@@ -1,0 +1,353 @@
+<template>
+  <q-page class="q-pa-md">
+	<div class="columns items-center">
+
+	<pre>
+
+
+['.idAuditoria']
+['.data']
+['.nomCentre']
+['.tecnic']
+['instalacionsComunicacions.informacioPrevia.CA.codi']
+['instalacionsComunicacions.informacioPrevia.CA.idSiteBT']
+['instalacionsComunicacions.informacioPrevia.CA.totalUsuaris']
+['instalacionsComunicacions.informacioPrevia.CA.Linia1']
+['instalacionsComunicacions.informacioPrevia.CA.Linia2']
+['instalacionsComunicacions.informacioPrevia.CA.CiscPrime.NumRouters']
+['instalacionsComunicacions.informacioPrevia.CA.CiscPrime.NumSwitchs']
+['instalacionsComunicacions.informacioPrevia.CA.CiscPrime.NumAPsWifi']
+['instalacionsComunicacions.informacioPrevia.CA.CuesImpressioMTF']
+['instalacionsComunicacions.informacioPrevia.CA.CuesImpressio']
+['instalacionsComunicacions.informacioPrevia.TareasRequeridas.RetirarMinipacsDelRack']
+['instalacionsComunicacions.informacioPrevia.TareasRequeridas.RevisarCascosJabra']
+['instalacionsComunicacions.informacioPrevia.TareasRequeridas.RetirarDelRack']
+['instalacionsComunicacions.informacioPrevia.TareasRequeridas.Otras']
+['instalacionsComunicacions.sala.centreSecundari.existeix']
+['instalacionsComunicacions.sala.centreSecundari.idCentrePrincipal']
+
+['instalacionsComunicacions.sala.accessibilitat.cerraduraPorta.existeix']
+['instalacionsComunicacions.sala.accessibilitat.cerraduraPorta.observacions']
+['instalacionsComunicacions.sala.accessibilitat.estatPorta']
+['instalacionsComunicacions.sala.accessibilitat.zonaPasLliure.existeix']
+['instalacionsComunicacions.sala.accessibilitat.zonaPasLliure.observacions']
+['instalacionsComunicacions.sala.proveidorWAN.estatInstalacio']
+['instalacionsComunicacions.sala.proveidorWAN.instalacionsObsoletes.existeix']
+['instalacionsComunicacions.sala.proveidorWAN.instalacionsObsoletes.observacions']
+['instalacionsComunicacions.sala.proveidorWAN.idLinia1.existeix']
+['instalacionsComunicacions.sala.proveidorWAN.idLinia1.observacions']
+['instalacionsComunicacions.sala.proveidorWAN.idLinia2.existeix']
+['instalacionsComunicacions.sala.proveidorWAN.idLinia2.observacions']
+['instalacionsComunicacions.sala.proveidorWAN.estatConvertidorLinia1']
+['instalacionsComunicacions.sala.proveidorWAN.estatConvertidorLinia2']
+['instalacionsComunicacions.sala.SAI.estatSAI']
+['instalacionsComunicacions.sala.SAI.connexioSwitch.existeix']
+['instalacionsComunicacions.sala.SAI.connexioSwitch.connexioPortSW1Gi26']
+['instalacionsComunicacions.sala.SAI.connexioSwitch.connexio.SW']
+['instalacionsComunicacions.sala.SAI.connexioSwitch.connexio.port']
+['instalacionsComunicacions.sala.SAI.instalacioSAI']
+['instalacionsComunicacions.sala.SAI.elementsConnectatsSAI.router']
+['instalacionsComunicacions.sala.SAI.elementsConnectatsSAI.switchs']
+['instalacionsComunicacions.sala.SAI.elementsConnectatsSAI.convertidorLinia1']
+['instalacionsComunicacions.sala.SAI.elementsConnectatsSAI.convertidorLinia2']
+['instalacionsComunicacions.sala.SAI.elementsConnectatsSAI.altres']
+['instalacionsComunicacions.sala.SAI.elementsRegletaNeta.router']
+['instalacionsComunicacions.sala.SAI.elementsRegletaNeta.switchs']
+['instalacionsComunicacions.sala.SAI.elementsRegletaNeta.convertidorLinia1']
+['instalacionsComunicacions.sala.SAI.elementsRegletaNeta.convertidorLinia2']
+['instalacionsComunicacions.sala.SAI.elementsRegletaNeta.altres']
+['instalacionsComunicacions.sala.SAI.elementsRegletaBruta.router']
+['instalacionsComunicacions.sala.SAI.elementsRegletaBruta.switchs']
+['instalacionsComunicacions.sala.SAI.elementsRegletaBruta.convertidorLinia1']
+['instalacionsComunicacions.sala.SAI.elementsRegletaBruta.convertidorLinia2']
+['instalacionsComunicacions.sala.SAI.elementsRegletaBruta.altres']
+['instalacionsComunicacions.sala.aspecteSala']
+['instalacionsComunicacions.sala.climatitzacio.existeix']
+['instalacionsComunicacions.sala.climatitzacio.observacions']
+['instalacionsComunicacions.sala.ventilacio.existeix']
+['instalacionsComunicacions.sala.ventilacio.observacions']
+['instalacionsComunicacions.sala.latiguillos.existeix']
+['instalacionsComunicacions.sala.latiguillos.observacions']
+['instalacionsComunicacions.sala.numRacksAdecuats.existeix']
+['instalacionsComunicacions.sala.numRacksAdecuats.observacions']
+['instalacionsComunicacions.sala.elementsBaixaInventari.existeix']
+['instalacionsComunicacions.sala.elementsBaixaInventari.observacions']
+['instalacionsComunicacions.sala.numRacks']
+['instalacionsComunicacions.sala.numRacksAdecuat.existeix']
+['instalacionsComunicacions.sala.numRacksAdecuat.observacions']
+['instalacionsComunicacions.llocsDeTeball.estatCablejat']
+['instalacionsComunicacions.llocsDeTeball.puntsXarxa.estat']
+['instalacionsComunicacions.llocsDeTeball.puntsXarxa.identificacio.existeix']
+['instalacionsComunicacions.llocsDeTeball.puntsXarxa.identificacio.observacions']
+['instalacionsComunicacions.llocsDeTeball.puntsXarxa.suficientsPunts.existeix']
+['instalacionsComunicacions.llocsDeTeball.puntsXarxa.suficientsPunts.observacions']
+['instalacionsComunicacions.llocsDeTeball.puntsXarxa.miniSwitchs.existeix']
+['instalacionsComunicacions.llocsDeTeball.puntsXarxa.miniSwitchs.observacions']
+['instalacionsComunicacions.llocsDeTeball.electricitat.estat']
+['instalacionsComunicacions.llocsDeTeball.electricitat.suficientsEndolls.existeix']
+['instalacionsComunicacions.llocsDeTeball.electricitat.suficientsEndolls.observacions']
+['instalacionsComunicacions.llocsDeTeball.electricitat.regletes.existeix']
+['instalacionsComunicacions.llocsDeTeball.electricitat.regletes.observacions']
+['instalacionsComunicacions.llocsDeTeball.electricitat.regletesCascada.existeix']
+['instalacionsComunicacions.llocsDeTeball.electricitat.regletesCascada.observacions']
+['instalacionsComunicacions.llocsDeTeball.observacions']
+['instalacionsComunicacions.LAN.SWidentificats.existeix']
+['instalacionsComunicacions.LAN.SWidentificats.observacions']
+['instalacionsComunicacions.LAN.wifiAPs.quantitat']
+['instalacionsComunicacions.LAN.wifiAPs.ubicacio.salaEspera']
+['instalacionsComunicacions.LAN.wifiAPs.ubicacio.altres']
+['instalacionsComunicacions.LAN.wifiAPs.APvisible.existeix']
+['instalacionsComunicacions.LAN.wifiAPs.APvisible.observacions']
+['instalacionsComunicacions.LAN.wifiAPs.coberturaPROAS.existeix']
+['instalacionsComunicacions.LAN.wifiAPs.coberturaPROAS.observacions']
+['instalacionsComunicacions.LAN.wifiAPs.carteleriaWifi.existeix']
+['instalacionsComunicacions.LAN.wifiAPs.carteleriaWifi.observacions']
+['instalacionsComunicacions.LAN.wifiAPs.observacions']
+['instalacionsComunicacions.LAN.NumCuesImpressioMTF']
+['instalacionsComunicacions.LAN.NumCuesImpressio']
+['instalacionsComunicacions.LAN.altresDispositius']
+['instalacionsComunicacions.LAN.coberturaWifi']
+['instalacionsComunicacions.LAN.observacions']
+['instalacionsComunicacions.equipamentConexions.connexioPortSW1Gi23']
+['instalacionsComunicacions.equipamentConexions.altraConnexio']
+['instalacionsComunicacions.pendriveBIOS.existeix']
+['instalacionsComunicacions.pendriveBIOS.ubicacio']
+['instalacionsComunicacions.pendriveBIOS.observacions']
+['instalacionsComunicacions.filMusical.existeix']
+['instalacionsComunicacions.filMusical.connexioSwitchPort']
+['instalacionsComunicacions.filMusical.observacions']
+['instalacionsComunicacions.telemedicina.existeix']
+['instalacionsComunicacions.telemedicina.observacions']
+['instalacionsComunicacions.telemedicina.dispositius.TV32']
+['instalacionsComunicacions.telemedicina.dispositius.Jabra510']
+['instalacionsComunicacions.telemedicina.dispositius.camaraIP']
+['instalacionsComunicacions.telemedicina.dispositius.DisplayPort']
+['instalacionsComunicacions.telemedicina.estat']
+['instalacionsComunicacions.LectorCDDVDExtern.existeix']
+['instalacionsComunicacions.LectorCDDVDExtern.observacions']
+['instalacionsComunicacions.observacions']
+['comunicacionsUnificades.videoconferencia.existeix']
+['comunicacionsUnificades.videoconferencia.observacionsExistencia']
+['comunicacionsUnificades.videoconferencia.operativa']
+['comunicacionsUnificades.videoconferencia.observacionsOperativa']
+['comunicacionsUnificades.videoconferencia.estat']
+['comunicacionsUnificades.videoconferencia.dispositius.SX10']
+['comunicacionsUnificades.videoconferencia.dispositius.SX80']
+['comunicacionsUnificades.videoconferencia.dispositius.roomkit']
+['comunicacionsUnificades.videoconferencia.dispositius.camaraWeb']
+['comunicacionsUnificades.videoconferencia.dispositius.tablet']
+['comunicacionsUnificades.videoconferencia.dispositius.TV']
+['comunicacionsUnificades.videoconferencia.dispositius.projector']
+['comunicacionsUnificades.videoconferencia.dispositius.displayPortHDMI']
+['comunicacionsUnificades.videoconferencia.dispositius.duplicadorHDMI']
+['comunicacionsUnificades.videoconferencia.dispositius.conversorVGA_HDMI']
+['comunicacionsUnificades.videoconferencia.dispositius.cableAudio']
+['comunicacionsUnificades.videoconferencia.prova.feta']
+['comunicacionsUnificades.videoconferencia.prova.observacions']
+['comunicacionsUnificades.videoconferencia.prova.trucada']
+['comunicacionsUnificades.videoconferencia.prova.compartirPc']
+['comunicacionsUnificades.videoconferencia.prova.audio']
+['comunicacionsUnificades.videoconferencia.prova.video']
+['comunicacionsUnificades.videoconferencia.prova.resultat']
+['comunicacionsUnificades.videoconferencia.observacions']
+['comunicacionsUnificades.telefonSupervivencia.existeix']
+['comunicacionsUnificades.telefonSupervivencia.observacionsExistencia']
+['comunicacionsUnificades.telefonSupervivencia.DDI']
+['comunicacionsUnificades.telefonSupervivencia.instruccions']
+['comunicacionsUnificades.telefonSupervivencia.estat']
+['comunicacionsUnificades.telefonSupervivencia.ubicacio']
+['comunicacionsUnificades.telefonSupervivencia.prova.trucadaSortint']
+['comunicacionsUnificades.telefonSupervivencia.prova.trucadaEntrant']
+['comunicacionsUnificades.telefonSupervivencia.prova.desconectarTensio']
+['comunicacionsUnificades.telefonSupervivencia.prova.nivellAudioRing']
+['comunicacionsUnificades.telefonSupervivencia.nivellCobertura']
+['comunicacionsUnificades.telefonSupervivencia.nivellBateria']
+['comunicacionsUnificades.telefonSupervivencia.connectatCorrent']
+['comunicacionsUnificades.telefonSupervivencia.instruccionsProperes']
+['comunicacionsUnificades.telefonSupervivencia.observacions']
+['comunicacionsUnificades.auricularsRecanvi.existeix']
+['comunicacionsUnificades.auricularsRecanvi.observacions']
+['comunicacionsUnificades.auricularsRecanvi.quantitat']
+['seguretatInformacio.taulesNetes.documentacioSobreTaules.existeix']
+['seguretatInformacio.taulesNetes.documentacioSobreTaules.observacions']
+['seguretatInformacio.taulesNetes.documentacioImpresores.existeix']
+['seguretatInformacio.taulesNetes.documentacioImpresores.observacions']
+['seguretatInformacio.taulesNetes.documentacioPapeleres.existeix']
+['seguretatInformacio.taulesNetes.documentacioPapeleres.observacions']
+['seguretatInformacio.destruccioDocuments.destructoraPapers.existeix']
+['seguretatInformacio.destruccioDocuments.destructoraPapers.observacionsPapers']
+['seguretatInformacio.destruccioDocuments.destructoraPapers.complementCDs']
+['seguretatInformacio.destruccioDocuments.destructoraPapers.observacionsCDs']
+['seguretatInformacio.destruccioDocuments.destructoraPapers.quantitat']
+['seguretatInformacio.destruccioDocuments.contenidorSegur.existeix']
+['seguretatInformacio.destruccioDocuments.contenidorSegur.observacions']
+['seguretatInformacio.destruccioDocuments.contenidorSegur.quantitat']
+['seguretatInformacio.OrientacioPantalles.exterior']
+['seguretatInformacio.OrientacioPantalles.observacionsExterior']
+['seguretatInformacio.OrientacioPantalles.zonaPas']
+['seguretatInformacio.OrientacioPantalles.observacionsZonaPas']
+['seguretatInformacio.carteleriaLOPD.PROAS']
+['seguretatInformacio.carteleriaLOPD.observacionsPROAS']
+['seguretatInformacio.carteleriaLOPD.CEX']
+['seguretatInformacio.carteleriaLOPD.observacionsCEX']
+['seguretatInformacio.materialBaixaInventari.existeix']
+['seguretatInformacio.materialBaixaInventari.observacions']
+['seguretatInformacio.suportsFisics.existeix']
+['seguretatInformacio.suportsFisics.observacions']
+['seguretatInformacio.documentacioSensible.existeix']
+['seguretatInformacio.documentacioSensible.observacions']
+['seguretatInformacio.expedientsGreus.existeix']
+['seguretatInformacio.expedientsGreus.observacions']
+['seguretatInformacio.accesAlCentre.personalIntern.usuarisAmbClaus.existeix']
+['seguretatInformacio.accesAlCentre.personalIntern.usuarisAmbClaus.observacions']
+['seguretatInformacio.accesAlCentre.personalIntern.codisAlarma.tipus']
+['seguretatInformacio.accesAlCentre.personalIntern.codisAlarma.observacions']
+['seguretatInformacio.accesAlCentre.personalExtern.llibreRegistre.existeix']
+['seguretatInformacio.accesAlCentre.personalExtern.llibreRegistre.observacions']
+['seguretatInformacio.accesAlCentre.personalExtern.usuarisAmbClaus.existeix']
+['seguretatInformacio.accesAlCentre.personalExtern.usuarisAmbClaus.observacions']
+['seguretatInformacio.accesAlCentre.personalExtern.codisAlarma.tipus']
+['seguretatInformacio.accesAlCentre.personalExtern.codisAlarma.observacions']
+['seguretatInformacio.accesAlCentre.accesForaHorariHabitual.existeix']
+['seguretatInformacio.accesAlCentre.accesForaHorariHabitual.observacions']
+['seguretatInformacio.accesAlCentre.observacions']
+['seguretatInformacio.alarmaIntrusio.existeix']
+['seguretatInformacio.alarmaIntrusio.observacions']
+['seguretatInformacio.videovigilancia.existeix']
+['seguretatInformacio.videovigilancia.observacions']
+['seguretatInformacio.videovigilancia.gestioInterna.existeix']
+['seguretatInformacio.videovigilancia.gestioInterna.observacions']
+['seguretatInformacio.videovigilancia.gestioInterna.gravacioImatges.personalAmbAcces']
+['seguretatInformacio.videovigilancia.gestioInterna.gravacioImatges.periodeConservacio']
+['seguretatInformacio.videovigilancia.gestioExterna.existeix']
+['seguretatInformacio.videovigilancia.gestioExterna.observacionsExistencia']
+['seguretatInformacio.videovigilancia.gestioExterna.periodeConservacio']
+['seguretatInformacio.videovigilancia.gestioExterna.evidencia']
+['seguretatInformacio.videovigilancia.gestioExterna.observacionsEvidencia']
+['seguretatInformacio.videovigilancia.retol.existeix']
+['seguretatInformacio.videovigilancia.retol.observacions']
+['seguretatInformacio.videovigilancia.carteleriaActualitzada.existeix']
+['seguretatInformacio.videovigilancia.carteleriaActualitzada.observacions']
+['seguretatInformacio.videovigilancia.alarmaIncendis.existeix']
+['seguretatInformacio.videovigilancia.alarmaIncendis.observacions']
+['seguretatInformacio.centresAlternatiusGADA.existeix']
+['seguretatInformacio.centresAlternatiusGADA.observacions']
+['seguretatInformacio.telefonSupervivencia.existeix']
+['seguretatInformacio.telefonSupervivencia.observacions']
+['seguretatInformacio.procedimentsPaper.existeix']
+['seguretatInformacio.procedimentsPaper.observacions']
+['seguretatInformacio.pendriveEmergencia.ubicacioCorrecte.existeix']
+['seguretatInformacio.pendriveEmergencia.ubicacioCorrecte.observacions']
+['seguretatInformacio.pendriveEmergencia.ultimaVersio.existeix']
+['seguretatInformacio.pendriveEmergencia.ultimaVersio.observacions']
+['seguretatInformacio.pendriveEmergencia.actualitzacio.feta']
+['seguretatInformacio.pendriveEmergencia.actualitzacio.observacions']
+['seguretatInformacio.accesSegurSalaComunicacions.existeix']
+['seguretatInformacio.accesSegurSalaComunicacions.observacions']
+['seguretatInformacio.accesSegurRack.existeix']
+['seguretatInformacio.accesSegurRack.observacions']
+['seguretatInformacio.SAIRack.existeix']
+['seguretatInformacio.SAIRack.observacions']
+['seguretatInformacio.puntsXarxaSalaEspera.existeix']
+['seguretatInformacio.puntsXarxaSalaEspera.observacions']
+['seguretatInformacio.observacions']
+['formacio.auriculars.formacioFeta']
+['formacio.auriculars.observacions']
+['formacio.videoconferencia.formacioFeta']
+['formacio.videoconferencia.instruccionsEntregades']
+['formacio.videoconferencia.observacions']
+['formacio.llicenciesM3.formacioFeta']
+['formacio.llicenciesM3.observacions']
+['formacio.telefonSupervivencia.formacioFeta']
+['formacio.telefonSupervivencia.observacions']
+['formacio.observacions']
+['valoracions.usuari.queixes']
+['valoracions.usuari.suggeriments']
+['valoracions.usuari.millores']
+['valoracions.tecnic.valoracions']
+
+   </pre>
+
+	</div>
+  </q-page>
+</template>
+
+<style>
+</style>
+
+<script>
+
+export default {
+	name: 'PageIndex',
+
+	created () {
+		this.localAuditoriaPlantilla = this.copiarObjAuditoriaPlantilla()
+    this.propietatsObjecte()
+	},
+
+
+	data () {
+  	return {
+  		localAuditoriaPlantilla: null
+  	}
+	},
+
+	methods : {
+		copiarObjAuditoriaPlantilla: function() {
+			// debugger;
+			let obj = JSON.parse(JSON.stringify(this.$store.state.mAuditoria.auditoriaPlantilla))
+			return obj
+		},
+
+
+
+    propietatsObjecte: function () {
+
+  		this.propsObjecte = recorrerPropietatsObjecte( this.localAuditoriaPlantilla )
+
+
+      function recorrerPropietatsObjecte(obj, arrPropsAnteriors = []) {
+  			var str = ""
+
+
+  			//for (var prop in obj) {
+        Object.keys(obj).forEach( prop => {
+
+          obj[prop] = (obj[prop] == null) ? "" : obj[prop]
+  				if ( typeof obj[prop] == "object" && obj[prop] !== null ){
+
+            arrPropsAnteriors.push(prop)
+  					recorrerPropietatsObjecte( obj[prop], arrPropsAnteriors )
+  					arrPropsAnteriors.pop()
+
+  				} else {
+    				// console.log("prop: " + prop)
+            var linea = "['" + arrPropsAnteriors.join("']['") + "']['" + prop + "']\n"
+    		//console.log(linea)
+            var linea2 = "['" + arrPropsAnteriors.join(".") + "." + prop + "']\n"
+            console.log(linea2)
+
+            str += linea + linea2
+
+  				}
+
+  			})
+
+  			return str
+  		}
+
+
+    }
+
+
+	},
+
+	computed: {
+
+		nomPropietatsAuditoriaPlantilla: function () {
+			return this.recorrerPropietatsObjecte( this.localAuditoriaPlantilla)
+			// this.crawlObj( this.localAuditoriaPlantilla, "checkList")
+		}
+	}
+}
+</script>
