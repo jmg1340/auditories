@@ -69,7 +69,7 @@ export default {
     },
 
     exportar: function() {
-      const status = exportFile("auditorias.json", this.arrAuditories);
+      const status = exportFile("auditorias.json", JSON.stringify(this.arrAuditories));
 
       if (status === true) {
         // browser allowed it

@@ -67,7 +67,7 @@
 
 						<cmp_inputText
 							etiqueta="OBSERVACIONES:"
-							arrCamps="['comunicacionsUnificades', 'videoconferencia', 'observacions']"
+							arrCamps="['formacio', 'videoconferencia', 'observacions']"
 						/>
 
 
