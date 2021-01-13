@@ -22,6 +22,13 @@ const routes = [
     ]
   },
   {
+    path: '/apunts',
+    component: () => import('layouts/MyLayout.vue'),
+    children: [
+      { path: '', component: () => import('pages/apunts.vue') }
+    ]
+  },
+  {
     path: '/carregarAuditoria',
     component: () => import('layouts/MyLayout.vue'),
     children: [

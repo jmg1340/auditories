@@ -80,6 +80,17 @@
         </q-item>
 
         <q-separator color="red-10" />
+        <q-item to="/apunts">
+          <q-item-section avatar>
+            <q-icon name="description" />
+          </q-item-section>
+          <q-item-section>
+            <q-item-label>Apunts</q-item-label>
+            <q-item-label caption>Apunts en general</q-item-label>
+          </q-item-section>
+        </q-item>
+
+        <q-separator color="red-10" />
 <!--
         <q-item to="/carregarAuditoria">
           <q-item-section avatar>
