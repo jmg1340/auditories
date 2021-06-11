@@ -188,23 +188,23 @@
 
 						<cmp_inputOpcionsMultipleResposta
 							etiqueta="ELEMENTOS CONECTADOS SAI:"
-							arrEtiquetes="['Router', 'Switchs', 'Convertidor Medios 1', 'Convertidor Medios 2', 'Otros']"
+							arrEtiquetes="['Router', 'Switch1', 'Switch2', 'Switch3', 'Convertidor Medios 1', 'Convertidor Medios 2', 'Hilo Musical', 'Raspberry', 'Ampli Hilo M.', 'Otros']"
 							arrArrelCamps="['instalacionsComunicacions', 'sala', 'SAI', 'elementsConnectatsSAI']"
-							arrCampsFinals="['router', 'switchs', 'convertidorLinia1', 'convertidorLinia2', 'altres']"
+							arrCampsFinals="['router', 'switch1', 'switch2', 'switch3', 'convertidorLinia1', 'convertidorLinia2', 'raspberry', 'filMusical', 'ampliFilM', 'altres']"
 						/>
 
 						<cmp_inputOpcionsMultipleResposta
 							etiqueta="ELEMENTOS CONECTADOS REGLETA LIMPIA:"
-							arrEtiquetes="['Router', 'Switchs', 'Convertidor Medios 1', 'Convertidor Medios 2', 'Otros']"
+							arrEtiquetes="['Router', 'Switch1', 'Switch2', 'Switch3', 'Convertidor Medios 1', 'Convertidor Medios 2', 'Hilo Musical', 'Raspberry', 'Ampli Hilo M.', 'Otros']"
 							arrArrelCamps="['instalacionsComunicacions', 'sala', 'SAI', 'elementsRegletaNeta']"
-							arrCampsFinals="['router', 'switchs', 'convertidorLinia1', 'convertidorLinia2', 'altres']"
+							arrCampsFinals="['router', 'switch1', 'switch2', 'switch3', 'convertidorLinia1', 'convertidorLinia2', 'raspberry', 'filMusical', 'ampliFilM', 'altres']"
 						/>
 
 						<cmp_inputOpcionsMultipleResposta
 							etiqueta="ELEMENTOS CONECTADOS REGLETA SUCIA:"
-							arrEtiquetes="['Router', 'Switchs', 'Convertidor Medios 1', 'Convertidor Medios 2', 'Otros']"
+							arrEtiquetes="['Router', 'Switch1', 'Switch2', 'Switch3', 'Convertidor Medios 1', 'Convertidor Medios 2', 'Hilo Musical', 'Raspberry', 'Ampli Hilo M.', 'Otros']"
 							arrArrelCamps="['instalacionsComunicacions', 'sala', 'SAI', 'elementsRegletaBruta']"
-							arrCampsFinals="['router', 'switchs', 'convertidorLinia1', 'convertidorLinia2', 'altres']"
+							arrCampsFinals="['router', 'switch1', 'switch2', 'switch3', 'convertidorLinia1', 'convertidorLinia2', 'raspberry', 'filMusical', 'ampliFilM', 'altres']"
 						/>
 
 					</q-card-section>

@@ -94,22 +94,40 @@ export default {
         elementsConnectatsSAI: {
           router: false,	// true / false
           switchs: false,
+					switch1: false,
+					switch2: false,
+					switch3: false,	// true / false
           convertidorLinia1: false,
           convertidorLinia2: false,
+					raspberry: false,
+					filMusical: false,	// true / false
+					ampliFilM: false,
           altres: false
         },
         elementsRegletaNeta: {
           router: false,	// true / false
           switchs: false,
+					switch1: false,
+					switch2: false,
+					switch3: false,	// true / false
           convertidorLinia1: false,
           convertidorLinia2: false,
+					raspberry: false,
+					filMusical: false,	// true / false
+					ampliFilM: false,
           altres: false
         },
         elementsRegletaBruta: {
           router: false,	// true / false
           switchs: false,
+					switch1: false,
+					switch2: false,
+					switch3: false,	// true / false
           convertidorLinia1: false,
           convertidorLinia2: false,
+					raspberry: false,
+					filMusical: false,	// true / false
+					ampliFilM: false,
           altres: false
         },
       },
