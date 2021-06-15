@@ -104,7 +104,12 @@ export function updateCamp ( state, payload ) {
 
 	let arr = eval(payload.arrProps)
 
+	console.log(`payload.valor: ${payload.valor}` )
+	console.log(` typeof payload.valor === 'boolean': ${ typeof payload.valor === 'boolean'}` )
+	console.log(` typeof payload.valor === 'string': ${ typeof payload.valor === 'string'}` )
+	
 	if (payload.objRack !== undefined) {
+		console.log("payload.objRack['" + arr.join("']['") + "'] = " + payload.valor )
 
 		if  ( typeof payload.valor === 'boolean') {
 			eval("payload.objRack['" + arr.join("']['") + "'] = " + payload.valor )
@@ -113,6 +118,7 @@ export function updateCamp ( state, payload ) {
 		}
 
 	} else {
+		console.log("state.auditories[state.indexArrAuditories]['" + arr.join("']['") + "'] = " + payload.valor)
 
 		if  ( typeof payload.valor === 'boolean') {
 			eval("state.auditories[state.indexArrAuditories]['" + arr.join("']['") + "'] = " + payload.valor )

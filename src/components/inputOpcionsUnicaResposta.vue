@@ -62,7 +62,7 @@ export default {
   				{ etiq: "suelo junto al rack", 	valor: "sueloJuntoRack",  color: "black"},
   			],
   			tipusRack: [
-  				{ etiq: "Rack vertical", 	valor: "vertical",  color: "black"},
+  				{ etiq: "Rack armario", 	valor: "armario",  color: "black"},
   				{ etiq: "Rack cofre", 		valor: "cofre", 		color: "black"},
   			],
   			nivellCoberturaBateria: [

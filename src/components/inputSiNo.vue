@@ -47,12 +47,17 @@ export default {
 				this._arrCamps = eval(this.arrCamps)   // transforma string a array
 				//console.log("this.objRack: " + this.objRack)
 				if (this.objRack !== undefined ){
-					return eval("this.objRack['" + this._arrCamps.join("']['") + "']")
+					return eval("this.objRack['" + this._arrCamps.join("']['") + "']").toString()
 				}
-				return eval("this.$store.state.mAuditoria.auditories[this.$store.state.mAuditoria.indexArrAuditories]['" + this._arrCamps.join("']['") + "']")
+				return eval("this.$store.state.mAuditoria.auditories[this.$store.state.mAuditoria.indexArrAuditories]['" + this._arrCamps.join("']['") + "']").toString()
 
 			},
 			set (value) {
+				switch (value){
+					case "true": value = true; break;
+					case "false": value = false; break;
+				}
+
 				this.$store.commit( 'mAuditoria/updateCamp', { arrProps: this.arrCamps, valor: value, objRack: this.objRack })
 			}
 		},
