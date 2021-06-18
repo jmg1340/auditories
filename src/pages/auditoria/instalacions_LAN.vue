@@ -159,8 +159,12 @@
             />
 
             <cmp_inputText
-              etiqueta="OTRA CONEXION:"
-              arrCamps="['instalacionsComunicacions', 'equipamentConexions', 'altraConnexio']"
+              etiqueta="OTRA CONEXION - SW:"
+              arrCamps="['instalacionsComunicacions', 'equipamentConexions', 'altraConnexioSW']"
+            />
+            <cmp_inputText
+              etiqueta="OTRA CONEXION - Gi:"
+              arrCamps="['instalacionsComunicacions', 'equipamentConexions', 'altraConnexioGi']"
             />
           </q-card-section>
         </q-card>

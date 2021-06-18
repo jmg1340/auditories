@@ -240,7 +240,8 @@ export default {
 
     equipamentConexions: {
       connexioPortSW1Gi23: false,
-      altraConnexio: null,
+      altraConnexioSW: null,
+      altraConnexioGi: null,
     },
 
     pendriveBIOS : {
@@ -251,7 +252,8 @@ export default {
 
     filMusical: {
       existeix: null,
-      connexioSwitchPort: null,
+      connexioSW: null,
+      connexioGi: null,
       observacions: null
     },
 
