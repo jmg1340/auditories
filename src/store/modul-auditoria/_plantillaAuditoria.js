@@ -297,7 +297,7 @@ export default {
   comunicacionsUnificades : {
     salaReunions: {
       existeix: false,
-      observacions: null,
+      numero: null,
       capacitat: null,
       mides: null,
       dispositius: {
