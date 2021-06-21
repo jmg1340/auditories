@@ -317,7 +317,12 @@ export default {
         cableAudio: false,	// true / false
         duplicadorHDMI: false,	// true / false
       },
-      recomanacions: null,
+      recomanacions: {
+				renovarPorjector: null,
+				dotacioWebCam: null,
+				DotacioJabra: null,
+				altres: null
+			},
     },
     videoconferencia : {
       // existeix: null, 	// true / false
@@ -334,7 +339,7 @@ export default {
         video: false, 	// true / false
         resultat: null,	// valor 1 - 5
       },
-      observacions: null
+      // observacions: null
     },
 
     telefonSupervivencia : {
@@ -344,6 +349,7 @@ export default {
       instruccions: null,
       estat: null,		// valor 1 - 5
       ubicacio: null,
+			resultatProva: null,
       prova : {
         trucadaSortint: false,	// true / false
         trucadaEntrant: false, 	// true / false
@@ -361,7 +367,9 @@ export default {
       existeix: null,		// true / false
       observacions: null,
       quantitat: null,	// numero
-    }
+    },
+
+		observacions: null
 
   },
 
