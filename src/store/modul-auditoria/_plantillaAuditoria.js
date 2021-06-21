@@ -234,17 +234,17 @@ export default {
       NumCuesImpressio: null,
       altresDispositius: null,
       coberturaWifi: {
-        dbProas: "4 dbs",
-        dbSalaReunions: "6 dbs",
+        dbProas: null,
+        dbSalaReunions: null,
         altre1: {
-          lloc: "lloc Altre1",
-          dbAltre1: "dbs altre1"
+          lloc: null,
+          dbAltre1: null
         },
         altre2: {
-          lloc: "lloc Altre2",
-          dbAltre2: "dbs altre2"
+          lloc: null,
+          dbAltre2: null
         },
-        observacionsCoberturaWifi: "observacions cobertura wifi"
+        observacionsCoberturaWifi: null
       },
       observacions: null,
     },
