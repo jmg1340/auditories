@@ -47,9 +47,12 @@ export default {
 				this._arrCamps = eval(this.arrCamps)   // transforma string a array
 				//console.log("this.objRack: " + this.objRack)
 				if (this.objRack !== undefined ){
-					return eval("this.objRack['" + this._arrCamps.join("']['") + "']").toString()
+					const valor = eval("this.objRack['" + this._arrCamps.join("']['") + "']")
+					return  (valor == null) ? valor : valor.toString()
 				}
-				return eval("this.$store.state.mAuditoria.auditories[this.$store.state.mAuditoria.indexArrAuditories]['" + this._arrCamps.join("']['") + "']").toString()
+				// return eval("this.$store.state.mAuditoria.auditories[this.$store.state.mAuditoria.indexArrAuditories]['" + this._arrCamps.join("']['") + "']").toString()
+				const valor =  eval("this.$store.state.mAuditoria.auditories[this.$store.state.mAuditoria.indexArrAuditories]['" + this._arrCamps.join("']['") + "']")
+				return  (valor == null) ? valor : valor.toString()
 
 			},
 			set (value) {

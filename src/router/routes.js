@@ -48,6 +48,24 @@ const routes = [
 
   //  pagina auditories
   {
+    path: '/auditoria/frases',
+    component: () => import('layouts/AuditoriaLayout.vue'),
+    children: [
+      { path: '', component: () => import('pages/auditoria/frasesInforme.vue') }
+    ]
+  },
+  {
+    path: '/auditoria/checkList',
+    component: () => import('layouts/AuditoriaLayout.vue'),
+    children: [
+      { path: '', component: () => import('pages/checkList.vue') }
+    ]
+  },
+
+
+
+
+  {
     path: '/auditoria/pdf',
     component: () => import('layouts/AuditoriaLayout.vue'),
     children: [
@@ -105,13 +123,6 @@ const routes = [
   },
 
 
-  {
-    path: '/auditoria/frases',
-    component: () => import('layouts/AuditoriaLayout.vue'),
-    children: [
-      { path: '', component: () => import('pages/auditoria/frasesInforme.vue') }
-    ]
-  },
 
 ]
 

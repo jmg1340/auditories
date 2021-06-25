@@ -91,8 +91,12 @@
 						/>
 
 						<cmp_inputText 
-							etiqueta="SWITCH - PUERTO:" 
-							arrCamps="['instalacionsComunicacions', 'filMusical', 'connexioSwitchPort']"
+							etiqueta="SWITCH:" 
+							arrCamps="['instalacionsComunicacions', 'filMusical', 'connexioSW']"
+						/>
+						<cmp_inputText 
+							etiqueta="PUERTO:" 
+							arrCamps="['instalacionsComunicacions', 'filMusical', 'connexioGi']"
 						/>
 
 						<cmp_inputText 

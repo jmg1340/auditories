@@ -86,7 +86,16 @@
         <q-separator color="grey-9" />
 
         <!-- <q-item to="/auditoria/pdf"> -->
-        <q-item clickable @click="generarPDF">
+        <!-- <q-item clickable @click="generarPDF">
+          <q-item-section avatar>
+            <q-icon name="picture_as_pdf" />
+          </q-item-section>
+          <q-item-section>
+            <q-item-label>CheckList PDF</q-item-label>
+            <q-item-label caption>Generar PDF del checklist</q-item-label>
+          </q-item-section>
+        </q-item> -->
+        <q-item to="/auditoria/checkList">
           <q-item-section avatar>
             <q-icon name="picture_as_pdf" />
           </q-item-section>

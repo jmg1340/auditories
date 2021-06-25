@@ -73,7 +73,7 @@ export default {
   			],
   			codisAlarma: [
   				{ etiq: "individuales", valor: "individuales",  color: "black"},
-  				{ etiq: "genericos", 		valor: "genericos", 		color: "black"},
+  				{ etiq: "generico", 		valor: "generico", 		color: "black"},
   			]
   		}
   	}

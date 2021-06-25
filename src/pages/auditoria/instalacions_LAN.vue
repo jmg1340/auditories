@@ -126,9 +126,39 @@
           <cmp_Titol2 titol="Cobertura WIFI (mediciones)" />
           <q-card-section>
             <cmp_inputText
-              etiqueta="MEDICIONES COBERTURA:"
-              arrCamps="['instalacionsComunicacions', 'LAN', 'coberturaWifi']"
+              etiqueta="dB PROAS:"
+              arrCamps="['instalacionsComunicacions', 'LAN', 'coberturaWifi', 'dbPROAS']"
             />
+            <cmp_inputText
+              etiqueta="dB Sala reuniones:"
+              arrCamps="['instalacionsComunicacions', 'LAN', 'coberturaWifi', 'dbSalaReunions']"
+            />
+						<div class="row justify-center">
+							<cmp_inputText
+								etiqueta="Lugar 1:"
+								arrCamps="['instalacionsComunicacions', 'LAN', 'coberturaWifi', 'altre1', 'lloc']"
+							/>
+							<cmp_inputText
+								etiqueta="dB Lugar 1:"
+								arrCamps="['instalacionsComunicacions', 'LAN', 'coberturaWifi', 'altre1', 'dbAltre1']"
+							/>
+						</div>
+						<div class="row justify-center">
+							<cmp_inputText
+								etiqueta="Lugar 2:"
+								arrCamps="['instalacionsComunicacions', 'LAN', 'coberturaWifi', 'altre2', 'lloc']"
+							/>
+							<cmp_inputText
+								etiqueta="dB Lugar 2:"
+								arrCamps="['instalacionsComunicacions', 'LAN', 'coberturaWifi', 'altre2', 'dbAltre2']"
+							/>
+						</div>
+
+            <cmp_inputText
+              etiqueta="Observaciones Cobertura Wifi:"
+              arrCamps="['instalacionsComunicacions', 'LAN', 'observacionsCoberturaWifi']"
+            />
+
           </q-card-section>
         </q-card>
 
