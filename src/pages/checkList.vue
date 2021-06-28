@@ -22,41 +22,40 @@ export default {
 	methods:{
 		generarCheckList: function(){
 
-			console.log("Estic a la funcio generar CHECKLIST")
-
 			var pagines = [
 				"Pagina_01",
 				"Pagina_02",
-				"Pagina_03",
-				"Pagina_04",
-				"Pagina_05",
-				"Pagina_06",
-				"Pagina_07",
-				"Pagina_08",
-				"Pagina_09",
-				"Pagina_10",
-				"Pagina_11",
-				"Pagina_12",
-				"Pagina_13",
-				"Pagina_14",
-				"Pagina_15",
-				"Pagina_16",
-				"Pagina_17",
-				"Pagina_18",
-				"Pagina_19",
-				"Pagina_20",
-				"Pagina_21",
+				// "Pagina_03",
+				// "Pagina_04",
+				// "Pagina_05",
+				// "Pagina_06",
+				// "Pagina_07",
+				// "Pagina_08",
+				// "Pagina_09",
+				// "Pagina_10",
+				// "Pagina_11",
+				// "Pagina_12",
+				// "Pagina_13",
+				// "Pagina_14",
+				// "Pagina_15",
+				// "Pagina_16",
+				// "Pagina_17",
+				// "Pagina_18",
+				// "Pagina_19",
+				// "Pagina_20",
+				// "Pagina_21",
 			]
 
-			var iframe = document.querySelector('iframe');
+			
 
 			var stream = blobStream();
 			// console.log(stream)
 			var ctx = new canvas2pdf.PdfContext(stream);
+			
 			// console.log(ctx)
 			// return
 
-			const oAudit = this.$store.state.mAuditoria.auditories
+			const oAudit = this.$store.state.mAuditoria.auditories[this.$store.state.mAuditoria.indexArrAuditories]
 
 			pagines.forEach( function(pagina){
 				
@@ -75,6 +74,7 @@ export default {
 				var background = new Image();
 				background.crossOrigin="anonymous"
 				background.src = `../statics/checkList/paginesJPG/${pagina}.jpg`;
+
 				// Make sure the image is loaded first otherwise nothing will draw.
 				background.onload = function(){
 					if (/Pagina_(17|18|19|20|21)/.test(pagina)){
@@ -89,8 +89,6 @@ export default {
 					ctx.doc.fontSize(8)
 
 					// ctx.fillRect(50,50,100,100);
-					// ctx.doc.polygon([0, 0], [595.28, 841.89]);
-					// ctx.doc.stroke();
 					
 					switch (pagina){
 						case "Pagina_01": pintaPagina01(ctx, oAudit); break;
@@ -116,12 +114,14 @@ export default {
 						case "Pagina_21": pintaCapsalera(ctx, oAudit); break;
 					}
 					
-				}
+				}			// final background.onload
 
 			});   // final pagines.forEach
 
+
 			ctx.end()
 			ctx.stream.on('finish', function () {
+				const iframe = document.getElementById('iframe');
 				iframe.src = ctx.stream.toBlobURL('application/pdf');
 			});
 			
