@@ -1,14 +1,18 @@
 <template>
-	<div>
-		<div class="text-h5">CheckList</div>
+	<q-page class="flex flex-center column">
+		<div class="text-h3 q-my-md">CheckList</div>
+
+		<div class="q-ma-lg text-h5" v-if="missatgeVisible">Carregant pàgina <span class="text-h4 text-red">{{ comptador }}</span> de 21</div>
+
 
 		<iframe id="iframe"
+			v-if="iframeVisible"
 			style="border: 1px solid black; text-align: center"
 			width="800"
 			height="1047"
 		></iframe>
 
-	</div>
+	</q-page>
 
 </template>
 
@@ -18,15 +22,97 @@ export default {
 		this.generarCheckList()
 	},
 	
-	
+	data () {
+		return {
+			comptador: 0,
+			missatgeVisible: true,
+			iframeVisible: false
+		}
+	}, 
+
 	methods:{
 		generarCheckList: function(){
 
 			var stream = blobStream();
-			// console.log(stream)
-			var ctx = new canvas2pdf.PdfContext(stream);
+			var ctx = new canvas2pdf.PdfContext(stream, {
+							size: 'A4',
+							margins: {
+								top: 0,
+								bottom: 0,
+								left: 0,
+								right: 0
+							}
+						});
 
+			this.comptador = 1
+			this.construirPagina(ctx, "Pagina_01")
+			.then ( () => {
+				this.comptador = 2
+				return this.construirPagina(ctx, "Pagina_02")})
+			.then ( () => {
+				this.comptador = 3
+				return this.construirPagina(ctx, "Pagina_03")})
+			.then ( () => {
+				this.comptador = 4
+				return this.construirPagina(ctx, "Pagina_04")})
+			.then ( () => {
+				this.comptador = 5
+				return this.construirPagina(ctx, "Pagina_05")})
+			.then ( () => {
+				this.comptador = 6
+				return this.construirPagina(ctx, "Pagina_06")})
+			.then ( () => {
+				this.comptador = 7
+				return this.construirPagina(ctx, "Pagina_07")})
+			.then ( () => {
+				this.comptador = 8
+				return this.construirPagina(ctx, "Pagina_08")})
+			.then ( () => {
+				this.comptador = 9
+				return this.construirPagina(ctx, "Pagina_09")})
+			.then ( () => {
+				this.comptador = 10
+				return this.construirPagina(ctx, "Pagina_10")})
+			.then ( () => {
+				this.comptador = 11
+				return this.construirPagina(ctx, "Pagina_11")})
+			.then ( () => {
+				this.comptador = 12
+				return this.construirPagina(ctx, "Pagina_12")})
+			.then ( () => {
+				this.comptador = 13
+				return this.construirPagina(ctx, "Pagina_13")})
+			.then ( () => {
+				this.comptador = 14
+				return this.construirPagina(ctx, "Pagina_14")})
+			.then ( () => {
+				this.comptador = 15
+				return this.construirPagina(ctx, "Pagina_15")})
+			.then ( () => {
+				this.comptador = 16
+				return this.construirPagina(ctx, "Pagina_16")})
+			.then ( () => {
+				this.comptador = 17
+				return this.construirPagina(ctx, "Pagina_17")})
+			.then ( () => {
+				this.comptador = 18
+				return this.construirPagina(ctx, "Pagina_18")})
+			.then ( () => {
+				this.comptador = 19
+				return this.construirPagina(ctx, "Pagina_19")})
+			.then ( () => {
+				this.comptador = 20
+				return this.construirPagina(ctx, "Pagina_20")})
+			.then ( () => {
+				this.comptador = 21
+				return this.construirPagina(ctx, "Pagina_21")})
+			.then (() => {
+				ctx.end()
+				this.missatgeVisible = false
+				this.iframeVisible = true
+			})
 
+/* 
 			const pagines = [
 				"Pagina_01",
 				"Pagina_02",
@@ -51,30 +137,6 @@ export default {
 				"Pagina_21",
 			]
 
-			this.construirPagina(ctx, "Pagina_01")
-			.then ( () => this.construirPagina(ctx, "Pagina_02"))
-			.then ( () => this.construirPagina(ctx, "Pagina_03"))
-			.then ( () => this.construirPagina(ctx, "Pagina_04"))
-			.then ( () => this.construirPagina(ctx, "Pagina_05"))
-			.then ( () => this.construirPagina(ctx, "Pagina_06"))
-			.then ( () => this.construirPagina(ctx, "Pagina_07"))
-			.then ( () => this.construirPagina(ctx, "Pagina_08"))
-			.then ( () => this.construirPagina(ctx, "Pagina_09"))
-			.then ( () => this.construirPagina(ctx, "Pagina_10"))
-			.then ( () => this.construirPagina(ctx, "Pagina_11"))
-			.then ( () => this.construirPagina(ctx, "Pagina_12"))
-			.then ( () => this.construirPagina(ctx, "Pagina_13"))
-			.then ( () => this.construirPagina(ctx, "Pagina_14"))
-			.then ( () => this.construirPagina(ctx, "Pagina_15"))
-			.then ( () => this.construirPagina(ctx, "Pagina_16"))
-			.then ( () => this.construirPagina(ctx, "Pagina_17"))
-			.then ( () => this.construirPagina(ctx, "Pagina_18"))
-			.then ( () => this.construirPagina(ctx, "Pagina_19"))
-			.then ( () => this.construirPagina(ctx, "Pagina_20"))
-			.then ( () => this.construirPagina(ctx, "Pagina_21"))
-			.then (() => ctx.end())
-
-/* 
 			let arrPromeses = pagines.map((item, index) => this.construirPagina(ctx, item, index))
 
 			Promise.allSettled(arrPromeses)
@@ -121,16 +183,18 @@ export default {
 				.then( (background) => {
 					console.log(pagina, "comença carregarBackground.then")
 
-					ctx.doc.addPage( {
-						size: 'A4',
-						margins: {
-							top: 0,
-							bottom: 0,
-							left: 0,
-							right: 0
-						},
-						layout: /Pagina_(17|18|19|20|21)/.test(pagina) ? "landscape" : "portrait",
-					})
+					if (pagina !== "Pagina_01")
+						ctx.doc.addPage( {
+							size: 'A4',
+							margins: {
+								top: 0,
+								bottom: 0,
+								left: 0,
+								right: 0
+							},
+							layout: /Pagina_(17|18|19|20|21)/.test(pagina) ? "landscape" : "portrait",
+						})
+
 
 					ctx.fillStyle='red';
 					ctx.doc.fontSize(8)	
