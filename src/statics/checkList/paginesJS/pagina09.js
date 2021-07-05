@@ -27,7 +27,7 @@ function pintaPagina09 (ctx, oAudit){
 	ctx.doc.text(objCob.altre2.dbAltre2, 217.0, 309.0 - 8);
 	
 	ctx.doc.text(objCob.observacionsCoberturaWifi, 296.0, 258.0 - 8);
-
+	console.log(`obs cobert wifi: ${objCob.observacionsCoberturaWifi}`)
 
 
 	// obseravacions LAN
@@ -61,9 +61,9 @@ function pintaPagina09 (ctx, oAudit){
 
 	new Cercle(ctx.doc, 234.0, 545.0, objFil.existeix).pinta()
 	new Cercle(ctx.doc, 257.0, 545.0, !objFil.existeix && objFil.existeix != null).pinta()
-	new Quadrat(ctx.doc, 293.0, 544.0, !!objFil.connexioSwitch).pinta() // !! converteix un string a boolean; "" es false;
-	ctx.doc.text(objFil.connexioSwitch, 354.0, 549.0 - 8);
-	ctx.doc.text(objFil.connexioPort, 389.0, 549.0 - 8);
+	new Quadrat(ctx.doc, 293.0, 544.0, !!objFil.connexioSW).pinta() // !! converteix un string a boolean; "" es false;
+	ctx.doc.text(objFil.connexioSW, 354.0, 549.0 - 8);
+	ctx.doc.text(objFil.connexioGi, 389.0, 549.0 - 8);
 
 	new Quadrat(ctx.doc, 234.0, 562.0, !!objFil.observacions).pinta() // !! converteix un string a boolean; "" es false;
 	ctx.doc.text(objFil.observacions, 299.0, 566.0 - 8);

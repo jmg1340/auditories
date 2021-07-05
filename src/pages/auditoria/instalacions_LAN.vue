@@ -156,7 +156,7 @@
 
             <cmp_inputText
               etiqueta="Observaciones Cobertura Wifi:"
-              arrCamps="['instalacionsComunicacions', 'LAN', 'observacionsCoberturaWifi']"
+              arrCamps="['instalacionsComunicacions', 'LAN', 'coberturaWifi', 'observacionsCoberturaWifi']"
             />
 
           </q-card-section>
