@@ -3,6 +3,8 @@
 		<div class="text-h3 q-my-md">CheckList</div>
 
 		<div class="q-ma-lg text-h5" v-if="missatgeVisible">Carregant pàgina <span class="text-h4 text-red">{{ comptador }}</span> de 21</div>
+		
+		<div class="q-ma-sm text-h6 text-red" v-if="errorVisible">Hi ha hagut un problema a la càrrega de la pàgina {{ comptador }}</div>
 
 
 		<iframe id="iframe"
@@ -26,7 +28,8 @@ export default {
 		return {
 			comptador: 0,
 			missatgeVisible: true,
-			iframeVisible: false
+			iframeVisible: false,
+			errorVisible: false
 		}
 	}, 
 
@@ -41,8 +44,14 @@ export default {
 								bottom: 0,
 								left: 0,
 								right: 0
-							}
+							},
+							info : {
+								Title: "CheckList",
+								Author: "JMG",
+								Subject: "CheckList auditoria interna DTIC"
+							}		
 						});
+
 
 			this.comptador = 1
 			this.construirPagina(ctx, "Pagina_01")
@@ -111,6 +120,10 @@ export default {
 				this.missatgeVisible = false
 				this.iframeVisible = true
 			})
+			.catch ( (e) => {
+				this.missatgeVisible = false
+				this.errorVisible = true
+			} )
 
 /* 
 			const pagines = [
@@ -166,16 +179,24 @@ export default {
 			return new Promise(function(resolve, reject) {
 				
 				const carregaBackground = function(){
-					return new Promise((resolt) => {
+					return new Promise((resoldre, rebutjar) => {
+						
 						var background = new Image();
 						background.crossOrigin="anonymous"
 						// Make sure the image is loaded first otherwise nothing will draw.
 						
 						background.onload = function(){
 							console.log(pagina, "background.onload")
-							resolt(background)
-						}		// final background.onload						
-						background.src = `../statics/checkList/paginesJPG/${pagina}.jpg`;
+							resoldre(background)
+						}		// final background.onload
+
+						background.onerror = function(){
+							console.log("ERROOOOOOOOOOOOOOOOOOOORRRRRRR")
+							rebutjar()
+						}
+
+						background.src = `../statics/checkList/paginesJPG/${pagina}.jpg`;		
+
 					})
 				}
 				
@@ -235,8 +256,9 @@ export default {
 					}
 					
 					console.log(pagina, "acaba carregarBackground.then")
-					resolve()
-				})
+					return resolve()
+
+				}).catch(() => {return reject()})
 
 			})  // final Promise
 		}  // final construirPagina

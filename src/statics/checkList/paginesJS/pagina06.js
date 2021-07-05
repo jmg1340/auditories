@@ -44,7 +44,7 @@ function pintaPagina06 (ctx, oAudit){
 	let objS = oAudit.instalacionsComunicacions.sala
 
 	new Cercle(ctx.doc, 345.0, 294.0, objS.centreSecundari.existeix).pinta()
-	new Cercle(ctx.doc, 374.0, 294.0, !objS.centreSecundari.existeix).pinta()
+	new Cercle(ctx.doc, 374.0, 294.0, !objS.centreSecundari.existeix && objS.centreSecundari.existeix != null).pinta()
 	new Quadrat(ctx.doc, 403.0, 294.0, !!objS.centreSecundari.idCentrePrincipal).pinta() // !! converteix un string a boolean; "" es false;
 	ctx.doc.text(objS.centreSecundari.idCentrePrincipal, 468.0, 298.0 - 8);
 	

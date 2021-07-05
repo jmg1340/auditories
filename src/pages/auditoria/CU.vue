@@ -58,12 +58,22 @@
 							arrCampsFinals="['SX10', 'SX80', 'roomkit', 'DX80', 'camaraWeb', 'tablet', 'mando', 'TV', 'projector', 'PC', 'altaveu', 'displayPortHDMI', 'conversorVGA_HDMI', 'cableAudio', 'duplicadorHDMI']"
 						/>
 
+
+						<q-separator></q-separator>
+
+						<cmp_inputOpcionsMultipleResposta
+							etiqueta="RECOMENDACIONES:"
+							arrEtiquetes="['Renovar proyector', 'Dotación webcam', 'Dotación altavoz Jabra']"
+							arrArrelCamps="['comunicacionsUnificades', 'salaReunions', 'recomanacions']"
+							arrCampsFinals="['renovarPorjector', 'dotacioWebCam', 'DotacioJabra']"
+						/>
 						<cmp_inputText
-							etiqueta="Recomendaciones:"
-							arrCamps="['comunicacionsUnificades', 'salaReunions', 'recomanacions']"
+							etiqueta="Otras recomendaciones:"
+							arrCamps="['comunicacionsUnificades', 'salaReunions', 'recomanacions', 'altres']"
 						/>
 
 
+						<q-separator></q-separator>
 
 
 
@@ -94,12 +104,12 @@
 							propOpcions="moltBe_moltMalament"
 							arrCamps="['comunicacionsUnificades', 'videoconferencia', 'prova', 'resultat']"
 						/>
-
+<!-- 
 						<cmp_inputText
 							etiqueta="Observaciones videoconf.:"
 							arrCamps="['comunicacionsUnificades', 'videoconferencia', 'observacions']"
 						/>
-
+ -->
 
 					</q-card-section>
 				</q-card>

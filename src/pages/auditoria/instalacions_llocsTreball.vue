@@ -7,7 +7,7 @@
 			<q-card class="col-sm-8 col q-pa-sm">
 				
 				<!-- <div class="col text-h5 text-white bg-red-10 q-pa-md q-mb-md"></div> -->
-				<cmp_Titol1 titol="Area de trabjajo (Puestos de trabajo)" />
+				<cmp_Titol1 titol="Area de trabajo (Puestos de trabajo)" />
 
 				<q-btn
 					dense

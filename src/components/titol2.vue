@@ -5,7 +5,7 @@
 			{{ titol }}
 
 			<span v-if="titol=='RACKS'" class="text-right">
-						 [ {{ numRacks }} / 3 ]
+						 [ {{ numRacks }} / 5 ]
 		        <q-btn
 		          dense
 		          noCaps
@@ -63,13 +63,13 @@ export default {
 
 	methods: {
 		afegirRack: function() {
-			if (this.numRacks < 3 ) {
+			if (this.numRacks < 5 ) {
 				this.$store.dispatch("mAuditoria/actAfegirRack")
 			} else {
 				this.$q.notify({
 					color: "red-8",
 					textColor: "white",
-					message: "No se permiten más de 3 racks",
+					message: "No se permiten más de 5 racks",
 					position: "top",
 					multiLine: true,
 					timeout: 1000

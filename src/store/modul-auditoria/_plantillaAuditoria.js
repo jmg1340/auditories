@@ -296,7 +296,7 @@ export default {
 
   comunicacionsUnificades : {
     salaReunions: {
-      existeix: false,
+      existeix: null,
       numero: null,
       capacitat: null,
       mides: null,
@@ -318,9 +318,9 @@ export default {
         duplicadorHDMI: false,	// true / false
       },
       recomanacions: {
-				renovarPorjector: null,
-				dotacioWebCam: null,
-				DotacioJabra: null,
+				renovarPorjector: false,
+				dotacioWebCam: false,
+				DotacioJabra: false,
 				altres: null
 			},
     },
@@ -331,7 +331,7 @@ export default {
       observacionsOperativa: null,
       // estat: null,		// valor 1 - 5
       prova: {
-        feta: false,
+        feta: null,
         observacions: null,
         trucada: false,	// true / false
         compartirPc: false, // true / false
