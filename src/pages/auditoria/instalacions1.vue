@@ -4,9 +4,9 @@
 
 		<cmp_informacioPrevia />
 		<cmp_instalacionsSala />
-		<cmp_instalacionsLlocsTreball />
+		<!-- <cmp_instalacionsLlocsTreball />
 		<cmp_instalacionsLAN />
-		<cmp_instalacionsPendrivesTelemedicina />
+		<cmp_instalacionsPendrivesTelemedicina /> -->
 
 	</div>
 	
@@ -22,9 +22,9 @@
 <script>
 import cmp_informacioPrevia from "./informacio_previa"
 import cmp_instalacionsSala from "./instalacions_sala"
-import cmp_instalacionsLlocsTreball from "./instalacions_llocsTreball"
-import cmp_instalacionsLAN from "./instalacions_LAN"
-import cmp_instalacionsPendrivesTelemedicina from "./instalacions_PendrivesTelemedicina"
+// import cmp_instalacionsLlocsTreball from "./instalacions_llocsTreball"
+// import cmp_instalacionsLAN from "./instalacions_LAN"
+// import cmp_instalacionsPendrivesTelemedicina from "./instalacions_PendrivesTelemedicina"
 
 export default {
 	name: 'PageInstalacions',
@@ -32,10 +32,9 @@ export default {
 	components: {
 		cmp_informacioPrevia,
 		cmp_instalacionsSala,
-		cmp_instalacionsSala,
-		cmp_instalacionsLlocsTreball,
-		cmp_instalacionsLAN,
-		cmp_instalacionsPendrivesTelemedicina
+		// cmp_instalacionsLlocsTreball,
+		// cmp_instalacionsLAN,
+		// cmp_instalacionsPendrivesTelemedicina
 	},
 
 	created () {

@@ -38,7 +38,8 @@
       indicator-color="amber-2"
       active-color="amber-2"      >
         <q-route-tab to="/auditoria/informacio" label="Info" />
-        <q-route-tab to="/auditoria/instalacions" label="Instalaciones" />
+        <q-route-tab to="/auditoria/instalacions1" label="Instal. 1" />
+        <q-route-tab to="/auditoria/instalacions2" label="Instal. 2" />
         <q-route-tab to="/auditoria/cu" label="CU" />
         <q-route-tab to="/auditoria/seguretat" label="Seguridad" />
         <q-route-tab to="/auditoria/formacio" label="Formación" />

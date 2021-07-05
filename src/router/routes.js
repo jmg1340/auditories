@@ -80,10 +80,17 @@ const routes = [
     ]
   },
   {
-    path: '/auditoria/instalacions',
+    path: '/auditoria/instalacions1',
     component: () => import('layouts/AuditoriaLayout.vue'),
     children: [
-      { path: '', component: () => import('pages/auditoria/instalacions.vue') }
+      { path: '', component: () => import('pages/auditoria/instalacions1.vue') }
+    ]
+  },
+  {
+    path: '/auditoria/instalacions2',
+    component: () => import('layouts/AuditoriaLayout.vue'),
+    children: [
+      { path: '', component: () => import('pages/auditoria/instalacions2.vue') }
     ]
   },
   {
