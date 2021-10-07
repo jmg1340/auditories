@@ -11,7 +11,7 @@ class Cercle {
 
 	pinta = function (){
 		if (this.bChosen){
-			this.doc.circle(this.x, this.y, this.radi).fillAndStroke("red", "#900")
+			this.doc.circle(this.x, this.y, this.radi).fillAndStroke("darkblue", "darkblue")
 		}
 		return
 	}
@@ -38,12 +38,12 @@ class Quadrat {
 			this.doc.lineCap('round')
 			.moveTo(coordX, coordY)
 			.lineTo(coordX + this._amplada, coordY + this._altura)
-			.stroke("red");
+			.stroke("darkblue");
 			
 			this.doc.lineCap('round')
 			.moveTo(coordX + this._amplada, coordY)
 			.lineTo(coordX , coordY + this._altura)
-			.stroke("red");
+			.stroke("darkblue");
 		}
 		return
 	}

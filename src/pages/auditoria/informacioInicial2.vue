@@ -26,6 +26,11 @@
 				<cmp_inputText etiqueta="interlocutors:" arrCamps="['interlocutors']" class="" />
 
 			</q-card>
+
+
+			<cmp_informacioPrevia />
+
+
 		</div>
 
 	</div>
@@ -42,6 +47,7 @@
 	import cmp_inputText from "../../components/inputText"
 	import cmp_inputSiNo from "../../components/inputSiNo"
 	import cmp_inputData from "../../components/inputData"
+	import cmp_informacioPrevia from "./informacio_previa"
 
 export default {
 	name: 'PageInfo',
@@ -49,7 +55,8 @@ export default {
 	components: {
 		cmp_inputText,
 		cmp_inputSiNo,
-		cmp_inputData
+		cmp_inputData,
+		cmp_informacioPrevia
 	},
 
 	created () {

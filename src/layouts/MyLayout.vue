@@ -13,7 +13,7 @@
           <q-icon name="menu" />
         </q-btn>
 
-        <q-toolbar-title>
+        <q-toolbar-title class="titol">
           Auditorías CCAA Asepeyo
         </q-toolbar-title>
 
@@ -163,5 +163,19 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+
+	.titol {
+/* color: #4400ff; */
+/* background: #e8e8e8; */
+text-shadow: 3px 5px 2px #a8a8a8;
+
+
+
+
+	}
+
+
+
+
 </style>

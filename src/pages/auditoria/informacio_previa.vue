@@ -5,10 +5,10 @@
 		<div class="row justify-center">
 
 
-			<q-card class="col-sm-8 col q-pa-sm">
+			<q-card class="col-sm-10 col q-pa-sm">
 				
 				<!-- INFOMACIO PREVIA -->
-				<cmp_Titol1 titol="Información previa" />
+				<cmp_Titol1 titol="Informació centre" />
 				<q-card-section>
 
 					<cmp_inputText etiqueta="ID CENTRO:" arrCamps="['instalacionsComunicacions', 'informacioPrevia', 'CA', 'codi']" />

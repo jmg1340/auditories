@@ -2,7 +2,7 @@
 
 	<div>
 
-		<cmp_informacioPrevia />
+		<!-- <cmp_informacioPrevia /> -->
 		<cmp_instalacionsSala />
 		<!-- <cmp_instalacionsLlocsTreball />
 		<cmp_instalacionsLAN />
@@ -20,7 +20,7 @@
 </style>
 
 <script>
-import cmp_informacioPrevia from "./informacio_previa"
+// import cmp_informacioPrevia from "./informacio_previa"
 import cmp_instalacionsSala from "./instalacions_sala"
 // import cmp_instalacionsLlocsTreball from "./instalacions_llocsTreball"
 // import cmp_instalacionsLAN from "./instalacions_LAN"
@@ -30,7 +30,7 @@ export default {
 	name: 'PageInstalacions',
 
 	components: {
-		cmp_informacioPrevia,
+		// cmp_informacioPrevia,
 		cmp_instalacionsSala,
 		// cmp_instalacionsLlocsTreball,
 		// cmp_instalacionsLAN,

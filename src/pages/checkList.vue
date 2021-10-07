@@ -217,7 +217,7 @@ export default {
 						})
 
 
-					ctx.fillStyle='red';
+					ctx.fillStyle='darkblue';
 					ctx.doc.fontSize(8)	
 
 
