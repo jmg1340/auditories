@@ -2,14 +2,17 @@
 
 
 		<q-card class="bordered">
-			<q-card-section>
-				<div class="text-h6">Propuesta de frases</div>
-			</q-card-section>
+			<!-- <q-card-section> -->
+				<div class="text-h6 q-ml-lg">BIBLIA</div>
+			<!-- </q-card-section> -->
 
 			<q-card-section  >
-				<div v-for="(obj, index) in arrFrases" :class="{formatNorma: obj.colorNorma}" :key="index" class="q-pa-sm q-mx-md q-mb-sm">
-					{{ obj.frase }}
-				</div>
+				<ul>
+					<li v-for="(obj, index) in arrFrases" :class="{formatNorma: obj.colorNorma}" :key="index" class="q-pa-sm q-mx-md q-mb-sm">
+						{{ obj.frase }}
+					</li>
+				</ul>
+
 			</q-card-section>
 
 			<q-card-actions align="right">

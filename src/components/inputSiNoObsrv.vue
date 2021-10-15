@@ -1,6 +1,16 @@
 <template>
 
 	<div class="row items-center q-px-sm q-py-sm jmg_bordeInferior">
+		<q-icon
+			v-if="help"
+			dense
+			name="info"
+			flat
+			rounded
+			@click="construirHelp(help)"
+			class="col-auto q-mr-xs"
+			color="blue-9"
+		/>
 		<div class="col-4 q-pr-sm q-pr-xs text-left" @dblclick="posarValorANull">
 			{{ etiqueta}}
 		</div>
@@ -8,9 +18,17 @@
 			<q-radio v-model="campTemplate" val=true label="Sí" color="black" dense class="q-ml-sm" />
 			<q-radio v-model="campTemplate" val=false label="No" color="black" dense class="q-ml-sm" />
 		</div>
-		<div class="col-5">
+		<div class="col-4">
 			<q-input v-model="campTemplate2" dense bg-color="brown-2" color="red-10" autogrow filled />
 		</div>
+
+
+
+
+		<q-dialog v-model="alertaHelp">
+			<cmp_frasesHelp  :arrFrases="arrFrases" />
+		</q-dialog>
+
 	</div>
 
 
@@ -22,10 +40,13 @@
 </style>
 
 <script>
+import cmp_frasesHelp from "../components/frasesHelp"
+import {frasesHelp} from "../statics/js/_biblia.js"
+
 export default {
 	name: 'PageIndex',
-
-	props: ['etiqueta', 'arrCamps', 'arrCampsDos', 'objRack'],
+	props: ['etiqueta', 'arrCamps', 'arrCampsDos', 'objRack', 'help'],
+	components: { cmp_frasesHelp },
 
 	created () {
 	},
@@ -34,13 +55,19 @@ export default {
 	data () {
   	return {
   		_arrCamps: null,
-  		_arrCampsDos: null
+  		_arrCampsDos: null,
+			alertaHelp: false
   	}
 	},
 
 	methods : {
 		posarValorANull: function(){
 			this.$store.commit( 'mAuditoria/updateCamp', { arrProps: this.arrCamps, valor: null, objRack: this.objRack })
+		},
+
+		construirHelp: function (punt) {
+			this.arrFrases = frasesHelp( punt )
+			this.alertaHelp = true
 		}
 
 	},

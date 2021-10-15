@@ -35,12 +35,24 @@
 			<cmp_TitolsRack :numRack="numRack" titol="CERRADURA" />
 			<q-card-section>
 
+				<!-- <q-btn
+					dense
+					icon="info"
+					flat
+					rounded
+					@click="construirHelp('cerradura rack')"
+					class="col q-ml-md"
+					color="blue-9"
+				/> -->
+
+
 				<cmp_inputSiNo
 					etiqueta="CERRADURA RACK ?"
 					etiqV="Sí"
 					etiqF="No"
 					arrCamps="['pany', 'existeix']"
 					:objRack="objRack"
+					help="cerradura rack"
 				/>
 
 				<cmp_inputSiNo
@@ -204,6 +216,18 @@
 
 
 
+
+
+
+
+
+
+
+
+		<q-dialog v-model="alertaHelp">
+			<cmp_frasesHelp  :arrFrases="arrFrases" />
+		</q-dialog>
+
 	</div>
 
 
@@ -222,6 +246,9 @@ import cmp_inputSiNo from "./inputSiNo"
 import cmp_inputSiNoObsrv from "./inputSiNoObsrv"
 import cmp_inputOpcionsUnicaResposta from "./inputOpcionsUnicaResposta"
 import cmp_inputOpcionsMultipleResposta from "./inputOpcionsMultipleResposta"
+import cmp_frasesHelp from "../components/frasesHelp"
+
+import {frasesHelp} from "../statics/js/_biblia.js"
 
 
 export default {
@@ -233,7 +260,8 @@ export default {
 		cmp_inputSiNo,
 		cmp_inputSiNoObsrv,
 		cmp_inputOpcionsUnicaResposta,
-		cmp_inputOpcionsMultipleResposta
+		cmp_inputOpcionsMultipleResposta,
+		cmp_frasesHelp
 	},
 
 	props: ['objRack', 'numRack'],
@@ -243,28 +271,33 @@ export default {
 
 
 	data () {
-	  	return {
-
-	  	}
-  	},
-
-  	methods : {
-  	},
-
-  	computed: {
-/*
-		campTemplate: {
-			get() {
-				//debugger
-				this._arrCamps = eval(this.arrCamps)   // transforma string a array
-				return eval("this.$store.state.mAuditoria.auditories[this.$store.state.mAuditoria.indexArrAuditories]['" + this._arrCamps.join("']['") + "']")
-
-			},
-			set (value) {
-				this.$store.commit( 'mAuditoria/updateCamp', { arrProps: this.arrCamps, valor: value })
-			}
+		return {
+			alertaHelp: false
 		}
+	},
+
+	methods : {
+		construirHelp: function (punt) {
+			this.arrFrases = frasesHelp( punt )
+			this.alertaHelp = true
+		}
+
+	},
+
+	computed: {
+/*
+	campTemplate: {
+		get() {
+			//debugger
+			this._arrCamps = eval(this.arrCamps)   // transforma string a array
+			return eval("this.$store.state.mAuditoria.auditories[this.$store.state.mAuditoria.indexArrAuditories]['" + this._arrCamps.join("']['") + "']")
+
+		},
+		set (value) {
+			this.$store.commit( 'mAuditoria/updateCamp', { arrProps: this.arrCamps, valor: value })
+		}
+	}
 */
-  	}
+	}
 }
 </script>

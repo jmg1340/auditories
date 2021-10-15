@@ -48,7 +48,7 @@
 
 				<q-card class="col-sm-6 col q-mb-md">
 
-					<cmp_Titol2 titol="Accesibilidad sala" />
+					<cmp_Titol2 titol="Accesibilidad sala" info=""/>
 
 					<q-card-section>
 						<cmp_inputSiNoObsrv
@@ -63,10 +63,22 @@
 							arrCamps="['instalacionsComunicacions', 'sala', 'accessibilitat', 'estatPorta']"
 						/>
 
+						
+						<!-- <q-btn
+							dense
+							icon="info"
+							flat
+							rounded
+							@click="construirHelp('zona paso libre sala')"
+							class="col q-ml-md"
+							color="blue-9"
+						/> -->
+
 						<cmp_inputSiNoObsrv
 							etiqueta="ZONA PASO LIBRE SALA ?"
 							arrCamps="['instalacionsComunicacions', 'sala', 'accessibilitat', 'zonaPasLliure', 'existeix']"
 							arrCampsDos="['instalacionsComunicacions', 'sala', 'accessibilitat', 'zonaPasLliure', 'observacions']"
+							help="zona paso libre sala"
 						/>
 
 					</q-card-section>
@@ -351,8 +363,13 @@
 
 
 
-		<q-dialog v-model="alerta">
+		<q-dialog v-model="alertaFrases">
 			<cmp_frasesDialog  :arrFrases="arrFrases" />
+		</q-dialog>
+
+
+		<q-dialog v-model="alertaHelp">
+			<cmp_frasesHelp  :arrFrases="arrFrases" />
 		</q-dialog>
 
 
@@ -376,8 +393,10 @@ import cmp_inputOpcionsUnicaResposta from "../../components/inputOpcionsUnicaRes
 import cmp_inputOpcionsMultipleResposta from "../../components/inputOpcionsMultipleResposta"
 import cmp_rack from "../../components/rack"
 import cmp_frasesDialog from "../../components/frasesDialog"
+import cmp_frasesHelp from "../../components/frasesHelp"
 
 import {frasesInforme} from "../../statics/js/_informeFrases.js"
+import {frasesHelp} from "../../statics/js/_biblia.js"
 
 export default {
 	name: 'PageInstalacions',
@@ -391,7 +410,8 @@ export default {
 		cmp_inputOpcionsUnicaResposta,
 		cmp_inputOpcionsMultipleResposta,
 		cmp_rack,
-		cmp_frasesDialog
+		cmp_frasesDialog,
+		cmp_frasesHelp
 	},
 
 	created () {
@@ -402,7 +422,8 @@ export default {
 	data () {
 		return {
 			arrFrases: null,
-			alerta: false
+			alertaFrases: false,
+			alertaHelp: false
 		}
 	},
 
@@ -428,10 +449,15 @@ export default {
   		},
 
 
-		construirFrases: function (apartat) {
-			this.arrFrases = frasesInforme( this.auditoriaActual, apartat )
-			this.alerta = true
-		}
+			construirFrases: function (apartat) {
+				this.arrFrases = frasesInforme( this.auditoriaActual, apartat )
+				this.alertaFrases = true
+			},
+
+			construirHelp: function (punt) {
+				this.arrFrases = frasesHelp( punt )
+				this.alertaHelp = true
+			}
 
 
 
