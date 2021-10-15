@@ -1,11 +1,11 @@
 <template>
 
-	<div class="row items-center q-py-sm q-px-sm jmg_bordeInferior">
+	<div class="row items-center q-py-sm q-px-sm jmg_bordeInferior" :class="{'text-grey': desactivat}">
 		<div class="col-4 q-pr-sm text-left text-caption">
 			{{ etiqueta}}
 		</div>
 		<div class="col-8">
-			<q-input v-model="campTemplate" dense bg-color="brown-2" color="red-10" autogrow filled class="text-caption " />
+			<q-input v-model="campTemplate" dense bg-color="brown-2" color="red-10" autogrow filled class="text-caption " :disable="desactivat" />
 		</div>
 	</div>
 
@@ -23,8 +23,20 @@ export default {
 	name: 'PageIndex',
 	props: ['etiqueta', 'arrCamps', 'objRack'],
 
+	created() {
+		const arrNoActivar = [
+			"['seguretatInformacio', 'accesAlCentre', 'personalIntern', 'codisAlarma', 'observacions']",
+		]
+
+		if ( arrNoActivar.includes( this.arrCamps )) {
+			this.desactivat = true
+		}
+
+	},
+
 	data () {
   	return {
+			desactivat: false,
   		_arrCamps: null
   	}
 	},

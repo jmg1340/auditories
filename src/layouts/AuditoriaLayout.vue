@@ -102,7 +102,7 @@
           </q-item-section>
           <q-item-section>
             <q-item-label>CheckList PDF</q-item-label>
-            <q-item-label caption>Generar PDF del checklist</q-item-label>
+            <q-item-label caption>Generar PDF (v.12) del checklist</q-item-label>
           </q-item-section>
         </q-item>
 

@@ -1,12 +1,12 @@
 <template>
 
-	<div class="row items-center q-py-md q-px-sm jmg_bordeInferior">
+	<div class="row items-center q-py-md q-px-sm jmg_bordeInferior" :class="{'text-grey': desactivat}">
 		<div class="col-4 q-pr-sm text-left" @dblclick="posarValorANull">
 			{{ etiqueta}}
 		</div>
 		<div class="col-8" >
 			<!-- <div class="col-8" > -->
-				<q-radio v-for="(opcio) in opcions" :key="opcio.valor" v-model="campTemplate" :val="opcio.valor" :label="opcio.etiq" :color="opcio.color" dense class="q-ml-sm" />
+				<q-radio v-for="(opcio) in opcions" :key="opcio.valor" v-model="campTemplate" :val="opcio.valor" :label="opcio.etiq" :color="opcio.color" dense :disable="desactivat"  class="q-ml-sm" />
 			<!-- </div> -->
 		</div>
 	</div>
@@ -27,6 +27,15 @@ export default {
 
 	created () {
 		this.arrOpcions = eval(this.strArrOpcions)
+		
+		const arrNoActivar = [
+			"['seguretatInformacio', 'accesAlCentre', 'personalIntern', 'codisAlarma', 'tipus']",
+		]
+
+		if ( arrNoActivar.includes( this.arrCamps )) {
+			this.desactivat = true
+		}
+
 	},
 
 
@@ -34,6 +43,7 @@ export default {
   	return {
   		_arrCamps: null,
   		arrOpcions: null,
+			desactivat: false,
   		objOpcions: {
 				sino: [
 					{ etiq: "Si", valor: true,   color: "green-8"  },
