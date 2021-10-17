@@ -1,6 +1,4 @@
 export function frasesHelp ( punt ){
-  // var objAuditoria = obj
-  // var apartatInforme = apartat
 
   const arrHelp = [
     /*    ***** INSTALACIONS I COMUNICACIONS ******   */
@@ -115,6 +113,62 @@ export function frasesHelp ( punt ){
         { frase: "Usar sentido común: si no tiene paneles posteriores y está todo al aire quizà esté suficientemente ventilado." },
       ]
     },
+
+
+
+
+    /*       PUESTOS DE TRABAJO       */
+
+    {
+      punt:  "area trabajo",
+      arrFrases: [
+        { frase: "Revisaremos principalmente los puestos de trabajo de PROAS." },
+        { frase: "Si el tiempo y circunstancias lo permiten revisaremos además los despachos Médicos, Enfermería, Administración, director/a y resto de puestos (por este orden). Yo revisaría los Proas, 1 medico, 1 enfermería y 1 de administración de forma aleatoria." },
+      ]
+    },
+
+    {
+      punt:  "area trabajo cableado",
+      arrFrases: [
+        { frase: "Cableado no tirante ni forzado." },
+        { frase: "Cable no pelado." },
+      ]
+    },
+
+    {
+      punt:  "area trabajo suficientes tomas",
+      arrFrases: [
+        { frase: "En los puestos de médicos y DC, 3 tomas de datos." },
+        { frase: "Si hay menos tomas, valorar si es necessario más" },
+      ]
+    },
+
+    {
+      punt:  "area trabajo suficientes enchufes",
+      arrFrases: [
+        { frase: "Se requieren mínimo 2 tomas de corriente por puesto." },
+      ]
+    },
+
+
+
+    /*       LAN       */
+
+    {
+      punt:  "LAN switchs identificacion",
+      arrFrases: [
+        { frase: "Comentado con Delpeix y Oriol Ribot, la etiqueta que es correcta es el nombre del dispositivo que hay en el CiscoPrime" },
+      ]
+    },
+
+    {
+      punt:  "LAN cobertura wifi",
+      arrFrases: [
+        { frase: "Medir con la app Heatmap Wifi (solo si da tiempo)" },
+      ]
+    },
+
+
 
 
 	]

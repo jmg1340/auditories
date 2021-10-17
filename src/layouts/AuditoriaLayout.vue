@@ -32,7 +32,7 @@
       </q-toolbar>
 
       <q-tabs
-      dense
+      dense 
       align="left"
       class="bg-blue-grey-10 text-grey-3 shadow-2"
       indicator-color="amber-2"
