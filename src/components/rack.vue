@@ -110,6 +110,7 @@
 					propOpcions="moltBe_moltMalament"
 					arrCamps="['cablejat', 'aspecte']"
 					:objRack="objRack"
+					help="rack aspecto cableado"
 				/>
 
 				<cmp_inputText
@@ -130,6 +131,7 @@
 					propOpcions="moltBe_moltMalament"
 					arrCamps="['cablejat', 'estatTerminacions']"
 					:objRack="objRack"
+					help="rack cableado terminaciones"
 				/>
 
 				<cmp_inputSiNo
@@ -164,6 +166,7 @@
 					propOpcions="moltBe_moltMalament"
 					arrCamps="['electricitat', 'estat']"
 					:objRack="objRack"
+					help="rack electricidad estado"
 				/>
 
 				<cmp_inputSiNo
@@ -172,6 +175,7 @@
 					etiqF="No"
 					arrCamps="['electricitat', 'regletaSuministramentNet']"
 					:objRack="objRack"
+					help="sai regleta"
 				/>
 
 				<cmp_inputSiNo
@@ -180,6 +184,7 @@
 					etiqF="No"
 					arrCamps="['electricitat', 'regletaSuministramentBrut']"
 					:objRack="objRack"
+					help="sai regleta"
 				/>
 
 				<cmp_inputText
@@ -198,6 +203,7 @@
 			etiqF="No"
 			arrCamps="['ventilacio']"
 			:objRack="objRack"
+			help="rack ventilacion"
 		/>
 
 		<cmp_inputSiNo

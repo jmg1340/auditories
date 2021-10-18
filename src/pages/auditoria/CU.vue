@@ -30,6 +30,7 @@
 							etiqueta="Sala reuniones ?"
 							arrCamps="['comunicacionsUnificades', 'salaReunions', 'existeix']"
 							arrCampsDos="['comunicacionsUnificades', 'salaReunions', 'observacions']"
+							help="cu salas reuniones"
 						/>
 
 						<cmp_inputText
@@ -56,6 +57,7 @@
 							arrEtiquetes="['SX10', 'SX80', 'Roomkit', 'DX80', 'WebCam', 'tablet', 'mando', 'TV', 'Proyector', 'PC', 'altavoz Jabra', 'displayPortHDMI', 'conversorVGA_HDMI', 'cableAudio', 'duplicadorHDMI']"
 							arrArrelCamps="['comunicacionsUnificades', 'salaReunions', 'dispositius']"
 							arrCampsFinals="['SX10', 'SX80', 'roomkit', 'DX80', 'camaraWeb', 'tablet', 'mando', 'TV', 'projector', 'PC', 'altaveu', 'displayPortHDMI', 'conversorVGA_HDMI', 'cableAudio', 'duplicadorHDMI']"
+							help="cu medios audiovisuales"
 						/>
 
 

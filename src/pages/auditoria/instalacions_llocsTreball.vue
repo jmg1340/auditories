@@ -7,7 +7,9 @@
 			<q-card class="col-sm-8 col q-pa-sm">
 				
 				<!-- <div class="col text-h5 text-white bg-red-10 q-pa-md q-mb-md"></div> -->
-				<cmp_Titol1 titol="Area de trabajo (Puestos de trabajo)" />
+				<cmp_Titol1 
+					titol="Area de trabajo (Puestos de trabajo)" 
+					help="area trabajo"/>
 
 				<q-btn
 					dense
@@ -23,7 +25,8 @@
 				<cmp_inputOpcionsUnicaResposta 
 					etiqueta="ESTADO CABLEADO:"
 					propOpcions="moltBe_moltMalament"
-					arrCamps="['instalacionsComunicacions', 'llocsDeTeball', 'estatCablejat']" 
+					arrCamps="['instalacionsComunicacions', 'llocsDeTeball', 'estatCablejat']"
+					help="area trabajo cableado"
 				/>
 
 				<!-- PUNTS DE XARXA -->
@@ -56,7 +59,8 @@
 						<cmp_inputSiNoObsrv 
 							etiqueta="SUFICIENTES TOMAS DATOS ?" 
 							arrCamps="['instalacionsComunicacions', 'llocsDeTeball', 'puntsXarxa', 'suficientsPunts', 'existeix']" 
-							arrCampsDos="['instalacionsComunicacions', 'llocsDeTeball', 'puntsXarxa', 'suficientsPunts', 'observacions']" 
+							arrCampsDos="['instalacionsComunicacions', 'llocsDeTeball', 'puntsXarxa', 'suficientsPunts', 'observacions']"
+							help="area trabajo suficientes tomas"
 						/>
 
 						<cmp_inputSiNoObsrv 
@@ -95,7 +99,8 @@
 						<cmp_inputSiNoObsrv 
 							etiqueta="SUFICIENTES ECHUFES ?" 
 							arrCamps="['instalacionsComunicacions', 'llocsDeTeball', 'electricitat', 'suficientsEndolls', 'existeix']" 
-							arrCampsDos="['instalacionsComunicacions', 'llocsDeTeball', 'electricitat', 'suficientsEndolls', 'observacions']" 
+							arrCampsDos="['instalacionsComunicacions', 'llocsDeTeball', 'electricitat', 'suficientsEndolls', 'observacions']"
+							help="area trabajo suficientes enchufes"
 						/>
 
 						<cmp_inputSiNoObsrv 
@@ -126,6 +131,9 @@
 
 			</q-card>
 		</div>
+
+
+
 
 
 		<q-dialog v-model="alerta">

@@ -1,12 +1,33 @@
 <template>
 
 	<div class="row items-center q-py-sm q-px-sm jmg_bordeInferior" :class="{'text-grey': desactivat}">
+		
+		<q-icon
+			v-if="help"
+			dense
+			name="info"
+			flat
+			rounded
+			@click="construirHelp(help)"
+			class="col-auto q-mr-xs"
+			color="blue-9"
+		/>
+		
 		<div class="col-4 q-pr-sm text-left text-caption">
-			{{ etiqueta}}
+			{{ etiqueta }}
 		</div>
-		<div class="col-8">
+		<div class="col-7">
 			<q-input v-model="campTemplate" dense bg-color="brown-2" color="red-10" autogrow filled class="text-caption " :disable="desactivat" />
 		</div>
+	
+	
+	
+		<q-dialog v-model="alertaHelp">
+			<cmp_frasesHelp  :arrFrases="arrFrases" />
+		</q-dialog>
+	
+	
+	
 	</div>
 
 
@@ -19,9 +40,13 @@
 </style>
 
 <script>
+import cmp_frasesHelp from "../components/frasesHelp"
+import {frasesHelp} from "../statics/js/_biblia.js"
+
 export default {
 	name: 'PageIndex',
-	props: ['etiqueta', 'arrCamps', 'objRack'],
+	props: ['etiqueta', 'arrCamps', 'objRack', 'help' ],
+	components: { cmp_frasesHelp },
 
 	created() {
 		const arrNoActivar = [
@@ -37,8 +62,18 @@ export default {
 	data () {
   	return {
 			desactivat: false,
-  		_arrCamps: null
+  		_arrCamps: null,
+			arrFrases: null,
+			alertaHelp: false	  	
   	}
+	},
+
+	methods: {
+		construirHelp: function (punt) {
+			this.arrFrases = frasesHelp( punt )
+			this.alertaHelp = true
+		}
+
 	},
 
 	computed: {

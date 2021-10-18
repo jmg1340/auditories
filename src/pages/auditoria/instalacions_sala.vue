@@ -27,6 +27,7 @@
 						etiqV="Sí"
 						etiqF="No"
 						arrCamps="['instalacionsComunicacions', 'sala', 'existeix']"
+						help="existe sala"
 					/>
 
 					<cmp_inputSiNo
@@ -106,6 +107,7 @@
 							etiqueta="ESTADO GENERAL INSTALACIÓN:"
 							propOpcions="moltBe_moltMalament"
 							arrCamps="['instalacionsComunicacions', 'sala', 'proveidorWAN', 'estatInstalacio']"
+							help="wan estado general"
 						/>
 
 						<cmp_inputSiNoObsrv
@@ -118,24 +120,28 @@
 							etiqueta="ID LINEA PRINCIPAL ?"
 							arrCamps="['instalacionsComunicacions', 'sala', 'proveidorWAN', 'idLinia1', 'existeix']"
 							arrCampsDos="['instalacionsComunicacions', 'sala', 'proveidorWAN', 'idLinia1', 'observacions']"
+							help="wan ID linea"
 						/>
 
 						<cmp_inputSiNoObsrv
 							etiqueta="ID LINEA BACKUP ?"
 							arrCamps="['instalacionsComunicacions', 'sala', 'proveidorWAN', 'idLinia2', 'existeix']"
 							arrCampsDos="['instalacionsComunicacions', 'sala', 'proveidorWAN', 'idLinia2', 'observacions']"
+							help="wan ID linea"
 						/>
 
 						<cmp_inputOpcionsUnicaResposta
 							etiqueta="ESTADO CONVERTIDOR MEDIOS PPAL:"
 							propOpcions="moltBe_moltMalament"
 							arrCamps="['instalacionsComunicacions', 'sala', 'proveidorWAN', 'estatConvertidorLinia1']"
+							help="wan estado convertidor medios"
 						/>
 
 						<cmp_inputOpcionsUnicaResposta
 							etiqueta="ESTADO CONVERTIDOR MEDIOS BACKUP:"
 							propOpcions="moltBe_moltMalament"
 							arrCamps="['instalacionsComunicacions', 'sala', 'proveidorWAN', 'estatConvertidorLinia2']"
+							help="wan estado convertidor medios"
 						/>
 
 					</q-card-section>
@@ -164,6 +170,7 @@
 							etiqueta="ESTADO SAI:"
 							propOpcions="moltBe_moltMalament"
 							arrCamps="['instalacionsComunicacions', 'sala', 'SAI', 'estatSAI']"
+							help="sai estado general"
 						/>
 
 						<q-separator />
@@ -210,6 +217,7 @@
 							arrEtiquetes="['Router', 'Switch1', 'Switch2', 'Switch3', 'Convertidor Medios 1', 'Convertidor Medios 2', 'Hilo Musical', 'Raspberry', 'Ampli Hilo M.', 'Otros']"
 							arrArrelCamps="['instalacionsComunicacions', 'sala', 'SAI', 'elementsRegletaNeta']"
 							arrCampsFinals="['router', 'switch1', 'switch2', 'switch3', 'convertidorLinia1', 'convertidorLinia2', 'raspberry', 'filMusical', 'ampliFilM', 'altres']"
+							help="sai regleta"
 						/>
 
 						<cmp_inputOpcionsMultipleResposta
@@ -217,6 +225,7 @@
 							arrEtiquetes="['Router', 'Switch1', 'Switch2', 'Switch3', 'Convertidor Medios 1', 'Convertidor Medios 2', 'Hilo Musical', 'Raspberry', 'Ampli Hilo M.', 'Otros']"
 							arrArrelCamps="['instalacionsComunicacions', 'sala', 'SAI', 'elementsRegletaBruta']"
 							arrCampsFinals="['router', 'switch1', 'switch2', 'switch3', 'convertidorLinia1', 'convertidorLinia2', 'raspberry', 'filMusical', 'ampliFilM', 'altres']"
+							help="sai regleta"
 						/>
 
 					</q-card-section>
@@ -269,6 +278,7 @@
 							etiqueta="ELEMENTOS DE BAJA INVENTARIO ?"
 							arrCamps="['instalacionsComunicacions', 'sala', 'elementsBaixaInventari', 'existeix']"
 							arrCampsDos="['instalacionsComunicacions', 'sala', 'elementsBaixaInventari', 'observacions']"
+							help="elementos baja inventario"
 						/>
 
 					</q-card-section>

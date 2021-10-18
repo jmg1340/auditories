@@ -24,6 +24,7 @@
               etiqV="Si"
               etiqF="No"
               arrCamps="['instalacionsComunicacions', 'LAN', 'SWidentificats', 'existeix']"
+							help="LAN switchs identificacion"
             />
 
             <cmp_inputText
@@ -123,7 +124,10 @@
         <!-- COBERTURA WIFI -->
 
         <q-card class="col-sm-6 col q-mb-md">
-          <cmp_Titol2 titol="Cobertura WIFI (mediciones)" />
+          <cmp_Titol2 
+						titol="Cobertura WIFI (mediciones)"
+						help="LAN cobertura wifi" />
+						
           <q-card-section>
             <cmp_inputText
               etiqueta="dB PROAS:"

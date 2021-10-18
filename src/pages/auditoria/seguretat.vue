@@ -28,18 +28,21 @@
 							etiqueta="DOCUMENTACIÓN SOBRE LAS MESAS ?"
 							arrCamps="['seguretatInformacio', 'taulesNetes', 'documentacioSobreTaules', 'existeix']"
 							arrCampsDos="['seguretatInformacio', 'taulesNetes', 'documentacioSobreTaules', 'observacions']"
+							help="seguridad - documentacion mesas"
 						/>
 
 						<cmp_inputSiNoObsrv
 							etiqueta="DOCUMENTACIÓN EN IMPRESORAS ?"
 							arrCamps="['seguretatInformacio', 'taulesNetes', 'documentacioImpresores', 'existeix']"
 							arrCampsDos="['seguretatInformacio', 'taulesNetes', 'documentacioImpresores', 'observacions']"
+							help="seguridad - documentacion impresoras"
 						/>
 
 						<cmp_inputSiNoObsrv
 							etiqueta="DOCUMENTACIÓN EN PAPELERAS ?"
 							arrCamps="['seguretatInformacio', 'taulesNetes', 'documentacioPapeleres', 'existeix']"
 							arrCampsDos="['seguretatInformacio', 'taulesNetes', 'documentacioPapeleres', 'observacions']"
+							help="seguridad - documentacion papeleras"
 						/>
 
 
@@ -70,6 +73,7 @@
 							etiqueta="DESTRUCTORAS DE PAPEL ?"
 							arrCamps="['seguretatInformacio', 'destruccioDocuments', 'destructoraPapers', 'existeix']"
 							arrCampsDos="['seguretatInformacio', 'destruccioDocuments', 'destructoraPapers', 'observacionsPapers']"
+							help="seguridad - destructoras de papel"
 						/>
 
 						<cmp_inputSiNoObsrv
@@ -87,6 +91,7 @@
 							etiqueta="CONTENEDOR SEGURO ?"
 							arrCamps="['seguretatInformacio', 'destruccioDocuments', 'contenidorSegur', 'existeix']"
 							arrCampsDos="['seguretatInformacio', 'destruccioDocuments', 'contenidorSegur', 'observacions']"
+							help="seguridad - contenedor seguro"
 						/>
 
 						<cmp_inputText
@@ -121,12 +126,14 @@
 							etiqueta="EXTERIOR ?"
 							arrCamps="['seguretatInformacio', 'OrientacioPantalles', 'exterior']"
 							arrCampsDos="['seguretatInformacio', 'OrientacioPantalles', 'observacionsExterior']"
+							help="orientacion exterior"
 						/>
 
 						<cmp_inputSiNoObsrv
 							etiqueta="ZONA PASO PACIENTES ?"
 							arrCamps="['seguretatInformacio', 'OrientacioPantalles', 'zonaPas']"
 							arrCampsDos="['seguretatInformacio', 'OrientacioPantalles', 'observacionsZonaPas']"
+							help="orientacion zona paso pacientes"
 						/>
 
 					</q-card-section>
@@ -186,24 +193,28 @@
 							etiqueta="MATERIAL BAJA INVENTARIO ?"
 							arrCamps="['seguretatInformacio', 'materialBaixaInventari', 'existeix']"
 							arrCampsDos="['seguretatInformacio', 'materialBaixaInventari', 'observacions']"
+							help="gestion activos - material baja inventario"
 						/>
 
 						<cmp_inputSiNoObsrv
 							etiqueta="EXISTENCIA DE SOPORTES FISICOS (BACKUP) ?"
 							arrCamps="['seguretatInformacio', 'suportsFisics', 'existeix']"
 							arrCampsDos="['seguretatInformacio', 'suportsFisics', 'observacions']"
+							help="gestion activos - soportes fisicos"
 						/>
 
 						<cmp_inputSiNoObsrv
 							etiqueta="CUSTODIA DOCUMENTACIÓN SENSIBLE ?"
 							arrCamps="['seguretatInformacio', 'documentacioSensible', 'existeix']"
 							arrCampsDos="['seguretatInformacio', 'documentacioSensible', 'observacions']"
+							help="gestion activos - documentacion sensible"
 						/>
 
 						<cmp_inputSiNoObsrv
 							etiqueta="EXPEDIENTES GRAVES ?"
 							arrCamps="['seguretatInformacio', 'expedientsGreus', 'existeix']"
 							arrCampsDos="['seguretatInformacio', 'expedientsGreus', 'observacions']"
+							help="gestion activos - expedientes graves"
 						/>
 
 					</q-card-section>
@@ -231,6 +242,7 @@
 							etiqueta="PERSONAL INTERNO - LLAVES ?"
 							arrCamps="['seguretatInformacio', 'accesAlCentre', 'personalIntern', 'usuarisAmbClaus', 'existeix']"
 							arrCampsDos="['seguretatInformacio', 'accesAlCentre', 'personalIntern', 'usuarisAmbClaus', 'observacions']"
+							help="seguridad - llaves personal interno"
 						/>
 
 						<cmp_inputOpcionsUnicaResposta
@@ -255,6 +267,7 @@
 							etiqueta="PERSONAL EXTERNO - LLAVES ?"
 							arrCamps="['seguretatInformacio', 'accesAlCentre', 'personalExtern', 'usuarisAmbClaus', 'existeix']"
 							arrCampsDos="['seguretatInformacio', 'accesAlCentre', 'personalExtern', 'usuarisAmbClaus', 'observacions']"
+							help="seguridad - llaves personal externo"
 						/>
 
 						<cmp_inputOpcionsUnicaResposta
@@ -337,6 +350,7 @@
 								<cmp_inputText
 									etiqueta="GEST.INT. TIEMPO RETENCIÓN IMAGENES:"
 									arrCamps="['seguretatInformacio', 'videovigilancia', 'gestioInterna', 'gravacioImatges', 'periodeConservacio']"
+									help="videovigilancia tiempo retencion"
 								/>
 
 
@@ -355,6 +369,7 @@
 									etiqueta="EVIDENCIA?"
 									arrCamps="['seguretatInformacio', 'videovigilancia', 'gestioExterna', 'evidencia']"
 									arrCampsDos="['seguretatInformacio', 'videovigilancia', 'gestioExterna', 'observacionsEvidencia']"
+									help="videovigilancia evidencia"
 								/>
 
 								<cmp_inputSiNoObsrv
@@ -402,6 +417,7 @@
 							etiqueta="CENTROS ALTERNATIVOS GADA?"
 							arrCamps="['seguretatInformacio', 'centresAlternatiusGADA', 'existeix']"
 							arrCampsDos="['seguretatInformacio', 'centresAlternatiusGADA', 'observacions']"
+							help="GADA"
 						/>
 
 						<cmp_inputSiNoObsrv
@@ -414,24 +430,28 @@
 							etiqueta="PROCEDIMIENTOS PAPEL?"
 							arrCamps="['seguretatInformacio', 'procedimentsPaper', 'existeix']"
 							arrCampsDos="['seguretatInformacio', 'procedimentsPaper', 'observacions']"
+							help="procedimientos papel"
 						/>
 
 						<cmp_inputSiNoObsrv
 							etiqueta="PENDRIVE EMERGENCIA - LOCALIZACIÓN CORRECTA?"
 							arrCamps="['seguretatInformacio', 'accesAlCentre', 'accesForaHorariHabitual', 'existeix']"
 							arrCampsDos="['seguretatInformacio', 'pendriveEmergencia', 'ubicacioCorrecte', 'observacions']"
+							help="localizacion pendrive emergencia"
 						/>
 
 						<cmp_inputSiNoObsrv
 							etiqueta="PENDRIVE EMERGENCIA - ULTIMA VERSIÓN?"
 							arrCamps="['seguretatInformacio', 'pendriveEmergencia', 'ultimaVersio', 'existeix']"
 							arrCampsDos="['seguretatInformacio', 'pendriveEmergencia', 'ultimaVersio', 'observacions']"
+							help="revision actualizacion pendrive emergencia"
 						/>
 
 						<cmp_inputSiNoObsrv
 							etiqueta="PENDRIVE EMERGENCIA - PROCED. ACTUALIZACIÓN?"
 							arrCamps="['seguretatInformacio', 'pendriveEmergencia', 'actualitzacio', 'feta']"
 							arrCampsDos="['seguretatInformacio', 'pendriveEmergencia', 'actualitzacio', 'observacions']"
+							help="procedimiento actualizacion pendrive emergencia"
 						/>
 
 					</q-card-section>
@@ -460,24 +480,28 @@
 							etiqueta="ACCESO SEGURO CUARTO COMUNICACIONES?"
 							arrCamps="['seguretatInformacio', 'accesSegurSalaComunicacions', 'existeix']"
 							arrCampsDos="['seguretatInformacio', 'accesSegurSalaComunicacions', 'observacions']"
+							help="acceso seguro cuarto"
 						/>
 
 						<cmp_inputSiNoObsrv
 							etiqueta="ACCESO SEGURO RACK?"
 							arrCamps="['seguretatInformacio', 'accesSegurRack', 'existeix']"
 							arrCampsDos="['seguretatInformacio', 'accesSegurRack', 'observacions']"
+							help="acceso seguro rack"
 						/>
 
 						<cmp_inputSiNoObsrv
 							etiqueta="SAI RACK?"
 							arrCamps="['seguretatInformacio', 'SAIRack', 'existeix']"
 							arrCampsDos="['seguretatInformacio', 'SAIRack', 'observacions']"
+							help="sai rack"
 						/>
 
 						<cmp_inputSiNoObsrv
 							etiqueta="TOMAS DE DATOS SALA DE ESPERA?"
 							arrCamps="['seguretatInformacio', 'puntsXarxaSalaEspera', 'existeix']"
 							arrCampsDos="['seguretatInformacio', 'puntsXarxaSalaEspera', 'observacions']"
+							help="tomas sala espera"
 						/>
 
 

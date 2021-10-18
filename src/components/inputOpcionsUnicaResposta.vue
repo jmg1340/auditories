@@ -1,14 +1,39 @@
 <template>
 
 	<div class="row items-center q-py-md q-px-sm jmg_bordeInferior" :class="{'text-grey': desactivat}">
+		
+		<q-icon
+			v-if="help"
+			dense
+			name="info"
+			flat
+			rounded
+			@click="construirHelp(help)"
+			class="col-auto q-mr-xs"
+			color="blue-9"
+		/>
+		
+		
+		
+		
 		<div class="col-4 q-pr-sm text-left" @dblclick="posarValorANull">
 			{{ etiqueta}}
 		</div>
-		<div class="col-8" >
+		<div class="col-7" >
 			<!-- <div class="col-8" > -->
 				<q-radio v-for="(opcio) in opcions" :key="opcio.valor" v-model="campTemplate" :val="opcio.valor" :label="opcio.etiq" :color="opcio.color" dense :disable="desactivat"  class="q-ml-sm" />
 			<!-- </div> -->
 		</div>
+
+
+
+
+		<q-dialog v-model="alertaHelp">
+			<cmp_frasesHelp  :arrFrases="arrFrases" />
+		</q-dialog>
+
+
+
 	</div>
 
 
@@ -20,10 +45,15 @@
 </style>
 
 <script>
+import cmp_frasesHelp from "../components/frasesHelp"
+import {frasesHelp} from "../statics/js/_biblia.js"
+
 export default {
 	name: 'PageIndex',
 
-	props: ['etiqueta', 'arrCamps', 'propOpcions', 'objRack'],
+	props: ['etiqueta', 'arrCamps', 'propOpcions', 'objRack', 'help'],
+	components: { cmp_frasesHelp },
+
 
 	created () {
 		this.arrOpcions = eval(this.strArrOpcions)
@@ -42,8 +72,10 @@ export default {
 	data () {
   	return {
   		_arrCamps: null,
+			arrFrases: null,
   		arrOpcions: null,
 			desactivat: false,
+			alertaHelp: false,
   		objOpcions: {
 				sino: [
 					{ etiq: "Si", valor: true,   color: "green-8"  },
@@ -92,8 +124,13 @@ export default {
 	methods : {
 		posarValorANull: function(){
 			this.$store.commit( 'mAuditoria/updateCamp', { arrProps: this.arrCamps, valor: null, objRack: this.objRack })
+		},
+
+		construirHelp: function (punt) {
+			this.arrFrases = frasesHelp( punt )
+			this.alertaHelp = true
 		}
-	},
+},
 
 	computed: {
 		opcions: function (){

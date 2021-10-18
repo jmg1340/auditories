@@ -6,6 +6,12 @@ export function frasesHelp ( punt ){
     /*       sala comunicacions       */
 
     {
+      punt:  "existe sala",
+      arrFrases: [
+        { frase: "Aportar: foto puerta sala; foto general sala; foto(s) del rack donde se aprecie su contenido; foto si hay algún aparato de refrigeración." },
+      ]
+    },
+    {
       punt:  "zona paso libre sala",
       arrFrases: [
         { frase: "Que no haya cajas ni materiales que obstaculicen la puerta de acceso ni el despalazamiento dentro de la sala" },
@@ -123,7 +129,7 @@ export function frasesHelp ( punt ){
       punt:  "area trabajo",
       arrFrases: [
         { frase: "Revisaremos principalmente los puestos de trabajo de PROAS." },
-        { frase: "Si el tiempo y circunstancias lo permiten revisaremos además los despachos Médicos, Enfermería, Administración, director/a y resto de puestos (por este orden). Yo revisaría los Proas, 1 medico, 1 enfermería y 1 de administración de forma aleatoria." },
+        { frase: "Si el tiempo y circunstancias lo permiten revisaremos además los despachos Médicos, Enfermería, Administración, director/a y resto de puestos (por este orden). Por ej. revisar los Proas, 1 medico, 1 enfermería y 1 de administración de forma aleatoria." },
       ]
     },
 
@@ -150,6 +156,13 @@ export function frasesHelp ( punt ){
       ]
     },
 
+    {
+      punt:  "area trabajo telemedicina",
+      arrFrases: [
+        { frase: "Aportar fotos, caso de que haya." },
+      ]
+    },
+
 
 
     /*       LAN       */
@@ -169,6 +182,217 @@ export function frasesHelp ( punt ){
     },
 
 
+  /*       COMUNICACIONES UNIFICADAS       */
+
+	{
+		punt:  "cu salas reuniones",
+		arrFrases: [
+			{ frase: "Indicar si hay mas de una en el campo observaciones. Aportar foto general de la sala" },
+		]
+	},
+	{
+		punt:  "cu medios audiovisuales",
+		arrFrases: [
+			{ frase: "Verificaremos que totdo el equipamiento de la sala de videoconferencia funcione correctamente (CPU, Proector, TV, SX, Teclado y ratón" },
+			{ frase: "Dejaremos impresas las indicacines para cambiar las opciones de audio cuando precisen reprducir adio dentro del la plataforma (por ejemplo, vídeos)" },
+			{ frase: "Dejaremos un impreso del manual de uso del sistema de videoconferencia." },
+			{ frase: "Segun Gestiones DTIC, todos los centros tienen tablet y algnos complementariamente un mando" },
+			{ frase: "Aportar foto de los dispositivos." },
+		]
+	},
+
+
+
+  /*       SEGURIDAD DE LA INFORMACION       */
+
+
+  /*       MESAS LIMPIAS       */
+
+	{
+		punt:  "seguridad - documentacion mesas",
+		arrFrases: [
+			{ frase: "Encima de la mesa de trabajo debe exiteir la documentación mínima e imrescindible para la activdad diaria (especialmente en aquellos puestos en los que se atiende a personas ajenas a la mútua). Es conveniente que la documentación esté classificada en carpetas que eviten, de forma accidental o intencionada, la visualización de ésta por parte de terceros." },
+			{ frase: "Echar un vistazo sobre 4 o 5 puestos. Que no tengan documentacion visible de otras personas / pacientes mientras atienden a otros. (ej: el administrativo tiene documentación de paciente anterior mientras atiende a uno nuevo" },
+		]
+	},
+	{
+		punt:  "seguridad - documentacion impresoras",
+		arrFrases: [
+			{ frase: "Revisar si existen documentos confidenciales abandonados en las impresoras." },
+		]
+	},
+	{
+		punt:  "seguridad - documentacion papeleras",
+		arrFrases: [
+			{ frase: "Revisar si existen documentos confidenciales en las papeleras." },
+		]
+	},
+
+
+
+
+
+  /*       DESTRUCCION DOCUMENTOS       */
+
+	{
+		punt:  "seguridad - destructoras de papel",
+		arrFrases: [
+			{ frase: "Mínimo tiene que haber una." },
+			{ frase: "La documentación debe ser destruida en el preciso momento que así se determine. De esta forma se evita la acumulación de documentación en lugares sin las adecuadas medidas de protección" },
+		]
+	},
+	{
+		punt:  "seguridad - contenedor seguro",
+		arrFrases: [
+			{ frase: "Antes de las destructoras de papel habían contenedores seguros (precintados)" },
+			{ frase: "Contendeores de cartón -> destruccion de papeles" },
+			{ frase: "David consultó a Edgard si se pueden tirar CDs a los contenedores de papel y, en principio, parece ser que sí" },
+		]
+	},
+
+
+  /*       SEGURIDAD GESTION ACTIVOS       */
+
+	{
+		punt:  "gestion activos - material baja inventario",
+		arrFrases: [
+			{ frase: "Revisar que no haya material que esté dado de baja en el inventario de Asepeyo. Caso de que sí, foto donde se vea número de serie." },
+		]
+	},
+	{
+		punt:  "gestion activos - soportes fisicos",
+		arrFrases: [
+			{ frase: "Revisar si existen CDs, DVDs, disquetes, cintas... con informacion de la mútua. Caso de que sí, foto." },
+		]
+	},
+	{
+		punt:  "gestion activos - expedientes graves",
+		arrFrases: [
+			{ frase: "Han de estar en un lugar con acceso restringido" },
+			{ frase: "En caso de su existencia, indicar la dependencia donde estan en el campo observaciones. Aportar foto dependencia y foto de la localización de los expedientes." },
+			{ frase: "En campo observaciones indicar si estan custodiados bajo llave" },
+		]
+	},
+	{
+		punt:  "gestion activos - documentacion sensible",
+		arrFrases: [
+			{ frase: "Historias clínicas: abrir armarios de despachos médicos por si se encuentra alguna" },
+			{ frase: "En caso de su existencia, indicar la dependencia donde estan en el campo observaciones. Aportar foto dependencia y foto de la localización de los expedientes." },
+			{ frase: "En campo observaciones indicar si estan custodiados bajo llave" },
+		]
+	},
+
+
+  /*       SEGURIDAD ORIENTACION PANTALLAS       */
+
+	{
+		punt:  "orientacion exterior",
+		arrFrases: [
+			{ frase: "Ver si desde el exterior se puede ver el contenido de alguna pantalla" },
+		]
+	},
+	{
+		punt:  "orientacion zona paso pacientes",
+		arrFrases: [
+			{ frase: "Pantallas internamente mal ubicadas que hacen posible la visualización, ni que sea por un momento, de la información." },
+		]
+	},
+
+
+
+
+  /*       SEGURIDAD ACCESO FISICO AL CENTRO       */
+
+	{
+		punt:  "seguridad - llaves personal interno",
+		arrFrases: [
+			{ frase: "informar el numero de usuarios que tienen" },
+		]
+	},
+	{
+		punt:  "seguridad - llaves personal externo",
+		arrFrases: [
+			{ frase: "El personal externo (servicio de limpieza) no debe tener llaves ni codigos de alarma (a medida que se vayan haciendo nuevos contratos con el servicio de limpieza, se iràn cambiando los horarios para que no tengan necesidad de llaves ni codigos." },
+		]
+	},
+
+
+  /*       SEGURIDAD VIDEOVIGILANCIA       */
+
+	{
+		punt:  "videovigilancia tiempo retencion",
+		arrFrases: [
+			{ frase: "Deberia ser màximo un mes de retencion de las imagenes" },
+		]
+	},
+	{
+		punt:  "videovigilancia evidencia",
+		arrFrases: [
+			{ frase: "Que haya algun docmento por parte de la empresa proveedora del sistema de vigilancia donde haya la evidencia / confirmación de que las imágenes se conservan por tiempo <= 1 mes" },
+		]
+	},
+
+  /*       SEGURIDAD DE LAS OPERACIONES       */
+
+	{
+		punt:  "GADA",
+		arrFrases: [
+			{ frase: "Verificar si en la aplicación GADA de la intranet están informados los centros alternativos en caso de cierre por no continuidad" },
+		]
+	},
+	{
+		punt:  "procedimientos papel",
+		arrFrases: [
+			{ frase: "Ver si hay impresos y accesibles los Procedimientos y protocolos del Plan de Continuidad de Negocio (PCN) - Manual M-1486.0" },
+		]
+	},
+	{
+		punt:  "localizacion pendrive emergencia",
+		arrFrases: [
+			{ frase: "La ubicación correcta es dentro de un sobre pegado a la puerta del rack en su parte interna." },
+		]
+	},
+	{
+		punt:  "revision actualizacion pendrive emergencia",
+		arrFrases: [
+			{ frase: "Pedro Martínez de Costaisa es quien lleva este tema" },
+		]
+	},
+	{
+		punt:  "procedimiento actualizacion pendrive emergencia",
+		arrFrases: [
+			{ frase: "Preguntar si se dispone del procedimiento de actualización y uso del pendrive de emergencias" },
+		]
+	},
+
+
+
+  /*       SEGURIDAD DE LAS COMUNICACIONES       */
+
+	{
+		punt:  "acceso seguro cuarto",
+		arrFrases: [
+			{ frase: "ver si el cuarto de comunicaciones está protegido con cerradura y si la puerta está cerrada. Aportar foto." },
+		]
+	},
+	{
+		punt:  "acceso seguro rack",
+		arrFrases: [
+			{ frase: "ver si el rack tiene la puerta cerrada o no y si está protegida con llave. Aportar foto." },
+		]
+	},
+	{
+		punt:  "sai rack",
+		arrFrases: [
+			{ frase: "Si dentro del rack hay un SAI y está operativo. Aportar foto." },
+		]
+	},
+	{
+		punt:  "tomas sala espera",
+		arrFrases: [
+			{ frase: "Si en la sala de espera de los pacientes hay tomas de red. Aportar foto caso de que sí." },
+		]
+	},
 
 
 	]

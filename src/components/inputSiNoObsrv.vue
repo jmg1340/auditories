@@ -56,6 +56,7 @@ export default {
   	return {
   		_arrCamps: null,
   		_arrCampsDos: null,
+			arrFrases: null,
 			alertaHelp: false
   	}
 	},

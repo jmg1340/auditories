@@ -2,6 +2,18 @@
 
 	<q-card-section
 		class="text-h6 bg-red-5 text-white q-mb-md" >
+			
+			<q-icon
+				v-if="help"
+				dense
+				name="info"
+				flat
+				rounded
+				@click="construirHelp(help)"
+				class="q-mr-xs"
+				color="blue-9"
+			/>
+			
 			{{ titol }}
 
 			<span v-if="titol=='RACKS'" class="text-right">
@@ -29,6 +41,13 @@
 
 			</span>
 
+
+
+			<q-dialog v-model="alertaHelp">
+				<cmp_frasesHelp  :arrFrases="arrFrases" />
+			</q-dialog>
+
+
 	</q-card-section>
 
 </template>
@@ -40,10 +59,15 @@
 </style>
 
 <script>
+import cmp_frasesHelp from "../components/frasesHelp"
+import {frasesHelp} from "../statics/js/_biblia.js"
+
 export default {
 	name: 'PageIndex',
 
-	props: ['titol'],
+	components: { cmp_frasesHelp },
+
+	props: ['titol', 'help'],
 
 	created () {
 	},
@@ -51,8 +75,8 @@ export default {
 
 	data () {
 	  	return {
-	  		//numRacks: 0
-	  	}
+				arrFrases: null,
+				alertaHelp: false	  	}
   	},
 
 	computed: {
@@ -77,8 +101,9 @@ export default {
 			}
 		},
 
-		frases: function() {
-
+		construirHelp: function (punt) {
+			this.arrFrases = frasesHelp( punt )
+			this.alertaHelp = true
 		}
 
 	},

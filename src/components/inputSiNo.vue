@@ -53,6 +53,7 @@ export default {
 	data () {
 	  	return {
 	  		_arrCamps: null,
+				arrFrases: null,
 				alertaHelp: false
 	  	}
   	},

@@ -128,7 +128,8 @@
 						<cmp_inputSiNoObsrv 
 							etiqueta="TELEMEDICINA ?" 
 							arrCamps="['instalacionsComunicacions', 'telemedicina', 'existeix']" 
-							arrCampsDos="['instalacionsComunicacions', 'telemedicina', 'observacions']" 
+							arrCampsDos="['instalacionsComunicacions', 'telemedicina', 'observacions']"
+							help="area trabajo telemedicina"
 						/>
 
 						<cmp_inputOpcionsMultipleResposta 
