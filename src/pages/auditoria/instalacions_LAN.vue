@@ -131,7 +131,7 @@
           <q-card-section>
             <cmp_inputText
               etiqueta="dB PROAS:"
-              arrCamps="['instalacionsComunicacions', 'LAN', 'coberturaWifi', 'dbPROAS']"
+              arrCamps="['instalacionsComunicacions', 'LAN', 'coberturaWifi', 'dbProas']"
             />
             <cmp_inputText
               etiqueta="dB Sala reuniones:"

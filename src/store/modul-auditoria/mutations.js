@@ -124,6 +124,7 @@ export function updateCamp ( state, payload ) {
 			eval("state.auditories[state.indexArrAuditories]['" + arr.join("']['") + "'] = " + payload.valor )
 		} else {
 			eval("state.auditories[state.indexArrAuditories]['" + arr.join("']['") + "'] = '" + payload.valor + "'")
+
 		}
 
 	}

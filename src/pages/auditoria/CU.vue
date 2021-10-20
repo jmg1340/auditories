@@ -29,7 +29,7 @@
 						<cmp_inputSiNoObsrv
 							etiqueta="Sala reuniones ?"
 							arrCamps="['comunicacionsUnificades', 'salaReunions', 'existeix']"
-							arrCampsDos="['comunicacionsUnificades', 'salaReunions', 'observacions']"
+							arrCampsDos="['comunicacionsUnificades', 'salaReunions', 'numero']"
 							help="cu salas reuniones"
 						/>
 
