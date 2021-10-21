@@ -111,7 +111,7 @@ export function updateCamp ( state, payload ) {
 	if (payload.objRack !== undefined) {
 		console.log("payload.objRack['" + arr.join("']['") + "'] = " + payload.valor )
 
-		if  ( typeof payload.valor === 'boolean') {
+		if  ( typeof payload.valor === 'boolean'|| payload.valor === null ) {
 			eval("payload.objRack['" + arr.join("']['") + "'] = " + payload.valor )
 		} else {
 			eval("payload.objRack['" + arr.join("']['") + "'] = '" + payload.valor + "'")
@@ -120,7 +120,7 @@ export function updateCamp ( state, payload ) {
 	} else {
 		console.log("state.auditories[state.indexArrAuditories]['" + arr.join("']['") + "'] = " + payload.valor)
 
-		if  ( typeof payload.valor === 'boolean') {
+		if  ( typeof payload.valor === 'boolean' || payload.valor === null ) {
 			eval("state.auditories[state.indexArrAuditories]['" + arr.join("']['") + "'] = " + payload.valor )
 		} else {
 			eval("state.auditories[state.indexArrAuditories]['" + arr.join("']['") + "'] = '" + payload.valor + "'")
