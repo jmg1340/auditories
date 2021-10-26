@@ -25,8 +25,8 @@
 			</q-card-section>
 
 			<q-card-section >
-				<div v-for="(obj2,index) in obj.frases" :key="'obj2-'+index" :class="{formatNorma: obj2.colorNorma}" class="q-pa-xs q-mx-md">
-					{{ obj2.frase }}
+				<div v-for="(obj2,index) in obj.frases" :key="'obj2-'+index" :class="{formatNorma: obj2.colorNorma}" class="q-pa-xs q-mx-md q-mb-xs" v-html="obj2.frase">
+					<!-- {{ obj2.frase }} -->
 					<q-separator spaced />
 				</div>
 			</q-card-section>

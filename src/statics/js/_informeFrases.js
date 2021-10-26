@@ -1,3 +1,17 @@
+
+/* Aquesta funcio preten de que si en una mateixa frase hi ha punts i aparts o nous paragrafs,
+   realment es mostrin per pantalla.
+	 Requisits:
+	 	1. que el string de la frase no vagi entre "" sino entre ``
+		2. que a frasesInforme.vue hi hagi la directiva v-html al div que mostra la frase
+*/
+const frasePuntsApart = frase => {
+	let string = ""
+	frase.split("\n").forEach( (paragraf) => string += paragraf + "<br />")
+	return string
+}
+
+
 export function frasesInforme (obj, apartat = null){
   var objAuditoria = obj
   var apartatInforme = apartat
@@ -723,6 +737,14 @@ export function frasesInforme (obj, apartat = null){
      /***************     telemedicina         ***************/
 
      {
+      apartatInforme: "instalaciones-telemedicina",
+      fraseGeneral : frasePuntsApart(`Xavi: Ayer JLP me llamó la atención por el mensaje que estamos dando sobre la revisión que hacemos del equipo de Telemedicina. Tenemos que poner un mensaje que no de a entender que como no lo utilizan, por las causas que sean, no lo revisamos.
+			En el informe debería poner algo así:
+        - Se revisan están todos los elementos y se comprueba que están correctamente conectados.
+        - Se revisa que todos los elementos funcionan.
+			`)
+    },
+		{
       apartatInforme: "instalaciones-telemedicina",
       fraseGeneral : "Se realiza con Costaisa la verificación del correcto funcionamiento del sistema de telemedicina. Las pruebas realizadas simulando una sesión de telemedicina son correctas."
     },

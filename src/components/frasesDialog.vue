@@ -7,8 +7,8 @@
 			</q-card-section>
 
 			<q-card-section  >
-				<div v-for="(obj, index) in arrFrases" :class="{formatNorma: obj.colorNorma}" :key="index" class="q-pa-sm q-mx-md q-mb-sm">
-					{{ obj.frase }}
+				<div v-for="(obj, index) in arrFrases" :class="{formatNorma: obj.colorNorma}" :key="index" class="q-pa-sm q-mx-md q-mb-sm" v-html="obj.frase">
+					<!-- {{ obj.frase }} -->
 				</div>
 			</q-card-section>
 
