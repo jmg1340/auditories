@@ -4,6 +4,16 @@
 
 		<q-card class="q-ma-md">
 			<q-card-section>
+				<div class="text-h6">PENDRIVE DE EMERGENCIA fuera:</div>
+					<ul>
+						<li>Hemos decidido dejar de actualizar los pendrives de emergencia en todos los centros. El coste que tiene es altísimo (en horas técnico) y el beneficio es muy poco. Se ha hecho balance de los últimos años y las veces en las que ha tenido utilidad se pueden contar con los dedos de una mano. Queda claro que necesitamos un sistema alternativo de backup.</li>
+						<li>Teniendo esto en cuenta, os ruego quitéis este punto del acta y no volváis a abrir un ticket por este motivo.</li>
+					</ul>
+			</q-card-section>
+		</q-card>
+
+		<q-card class="q-ma-md">
+			<q-card-section>
 				<div class="text-h6">Con relación a las verificaciones (y correspondientes no conformidades si las hay) de los códigos de alarma genéricos:</div>
 					<ul>
 						<li>indicar que éstas deben hacer referencia única y exclusivamente al personal EXTERNO (M-1450). Por el momento este control no debe ser enfocado ni tratado desde la perspectiva de los usuarios internos (pendiente de desarrollo).</li>

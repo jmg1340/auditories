@@ -1,6 +1,6 @@
 <template>
   <q-layout view="lHh Lpr lff">
-    <q-header elevated class="bg-light-blue-10">
+    <q-header elevated class="bg-cyan-10 shadow-5">
       <q-toolbar>
 
         <q-btn
@@ -34,17 +34,20 @@
       <q-tabs
       dense 
       align="left"
-      class="bg-blue-grey-10 text-grey-3 shadow-2"
-      indicator-color="amber-2"
-      active-color="amber-2"      >
-        <q-route-tab to="/auditoria/informacio" label="Info" />
-        <q-route-tab to="/auditoria/instalacions1" label="Instal. 1" />
-        <q-route-tab to="/auditoria/instalacions2" label="Instal. 2" />
-        <q-route-tab to="/auditoria/cu" label="CU" />
-        <q-route-tab to="/auditoria/seguretat" label="Seguridad" />
-        <q-route-tab to="/auditoria/formacio" label="Formación" />
-        <q-route-tab to="/auditoria/valoracions" label="Valoraciones" />
-        <q-route-tab to="/auditoria/accionsMillora" label="Acciones Mejora" />
+      class="bg-blue-grey-11 text-black shadow-2"
+      indicator-color="light-green-11"
+			narrow-indicator
+      active-color="light-green-11"
+			active-bg-color="green-10"
+			>
+        <q-route-tab class="clTabs" to="/auditoria/informacio" label="Info" />
+        <q-route-tab class="clTabs" to="/auditoria/instalacions1" label="Instal. 1" />
+        <q-route-tab class="clTabs" to="/auditoria/instalacions2" label="Instal. 2" />
+        <q-route-tab class="clTabs" to="/auditoria/cu" label="CU" />
+        <q-route-tab class="clTabs" to="/auditoria/seguretat" label="Seguridad" />
+        <q-route-tab class="clTabs" to="/auditoria/formacio" label="Formación" />
+        <q-route-tab class="clTabs" to="/auditoria/valoracions" label="Valoraciones" />
+        <q-route-tab class="clTabs" to="/auditoria/accionsMillora" label="Acciones Mejora" />
       </q-tabs>
 
 
@@ -205,5 +208,13 @@ export default {
 }
 </script>
 
-<style>
+<style scope>
+	.clTabs {
+		border: 1px solid grey;
+		border-radius: 5px;
+
+background: rgb(172, 245, 191);
+/* background: radial-gradient(circle, rgba(2,62,18,1) 0%, rgba(0,0,0,1) 100%, rgba(18,3,107,1) 100%); */
+
+}
 </style>

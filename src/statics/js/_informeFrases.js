@@ -402,30 +402,22 @@ export function frasesInforme (obj, apartat = null){
       ]
     },
 
-    /***************     PENDRIVE i TELEMEDICINA       ***************/
 
-    /***************     Pendrive         ***************/
 
-    {
-      apartatInforme: "instalaciones-pendrive",
-      valorPropietat: objAuditoria.instalacionsComunicacions.pendriveBIOS.existeix,
-      arrFrases: [
-        {
-          valorActivacioFrase: true,
-          frase: "El centro dispone de un pendrive de emergencia ubicado en " + (objAuditoria.instalacionsComunicacions.pendriveBIOS.ubicacio || "") + ". Costaisa periódicamente se pone en contacto con el centro para la realizar la actualización de dicho pendrive.",
-        },
-        {
-          valorActivacioFrase: false,
-          frase: "El centro no dispone de un pendrive de emergencia. ",
-        },
-      ]
-    },
+		/***************       RACKs       ***************/
 
-    {
-      apartatInforme: "instalaciones-pendrive",
-      fraseGeneral : "En caso de fallo de la UCSE, el pendrive se ha de utilizar para poder iniciar los equipos de forma escalonada. Antes de la visita se confirma que está actualizado mediante ticket SS-     . El centro dispone de un manual sobre su utilización en una carpeta en el interior de rack."
-    },
-  
+		{
+			apartatInforme: "Rack",
+			fraseGeneral : `Se observa que la electronica de red se encuentra en buen estado pero con mucha acumulación de polvo / suciedad en las bandejas, equipos electrónicos (router, switch, conversores, etc...)
+			
+			Se observan X patch panels activos con tomas sueltas las cuales podrían unificarse.
+			
+			Durante la auditoría se dejan etiquetados los switchs i router con la información de Cisco Prime.
+			
+			El cableado del rack no esta debidamente peinado ni ordenado. Sería necesario un saneamiento dado que el estado actual dificulta operar con normalidad.`
+		},
+	
+
 
 
       
@@ -714,6 +706,31 @@ export function frasesInforme (obj, apartat = null){
       fraseGeneral : "El ordenador de control de climatización del centro asistencial está ubicado en el cuarto técnico del cofre. Está conectada al SW01-GE0/23 (puerto 23 del switch) a través del puerto DA.3 del patch panel de enlaces. IMPORTANTE -> Siempre debe estar conectada en ese switch y puerto, cambiarlo a otro haría que dejase de funcionar."
     },
 
+
+		    /***************     PENDRIVE i TELEMEDICINA       ***************/
+
+    /***************     Pendrive         ***************/
+
+    {
+      apartatInforme: "instalaciones-pendrive",
+      valorPropietat: objAuditoria.instalacionsComunicacions.pendriveBIOS.existeix,
+      arrFrases: [
+        {
+          valorActivacioFrase: true,
+          frase: "El centro dispone de un pendrive de emergencia ubicado en " + (objAuditoria.instalacionsComunicacions.pendriveBIOS.ubicacio || "") + ". Costaisa periódicamente se pone en contacto con el centro para la realizar la actualización de dicho pendrive.",
+        },
+        {
+          valorActivacioFrase: false,
+          frase: "El centro no dispone de un pendrive de emergencia. ",
+        },
+      ]
+    },
+
+    {
+      apartatInforme: "instalaciones-pendrive",
+      fraseGeneral : "En caso de fallo de la UCSE, el pendrive se ha de utilizar para poder iniciar los equipos de forma escalonada. Antes de la visita se confirma que está actualizado mediante ticket SS-     . El centro dispone de un manual sobre su utilización en una carpeta en el interior de rack."
+    },
+  
 
 
     /***************     Hilo musical         ***************/
