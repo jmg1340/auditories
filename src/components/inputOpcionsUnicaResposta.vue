@@ -1,6 +1,6 @@
 <template>
 
-	<div class="row items-center q-py-md q-px-sm jmg_bordeInferior" :class="{'text-grey': desactivat}">
+	<div class="row items-center q-py-md q-px-sm jmg_bordeInferior" :class="{'text-grey': deshabilitat}">
 		
 		<q-icon
 			v-if="help"
@@ -21,7 +21,7 @@
 		</div>
 		<div class="col-7" >
 			<!-- <div class="col-8" > -->
-				<q-radio v-for="(opcio) in opcions" :key="opcio.valor" v-model="campTemplate" :val="opcio.valor" :label="opcio.etiq" :color="opcio.color" dense :disable="desactivat"  class="q-ml-sm" />
+				<q-radio v-for="(opcio) in opcions" :key="opcio.valor" v-model="campTemplate" :val="opcio.valor" :label="opcio.etiq" :color="opcio.color" dense :disable="deshabilitat"  class="q-ml-sm" />
 			<!-- </div> -->
 		</div>
 
@@ -51,21 +51,11 @@ import {frasesHelp} from "../statics/js/_biblia.js"
 export default {
 	name: 'PageIndex',
 
-	props: ['etiqueta', 'arrCamps', 'propOpcions', 'objRack', 'help'],
+	props: ['etiqueta', 'arrCamps', 'propOpcions', 'objRack', 'help', 'deshabilitat'],
 	components: { cmp_frasesHelp },
 
 
 	created () {
-		this.arrOpcions = eval(this.strArrOpcions)
-		
-		const arrNoActivar = [
-			"['seguretatInformacio', 'accesAlCentre', 'personalIntern', 'codisAlarma', 'tipus']",
-		]
-
-		if ( arrNoActivar.includes( this.arrCamps )) {
-			this.desactivat = true
-		}
-
 	},
 
 

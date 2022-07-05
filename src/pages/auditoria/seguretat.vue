@@ -249,11 +249,13 @@
 							etiqueta="CODIGOS ALARMA PERS. INTERNO:"
 							propOpcions="codisAlarma"
 							arrCamps="['seguretatInformacio', 'accesAlCentre', 'personalIntern', 'codisAlarma', 'tipus']"
+							:deshabilitat="true"
 						/>
 
 						<cmp_inputText
 							etiqueta="OBSERVACIONES CODIGOS ALARMA PERS. INTERNO:"
 							arrCamps="['seguretatInformacio', 'accesAlCentre', 'personalIntern', 'codisAlarma', 'observacions']"
+							:deshabilitat="true"
 						/>
 <!--
 						<cmp_inputSiNoObsrv
@@ -435,9 +437,10 @@
 
 						<cmp_inputSiNoObsrv
 							etiqueta="PENDRIVE EMERGENCIA - LOCALIZACIÓN CORRECTA?"
-							arrCamps="['seguretatInformacio', 'accesAlCentre', 'accesForaHorariHabitual', 'existeix']"
+							arrCamps="['seguretatInformacio', 'pendriveEmergencia', 'ubicacioCorrecte', 'existeix']"
 							arrCampsDos="['seguretatInformacio', 'pendriveEmergencia', 'ubicacioCorrecte', 'observacions']"
 							help="localizacion pendrive emergencia"
+							:deshabilitat="true"
 						/>
 
 						<cmp_inputSiNoObsrv
@@ -445,6 +448,7 @@
 							arrCamps="['seguretatInformacio', 'pendriveEmergencia', 'ultimaVersio', 'existeix']"
 							arrCampsDos="['seguretatInformacio', 'pendriveEmergencia', 'ultimaVersio', 'observacions']"
 							help="revision actualizacion pendrive emergencia"
+							:deshabilitat="true"
 						/>
 
 						<cmp_inputSiNoObsrv
@@ -452,6 +456,7 @@
 							arrCamps="['seguretatInformacio', 'pendriveEmergencia', 'actualitzacio', 'feta']"
 							arrCampsDos="['seguretatInformacio', 'pendriveEmergencia', 'actualitzacio', 'observacions']"
 							help="procedimiento actualizacion pendrive emergencia"
+							:deshabilitat="true"
 						/>
 
 					</q-card-section>

@@ -1,6 +1,6 @@
 <template>
 
-	<div class="row items-center q-py-sm q-px-sm jmg_bordeInferior" :class="{'text-grey': desactivat}">
+	<div class="row items-center q-py-sm q-px-sm jmg_bordeInferior" :class="{'text-grey': deshabilitat}">
 		
 		<q-icon
 			v-if="help"
@@ -17,7 +17,7 @@
 			{{ etiqueta }}
 		</div>
 		<div class="col-7">
-			<q-input v-model="campTemplate" dense bg-color="brown-2" color="red-10" autogrow filled class="text-caption " :disable="desactivat" />
+			<q-input v-model="campTemplate" dense bg-color="brown-2" color="red-10" autogrow filled class="text-caption " :disable="deshabilitat" />
 		</div>
 	
 	
@@ -45,18 +45,10 @@ import {frasesHelp} from "../statics/js/_biblia.js"
 
 export default {
 	name: 'PageIndex',
-	props: ['etiqueta', 'arrCamps', 'objRack', 'help' ],
+	props: ['etiqueta', 'arrCamps', 'objRack', 'help', 'deshabilitat' ],
 	components: { cmp_frasesHelp },
 
 	created() {
-		const arrNoActivar = [
-			"['seguretatInformacio', 'accesAlCentre', 'personalIntern', 'codisAlarma', 'observacions']",
-		]
-
-		if ( arrNoActivar.includes( this.arrCamps )) {
-			this.desactivat = true
-		}
-
 	},
 
 	data () {

@@ -1,6 +1,6 @@
 <template>
 
-	<div class="row items-center q-px-sm q-py-sm jmg_bordeInferior">
+	<div class="row items-center q-px-sm q-py-sm jmg_bordeInferior" :class="{'text-grey': deshabilitat}">
 		<q-icon
 			v-if="help"
 			dense
@@ -15,11 +15,11 @@
 			{{ etiqueta}}
 		</div>
 		<div class="col-3" >
-			<q-radio v-model="campTemplate" val=true label="Sí" color="black" dense class="q-ml-sm" />
-			<q-radio v-model="campTemplate" val=false label="No" color="black" dense class="q-ml-sm" />
+			<q-radio v-model="campTemplate" val=true label="Sí" color="black" dense class="q-ml-sm"  :disable="deshabilitat"/>
+			<q-radio v-model="campTemplate" val=false label="No" color="black" dense class="q-ml-sm" :disable="deshabilitat"/>
 		</div>
 		<div class="col-4">
-			<q-input v-model="campTemplate2" dense bg-color="brown-2" color="red-10" autogrow filled />
+			<q-input v-model="campTemplate2" dense bg-color="brown-2" color="red-10" autogrow filled :disable="deshabilitat"/>
 		</div>
 
 
@@ -43,10 +43,11 @@ import {frasesHelp} from "../statics/js/_biblia.js"
 
 export default {
 	name: 'PageIndex',
-	props: ['etiqueta', 'arrCamps', 'arrCampsDos', 'objRack', 'help'],
+	props: ['etiqueta', 'arrCamps', 'arrCampsDos', 'objRack', 'help', 'deshabilitat'],
 	components: { cmp_frasesHelp },
 
 	created () {
+	
 	},
 
 

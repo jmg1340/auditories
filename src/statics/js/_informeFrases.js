@@ -757,8 +757,7 @@ export function frasesInforme (obj, apartat = null){
       apartatInforme: "instalaciones-telemedicina",
       fraseGeneral : frasePuntsApart(`Xavi: Ayer JLP me llamó la atención por el mensaje que estamos dando sobre la revisión que hacemos del equipo de Telemedicina. Tenemos que poner un mensaje que no de a entender que como no lo utilizan, por las causas que sean, no lo revisamos.
 			En el informe debería poner algo así:
-        - Se revisan están todos los elementos y se comprueba que están correctamente conectados.
-        - Se revisa que todos los elementos funcionan.
+        - "Se verifica que todos los componentes que forman parte de la equipación de telemedicina están presentes, correctamente conectados y operativos."
 			`)
     },
 		{

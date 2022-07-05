@@ -4,6 +4,27 @@
 
 		<q-card class="q-ma-md">
 			<q-card-section>
+				<div class="text-h6">TELEMEDICINA:</div>
+					<ul>
+						<li>
+							Esto ya no lo podemos poner en el apartado de telemedicina:<br/>
+							<span class="text-italic">
+								"Debido a la alerta sanitaria por COVID no es posible hacer pruebas de funcionamiento con COSTAISA.""
+							</span>
+						</li>
+						<li>
+							Texto alternativo:<br/>
+							<span class="text-bold">
+								"Se verifica que todos los componentes que forman parte de la equipación de telemedicina están presentes, correctamente conectados y operativos."
+							</span>
+						</li>
+
+					</ul>
+			</q-card-section>
+		</q-card>
+
+		<q-card class="q-ma-md">
+			<q-card-section>
 				<div class="text-h6">PENDRIVE DE EMERGENCIA fuera:</div>
 					<ul>
 						<li>Hemos decidido dejar de actualizar los pendrives de emergencia en todos los centros. El coste que tiene es altísimo (en horas técnico) y el beneficio es muy poco. Se ha hecho balance de los últimos años y las veces en las que ha tenido utilidad se pueden contar con los dedos de una mano. Queda claro que necesitamos un sistema alternativo de backup.</li>
