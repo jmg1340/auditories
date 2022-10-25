@@ -966,7 +966,7 @@ export function frasesInforme (obj, apartat = null){
 
     {
       apartatInforme: "seguridad-mesasLimpias",
-      fraseGeneral : "Normativa de seguridad ASEPEYO (norma 3.3.25): En el caso de las impresoras el usuario debe asegurarse de que no quedan documentos impresos en la bandeja de salida. Si las impresoras son compartidas con otros usuarios no autorizados para acceder a la información, los responsables de cada puesto deben retirar los documentos conforme vayan siendo impresos."
+      fraseGeneral : "Normativa de seguridad ASEPEYO (norma 3.3.24): En el caso de las impresoras el usuario debe asegurarse de que no quedan documentos impresos en la bandeja de salida. Si las impresoras son compartidas con otros usuarios no autorizados para acceder a la información, los responsables de cada puesto deben retirar los documentos conforme vayan siendo impresos."
     },
     {
       apartatInforme: "seguridad-mesasLimpias",
@@ -1055,7 +1055,7 @@ export function frasesInforme (obj, apartat = null){
 
     {
       apartatInforme: "seguridad-orientacionPantallas",
-      fraseGeneral : "Normativa de seguridad ASEPEYO (norma 3.3.22): La orientación de las pantallas, la ubicación de las impresoras y cualquier otro tipo de dispositivo conectado al puesto de trabajo debe estar físicamente situado en lugares que garanticen la confidencialidad de la información."
+      fraseGeneral : "Normativa de seguridad ASEPEYO (norma 3.3.21): La orientación de las pantallas, la ubicación de las impresoras y cualquier otro tipo de dispositivo conectado al puesto de trabajo debe estar físicamente situado en lugares que garanticen la confidencialidad de la información."
     },
     {
       apartatInforme: "seguridad-orientacionPantallas",
@@ -1207,6 +1207,30 @@ export function frasesInforme (obj, apartat = null){
 
     {
       apartatInforme: "seguridad-controlAcceso",
+      fraseGeneral : "Manual 1450: Con carácter general, el personal externo, con presencia física tanto permanente como puntual, desarrollará sus funciones en el horario de apertura de la dependencia. En cualquier caso siempre estará presente personal de Asepeyo."
+    },
+    {
+      apartatInforme: "seguridad-controlAcceso",
+      fraseGeneral : "Manual 1450: En los supuestos de accesos puntuales o periódicos (revisiones, averías, etc.), el personal de la dependencia será informado por el técnico de la Dirección competente (en general Dirección de Infraestructuras y Equipamientos y/o Dirección de Tecnologías de la Información y Comunicación) acerca de la actuación a realizar. Si el responsable de la dependencia no tuviera conocimiento previo, deberá verificar la visita con la Dirección responsable. En caso de fuerza mayor, dependiendo de la magnitud y repercusión de la avería, si el personal externo tuviera que permanecer en las instalaciones fuera del horario de apertura, el Director del Centro, o bien quien el mismo designe, deberá permanecer como responsable y representante de Asepeyo hasta la resolución del problema."
+    },
+    {
+      apartatInforme: "seguridad-controlAcceso",
+      fraseGeneral : "Manual 1450: Con carácter general, el personal externo no está habilitado para responsabilizarse de la apertura y/o el cierre de la dependencia. En este sentido no deberá poseer copia de las llaves de la dependencia ni tener conocimiento de los códigos del sistema de alarma."
+    },
+    {
+      apartatInforme: "seguridad-controlAcceso",
+      fraseGeneral : "Manual 1450: Los códigos del sistema de alarma de la dependencia deben ser nominativos e individuales (no compartidos). No se contempla el uso de códigos genéricos."
+    },
+    {
+      apartatInforme: "seguridad-controlAcceso",
+      fraseGeneral : "Manual 1450: El personal externo no tendrá acceso a las estancias que contengan archivos con documentación confidencial (archivo historias clínicas, expedientes graves, etc.). Estas estancias deberán ser abiertas por el propio personal de Asepeyo para que el personal externo pueda acceder según las necesidades (limpieza, revisiones, etc.) y periodicidades que se establezcan en cada caso. El personal de Asepeyo deberá cerrar las estancias al finalizar los trabajos. No se cederán llaves, códigos, tarjetas, etc. de estas estancias a personal externo."
+    },
+    {
+      apartatInforme: "seguridad-controlAcceso",
+      fraseGeneral : "Manual 1450: Excepcionalmente, en las dependencias con presencia permanente de personal externo de empresas mantenedoras de las instalaciones (Hospitales, centros singulares, etc.), este personal SI dispondrá de llaves para acceder a cualquier dependencia (cuartos técnicos, zonas de instalaciones determinadas para revisión y control de incidencias y averías, etc.)."
+    },
+    {
+      apartatInforme: "seguridad-controlAcceso",
       fraseGeneral : "Normativa de seguridad ASEPEYO (norma 3.1.12): El responsable de la dependencia designa, en función de las características de ésta, las personas autorizadas para efectuar la apertura y cierre de la dependencia."
     },
     {
@@ -1215,11 +1239,7 @@ export function frasesInforme (obj, apartat = null){
     },
     {
       apartatInforme: "seguridad-controlAcceso",
-      fraseGeneral : "Normativa de seguridad ASEPEYO (norma 3.1.15): El acceso del personal de servicios externos (mantenimiento instalaciones, etc.) debe estar notificado y autorizado previamente. Si el responsable de la dependencia no tuviera conocimiento previo deberá verificar la visita con la Dirección del responsable."
-    },
-    {
-      apartatInforme: "seguridad-controlAcceso",
-      fraseGeneral : "Seguirdad de la información (norma 3.1.16): El control y supervisión del personal de servicios externo es competencia del responsable de la dependencia."
+      fraseGeneral : "Seguridad de la información (norma 3.1.16): El control y supervisión del personal de servicios externo es competencia del responsable de la dependencia."
     },
     {
       apartatInforme: "seguridad-controlAcceso",
@@ -1281,7 +1301,7 @@ export function frasesInforme (obj, apartat = null){
 
     {
       apartatInforme: "seguridad-controlAcceso",
-      fraseGeneral : "Normativa de seguridad ASEPEYO (norma 3.1.14): El acceso a las dependencias de ASEPEYO furea del horario habitual de atención está prohibido salvo autorización expresa del responsable de la dependencia. Existen controles de acceso a los sistemas de información en horarios fuera de oficina."
+      fraseGeneral : "Normativa de seguridad ASEPEYO (norma 3.1.14): El acceso a las dependencias de ASEPEYO fuera del horario habitual de atención está prohibido salvo autorización expresa del responsable de la dependencia. Existen controles de acceso a los sistemas de información en horarios fuera de oficina."
     },
     {
       apartatInforme: "seguridad-controlAcceso",
@@ -1306,11 +1326,27 @@ export function frasesInforme (obj, apartat = null){
 
     {
       apartatInforme: "seguridad-seguridadFisicaEntorno",
-      fraseGeneral : "Normativa de seguridad ASEPEYO (norma 3.1.7): En el supuesto de existencia de CCTV se cumple debidamente con lo establecido en la instrucción 01/2006 de la AEPD."
+      fraseGeneral : "Normativa de seguridad ASEPEYO (norma 3.1): OBJETIVO: Impedir o minimizar los accesos físicos no autorizados, daños e interferencias a los centros de tratamiento, recursos e información de la empresa."
     },
     {
       apartatInforme: "seguridad-seguridadFisicaEntorno",
-      fraseGeneral : "Normativa de seguridad ASEPEYO (norma 3.1.3): Los códigos de alarmas deben modificarse siempre que haya cambios (desvinculaciones, cambios de centro, etc.) en los usuarios, tanto internos como externos, que tuvieran conocimiento de los mismos"
+      fraseGeneral : "Normativa de seguridad ASEPEYO (norma 3.1.6): Los distintos centros disponen de un área de admisión donde se efectúa el correspondiente control de acceso físico a las instalaciones. El control de acceso puede llevarse a cabo por medios propios y/o externos."
+    },
+    {
+      apartatInforme: "seguridad-seguridadFisicaEntorno",
+      fraseGeneral : "Normativa de seguridad ASEPEYO (norma 3.1.7): Además de la presencia de personal de control de acceso, en determinados centros de tratamiento se dispone de medidas adicionales de seguridad como CCTV (Circuito Cerrado de Televisión) o sistema de reconocimiento de matrículas."
+    },
+    {
+      apartatInforme: "seguridad-seguridadFisicaEntorno",
+      fraseGeneral : "Normativa de seguridad ASEPEYO (norma 3.1.8): En el supuesto de existencia de CCTV se cumple debidamente con lo establecido en la instrucción 01/2006 de la AEPD."
+    },
+    {
+      apartatInforme: "seguridad-seguridadFisicaEntorno",
+      fraseGeneral : "Normativa de seguridad ASEPEYO (norma 3.1.3): Todo centro de tratamiento de datos dispone de los medios mínimos de seguridad (sistemas contraincendios, sensores, alarma, etc.), con sus pertinentes revisiones periódicas (internas y externas), que evitan o minimizan las consecuencias de incidencias fortuitas o intencionadas."
+    },
+    {
+      apartatInforme: "seguridad-seguridadFisicaEntorno",
+      fraseGeneral : "Normativa de seguridad ASEPEYO (norma 3.1.4): Los códigos de alarmas deben modificarse siempre que haya cambios (desvinculaciones, cambios de centro, etc.) en los usuarios, tanto internos como externos, que tuvieran conocimiento de los mismos"
     },
     {
       apartatInforme: "seguridad-seguridadFisicaEntorno",
@@ -1523,15 +1559,11 @@ export function frasesInforme (obj, apartat = null){
 
     {
       apartatInforme: "seguridad-seguridadComunicaciones",
-      fraseGeneral : "Normativa de la política de protección de datos y seguridad de la información (norma 5.9.4): Los armarios de comunicaciones (rack) están cerrados con llave. Éstas están debidamente custodiadas según criterio de la dirección de la dependencia. En los centros singulares, los armarios de comunicaciones son responsabilidad de los Administradores de Seguridad del Sistema."
+      fraseGeneral : "Normativa de la política de protección de datos y seguridad de la información (norma 3.1.21): Los armarios de comunicaciones (rack) están cerrados con llave. Éstas están debidamente custodiadas según criterio de la dirección de la dependencia. En los centros singulares, los armarios de comunicaciones son responsabilidad de los Administradores de Seguridad del Sistema."
     },
     {
       apartatInforme: "seguridad-seguridadComunicaciones",
-      fraseGeneral : "Normativa de seguridad ASEPEYO (norma 3.1.17): El acceso a las estancias consideradas de especial protección (racks, servidores, comunicaciones, etc.) está restringido"
-    },
-    {
-      apartatInforme: "seguridad-seguridadComunicaciones",
-      fraseGeneral : "Normativa de seguridad ASEPEYO (norma 3.1.20): Los armarios de comunicaciones (rack) están cerrados con llave. Éstas están debidamente custodiadas según criterio de la dirección de la dependencia. En los centros singulares, los armarios de comunicaciones son responsabilidad de los Administradores de Seguridad del Sistema."
+      fraseGeneral : "Normativa de seguridad ASEPEYO (norma 3.1.18): El acceso a las estancias consideradas de especial protección (racks, servidores, comunicaciones, etc.) está restringido. Adicionalmente, y en la medida de lo posible, estas estancias se encuentran cerradas con llave."
     },
     {
       apartatInforme: "seguridad-seguridadComunicaciones",
