@@ -19,16 +19,27 @@
 					color="grey-9"
 				/>
 
+				<q-icon
+					size="sm"
+					name="info"
+					flat
+					rounded
+					@click="construirHelp('existe sala')"
+					class="col-auto q-ml-md"
+					color="blue-9"
+				/>
 
 				<q-card-section>
 
-					<cmp_inputSiNo
+
+
+					<!-- <cmp_inputSiNo
 						etiqueta="Existe sala? "
 						etiqV="Sí"
 						etiqF="No"
 						arrCamps="['instalacionsComunicacions', 'sala', 'existeix']"
 						help="existe sala"
-					/>
+					/> -->
 
 					<cmp_inputSiNo
 						etiqueta="ES UN CENTRO SECUNDARIO? "
@@ -205,28 +216,151 @@
 							arrCamps="['instalacionsComunicacions', 'sala', 'SAI', 'instalacioSAI']"
 						/>
 
-						<cmp_inputOpcionsMultipleResposta
-							etiqueta="ELEMENTOS CONECTADOS SAI:"
-							arrEtiquetes="['Router', 'Switch1', 'Switch2', 'Switch3', 'Convertidor Medios 1', 'Convertidor Medios 2', 'Hilo Musical', 'Raspberry', 'Ampli Hilo M.', 'Otros']"
-							arrArrelCamps="['instalacionsComunicacions', 'sala', 'SAI', 'elementsConnectatsSAI']"
-							arrCampsFinals="['router', 'switch1', 'switch2', 'switch3', 'convertidorLinia1', 'convertidorLinia2', 'raspberry', 'filMusical', 'ampliFilM', 'altres']"
-						/>
+						<q-card class="q-mt-md bg-yellow-1">
+							<q-card-section>
+								ELEMENTS CONNECTATS AL SAI
+							</q-card-section>
+							<q-card-section>
+								<cmp_inputOpcionsMultipleResposta
+									etiqueta="SAI - Elementos:"
+									arrEtiquetes="['router', 'Router NFS', 'router4G', 'Switch1', 'Switch2', 'Switch3', 'Convertidor Medios 1', 'Convertidor Medios 2', 'Hilo Musical', 'Raspberry', 'Ampli Hilo M.']"
+									arrArrelCamps="['instalacionsComunicacions', 'sala', 'SAI', 'elementsConnectatsSAI']"
+									arrCampsFinals="['router', 'routerNFS', 'router4G', 'switch1', 'switch2', 'switch3', 'convertidorLinia1', 'convertidorLinia2', 'raspberry', 'filMusical', 'ampliFilM']"
+								/>
+							</q-card-section>
+						</q-card>
+						
+						<q-card class="q-mt-md bg-orange-2">
+							<q-card-section>
+								<q-icon
+									dense
+									name="info"
+									flat
+									rounded
+									@click="construirHelp('sai regleta')"
+									class="col-auto q-ml-md"
+									color="blue-9"
+								/>
 
-						<cmp_inputOpcionsMultipleResposta
-							etiqueta="ELEMENTOS CONECTADOS REGLETA LIMPIA:"
-							arrEtiquetes="['Router', 'Switch1', 'Switch2', 'Switch3', 'Convertidor Medios 1', 'Convertidor Medios 2', 'Hilo Musical', 'Raspberry', 'Ampli Hilo M.', 'Otros']"
-							arrArrelCamps="['instalacionsComunicacions', 'sala', 'SAI', 'elementsRegletaNeta']"
-							arrCampsFinals="['router', 'switch1', 'switch2', 'switch3', 'convertidorLinia1', 'convertidorLinia2', 'raspberry', 'filMusical', 'ampliFilM', 'altres']"
-							help="sai regleta"
-						/>
+								ELEMENTS CONNECTATS A REGLETA NETA
+							</q-card-section>
+							<q-card-section>
+								<cmp_inputOpcionsMultipleResposta
+									etiqueta="NETA - Elementos:"
+									arrEtiquetes="['router', 'Router NFS', 'router4G', 'Switch1', 'Switch2', 'Switch3', 'Convertidor Medios 1', 'Convertidor Medios 2', 'Hilo Musical', 'Raspberry', 'Ampli Hilo M.']"
+									arrArrelCamps="['instalacionsComunicacions', 'sala', 'SAI', 'elementsRegletaNeta']"
+									arrCampsFinals="['router', 'routerNFS', 'router4G', 'switch1', 'switch2', 'switch3', 'convertidorLinia1', 'convertidorLinia2', 'raspberry', 'filMusical', 'ampliFilM']"
+								/>
+							</q-card-section>
+						</q-card>
+						
+						<q-card class="q-mt-md bg-brown-1">
+							<q-card-section>
+								<q-icon
+									dense
+									name="info"
+									flat
+									rounded
+									@click="construirHelp('sai regleta')"
+									class="col-auto q-ml-md"
+									color="blue-9"
+								/>
 
-						<cmp_inputOpcionsMultipleResposta
-							etiqueta="ELEMENTOS CONECTADOS REGLETA SUCIA:"
-							arrEtiquetes="['Router', 'Switch1', 'Switch2', 'Switch3', 'Convertidor Medios 1', 'Convertidor Medios 2', 'Hilo Musical', 'Raspberry', 'Ampli Hilo M.', 'Otros']"
-							arrArrelCamps="['instalacionsComunicacions', 'sala', 'SAI', 'elementsRegletaBruta']"
-							arrCampsFinals="['router', 'switch1', 'switch2', 'switch3', 'convertidorLinia1', 'convertidorLinia2', 'raspberry', 'filMusical', 'ampliFilM', 'altres']"
-							help="sai regleta"
-						/>
+								ELEMENTS CONNECTATS A REGLETA BRUTA
+							</q-card-section>
+							<q-card-section>
+								<cmp_inputOpcionsMultipleResposta
+									etiqueta="BRUTA - Elementos:"
+									arrEtiquetes="['router', 'Router NFS', 'router4G', 'Switch1', 'Switch2', 'Switch3', 'Convertidor Medios 1', 'Convertidor Medios 2', 'Hilo Musical', 'Raspberry', 'Ampli Hilo M.']"
+									arrArrelCamps="['instalacionsComunicacions', 'sala', 'SAI', 'elementsRegletaBruta']"
+									arrCampsFinals="['router', 'routerNFS', 'router4G', 'switch1', 'switch2', 'switch3', 'convertidorLinia1', 'convertidorLinia2', 'raspberry', 'filMusical', 'ampliFilM']"
+								/>
+							</q-card-section>
+						</q-card>
+						
+						<q-card class="q-mt-md bg-brown-1">
+							<q-card-section>
+								ELEMENTS SENSE VERIFICAR
+							</q-card-section>
+							<q-card-section>
+								<cmp_inputOpcionsMultipleResposta
+									etiqueta="SENSE V. - Elementos:"
+									arrEtiquetes="['router', 'Router NFS', 'router4G', 'Switch1', 'Switch2', 'Switch3', 'Convertidor Medios 1', 'Convertidor Medios 2', 'Hilo Musical', 'Raspberry', 'Ampli Hilo M.']"
+									arrArrelCamps="['instalacionsComunicacions', 'sala', 'SAI', 'elementsSenseVerificar']"
+									arrCampsFinals="['router', 'routerNFS', 'router4G', 'switch1', 'switch2', 'switch3', 'convertidorLinia1', 'convertidorLinia2', 'raspberry', 'filMusical', 'ampliFilM']"
+								/>
+							</q-card-section>
+						</q-card>
+						
+						<q-card class="q-mt-md bg-brown-1">
+							<q-card-section>
+								ALTRES ELEMENTS
+							</q-card-section>
+							<q-card-section>
+								<cmp_inputText etiqueta="Elemento1:" arrCamps="['instalacionsComunicacions', 'sala', 'SAI', 'altresElements', 'element1', 'nom']" />
+
+								<cmp_inputOpcionsMultipleResposta
+									etiqueta="Conexiones:"
+									arrEtiquetes="['SAI', 'R. Limpia', 'R. Sucia', 'Sin verificar']"
+									arrArrelCamps="['instalacionsComunicacions', 'sala', 'SAI', 'altresElements', 'element1', 'connexio']"
+									arrCampsFinals="['SAI', 'RNeta', 'RBruta', 'SenseVerificar']"
+								/>
+							</q-card-section>
+							<q-card-section>
+								<cmp_inputText etiqueta="Elemento2:" arrCamps="['instalacionsComunicacions', 'sala', 'SAI', 'altresElements', 'element2', 'nom']" />
+
+								<cmp_inputOpcionsMultipleResposta
+									etiqueta="Conexiones:"
+									arrEtiquetes="['SAI', 'R. Limpia', 'R. Sucia', 'Sin verificar']"
+									arrArrelCamps="['instalacionsComunicacions', 'sala', 'SAI', 'altresElements', 'element2', 'connexio']"
+									arrCampsFinals="['SAI', 'RNeta', 'RBruta', 'SenseVerificar']"
+								/>
+							</q-card-section>
+							<q-card-section>
+								<cmp_inputText etiqueta="Elemento3:" arrCamps="['instalacionsComunicacions', 'sala', 'SAI', 'altresElements', 'element3', 'nom']" />
+
+								<cmp_inputOpcionsMultipleResposta
+									etiqueta="Conexiones:"
+									arrEtiquetes="['SAI', 'R. Limpia', 'R. Sucia', 'Sin verificar']"
+									arrArrelCamps="['instalacionsComunicacions', 'sala', 'SAI', 'altresElements', 'element3', 'connexio']"
+									arrCampsFinals="['SAI', 'RNeta', 'RBruta', 'SenseVerificar']"
+								/>
+							</q-card-section>
+							<q-card-section>
+								<cmp_inputText etiqueta="Elemento4:" arrCamps="['instalacionsComunicacions', 'sala', 'SAI', 'altresElements', 'element4', 'nom']" />
+
+								<cmp_inputOpcionsMultipleResposta
+									etiqueta="Conexiones:"
+									arrEtiquetes="['SAI', 'R. Limpia', 'R. Sucia', 'Sin verificar']"
+									arrArrelCamps="['instalacionsComunicacions', 'sala', 'SAI', 'altresElements', 'element4', 'connexio']"
+									arrCampsFinals="['SAI', 'RNeta', 'RBruta', 'SenseVerificar']"
+								/>
+							</q-card-section>
+							<q-card-section>
+								<cmp_inputText etiqueta="Elemento5:" arrCamps="['instalacionsComunicacions', 'sala', 'SAI', 'altresElements', 'element5', 'nom']" />
+
+								<cmp_inputOpcionsMultipleResposta
+									etiqueta="Conexiones:"
+									arrEtiquetes="['SAI', 'R. Limpia', 'R. Sucia', 'Sin verificar']"
+									arrArrelCamps="['instalacionsComunicacions', 'sala', 'SAI', 'altresElements', 'element5', 'connexio']"
+									arrCampsFinals="['SAI', 'RNeta', 'RBruta', 'SenseVerificar']"
+								/>
+							</q-card-section>
+							<q-card-section>
+								<cmp_inputText etiqueta="Elemento6:" arrCamps="['instalacionsComunicacions', 'sala', 'SAI', 'altresElements', 'element6', 'nom']" />
+
+								<cmp_inputOpcionsMultipleResposta
+									etiqueta="Conexiones:"
+									arrEtiquetes="['SAI', 'R. Limpia', 'R. Sucia', 'Sin verificar']"
+									arrArrelCamps="['instalacionsComunicacions', 'sala', 'SAI', 'altresElements', 'element6', 'connexio']"
+									arrCampsFinals="['SAI', 'RNeta', 'RBruta', 'SenseVerificar']"
+								/>
+							</q-card-section>
+
+
+						</q-card>
+						
+
 
 					</q-card-section>
 				</q-card>

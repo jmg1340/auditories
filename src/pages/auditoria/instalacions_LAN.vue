@@ -54,29 +54,75 @@
               arrCamps="['instalacionsComunicacions', 'LAN', 'wifiAPs', 'quantitat']"
             />
 
-            <cmp_inputOpcionsMultipleResposta
-              etiqueta="UBICACION:"
-              arrEtiquetes="['Sala espera']"
-              arrArrelCamps="['instalacionsComunicacions', 'LAN', 'wifiAPs', 'ubicacio']"
-              arrCampsFinals="['salaEspera']"
-            />
-
-            <cmp_inputText
-              etiqueta="OTRAS UBICACIONES:"
-              arrCamps="['instalacionsComunicacions', 'LAN', 'wifiAPs', 'ubicacio', 'altres']"
-            />
+            
+						<q-card>
+							<q-card-section>
+								APs
+							</q-card-section>
+							<q-card-section>
+								<cmp_inputText
+									etiqueta="AP1 ubicación:"
+									arrCamps="['instalacionsComunicacions', 'LAN', 'wifiAPs', 'APs', 'AP1', 'ubicacio']"
+								/>
+								<cmp_inputText
+									etiqueta="AP1 observación:"
+									arrCamps="['instalacionsComunicacions', 'LAN', 'wifiAPs', 'APs', 'AP1', 'observacions']"
+								/>
+							</q-card-section>
+							<q-card-section>
+								<cmp_inputText
+									etiqueta="AP2 ubicación:"
+									arrCamps="['instalacionsComunicacions', 'LAN', 'wifiAPs', 'APs', 'AP2', 'ubicacio']"
+								/>
+								<cmp_inputText
+									etiqueta="AP2 observación:"
+									arrCamps="['instalacionsComunicacions', 'LAN', 'wifiAPs', 'APs', 'AP2', 'observacions']"
+								/>
+							</q-card-section>
+							<q-card-section>
+								<cmp_inputText
+									etiqueta="AP3 ubicación:"
+									arrCamps="['instalacionsComunicacions', 'LAN', 'wifiAPs', 'APs', 'AP3', 'ubicacio']"
+								/>
+								<cmp_inputText
+									etiqueta="AP3 observación:"
+									arrCamps="['instalacionsComunicacions', 'LAN', 'wifiAPs', 'APs', 'AP3', 'observacions']"
+								/>
+							</q-card-section>
+							<q-card-section>
+								<cmp_inputText
+									etiqueta="AP4 ubicación:"
+									arrCamps="['instalacionsComunicacions', 'LAN', 'wifiAPs', 'APs', 'AP4', 'ubicacio']"
+								/>
+								<cmp_inputText
+									etiqueta="AP4 observación:"
+									arrCamps="['instalacionsComunicacions', 'LAN', 'wifiAPs', 'APs', 'AP4', 'observacions']"
+								/>
+							</q-card-section>
+							<q-card-section>
+								<cmp_inputText
+									etiqueta="AP5 ubicación:"
+									arrCamps="['instalacionsComunicacions', 'LAN', 'wifiAPs', 'APs', 'AP5', 'ubicacio']"
+								/>
+								<cmp_inputText
+									etiqueta="AP5 observación:"
+									arrCamps="['instalacionsComunicacions', 'LAN', 'wifiAPs', 'APs', 'AP5', 'observacions']"
+								/>
+							</q-card-section>
+						</q-card>
+						
 
             <cmp_inputSiNoObsrv
-              etiqueta="AP VISIBLE ?"
+              etiqueta="APs VISIBLES ?"
               arrCamps="['instalacionsComunicacions', 'LAN', 'wifiAPs', 'APvisible', 'existeix']"
               arrCampsDos="['instalacionsComunicacions', 'LAN', 'wifiAPs', 'APvisible', 'observacions']"
             />
 
-            <cmp_inputSiNoObsrv
+            <!-- <cmp_inputSiNoObsrv
               etiqueta="COBERTURA PROAS ?"
               arrCamps="['instalacionsComunicacions', 'LAN', 'wifiAPs', 'coberturaPROAS', 'existeix']"
               arrCampsDos="['instalacionsComunicacions', 'LAN', 'wifiAPs', 'coberturaPROAS', 'observacions']"
-            />
+            /> -->
 
             <cmp_inputSiNoObsrv
               etiqueta="CARTELERIA WIFI ?"
@@ -90,6 +136,52 @@
             />
           </q-card-section>
         </q-card>
+
+				<!-- COBERTURA WIFI -->
+
+				<q-card class="col-sm-6 col q-mb-md">
+					<cmp_Titol2 
+						titol="Cobertura WIFI (mediciones)"
+						help="LAN cobertura wifi" />
+						
+					<q-card-section>
+						<cmp_inputText
+							etiqueta="dB PROAS:"
+							arrCamps="['instalacionsComunicacions', 'LAN', 'wifiAPs', 'coberturaWifi', 'dbProas']"
+						/>
+						<cmp_inputText
+							etiqueta="dB Sala reuniones:"
+							arrCamps="['instalacionsComunicacions', 'LAN', 'wifiAPs', 'coberturaWifi', 'dbSalaReunions']"
+						/>
+						<div class="row justify-center">
+							<cmp_inputText
+								etiqueta="Lugar 1:"
+								arrCamps="['instalacionsComunicacions', 'LAN', 'wifiAPs', 'coberturaWifi', 'altre1', 'lloc']"
+							/>
+							<cmp_inputText
+								etiqueta="dB Lugar 1:"
+								arrCamps="['instalacionsComunicacions', 'LAN', 'wifiAPs', 'coberturaWifi', 'altre1', 'dbAltre1']"
+							/>
+						</div>
+						<div class="row justify-center">
+							<cmp_inputText
+								etiqueta="Lugar 2:"
+								arrCamps="['instalacionsComunicacions', 'LAN', 'wifiAPs', 'coberturaWifi', 'altre2', 'lloc']"
+							/>
+							<cmp_inputText
+								etiqueta="dB Lugar 2:"
+								arrCamps="['instalacionsComunicacions', 'LAN', 'wifiAPs', 'coberturaWifi', 'altre2', 'dbAltre2']"
+							/>
+						</div>
+
+						<!-- <cmp_inputText
+							etiqueta="Observaciones Cobertura Wifi:"
+							arrCamps="['instalacionsComunicacions', 'LAN', 'wifiAPs', 'coberturaWifi', 'observacionsCoberturaWifi']"
+						/> -->
+
+					</q-card-section>
+				</q-card>
+
 
         <!-- IMPRESORES -->
 
@@ -121,55 +213,10 @@
           </q-card-section>
         </q-card>
 
-        <!-- COBERTURA WIFI -->
-
-        <q-card class="col-sm-6 col q-mb-md">
-          <cmp_Titol2 
-						titol="Cobertura WIFI (mediciones)"
-						help="LAN cobertura wifi" />
-						
-          <q-card-section>
-            <cmp_inputText
-              etiqueta="dB PROAS:"
-              arrCamps="['instalacionsComunicacions', 'LAN', 'coberturaWifi', 'dbProas']"
-            />
-            <cmp_inputText
-              etiqueta="dB Sala reuniones:"
-              arrCamps="['instalacionsComunicacions', 'LAN', 'coberturaWifi', 'dbSalaReunions']"
-            />
-						<div class="row justify-center">
-							<cmp_inputText
-								etiqueta="Lugar 1:"
-								arrCamps="['instalacionsComunicacions', 'LAN', 'coberturaWifi', 'altre1', 'lloc']"
-							/>
-							<cmp_inputText
-								etiqueta="dB Lugar 1:"
-								arrCamps="['instalacionsComunicacions', 'LAN', 'coberturaWifi', 'altre1', 'dbAltre1']"
-							/>
-						</div>
-						<div class="row justify-center">
-							<cmp_inputText
-								etiqueta="Lugar 2:"
-								arrCamps="['instalacionsComunicacions', 'LAN', 'coberturaWifi', 'altre2', 'lloc']"
-							/>
-							<cmp_inputText
-								etiqueta="dB Lugar 2:"
-								arrCamps="['instalacionsComunicacions', 'LAN', 'coberturaWifi', 'altre2', 'dbAltre2']"
-							/>
-						</div>
-
-            <cmp_inputText
-              etiqueta="Observaciones Cobertura Wifi:"
-              arrCamps="['instalacionsComunicacions', 'LAN', 'coberturaWifi', 'observacionsCoberturaWifi']"
-            />
-
-          </q-card-section>
-        </q-card>
-
-        <cmp_inputText
+        <!-- <cmp_inputText
           etiqueta="OBSERVACIONES LAN:"
           arrCamps="['instalacionsComunicacions', 'LAN', 'observacions']"
-        />
+        /> -->
 
         <!-- CLIMATIZACION -->
 
@@ -201,7 +248,32 @@
               arrCamps="['instalacionsComunicacions', 'equipamentConexions', 'altraConnexioGi']"
             />
           </q-card-section>
+					<q-card-section>
+            <cmp_inputText
+              etiqueta="Observacions:"
+              arrCamps="['instalacionsComunicacions', 'equipamentConexions', 'observacions']"
+            />
+					</q-card-section>
         </q-card>
+
+        <!-- HILO MUSICAL -->
+
+        <q-card class="col-sm-6 col q-mb-md">
+          <cmp_Titol2 titol="HILO MUSICAL" />
+          <q-card-section>
+
+            <cmp_inputSiNoObsrv
+              etiqueta="Hilo musical:"
+              arrCamps="['instalacionsComunicacions', 'filMusical', 'existeix']"
+              arrCampsDos="['instalacionsComunicacions', 'filMusical', 'observacions']"
+            />
+
+          </q-card-section>
+        </q-card>
+
+
+
+
       </q-card>
     </div>
 

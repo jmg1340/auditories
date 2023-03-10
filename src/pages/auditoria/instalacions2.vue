@@ -4,8 +4,10 @@
 
 		<!-- <cmp_informacioPrevia />
 		<cmp_instalacionsSala /> -->
+
+
 		<cmp_instalacionsLlocsTreball />
-		<cmp_instalacionsLAN />
+		<cmp_instalacionsLAN /> 
 		<cmp_instalacionsPendrivesTelemedicina />
 
 	</div>

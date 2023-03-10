@@ -77,6 +77,7 @@ export default {
 		campTemplate: {
 			get() {
 				//debugger
+				// console.log(this.arrCamps)
 				this._arrCamps = eval(this.arrCamps)   // transforma string a array
 				// console.log("this.objRack: " + this.objRack)
 				if (this.objRack !== undefined ){

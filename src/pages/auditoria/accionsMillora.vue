@@ -86,8 +86,13 @@
           />
 
           <cmp_inputCheckBox
-            etiqueta="Enviar webcam sala de reuniones:"
-            arrCamps="['accionsMillora', 'observacions', 'enviarWebcam']"
+            etiqueta="Enviar cascos reserva Evolve65:"
+            arrCamps="['accionsMillora', 'observacions', 'CU', 'enviarAuricularsReservaEvolve65']"
+          />
+
+          <cmp_inputCheckBox
+            etiqueta="Enviar cascos reserva Jabra930:"
+            arrCamps="['accionsMillora', 'observacions', 'CU', 'enviarAuricularsReservaJabra930']"
           />
 
           <cmp_inputCheckBox
@@ -97,32 +102,56 @@
 
           <cmp_inputCheckBox
             etiqueta="Enviar altavoz:"
-            arrCamps="['accionsMillora', 'observacions', 'CU', 'enviarAltaveu']"
+            arrCamps="['accionsMillora', 'observacions', 'CU', 'enviarAltaveuJabra']"
           />
+
+          <cmp_inputCheckBox
+            etiqueta="Solicitar destructora papel:"
+            arrCamps="['accionsMillora', 'observacions', 'Seguretat', 'solicitarDestructoraPaper']"
+          />
+
+          <cmp_inputCheckBox
+            etiqueta="Solicitar contenedor"
+            arrCamps="['accionsMillora', 'observacions', 'Seguretat', 'solicitarContenidor']"
+          />
+
+          <cmp_inputCheckBox
+            etiqueta="Visibilidad pantallas"
+            arrCamps="['accionsMillora', 'observacions', 'Seguretat', 'visibilitatPantalles']"
+          />
+
+
+
+
 
           <cmp_inputCheckBox
             etiqueta="Enviar lector CD/DVD:"
             arrCamps="['accionsMillora', 'observacions', 'enviarLectorCDDVD']"
           />
 
-          <cmp_inputCheckBox
+          <!-- <cmp_inputCheckBox
             etiqueta="Renove proyector sala reuniones:"
             arrCamps="['accionsMillora', 'observacions', 'renoveProjector']"
-          />
+          /> -->
 
-          <cmp_inputText etiqueta="Otros:" arrCamps="['accionsMillora', 'observacions', 'altres']" />
+          <!-- <cmp_inputText etiqueta="Otros:" arrCamps="['accionsMillora', 'observacions', 'altres']" /> -->
         </q-card-section>
       </q-card>
+
+
+
+
+
 
       <!-- NO CONFORMIDADES -->
 
       <q-card class="col-sm-6 col q-mb-md">
         <cmp_Titol2 titol="NO CONFORMIDADES" />
         <q-card-section class="column">
-          <cmp_inputCheckBox
+          <!-- <cmp_inputCheckBox
             etiqueta="Enviar pendrive emergencia:"
             arrCamps="['accionsMillora', 'NC', 'enviarPendriveEmergencia']"
-          />
+          /> -->
 
           <cmp_inputCheckBox
             etiqueta="Solicitar destructora papel:"
@@ -164,7 +193,7 @@
             arrCamps="['accionsMillora', 'NC', 'docsSensibles']"
           />
 
-          <cmp_inputText etiqueta="Otros:" arrCamps="['accionsMillora', 'NC', 'altres']" />
+          <!-- <cmp_inputText etiqueta="Otros:" arrCamps="['accionsMillora', 'NC', 'altres']" /> -->
         </q-card-section>
       </q-card>
     </div>

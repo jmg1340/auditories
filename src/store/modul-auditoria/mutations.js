@@ -49,7 +49,7 @@ export function mutNovaAuditoria ( state ) {
 	state.indexArrAuditories = state.auditories.length - 1
 
 	// canviem el titol de la app per a que aparegui el nom del centre
-	state.titolApp = "Auditoria CA: " + state.auditories[state.indexArrAuditories].nomCentre
+	state.titolApp = "Auditoria CA: " + state.auditories[state.indexArrAuditories].dadesCentre.nomCentre
 	console.log("nou titol: " + state.titolApp)
 
 	// edita el IdAuditoria amb un nou valor

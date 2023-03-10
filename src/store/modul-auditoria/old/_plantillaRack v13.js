@@ -20,7 +20,7 @@ export default {
     },
     estatTerminacions: null,  // valor 1 - 5
     duplicadorPorts: null,	// true / false,
-    cablejatPPObsolet: null,	// true / false,
+    cablejatObsolet: null,	// true / false,
   },
   electricitat: {
     estat: null,

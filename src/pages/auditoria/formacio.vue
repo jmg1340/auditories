@@ -22,14 +22,14 @@
 							etiqueta="FORMACION HECHA:"
 							etiqV="Sí"
 							etiqF="No"
-							arrCamps="['formacio', 'auriculars', 'formacioFeta']"
+							arrCamps="['formacio', 'auriculars']"
 						/>
 
 
-						<cmp_inputText
+						<!-- <cmp_inputText
 							etiqueta="OBSERVACIONES:"
 							arrCamps="['formacio', 'auriculars', 'observacions']"
-						/>
+						/> -->
 
 
 					</q-card-section>
@@ -54,21 +54,21 @@
 							etiqueta="FORMACION HECHA?"
 							etiqV="Sí"
 							etiqF="No"
-							arrCamps="['formacio', 'videoconferencia', 'formacioFeta']"
+							arrCamps="['formacio', 'videoconferencia']"
 						/>
 
-						<cmp_inputSiNo
+						<!-- <cmp_inputSiNo
 							etiqueta="INSTRUCCIONES ENTREGADAS?"
 							etiqV="Sí"
 							etiqF="No"
 							arrCamps="['formacio', 'videoconferencia', 'instruccionsEntregades']"
-						/>
+						/> -->
 
 
-						<cmp_inputText
+						<!-- <cmp_inputText
 							etiqueta="OBSERVACIONES:"
 							arrCamps="['formacio', 'videoconferencia', 'observacions']"
-						/>
+						/> -->
 
 
 					</q-card-section>
@@ -90,14 +90,14 @@
 							etiqueta="FORMACIÓN HECHA?"
 							etiqV="Sí"
 							etiqF="No"
-							arrCamps="['formacio', 'llicenciesM3', 'formacioFeta']"
+							arrCamps="['formacio', 'llicenciesM3']"
 						/>
 
 
-						<cmp_inputText
+						<!-- <cmp_inputText
 							etiqueta="OBSERVACIONES:"
 							arrCamps="['formacio', 'llicenciesM3', 'observacions']"
-						/>
+						/> -->
 
 
 					</q-card-section>
@@ -120,14 +120,14 @@
 							etiqueta="FORMACIÓN HECHA?"
 							etiqV="Sí"
 							etiqF="No"
-							arrCamps="['formacio', 'telefonSupervivencia', 'formacioFeta']"
+							arrCamps="['formacio', 'telefonSupervivencia']"
 						/>
 
 
-						<cmp_inputText
+						<!-- <cmp_inputText
 							etiqueta="OBSERVACIONES:"
 							arrCamps="['formacio', 'telefonSupervivencia', 'observacions']"
-						/>
+						/> -->
 
 
 					</q-card-section>

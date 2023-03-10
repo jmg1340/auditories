@@ -416,10 +416,16 @@
 					<q-card-section>
 
 						<cmp_inputSiNoObsrv
-							etiqueta="CENTROS ALTERNATIVOS GADA?"
-							arrCamps="['seguretatInformacio', 'centresAlternatiusGADA', 'existeix']"
-							arrCampsDos="['seguretatInformacio', 'centresAlternatiusGADA', 'observacions']"
-							help="GADA"
+							etiqueta="GADA. Plan Continuidad Negocio?"
+							arrCamps="['seguretatInformacio', 'GADAplanContinuidadNegocio', 'existeix']"
+							arrCampsDos="['seguretatInformacio', 'GADAplanContinuidadNegocio', 'observacions']"
+							help="GADA_PCN"
+						/>
+						<cmp_inputSiNoObsrv
+							etiqueta="GADA. Dependencias asociadas?"
+							arrCamps="['seguretatInformacio', 'GADAcentresAlternatius', 'existeix']"
+							arrCampsDos="['seguretatInformacio', 'GADAcentresAlternatius', 'observacions']"
+							help="GADA_CentrosAsociados"
 						/>
 
 						<cmp_inputSiNoObsrv
@@ -435,7 +441,7 @@
 							help="procedimientos papel"
 						/>
 
-						<cmp_inputSiNoObsrv
+						<!-- <cmp_inputSiNoObsrv
 							etiqueta="PENDRIVE EMERGENCIA - LOCALIZACIÓN CORRECTA?"
 							arrCamps="['seguretatInformacio', 'pendriveEmergencia', 'ubicacioCorrecte', 'existeix']"
 							arrCampsDos="['seguretatInformacio', 'pendriveEmergencia', 'ubicacioCorrecte', 'observacions']"
@@ -457,7 +463,7 @@
 							arrCampsDos="['seguretatInformacio', 'pendriveEmergencia', 'actualitzacio', 'observacions']"
 							help="procedimiento actualizacion pendrive emergencia"
 							:deshabilitat="true"
-						/>
+						/> -->
 
 					</q-card-section>
 				</q-card>
@@ -502,12 +508,12 @@
 							help="sai rack"
 						/>
 
-						<cmp_inputSiNoObsrv
+						<!-- <cmp_inputSiNoObsrv
 							etiqueta="TOMAS DE DATOS SALA DE ESPERA?"
 							arrCamps="['seguretatInformacio', 'puntsXarxaSalaEspera', 'existeix']"
 							arrCampsDos="['seguretatInformacio', 'puntsXarxaSalaEspera', 'observacions']"
 							help="tomas sala espera"
-						/>
+						/> -->
 
 
 					</q-card-section>
@@ -545,7 +551,7 @@ import cmp_frasesDialog from "../../components/frasesDialog"
 import {frasesInforme} from "../../statics/js/_informeFrases.js"
 
 export default {
-	name: 'PageInstalacions',
+	name: 'PageSeguretat',
 
 	components: {
 		cmp_Titol1,
@@ -579,9 +585,9 @@ export default {
 
 
   	computed: {
-		auditoriaActual: function() {
-			return this.$store.state.mAuditoria.auditories[this.$store.state.mAuditoria.indexArrAuditories]
-		},
+			auditoriaActual: function() {
+				return this.$store.state.mAuditoria.auditories[this.$store.state.mAuditoria.indexArrAuditories]
+			},
 
   	}
 }

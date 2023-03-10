@@ -105,7 +105,7 @@
           </q-item-section>
           <q-item-section>
             <q-item-label>CheckList PDF</q-item-label>
-            <q-item-label caption>Generar PDF (v.12) del checklist</q-item-label>
+            <q-item-label caption>Generar PDF (v.14) del checklist</q-item-label>
           </q-item-section>
         </q-item>
 
@@ -198,7 +198,7 @@ export default {
   computed: {
 
     titolApp: function() {
-      return "Auditoria " + this.$store.state.mAuditoria.auditories[this.$store.state.mAuditoria.indexArrAuditories].nomCentre.toUpperCase()
+      return "Auditoria " + this.$store.state.mAuditoria.auditories[this.$store.state.mAuditoria.indexArrAuditories].dadesCentre.nomCentre.toUpperCase()
     },
     objAuditoria: function (){
       return this.$store.state.mAuditoria.auditories[this.$store.state.mAuditoria.indexArrAuditories]

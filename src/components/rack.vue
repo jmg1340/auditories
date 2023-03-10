@@ -146,7 +146,7 @@
 					etiqueta="CABLEADO Y/O P.PANEL OBSOLETO ?"
 					etiqV="Si"
 					etiqF="No"
-					arrCamps="['cablejat', 'cablejatObsolet']"
+					arrCamps="['cablejat', 'cablejatPPObsolet']"
 					:objRack="objRack"
 				/>
 
@@ -278,7 +278,8 @@ export default {
 
 	data () {
 		return {
-			alertaHelp: false
+			alertaHelp: false,
+			arrFrases: []
 		}
 	},
 

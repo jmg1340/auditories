@@ -8,9 +8,9 @@
 			<q-card class="col-sm-10 col q-pa-sm">
 				
 				<!-- INFOMACIO PREVIA -->
-				<cmp_Titol1 titol="Informació centre" />
+				<!-- <cmp_Titol1 titol="Informació centre" /> -->
 				<q-card-section>
-
+<!--
 					<cmp_inputText etiqueta="ID CENTRO:" arrCamps="['instalacionsComunicacions', 'informacioPrevia', 'CA', 'codi']" />
 
 					<cmp_inputText etiqueta="ID SITE BT:" arrCamps="['instalacionsComunicacions', 'informacioPrevia', 'CA', 'idSiteBT']" />
@@ -30,15 +30,19 @@
 					<cmp_inputText etiqueta="COLAS IMPRESION MTF:" arrCamps="['instalacionsComunicacions', 'informacioPrevia', 'CA', 'CuesImpressioMTF']" />
 
 					<cmp_inputText etiqueta="COLAS IMPRESION:" arrCamps="['instalacionsComunicacions', 'informacioPrevia', 'CA', 'CuesImpressio']" />
-
+ -->
 					<cmp_inputOpcionsMultipleResposta 
 						etiqueta="TAREAS REQUERIDAS:"
 						arrEtiquetes="['RETIRAR MINIPACS DE RACK', 'REVISAR CASCOS JABRA', 'RETIRAR DEL RACK']" 
-						arrArrelCamps="['instalacionsComunicacions', 'informacioPrevia', 'TareasRequeridas']"
+						arrArrelCamps="['tareasRequeridas']"
 						arrCampsFinals="['RetirarMinipacsDelRack', 'RevisarCascosJabra', 'RetirarDelRack']" 
 					/>
 
-					<cmp_inputText etiqueta="TAREAS REQUERIDAS - OTRAS:" arrCamps="['instalacionsComunicacions', 'informacioPrevia', 'TareasRequeridas', 'Otras']" />
+					<cmp_inputText etiqueta="TAREAS REQUERIDAS - OTRAS:" arrCamps="['tareasRequeridas', 'Retirar1']" />
+					<cmp_inputText etiqueta="TAREAS REQUERIDAS - OTRAS:" arrCamps="['tareasRequeridas', 'Retirar2']" />
+					<cmp_inputText etiqueta="TAREAS REQUERIDAS - OTRAS:" arrCamps="['tareasRequeridas', 'Retirar3']" />
+					<cmp_inputText etiqueta="TAREAS REQUERIDAS - OTRAS:" arrCamps="['tareasRequeridas', 'Retirar4']" />
+					<cmp_inputText etiqueta="TAREAS REQUERIDAS - OTRAS:" arrCamps="['tareasRequeridas', 'Retirar5']" />
 
 				</q-card-section>
 
@@ -92,10 +96,10 @@ export default {
 
   	computed: {
 
-		idAuditoria: function() { 
-			// debugger;
-			return this.$store.state.mAuditoria.auditories[this.$store.state.mAuditoria.indexArrAuditories].idAuditoria 
-		},
+		// idAuditoria: function() { 
+		// 	// debugger;
+		// 	return this.$store.state.mAuditoria.auditories[this.$store.state.mAuditoria.indexArrAuditories].idAuditoria 
+		// },
 
   	}
 }

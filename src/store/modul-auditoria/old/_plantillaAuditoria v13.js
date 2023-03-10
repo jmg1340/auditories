@@ -1,37 +1,49 @@
 export default {
 
   // idAuditoria: null,
-  dadesCentre: {
-		data: null,
-		nomCentre: "",
-		sector: null,
-		codi: null,
-		domicili: null,
-		tecnic: null,
-		DC: null,
-		interlocutors: null
-	},
-	
-	tareasRequeridas:{
-		RetirarMinipacsDelRack: false,
-		RevisarCascosJabra: false,
-		RetirarDelRack: false,
-		Retirar1: null,
-		Retirar2: null,
-		Retirar3: null,
-		Retirar4: null,
-		Retirar5: null,
-	},
-	
-	
-	
+  data: null,
+  nomCentre: "",
+  tecnic: null,
+
+  sector: null,
+  domicili: null,
+  DC: null,
+  interlocutors: null,
+
+
+
   // INSTALACIONS I COMUNICACIONS
-	
+
   instalacionsComunicacions: {
-		
+
+    informacioPrevia: {
+
+      CA: {
+        codi: null,
+        idSiteBT: null,
+        totalUsuaris: 0,
+        Linia1: null,
+        Linia2: null,
+        CiscPrime: {
+          NumRouters: null,
+          NumSwitchs: null,
+          NumAPsWifi: null
+        },
+        CuesImpressioMTF: null,
+        CuesImpressio: null
+      },
+      TareasRequeridas:{
+        RetirarMinipacsDelRack: false,
+        RevisarCascosJabra: false,
+        RetirarDelRack: false,
+        Otras: null
+      }
+    },
+
+
 
     sala: {
-      
+      existeix: null,     // propietat NO Rafa. Aportada per JMG
       centreSecundari: {
         existeix: null,
         idCentrePrincipal: null
@@ -80,122 +92,44 @@ export default {
         },
         instalacioSAI: null,	// opcions: enrackat; a terra dins el rack; al terra junt al rack
         elementsConnectatsSAI: {
-          router: false,
-					routerNFS: false,
+          router: false,	// true / false
+          switchs: false,
 					switch1: false,
 					switch2: false,
-					switch3: false,
+					switch3: false,	// true / false
           convertidorLinia1: false,
           convertidorLinia2: false,
-					router4G: false,
-					filMusical: false,
-					ampliFilM: false,
 					raspberry: false,
-          altres1: null,
-          altres2: null,
-          altres3: null,
-          altres4: null,
-          altres5: null,
-          altres6: null
+					filMusical: false,	// true / false
+					ampliFilM: false,
+          altres: false
         },
         elementsRegletaNeta: {
-          router: false,
-          routerNFS: false,
+          router: false,	// true / false
+          switchs: false,
 					switch1: false,
 					switch2: false,
-					switch3: false,
+					switch3: false,	// true / false
           convertidorLinia1: false,
           convertidorLinia2: false,
-					router4G: false,
-					filMusical: false,
+					raspberry: false,
+					filMusical: false,	// true / false
 					ampliFilM: false,
-					raspberry: false
+          altres: false
         },
         elementsRegletaBruta: {
-          router: false,
-					routerNFS: false,
+          router: false,	// true / false
           switchs: false,
 					switch1: false,
 					switch2: false,
-					switch3: false,
+					switch3: false,	// true / false
           convertidorLinia1: false,
           convertidorLinia2: false,
-					router4G: false,
-					filMusical: false,
-					ampliFilM: false,
 					raspberry: false,
-        },
-        elementsSenseVerificar: {
-          router: false,
-					routerNFS: false,
-          switchs: false,
-					switch1: false,
-					switch2: false,
-					switch3: false,
-          convertidorLinia1: false,
-          convertidorLinia2: false,
-					router4G: false,
-					filMusical: false,
+					filMusical: false,	// true / false
 					ampliFilM: false,
-					raspberry: false
+          altres: false
         },
-
-				altresElements: {
-					element1: {
-						nom: null,
-						connexio: {
-							SAI: false,
-							RNeta: false,
-							RBruta: false,
-							SenseVerificar: false
-						}
-					},
-					element2: {
-						nom: null,
-						connexio: {
-							SAI: false,
-							RNeta: false,
-							RBruta: false,
-							SenseVerificar: false
-						}
-					},
-					element3: {
-						nom: null,
-						connexio: {
-							SAI: false,
-							RNeta: false,
-							RBruta: false,
-							SenseVerificar: false
-						}
-					},
-					element4: {
-						nom: null,
-						connexio: {
-							SAI: false,
-							RNeta: false,
-							RBruta: false,
-							SenseVerificar: false
-						}
-					},
-					element5: {
-						nom: null,
-						connexio: {
-							SAI: false,
-							RNeta: false,
-							RBruta: false,
-							SenseVerificar: false
-						}
-					},
-					element6: {
-						nom: null,
-						connexio: {
-							SAI: false,
-							RNeta: false,
-							RBruta: false,
-							SenseVerificar: false
-						}
-					},
-				}
       },
 
       aspecteSala: null,	// valor 1 - 5
@@ -277,84 +211,61 @@ export default {
       },
       wifiAPs: {
         quantitat: null,
-        APs:{
-					AP1:{
-						ubicacio: null,
-						observacions: null
-					},
-					AP2:{
-						ubicacio: null,
-						observacions: null
-					},
-					AP3:{
-						ubicacio: null,
-						observacions: null
-					},
-					AP4:{
-						ubicacio: null,
-						observacions: null
-					},
-					AP5:{
-						ubicacio: null,
-						observacions: null
-					},
-				},
-				
+        ubicacio: {
+          salaEspera: false,
+          altres: null
+        },
         APvisible: {  // estan identificats ?
           existeix: null,		// true / false
           observacions: null
         },
-        // coberturaPROAS: {  // estan identificats ?
-        //   existeix: null,		// true / false
-        //   observacions: null
-        // },
+        coberturaPROAS: {  // estan identificats ?
+          existeix: null,		// true / false
+          observacions: null
+        },
         carteleriaWifi: {  // estan identificats ?
           existeix: null,		// true / false
           observacions: null
         },
-        observacions: null,
-
-				coberturaWifi: {
-					dbProas: null,
-					dbSalaReunions: null,
-					altre1: {
-						lloc: null,
-						dbAltre1: null
-					},
-					altre2: {
-						lloc: null,
-						dbAltre2: null
-					},
-					altre3: {
-						lloc: null,
-						dbAltre3: null
-					},
-					altre4: {
-						lloc: null,
-						dbAltre4: null
-					},
-				},
+        observacions: null
       },
 
-
-
-
-      NumCuesImpressio: null,
       NumCuesImpressioMTF: null,
+      NumCuesImpressio: null,
       altresDispositius: null,
+      coberturaWifi: {
+        dbProas: null,
+        dbSalaReunions: null,
+        altre1: {
+          lloc: null,
+          dbAltre1: null
+        },
+        altre2: {
+          lloc: null,
+          dbAltre2: null
+        },
+        observacionsCoberturaWifi: null
+      },
+      observacions: null,
     },
-		
-		
+
+
     equipamentConexions: {
-			connexioPortSW1Gi23: false,
+      connexioPortSW1Gi23: false,
       altraConnexioSW: null,
       altraConnexioGi: null,
-			observacions: null,
     },
 
+    pendriveBIOS : {
+      existeix: null,		// true / false
+      ubicacio: null,
+      observacions: null
+    },
 
     filMusical: {
       existeix: null,
+      connexioSW: null,
+      connexioGi: null,
       observacions: null
     },
 
@@ -375,84 +286,6 @@ export default {
       observacions: null
     },
 
-		firmaBiometrica: {
-			numTablets: null,
-
-			tabletsApagades: {
-				existeix: null,
-				observacions: null
-			},
-
-			retirarTablets: {
-				existeix: null,
-				observacions: null
-			},
-			
-
-			tablets: {
-				t1:{
-					codi: null,
-					ubicacio: null,
-					observacions: null
-				},
-				t2:{
-					codi: null,
-					ubicacio: null,
-					observacions: null
-				},
-				t3:{
-					codi: null,
-					ubicacio: null,
-					observacions: null
-				},
-				t4:{
-					codi: null,
-					ubicacio: null,
-					observacions: null
-				},
-				t5:{
-					codi: null,
-					ubicacio: null,
-					observacions: null
-				},
-				t6:{
-					codi: null,
-					ubicacio: null,
-					observacions: null
-				},
-				t7:{
-					codi: null,
-					ubicacio: null,
-					observacions: null
-				},
-			}
-
-		},
-
-
-		gestioTorns: {
-			dispositius: {
-				totem: null,
-				impresores: null,
-				pantalles: null,
-				observacions: null
-
-			},
-
-			revisio: {
-				avisAPacients: {
-					existeix: null,
-					observacions: null
-				},
-				arribadaPacient: {
-					existeix: null,
-					observacions: null
-				}
-			}
-		},
-
-
-
     observacions: null
 
   },
@@ -463,7 +296,7 @@ export default {
 
   comunicacionsUnificades : {
     salaReunions: {
-      // existeix: null,
+      existeix: null,
       numero: null,
       capacitat: null,
       mides: null,
@@ -475,6 +308,7 @@ export default {
         camaraWeb: false,  // true / false
         tablet: false, 	// true / false
         mando: false,		// true / false
+        altaveu: false, 	// true / false
         TV: false,		// true / false
         projector: false, // true / false
         PC: false, // true / false
@@ -482,28 +316,37 @@ export default {
         conversorVGA_HDMI: false,	// true / false
         cableAudio: false,	// true / false
         duplicadorHDMI: false,	// true / false
-      }
+      },
+      recomanacions: {
+				renovarPorjector: false,
+				dotacioWebCam: false,
+				DotacioJabra: false,
+				altres: null
+			},
     },
-		
     videoconferencia : {
       // existeix: null, 	// true / false
       // observacionsExistencia: null,
-      // operativa: null,	// true / false
-      // observacionsOperativa: null,
+      operativa: null,	// true / false
+      observacionsOperativa: null,
       // estat: null,		// valor 1 - 5
       prova: {
         feta: null,
-        resultat: null,	// valor 1 - 5
         observacions: null,
+        trucada: false,	// true / false
+        compartirPc: false, // true / false
+        audio: false,	// true / false
+        video: false, 	// true / false
+        resultat: null,	// valor 1 - 5
       },
       // observacions: null
     },
 
     telefonSupervivencia : {
       existeix: null,		// true / false
-      // observacionsExistencia: null,
+      observacionsExistencia: null,
       DDI: null,
-      // instruccions: null,
+      instruccions: null,
       estat: null,		// valor 1 - 5
       ubicacio: null,
 			resultatProva: null,
@@ -517,7 +360,7 @@ export default {
       nivellBateria: null,
       connectatCorrent: null,
       instruccionsProperes: null,
-      // observacions: null,
+      observacions: null,
     },
 
     auricularsRecanvi: {
@@ -526,7 +369,7 @@ export default {
       quantitat: null,	// numero
     },
 
-		observacionsCU: null
+		observacions: null
 
   },
 
@@ -613,10 +456,11 @@ export default {
         },
       },
       personalExtern: {
-        // llibreRegistre: {
-        //   existeix: null,		// true / false
-        //   observacions: null 	// numero
-        // },
+
+        llibreRegistre: {
+          existeix: null,		// true / false
+          observacions: null 	// numero
+        },
         usuarisAmbClaus: {
           existeix: null,		// true / false
           observacions: null 	// numero
@@ -645,52 +489,47 @@ export default {
       existeix: null,		// true / false
       observacions: null 	// numero
     },
-		
+    alarmaIncendis: {
+      existeix: null,		// true / false
+      observacions: null 	// numero
+    },
+
     videovigilancia : {
-			existeix: null,		// true / false
+      existeix: null,		// true / false
       observacions: null,
       gestioInterna: {
-				existeix: null,
+        existeix: null,
         observacions: null,
         gravacioImatges: {
-					personalAmbAcces: null,
+          personalAmbAcces: null,
           periodeConservacio: null
         },
       },
       gestioExterna: {
-				existeix: null,
+        existeix: null,
         observacionsExistencia: null,
         periodeConservacio: null,
         evidencia: null,
         observacionsEvidencia: null
       },
-			
+
       retol: {
-				existeix: null,		// true / false
+        existeix: null,		// true / false
         observacions: null 	// numero
       },
       carteleriaActualitzada: {
-				existeix: null,		// true / false
+        existeix: null,		// true / false
         observacions: null 	// numero
       },
     },
-		
-		alarmaIncendis: {
-			existeix: null,		// true / false
-			observacions: null 	// numero
-		},
+
 
 
     // Seguretat de les operacions
 
     // continuidad de negocio
 
-    GADAplanContinuidadNegocio: {
-      existeix: null,		// true / false
-      observacions: null 	// numero
-    },
-
-    GADAcentresAlternatius: {
+    centresAlternatiusGADA: {
       existeix: null,		// true / false
       observacions: null 	// numero
     },
@@ -705,20 +544,20 @@ export default {
       observacions: null 	// numero
     },
 
-    // pendriveEmergencia: {
-    //   ubicacioCorrecte : {
-    //     existeix: null,		// Esta en un sobre enganxat al rack ?
-    //     observacions: null
-    //   },
-    //   ultimaVersio : {
-    //     existeix: null,		// true / false
-    //     observacions: null
-    //   },
-    //   actualitzacio : {
-    //     feta: null, 	// true / false
-    //     observacions: null
-    //   },
-    // },
+    pendriveEmergencia: {
+      ubicacioCorrecte : {
+        existeix: null,		// Esta en un sobre enganxat al rack ?
+        observacions: null
+      },
+      ultimaVersio : {
+        existeix: null,		// true / false
+        observacions: null
+      },
+      actualitzacio : {
+        feta: null, 	// true / false
+        observacions: null
+      },
+    },
 
 
     // seguretat de les comunicacions
@@ -738,20 +577,37 @@ export default {
       observacions: null 	// numero
     },
 
-    // puntsXarxaSalaEspera: {
-    //   existeix: null,		// true / false
-    //   observacions: null 	// numero
-    // },
+    puntsXarxaSalaEspera: {
+      existeix: null,		// true / false
+      observacions: null 	// numero
+    },
 
     observacions: null
 
   },
 
   formacio: {
-    auriculars: null,
-    videoconferencia: null,
-    llicenciesM3: null,
-    telefonSupervivencia: null,
+    auriculars: {
+      formacioFeta: null,
+      observacions: null
+    },
+
+    videoconferencia: {
+      formacioFeta: null,
+      instruccionsEntregades: null,
+      observacions: null
+    },
+
+    llicenciesM3: {
+      formacioFeta: null,
+      observacions: null
+    },
+
+    telefonSupervivencia: {
+      formacioFeta: null,
+      observacions: null
+    },
+
     observacions: null
   },
 
@@ -792,25 +648,18 @@ export default {
       },
       revisarTelemedicina: false,
       revisarVideoconferencia: false,
-      // enviarWebcam: false,
+      enviarWebcam: false,
       CU: {
-        enviarAuricularsReservaEvolve65: false,
-        enviarAuricularsReservaJabra930: false,
         enviarAuricularsReserva: false,
-        enviarAltaveuJabra: false,
+        enviarAltaveu: false,
       },
-			Seguretat: {
-				solicitarDestructoraPaper: false,
-				solicitarContenidor: false,
-				visibilitatPantalles: false
-			},
       enviarLectorCDDVD: false,
-      // renoveProjector: false,
-      // altres: null
+      renoveProjector: false,
+      altres: null
     },
 
     NC: {
-      // enviarPendriveEmergencia: false,
+      enviarPendriveEmergencia: false,
       solicitarDestructoraPaper: false,
       solicitarContenidor: false,
       visibilitatPantalles: false,
@@ -819,7 +668,7 @@ export default {
       carteleriaLOPD: false,
       suportsBackup: false,
       docsSensibles: false,
-      // altres: null
+      altres: null
     }
   }
 

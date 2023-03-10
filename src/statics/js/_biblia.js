@@ -187,7 +187,7 @@ export function frasesHelp ( punt ){
 	{
 		punt:  "cu salas reuniones",
 		arrFrases: [
-			{ frase: "Indicar si hay mas de una en el campo observaciones. Aportar foto general de la sala" },
+			{ frase: "Aportar foto general de la sala" },
 		]
 	},
 	{
@@ -335,9 +335,15 @@ export function frasesHelp ( punt ){
   /*       SEGURIDAD DE LAS OPERACIONES       */
 
 	{
-		punt:  "GADA",
+		punt:  "GADA_PCN",
 		arrFrases: [
-			{ frase: "Verificar si en la aplicación GADA de la intranet están informados los centros alternativos en caso de cierre por no continuidad" },
+			{ frase: "Centros concretos, que en caso de contingencia se deriban visitas i/o se desplaza personal para asumir la carga de trabajo del centro afectado" },
+		]
+	},
+	{
+		punt:  "GADA_CentrosAsociados",
+		arrFrases: [
+			{ frase: "Son centros (propios, mútuas i/o ajenos) más cercanos al centro en cuestión." },
 		]
 	},
 	{

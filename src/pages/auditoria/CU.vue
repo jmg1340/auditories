@@ -26,10 +26,9 @@
 
 					<q-card-section>
 
-						<cmp_inputSiNoObsrv
-							etiqueta="Sala reuniones ?"
-							arrCamps="['comunicacionsUnificades', 'salaReunions', 'existeix']"
-							arrCampsDos="['comunicacionsUnificades', 'salaReunions', 'numero']"
+						<cmp_inputText
+							etiqueta="Número de salas:"
+							arrCamps="['comunicacionsUnificades', 'salaReunions', 'numero']"
 							help="cu salas reuniones"
 						/>
 
@@ -54,64 +53,36 @@
 
 						<cmp_inputOpcionsMultipleResposta
 							etiqueta="EQUIPAMIENTO:"
-							arrEtiquetes="['SX10', 'SX80', 'Roomkit', 'DX80', 'WebCam', 'tablet', 'mando', 'TV', 'Proyector', 'PC', 'altavoz Jabra', 'displayPortHDMI', 'conversorVGA_HDMI', 'cableAudio', 'duplicadorHDMI']"
+							arrEtiquetes="['SX10', 'SX80', 'Roomkit', 'DX80', 'WebCam', 'tablet', 'mando', 'TV', 'Proyector', 'PC', 'displayPortHDMI', 'conversorVGA_HDMI', 'cableAudio', 'duplicadorHDMI']"
 							arrArrelCamps="['comunicacionsUnificades', 'salaReunions', 'dispositius']"
-							arrCampsFinals="['SX10', 'SX80', 'roomkit', 'DX80', 'camaraWeb', 'tablet', 'mando', 'TV', 'projector', 'PC', 'altaveu', 'displayPortHDMI', 'conversorVGA_HDMI', 'cableAudio', 'duplicadorHDMI']"
+							arrCampsFinals="['SX10', 'SX80', 'roomkit', 'DX80', 'camaraWeb', 'tablet', 'mando', 'TV', 'projector', 'PC', 'displayPortHDMI', 'conversorVGA_HDMI', 'cableAudio', 'duplicadorHDMI']"
 							help="cu medios audiovisuales"
 						/>
 
 
-						<q-separator></q-separator>
-
-						<cmp_inputOpcionsMultipleResposta
-							etiqueta="RECOMENDACIONES:"
-							arrEtiquetes="['Renovar proyector', 'Dotación webcam', 'Dotación altavoz Jabra']"
-							arrArrelCamps="['comunicacionsUnificades', 'salaReunions', 'recomanacions']"
-							arrCampsFinals="['renovarPorjector', 'dotacioWebCam', 'DotacioJabra']"
-						/>
-						<cmp_inputText
-							etiqueta="Otras recomendaciones:"
-							arrCamps="['comunicacionsUnificades', 'salaReunions', 'recomanacions', 'altres']"
-						/>
-
 
 						<q-separator></q-separator>
 
 
 
-						<cmp_inputSiNoObsrv
-							etiqueta="Videoconferencia operativa?"
-							arrCamps="['comunicacionsUnificades', 'videoconferencia', 'operativa']"
-							arrCampsDos="['comunicacionsUnificades', 'videoconferencia', 'observacionsOperativa']"
-						/>
-
-
-
-						<cmp_inputSiNoObsrv
+						<cmp_inputSiNo
 							etiqueta="Prueba videoconferencia ?"
+              etiqV="Si"
+              etiqF="No"
 							arrCamps="['comunicacionsUnificades', 'videoconferencia', 'prova', 'feta']"
-							arrCampsDos="['comunicacionsUnificades', 'videoconferencia', 'prova', 'observacions']"
 						/>
-
-						<cmp_inputOpcionsMultipleResposta
-							etiqueta="PRUEBA:"
-							arrEtiquetes="['llamada', 'compartirPc', 'audio', 'video']"
-							arrArrelCamps="['comunicacionsUnificades', 'videoconferencia', 'prova']"
-							arrCampsFinals="['trucada', 'compartirPc', 'audio', 'video']"
-						/>
-
 
 						<cmp_inputOpcionsUnicaResposta
 							etiqueta="RESULTADO PRUEBA:"
 							propOpcions="moltBe_moltMalament"
 							arrCamps="['comunicacionsUnificades', 'videoconferencia', 'prova', 'resultat']"
 						/>
-<!-- 
+
 						<cmp_inputText
 							etiqueta="Observaciones videoconf.:"
-							arrCamps="['comunicacionsUnificades', 'videoconferencia', 'observacions']"
+							arrCamps="['comunicacionsUnificades', 'videoconferencia', 'prova', 'observacions']"
 						/>
- -->
+
 
 					</q-card-section>
 				</q-card>
@@ -133,10 +104,11 @@
 
 					<q-card-section>
 
-						<cmp_inputSiNoObsrv
+						<cmp_inputSiNo
 							etiqueta="Existe ?"
+              etiqV="Si"
+              etiqF="No"
 							arrCamps="['comunicacionsUnificades', 'telefonSupervivencia', 'existeix']"
-							arrCampsDos="['comunicacionsUnificades', 'telefonSupervivencia', 'observacionsExistencia']"
 						/>
 
 						<cmp_inputText
@@ -154,6 +126,15 @@
 							etiqueta="UBICACIÓN:"
 							arrCamps="['comunicacionsUnificades', 'telefonSupervivencia', 'ubicacio']"
 						/>
+
+
+						<cmp_inputOpcionsUnicaResposta
+							etiqueta="Resultado prueba:"
+							propOpcions="moltBe_moltMalament"
+							arrCamps="['comunicacionsUnificades', 'telefonSupervivencia', 'resultatProva']"
+						/>
+
+
 
 						<cmp_inputOpcionsMultipleResposta
 							etiqueta="PRUEBA:"
@@ -189,10 +170,10 @@
 						/>
 
 
-						<cmp_inputText
+						<!-- <cmp_inputText
 							etiqueta="OBSERVACIONES:"
 							arrCamps="['comunicacionsUnificades', 'telefonSupervivencia', 'observacions']"
-						/>
+						/> -->
 
 
 					</q-card-section>
@@ -234,6 +215,14 @@
 
 
 			</q-card>
+
+			<div class="col-sm-8 col q-pa-sm">
+				<cmp_inputText
+					etiqueta="OBSERVACIONES CU:"
+					arrCamps="['comunicacionsUnificades', 'observacionsCU']"
+				/>
+			</div>
+
 		</div>
 
 

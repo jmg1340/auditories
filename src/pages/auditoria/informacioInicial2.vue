@@ -16,22 +16,21 @@
 						{{ idAuditoria }}
 					</div>
 				</div> -->
-				<cmp_inputData etiqueta="Data:" arrCamps="['data']" />
-				<cmp_inputText etiqueta="Centre:" arrCamps="['nomCentre']" />
-				<cmp_inputText etiqueta="Tecnic:" arrCamps="['tecnic']" class="q-mb-lg" />
+				<cmp_inputData etiqueta="Data:" arrCamps="['dadesCentre', 'data']" />
+				<cmp_inputText etiqueta="Centre:" arrCamps="['dadesCentre', 'nomCentre']" />
+				<cmp_inputText etiqueta="Tecnic:" arrCamps="['dadesCentre', 'tecnic']" class="q-mb-lg" />
 
-				<cmp_inputText etiqueta="sector:" arrCamps="['sector']" class="" />
-				<cmp_inputText etiqueta="domicili:" arrCamps="['domicili']" class="" />
-				<cmp_inputText etiqueta="DC:" arrCamps="['DC']" class="" />
-				<cmp_inputText etiqueta="interlocutors:" arrCamps="['interlocutors']" class="" />
+				<cmp_inputText etiqueta="sector:" arrCamps="['dadesCentre', 'sector']" class="" />
+				<cmp_inputText etiqueta="domicili:" arrCamps="['dadesCentre', 'domicili']" class="" />
+				<cmp_inputText etiqueta="DC:" arrCamps="['dadesCentre', 'DC']" class="" />
+				<cmp_inputText etiqueta="interlocutors:" arrCamps="['dadesCentre', 'interlocutors']" class="" />
 
 			</q-card>
 
-
-			<cmp_informacioPrevia />
-
-
 		</div>
+
+		<cmp_informacioPrevia />
+
 
 	</div>
 
@@ -59,27 +58,5 @@ export default {
 		cmp_informacioPrevia
 	},
 
-	created () {
-		// this.assignarAuditoriaSeleccionada()
-	},
-
-
-	data () {
-		return {
-		}
-  	},
-
-  	methods : {
-  	},
-
-
-  	computed: {
-
-		idAuditoria: function() {
-			// debugger;
-			return this.$store.state.mAuditoria.auditories[this.$store.state.mAuditoria.indexArrAuditories].idAuditoria
-		},
-
-  	}
 }
 </script>

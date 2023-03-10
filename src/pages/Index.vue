@@ -42,12 +42,12 @@
 
 	        <!-- columna data -->
 	        <q-td key="data" :props="props">
-	          {{ props.row.data }}
+	          {{ props.row.dadesCentre.data }}
 	        </q-td>
 
 	        <!-- columna centre -->
 	        <q-td key="centre" :props="props">
-	          {{ props.row.nomCentre }}
+	          {{ props.row.dadesCentre.nomCentre }}
 	        </q-td>
 
 	        <!-- columna amb botons edicio i eliminar -->
@@ -162,7 +162,7 @@ export default {
 	      this.$q.dialog({
 	        dark: true,
 	        title: 'Confirmar',
-	        message: 'Eliminar auditoria del centre ' + row.nomCentre.toUpperCase() + ' ?',
+	        message: 'Eliminar auditoria del centre ' + row.dadesCentre.nomCentre.toUpperCase() + ' ?',
 	        cancel: true,
 	        persistent: true
 	      }).onOk(() => {
