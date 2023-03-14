@@ -1,5 +1,5 @@
 /* 
-Pinta les respostes del la 	PAGINA 6, segons les cooredenades
+Pinta les respostes del la 	PAGINA 8, segons les cooredenades
 */
 
 
@@ -9,120 +9,138 @@ function pintaPagina08 (ctx, oAudit){
 	pintaCapsalera(ctx, oAudit)
 
 
-	/* LLOCS DE TREBALL */
+	/* CU */
 	
-	/* -- cablejat */
-	let objLlocs = oAudit.instalacionsComunicacions.llocsDeTeball
+	/* -- sala de reunions */
+	let objSR = oAudit.comunicacionsUnificades.salaReunions
 
-	new Cercle(ctx.doc, 257.0, 136.0, objLlocs.estatCablejat == "muy deficiente").pinta()
-	new Cercle(ctx.doc, 280.0, 136.0, objLlocs.estatCablejat == "deficiente").pinta()
-	new Cercle(ctx.doc, 303.0, 136.0, objLlocs.estatCablejat == "mejorable").pinta()
-	new Cercle(ctx.doc, 327.0, 136.0, objLlocs.estatCablejat == "aceptable").pinta()
-	new Cercle(ctx.doc, 350.0, 136.0, objLlocs.estatCablejat == "correcto").pinta()
-
-
-	/* -- tomas de datos */
-	let objPtsX = oAudit.instalacionsComunicacions.llocsDeTeball.puntsXarxa
-
-	new Cercle(ctx.doc, 257.0, 170.0, objPtsX.estat == "muy deficiente").pinta()
-	new Cercle(ctx.doc, 280.0, 170.0, objPtsX.estat == "deficiente").pinta()
-	new Cercle(ctx.doc, 303.0, 170.0, objPtsX.estat == "mejorable").pinta()
-	new Cercle(ctx.doc, 327.0, 170.0, objPtsX.estat == "aceptable").pinta()
-	new Cercle(ctx.doc, 350.0, 170.0, objPtsX.estat == "correcto").pinta()
+	// new Cercle(ctx.doc, 234.0, 153.0, objSR.existeix).pinta()
+	// new Cercle(ctx.doc, 264.0, 153.0, !objSR.existeix && objSR.existeix != null).pinta()
+	// new Quadrat(ctx.doc, 293.0, 153.0, !!objSR.numero).pinta() // !! converteix un string a boolean; "" es false;
+	ctx.doc.text(objSR.numero, 108.0, 138.0 - 8);	
 
 
-	new Cercle(ctx.doc, 234.0, 188.0, objPtsX.identificacio.existeix).pinta()
-	new Cercle(ctx.doc, 264.0, 188.0, !objPtsX.identificacio.existeix && objPtsX.identificacio.existeix != null).pinta()
-	new Quadrat(ctx.doc, 293.0, 188.0, !!objPtsX.identificacio.observacions).pinta() // !! converteix un string a boolean; "" es false;
-	ctx.doc.text(objPtsX.identificacio.observacions, 362.0, 192.0 - 8);
+	ctx.doc.text(objSR.capacitat, 301.0, 138.0 - 8);	
+	ctx.doc.text(objSR.mides, 472.0, 138.0 - 8);	
 
 
-	new Cercle(ctx.doc, 234.0, 205.0, objPtsX.suficientsPunts.existeix).pinta()
-	new Cercle(ctx.doc, 264.0, 205.0, !objPtsX.suficientsPunts.existeix && objPtsX.suficientsPunts.existeix != null).pinta()
-	new Quadrat(ctx.doc, 293.0, 205.0, !!objPtsX.suficientsPunts.observacions).pinta() // !! converteix un string a boolean; "" es false;
-	ctx.doc.text(objPtsX.suficientsPunts.observacions, 362.0, 210.0 - 8);
+	new Quadrat(ctx.doc, 158.0, 169.0, objSR.dispositius.SX10).pinta()
+	new Quadrat(ctx.doc, 193.0, 169.0, objSR.dispositius.SX80).pinta()
+	new Quadrat(ctx.doc, 229.0, 169.0, objSR.dispositius.roomkit).pinta()
+	new Quadrat(ctx.doc, 300.0, 169.0, objSR.dispositius.DX80).pinta()
+	new Quadrat(ctx.doc, 336.0, 169.0, objSR.dispositius.camaraWeb).pinta()
+	new Quadrat(ctx.doc, 158.0, 183.0, objSR.dispositius.tablet).pinta()
+	new Quadrat(ctx.doc, 229.0, 183.0, objSR.dispositius.mando).pinta()
+	// new Quadrat(ctx.doc, 320.0, 221.0, objSR.dispositius.altaveu).pinta()
+	new Quadrat(ctx.doc, 158.0, 197.0, objSR.dispositius.TV).pinta()
+	new Quadrat(ctx.doc, 194.0, 197.0, objSR.dispositius.projector).pinta()
+	new Quadrat(ctx.doc, 158.0, 211.0, objSR.dispositius.PC).pinta()
+	new Quadrat(ctx.doc, 193.0, 212.0, objSR.dispositius.displayPortHDMI).pinta()
+	new Quadrat(ctx.doc, 300.0, 212.0, objSR.dispositius.conversorVGA_HDMI).pinta()
+	new Quadrat(ctx.doc, 442.0, 211.0, objSR.dispositius.cableAudio).pinta()
+	new Quadrat(ctx.doc, 158.0, 224.0, objSR.dispositius.duplicadorHDMI).pinta()
 
 
-	new Cercle(ctx.doc, 234.0, 222.0, objPtsX.miniSwitchs.existeix).pinta()
-	new Cercle(ctx.doc, 264.0, 222.0, !objPtsX.miniSwitchs.existeix && objPtsX.miniSwitchs.existeix != null).pinta()
-	new Quadrat(ctx.doc, 293.0, 222.0, !!objPtsX.miniSwitchs.observacions).pinta() // !! converteix un string a boolean; "" es false;
-	ctx.doc.text(objPtsX.miniSwitchs.observacions, 362.0, 226.0 - 8);
-
-
-	/* -- electricitat */
-	let objElec = oAudit.instalacionsComunicacions.llocsDeTeball.electricitat
-
-	new Cercle(ctx.doc, 257.0, 255.0, objElec.estat == "muy deficiente").pinta()
-	new Cercle(ctx.doc, 280.0, 255.0, objElec.estat == "deficiente").pinta()
-	new Cercle(ctx.doc, 303.0, 255.0, objElec.estat == "mejorable").pinta()
-	new Cercle(ctx.doc, 327.0, 255.0, objElec.estat == "aceptable").pinta()
-	new Cercle(ctx.doc, 350.0, 255.0, objElec.estat == "correcto").pinta()
-
-	new Cercle(ctx.doc, 234.0, 273.0, objElec.suficientsEndolls.existeix).pinta()
-	new Cercle(ctx.doc, 264.0, 273.0, !objElec.suficientsEndolls.existeix && objElec.suficientsEndolls.existeix != null).pinta()
-	new Quadrat(ctx.doc, 293.0, 273.0, !!objElec.suficientsEndolls.observacions).pinta() // !! converteix un string a boolean; "" es false;
-	ctx.doc.text(objElec.suficientsEndolls.observacions, 362.0, 278.0 - 8);
-
-	new Cercle(ctx.doc, 234.0, 290.0, objElec.regletes.existeix).pinta()
-	new Cercle(ctx.doc, 264.0, 290.0, !objElec.regletes.existeix && objElec.regletes.existeix != null).pinta()
-	new Quadrat(ctx.doc, 293.0, 290.0, !!objElec.regletes.observacions).pinta() // !! converteix un string a boolean; "" es false;
-	ctx.doc.text(objElec.regletes.observacions, 362.0, 295.0 - 8);
-
-	new Cercle(ctx.doc, 234.0, 307.0, objElec.regletesCascada.existeix).pinta()
-	new Cercle(ctx.doc, 264.0, 307.0, !objElec.regletesCascada.existeix && objElec.regletesCascada.existeix != null).pinta()
-	new Quadrat(ctx.doc, 293.0, 307.0, !!objElec.regletesCascada.observacions).pinta() // !! converteix un string a boolean; "" es false;
-	ctx.doc.text(objElec.regletesCascada.observacions, 362.0, 312.0 - 8);
-
-
-
-	ctx.doc.text(oAudit.instalacionsComunicacions.llocsDeTeball.observacions, 84.0, 350.0 - 8);
+	// new Quadrat(ctx.doc, 234.0, 273.0, objSR.recomanacions.renovarPorjector).pinta()
+	// new Quadrat(ctx.doc, 328.0, 273.0, objSR.recomanacions.dotacioWebCam).pinta()
+	// new Quadrat(ctx.doc, 412.0, 273.0, objSR.recomanacions.DotacioJabra).pinta()
+	// new Quadrat(ctx.doc, 234.0, 290.0, !!objSR.recomanacions.altres).pinta()
+	// ctx.doc.text(objSR.recomanacions.altres, 241.0, 294.0 - 8);
 
 
 
 
+	/* -- videoconferencia */
+	let objVC = oAudit.comunicacionsUnificades.videoconferencia
 
-	/* LAN */
+	// new Cercle(ctx.doc, 234.0, 324.0, objVC.operativa).pinta()
+	// new Cercle(ctx.doc, 263.0, 324.0, !objVC.operativa && objVC.operativa != null).pinta()
+	// new Quadrat(ctx.doc, 293.0, 324.0, !!objVC.observacionsOperativa).pinta() // !! converteix un string a boolean; "" es false;
+	// ctx.doc.text(objVC.observacionsOperativa, 360.0, 328.0 - 8);	
 
-	/* -- Switchs */
-	let objSW = oAudit.instalacionsComunicacions.LAN
+	new Cercle(ctx.doc, 158.0, 271.0, objVC.prova.feta).pinta()
+	new Cercle(ctx.doc, 193.0, 271.0, !objVC.prova.feta && objVC.prova.feta != null).pinta()
 
-	new Cercle(ctx.doc, 234.0, 511.0, objSW.SWidentificats.existeix).pinta()
-	new Cercle(ctx.doc, 264.0, 511.0, !objSW.SWidentificats.existeix && objSW.SWidentificats.existeix != null).pinta()
-	new Quadrat(ctx.doc, 293.0, 511.0, !!objSW.SWidentificats.observacions).pinta() // !! converteix un string a boolean; "" es false;
-	ctx.doc.text(objSW.SWidentificats.observacions, 362.0, 516.0 - 8);
+	new Cercle(ctx.doc, 157.0, 287.0, objVC.prova.resultat == "muy deficiente").pinta()
+	new Cercle(ctx.doc, 193.0, 287.0, objVC.prova.resultat == "deficiente").pinta()
+	new Cercle(ctx.doc, 228.0, 287.0, objVC.prova.resultat == "mejorable").pinta()
+	new Cercle(ctx.doc, 264.0, 287.0, objVC.prova.resultat == "aceptable").pinta()
+	new Cercle(ctx.doc, 299.0, 287.0, objVC.prova.resultat == "correcto").pinta()
 
+	ctx.doc.text(objVC.prova.observacions, 142.0, 310.0 - 8);
 
-	/* -- APs wifi */
-	let objAps = oAudit.instalacionsComunicacions.LAN.wifiAPs
-
-	ctx.doc.text(objAps.quantitat, 143.0, 615.0 - 8);
-	new Quadrat(ctx.doc, 286.0, 613.0, !!objAps.ubicacio.salaEspera).pinta()
-	new Quadrat(ctx.doc, 363.0, 613.0, !!objAps.ubicacio.altres).pinta() // !! converteix un string a boolean; "" es false;
-	ctx.doc.text(objAps.ubicacio.altres, 374.0, 617.0 - 8);
-
-	new Cercle(ctx.doc, 174.0, 630.0, objAps.APvisible.existeix).pinta()
-	new Cercle(ctx.doc, 204.0, 630.0, !objAps.APvisible.existeix && objAps.APvisible.existeix != null).pinta()
-	new Quadrat(ctx.doc, 233.0, 630.0, !!objAps.APvisible.observacions).pinta() // !! converteix un string a boolean; "" es false;
-	ctx.doc.text(objAps.APvisible.observacions, 312.0, 634.0 - 8);
-
-	new Cercle(ctx.doc, 187.0, 647.0, objAps.coberturaPROAS.existeix).pinta()
-	new Cercle(ctx.doc, 217.0, 647.0, !objAps.coberturaPROAS.existeix && objAps.coberturaPROAS.existeix != null).pinta()
-	new Quadrat(ctx.doc, 246.0, 647.0, !!objAps.coberturaPROAS.observacions).pinta() // !! converteix un string a boolean; "" es false;
-	ctx.doc.text(objAps.coberturaPROAS.observacions, 312.0, 651.0 - 8);
-
-	new Cercle(ctx.doc, 187.0, 664.0, objAps.carteleriaWifi.existeix).pinta()
-	new Cercle(ctx.doc, 217.0, 664.0, !objAps.carteleriaWifi.existeix && objAps.carteleriaWifi.existeix != null).pinta()
-	new Quadrat(ctx.doc, 246.0, 664.0, !!objAps.carteleriaWifi.observacions).pinta() // !! converteix un string a boolean; "" es false;
-	ctx.doc.text(objAps.carteleriaWifi.observacions, 312.0, 668.0 - 8);
-
-	ctx.doc.text(objAps.observacions, 177.0, 684.0 - 8);
+	// new Quadrat(ctx.doc, 234.0, 358.0, objVC.prova.trucada).pinta()
+	// new Quadrat(ctx.doc, 284.0, 358.0, objVC.prova.compartirPc).pinta()
+	// new Quadrat(ctx.doc, 352.0, 358.0, objVC.prova.audio).pinta()
+	// new Quadrat(ctx.doc, 391.0, 358.0, objVC.prova.video).pinta()
 
 
-	/* -- APs wifi */
-	let objImpr = oAudit.instalacionsComunicacions.LAN
 
-	ctx.doc.text(objImpr.NumCuesImpressioMTF, 190.0, 736.0 - 8);
-	ctx.doc.text(objImpr.NumCuesImpressio, 287.0, 736.0 - 8);
+	/* -- telefon supervivència */
+	let objTS = oAudit.comunicacionsUnificades.telefonSupervivencia
+
+	new Cercle(ctx.doc, 193.0, 373.0, objTS.existeix).pinta()
+	new Cercle(ctx.doc, 229.0, 373.0, !objTS.existeix && objTS.existeix != null).pinta()
+	// new Quadrat(ctx.doc, 293.0, 408.0, !!objTS.observacionsExistencia).pinta() // !! converteix un string a boolean; "" es false;
+	// ctx.doc.text(objTS.observacionsExistencia, 364.0, 413.0 - 8);	
+
+	ctx.doc.text(objTS.DDI, 155.0, 395.0 - 8);	
+
+	new Cercle(ctx.doc, 158.0, 408.0, objTS.estat == "muy deficiente").pinta()
+	new Cercle(ctx.doc, 193.0, 408.0, objTS.estat == "deficiente").pinta()
+	new Cercle(ctx.doc, 228.0, 408.0, objTS.estat == "mejorable").pinta()
+	new Cercle(ctx.doc, 264.0, 408.0, objTS.estat == "aceptable").pinta()
+	new Cercle(ctx.doc, 300.0, 408.0, objTS.estat == "correcto").pinta()
+
+	ctx.doc.text(objTS.ubicacio, 154.0, 431.0 - 8);	
+
+	new Cercle(ctx.doc, 157.0, 443.0, objTS.resultatProva == "muy deficiente").pinta()
+	new Cercle(ctx.doc, 193.0, 443.0, objTS.resultatProva == "deficiente").pinta()
+	new Cercle(ctx.doc, 229.0, 443.0, objTS.resultatProva == "mejorable").pinta()
+	new Cercle(ctx.doc, 264.0, 443.0, objTS.resultatProva == "aceptable").pinta()
+	new Cercle(ctx.doc, 299.0, 443.0, objTS.resultatProva == "correcto").pinta()
+
+	new Quadrat(ctx.doc, 157.0, 460.0, objTS.prova.trucadaEntrant).pinta()
+	new Quadrat(ctx.doc, 264.0, 460.0, objTS.prova.trucadaSortint).pinta()
+	new Quadrat(ctx.doc, 372.0, 460.0, objTS.prova.desconectarTensio).pinta()
+	new Quadrat(ctx.doc, 479.0, 460.0, objTS.prova.nivellAudioRing).pinta()
+
+
+	// - nivells - 
+
+	new Quadrat(ctx.doc, 263.0, 511.0, objTS.nivellCobertura == 1).pinta()
+	new Quadrat(ctx.doc, 272.0, 511.0, objTS.nivellCobertura == 2).pinta()
+	new Quadrat(ctx.doc, 281.0, 511.0, objTS.nivellCobertura == 3).pinta()
+	new Quadrat(ctx.doc, 290.0, 511.0, objTS.nivellCobertura == 4).pinta()
+
+	new Quadrat(ctx.doc, 264.0, 529.0, objTS.nivellBateria == 1).pinta()
+	new Quadrat(ctx.doc, 273.0, 529.0, objTS.nivellBateria == 2).pinta()
+	new Quadrat(ctx.doc, 281.0, 529.0, objTS.nivellBateria == 3).pinta()
+	new Quadrat(ctx.doc, 290.0, 529.0, objTS.nivellBateria == 4).pinta()
+
+
+	new Cercle(ctx.doc, 264.0, 548.0, objTS.connectatCorrent).pinta()
+	new Cercle(ctx.doc, 299.0, 549.0, !objTS.connectatCorrent && objTS.connectatCorrent != null).pinta()
+
+	new Cercle(ctx.doc, 335.0, 568.0, objTS.instruccionsProperes).pinta()
+	new Cercle(ctx.doc, 370.0, 568.0, !objTS.instruccionsProperes && objTS.instruccionsProperes != null).pinta()
+
+
+
+	/* -- auriculars */
+	let objAR = oAudit.comunicacionsUnificades.auricularsRecanvi
+
+	new Cercle(ctx.doc, 229.0, 630.0, objAR.existeix).pinta()
+	new Cercle(ctx.doc, 264.0, 630.0, !objAR.existeix && objAR.existeix != null).pinta()
+	// new Quadrat(ctx.doc, 291.0, 672.0, !!objAR.observacions).pinta() // !! converteix un string a boolean; "" es false;
+	// ctx.doc.text(objAR.observacions, 356.0, 676.0 - 8);	
+
+	ctx.doc.text(objAR.quantitat, 219.0, 651.0 - 8);	
+
+
+
+
+	ctx.doc.text(oAudit.comunicacionsUnificades.observacionsCU, 77.0, 693.0 - 8);
 
 
 }

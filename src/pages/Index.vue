@@ -74,7 +74,7 @@ export default {
 
 	created () {
 		this.loadAuditories().then(() => {
-			this.comprovarExistenciaNovesPropietats ()
+			// this.comprovarExistenciaNovesPropietats ()
 		}).catch ( (e) => {
 			console.log("Hi ha hagut algun error a comprovarExistenciaNovesPropietats")
 			console.log(e)

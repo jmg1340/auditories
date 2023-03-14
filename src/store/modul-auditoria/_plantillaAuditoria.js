@@ -346,7 +346,7 @@ export default {
 		
 		
     equipamentConexions: {
-			connexioPortSW1Gi23: false,
+			connexioPortSW1Gi23: null,
       altraConnexioSW: null,
       altraConnexioGi: null,
 			observacions: null,

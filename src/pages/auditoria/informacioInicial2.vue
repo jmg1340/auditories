@@ -18,10 +18,11 @@
 				</div> -->
 				<cmp_inputData etiqueta="Data:" arrCamps="['dadesCentre', 'data']" />
 				<cmp_inputText etiqueta="Centre:" arrCamps="['dadesCentre', 'nomCentre']" />
-				<cmp_inputText etiqueta="Tecnic:" arrCamps="['dadesCentre', 'tecnic']" class="q-mb-lg" />
-
 				<cmp_inputText etiqueta="sector:" arrCamps="['dadesCentre', 'sector']" class="" />
+				<cmp_inputText etiqueta="ID:" arrCamps="['dadesCentre', 'codi']" class="" />
 				<cmp_inputText etiqueta="domicili:" arrCamps="['dadesCentre', 'domicili']" class="" />
+				
+				<cmp_inputText etiqueta="Tecnic:" arrCamps="['dadesCentre', 'tecnic']" class="q-mb-lg" />
 				<cmp_inputText etiqueta="DC:" arrCamps="['dadesCentre', 'DC']" class="" />
 				<cmp_inputText etiqueta="interlocutors:" arrCamps="['dadesCentre', 'interlocutors']" class="" />
 

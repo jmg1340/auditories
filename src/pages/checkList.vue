@@ -2,7 +2,7 @@
 	<q-page class="flex flex-center column">
 		<div class="text-h3 q-my-md">CheckList</div>
 
-		<div class="q-ma-lg text-h5" v-if="missatgeVisible">Carregant pàgina <span class="text-h4 text-red">{{ comptador }}</span> de 21</div>
+		<div class="q-ma-lg text-h5" v-if="missatgeVisible">Carregant pàgina <span class="text-h4 text-red">{{ comptador }}</span> de 15</div>
 		
 		<div class="q-ma-sm text-h6 text-red" v-if="errorVisible">Hi ha hagut un problema a la càrrega de la pàgina {{ comptador }}</div>
 
@@ -97,24 +97,24 @@ export default {
 			.then ( () => {
 				this.comptador = 15
 				return this.construirPagina(ctx, "Pagina_15")})
-			.then ( () => {
-				this.comptador = 16
-				return this.construirPagina(ctx, "Pagina_16")})
-			.then ( () => {
-				this.comptador = 17
-				return this.construirPagina(ctx, "Pagina_17")})
-			.then ( () => {
-				this.comptador = 18
-				return this.construirPagina(ctx, "Pagina_18")})
-			.then ( () => {
-				this.comptador = 19
-				return this.construirPagina(ctx, "Pagina_19")})
-			.then ( () => {
-				this.comptador = 20
-				return this.construirPagina(ctx, "Pagina_20")})
-			.then ( () => {
-				this.comptador = 21
-				return this.construirPagina(ctx, "Pagina_21")})
+			// .then ( () => {
+			// 	this.comptador = 16
+			// 	return this.construirPagina(ctx, "Pagina_16")})
+			// .then ( () => {
+			// 	this.comptador = 17
+			// 	return this.construirPagina(ctx, "Pagina_17")})
+			// .then ( () => {
+			// 	this.comptador = 18
+			// 	return this.construirPagina(ctx, "Pagina_18")})
+			// .then ( () => {
+			// 	this.comptador = 19
+			// 	return this.construirPagina(ctx, "Pagina_19")})
+			// .then ( () => {
+			// 	this.comptador = 20
+			// 	return this.construirPagina(ctx, "Pagina_20")})
+			// .then ( () => {
+			// 	this.comptador = 21
+			// 	return this.construirPagina(ctx, "Pagina_21")})
 			.then (() => {
 				ctx.end()
 				this.missatgeVisible = false
@@ -234,8 +234,8 @@ export default {
 					switch (pagina){
 						case "Pagina_01": pintaPagina01(ctx, oAudit); break;
 						case "Pagina_02": pintaCapsalera(ctx, oAudit); break;
-						case "Pagina_03": pintaCapsalera(ctx, oAudit); break;
-						case "Pagina_04": pintaCapsalera(ctx, oAudit); break;
+						case "Pagina_03": pintaPagina03(ctx, oAudit); break;
+						case "Pagina_04": pintaPagina04(ctx, oAudit); break;
 						case "Pagina_05": pintaPagina05(ctx, oAudit); break;
 						case "Pagina_06": pintaPagina06(ctx, oAudit); break;
 						case "Pagina_07": pintaPagina07(ctx, oAudit); break;
@@ -245,14 +245,14 @@ export default {
 						case "Pagina_11": pintaPagina11(ctx, oAudit); break;
 						case "Pagina_12": pintaPagina12(ctx, oAudit); break;
 						case "Pagina_13": pintaPagina13(ctx, oAudit); break;
-						case "Pagina_14": pintaPagina14(ctx, oAudit); break;
-						case "Pagina_15": pintaPagina15(ctx, oAudit); break;
-						case "Pagina_16": pintaCapsalera(ctx, oAudit); break;
-						case "Pagina_17": pintaCapsalera(ctx, oAudit); break;
-						case "Pagina_18": pintaCapsalera(ctx, oAudit); break;
-						case "Pagina_19": pintaCapsalera(ctx, oAudit); break;
-						case "Pagina_20": pintaCapsalera(ctx, oAudit); break;
-						case "Pagina_21": pintaCapsalera(ctx, oAudit); break;
+						case "Pagina_14": pintaCapsalera(ctx, oAudit); break;
+						case "Pagina_15": pintaCapsalera(ctx, oAudit); break;
+						// case "Pagina_16": pintaCapsalera(ctx, oAudit); break;
+						// case "Pagina_17": pintaCapsalera(ctx, oAudit); break;
+						// case "Pagina_18": pintaCapsalera(ctx, oAudit); break;
+						// case "Pagina_19": pintaCapsalera(ctx, oAudit); break;
+						// case "Pagina_20": pintaCapsalera(ctx, oAudit); break;
+						// case "Pagina_21": pintaCapsalera(ctx, oAudit); break;
 					}
 					
 					console.log(pagina, "acaba carregarBackground.then")

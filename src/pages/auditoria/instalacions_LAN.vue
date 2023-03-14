@@ -153,24 +153,53 @@
 							etiqueta="dB Sala reuniones:"
 							arrCamps="['instalacionsComunicacions', 'LAN', 'wifiAPs', 'coberturaWifi', 'dbSalaReunions']"
 						/>
+
 						<div class="row justify-center">
 							<cmp_inputText
+								class="col"
 								etiqueta="Lugar 1:"
 								arrCamps="['instalacionsComunicacions', 'LAN', 'wifiAPs', 'coberturaWifi', 'altre1', 'lloc']"
 							/>
 							<cmp_inputText
+								class="col"
 								etiqueta="dB Lugar 1:"
 								arrCamps="['instalacionsComunicacions', 'LAN', 'wifiAPs', 'coberturaWifi', 'altre1', 'dbAltre1']"
 							/>
 						</div>
 						<div class="row justify-center">
 							<cmp_inputText
+								class="col"
 								etiqueta="Lugar 2:"
 								arrCamps="['instalacionsComunicacions', 'LAN', 'wifiAPs', 'coberturaWifi', 'altre2', 'lloc']"
 							/>
 							<cmp_inputText
+								class="col"
 								etiqueta="dB Lugar 2:"
 								arrCamps="['instalacionsComunicacions', 'LAN', 'wifiAPs', 'coberturaWifi', 'altre2', 'dbAltre2']"
+							/>
+						</div>
+						<div class="row justify-center">
+							<cmp_inputText
+								class="col"
+								etiqueta="Lugar 3:"
+								arrCamps="['instalacionsComunicacions', 'LAN', 'wifiAPs', 'coberturaWifi', 'altre3', 'lloc']"
+							/>
+							<cmp_inputText
+								class="col"
+								etiqueta="dB Lugar 3:"
+								arrCamps="['instalacionsComunicacions', 'LAN', 'wifiAPs', 'coberturaWifi', 'altre3', 'dbAltre3']"
+							/>
+						</div>
+						<div class="row justify-center">
+							<cmp_inputText
+								class="col"
+								etiqueta="Lugar 4:"
+								arrCamps="['instalacionsComunicacions', 'LAN', 'wifiAPs', 'coberturaWifi', 'altre4', 'lloc']"
+							/>
+							<cmp_inputText
+								class="col"
+								etiqueta="dB Lugar 4:"
+								arrCamps="['instalacionsComunicacions', 'LAN', 'wifiAPs', 'coberturaWifi', 'altre4', 'dbAltre4']"
 							/>
 						</div>
 

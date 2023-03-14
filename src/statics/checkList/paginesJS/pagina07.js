@@ -1,5 +1,5 @@
 /* 
-Pinta les respostes del la 	PAGINA 6, segons les cooredenades
+Pinta les respostes del la 	PAGINA 7, segons les cooredenades
 */
 
 
@@ -8,177 +8,133 @@ function pintaPagina07 (ctx, oAudit){
   /* CAPÇALERA */
 	pintaCapsalera(ctx, oAudit)
 
+
+	/* CONTINUACIÓ LAN */
 	
-	let objSala = oAudit.instalacionsComunicacions.sala
+	// faltaria apartat medició cobertura wifi
+	// let objCob = oAudit.instalacionsComunicacions.LAN.coberturaWifi
 
-	new Cercle(ctx.doc, 257.0, 102.0, objSala.aspecteSala == "muy deficiente").pinta()
-	new Cercle(ctx.doc, 280.0, 102.0, objSala.aspecteSala == "deficiente").pinta()
-	new Cercle(ctx.doc, 303.0, 102.0, objSala.aspecteSala == "mejorable").pinta()
-	new Cercle(ctx.doc, 327.0, 102.0, objSala.aspecteSala == "aceptable").pinta()
-	new Cercle(ctx.doc, 350.0, 102.0, objSala.aspecteSala == "correcto").pinta()
+	// ctx.doc.text(objCob.dbProas, 218.0, 258.0 - 8);
+	// ctx.doc.text(objCob.dbSalaReunions, 218.0, 274.0 - 8);
+	// ctx.doc.text(objCob.altre1.lloc, 80.0, 291.0 - 8);
+	// ctx.doc.text(objCob.altre1.dbAltre1, 217.0, 291.0 - 8);
+	// ctx.doc.text(objCob.altre2.lloc, 80.0, 310.0 - 8);
+	// ctx.doc.text(objCob.altre2.dbAltre2, 217.0, 309.0 - 8);
+	
+	// ctx.doc.text(objCob.observacionsCoberturaWifi, 296.0, 258.0 - 8);
 
 
-	new Cercle(ctx.doc, 234.0, 120.0, objSala.climatitzacio.existeix).pinta()
-	new Cercle(ctx.doc, 264.0, 120.0, !objSala.climatitzacio.existeix && objSala.climatitzacio.existeix != null).pinta()
-	new Quadrat(ctx.doc, 293.0, 120.0, !!objSala.climatitzacio.observacions).pinta() // !! converteix un string a boolean; "" es false;
-	ctx.doc.text(objSala.climatitzacio.observacions, 362.0, 125.0 - 8);
 
-	new Cercle(ctx.doc, 234.0, 138.0, objSala.ventilacio.existeix).pinta()
-	new Cercle(ctx.doc, 264.0, 138.0, !objSala.ventilacio.existeix && objSala.ventilacio.existeix != null).pinta()
-	new Quadrat(ctx.doc, 293.0, 138.0, !!objSala.ventilacio.observacions).pinta() // !! converteix un string a boolean; "" es false;
-	ctx.doc.text(objSala.ventilacio.observacions, 362.0, 143.0 - 8);
+	// obseravacions LAN
+	// ctx.doc.text(objImpr.observacions, 84.0, 360.0 - 8);
 
-	new Cercle(ctx.doc, 234.0, 156.0, objSala.latiguillos.existeix).pinta()
-	new Cercle(ctx.doc, 264.0, 156.0, !objSala.latiguillos.existeix && objSala.latiguillos.existeix != null).pinta()
-	new Quadrat(ctx.doc, 293.0, 156.0, !!objSala.latiguillos.observacions).pinta() // !! converteix un string a boolean; "" es false;
-	ctx.doc.text(objSala.latiguillos.observacions, 362.0, 160.0 - 8);
 
-	new Cercle(ctx.doc, 234.0, 172.0, objSala.elementsBaixaInventari.existeix).pinta()
-	new Cercle(ctx.doc, 264.0, 172.0, !objSala.elementsBaixaInventari.existeix && objSala.elementsBaixaInventari.existeix != null).pinta()
-	new Quadrat(ctx.doc, 293.0, 172.0, !!objSala.elementsBaixaInventari.observacions).pinta() // !! converteix un string a boolean; "" es false;
-	ctx.doc.text(objSala.elementsBaixaInventari.observacions, 362.0, 176.0 - 8);
 
 
 
-	/* RACKS */
+	/* TELEMEDICINA */
 
-	ctx.doc.text(objSala.numRacks, 230.0, 206.0 - 8);
+	let objTM = oAudit.instalacionsComunicacions.telemedicina
 
-	new Cercle(ctx.doc, 234.0, 221.0, objSala.numRacksAdecuat.existeix).pinta()
-	new Cercle(ctx.doc, 264.0, 221.0, !objSala.numRacksAdecuat.existeix && objSala.numRacksAdecuat.existeix != null).pinta()
-	// new Quadrat(ctx.doc, 293.0, 221.0, !!objSala.numRacksAdecuats.observacions).pinta() // !! converteix un string a boolean; "" es false;
-	ctx.doc.text(objSala.numRacksAdecuat.observacions, 362.0, 224.0 - 8);
+	new Cercle(ctx.doc, 193.0, 85.0, objTM.existeix).pinta()
+	new Cercle(ctx.doc, 229.0, 85.0, !objTM.existeix && objTM.existeix != null).pinta()
+	ctx.doc.text(objTM.observacions, 337.0, 88.0 - 8);
 
+	new Quadrat(ctx.doc, 193.0, 101.0, !!objTM.dispositius.TV32).pinta()
+	new Quadrat(ctx.doc, 264.0, 101.0, !!objTM.dispositius.Jabra510).pinta()
+	new Quadrat(ctx.doc, 335.0, 101.0, !!objTM.dispositius.camaraIP).pinta()
+	new Quadrat(ctx.doc, 406.0, 101.0, !!objTM.dispositius.DisplayPort).pinta()
 
+	new Cercle(ctx.doc, 193.0, 117.0, objTM.estat == "muy deficiente").pinta()
+	new Cercle(ctx.doc, 229.0, 117.0, objTM.estat == "deficiente").pinta()
+	new Cercle(ctx.doc, 264.0, 117.0, objTM.estat == "mejorable").pinta()
+	new Cercle(ctx.doc, 300.0, 117.0, objTM.estat == "aceptable").pinta()
+	new Cercle(ctx.doc, 335.0, 117.0, objTM.estat == "correcto").pinta()
 
 
-	/* Tractament del array de RACKS */
+	/* LECTOR CD/DVD EXTERN */
 
-	let arrR = objSala.racks
-	let margeEsquerre = 0;
-	let distanciaObs = 0;
-	arrR.forEach(function(rack, index){
+	let objTLcd = oAudit.instalacionsComunicacions.LectorCDDVDExtern
 
-		ctx.doc.text(rack.ubicacio, 234.0 + margeEsquerre, 262.0 - 8);
-		ctx.doc.text(rack.tipusRack, 246.0 + margeEsquerre, 279.0 - 8);
+	new Cercle(ctx.doc, 193.0, 167.0, objTLcd.existeix).pinta()
+	new Cercle(ctx.doc, 229.0, 167.0, !objTLcd.existeix && objTLcd.existeix != null).pinta()
+	ctx.doc.text(objTLcd.observacions, 336.0, 171.0 - 8);
 
-		new Cercle(ctx.doc, 239.5 + margeEsquerre, 292.0, rack.estatGeneral == "muy deficiente").pinta()
-		new Cercle(ctx.doc, 250.5 + margeEsquerre, 292.0, rack.estatGeneral == "deficiente").pinta()
-		new Cercle(ctx.doc, 261.0 + margeEsquerre, 292.0, rack.estatGeneral == "mejorable").pinta()
-		new Cercle(ctx.doc, 272.0 + margeEsquerre, 292.0, rack.estatGeneral == "aceptable").pinta()
-		new Cercle(ctx.doc, 283.0 + margeEsquerre, 292.0, rack.estatGeneral == "correcto").pinta()
 
-		new Cercle(ctx.doc, 239.5 + margeEsquerre, 309.5, rack.aspecteNeteja == "muy deficiente").pinta()
-		new Cercle(ctx.doc, 251.0 + margeEsquerre, 309.5, rack.aspecteNeteja == "deficiente").pinta()
-		new Cercle(ctx.doc, 261.0 + margeEsquerre, 309.5, rack.aspecteNeteja == "mejorable").pinta()
-		new Cercle(ctx.doc, 272.0 + margeEsquerre, 309.5, rack.aspecteNeteja == "aceptable").pinta()
-		new Cercle(ctx.doc, 283.0 + margeEsquerre, 309.5, rack.aspecteNeteja == "correcto").pinta()
+	/* FIRMA BIOMETRICA */
 
-		new Cercle(ctx.doc, 241.0 + margeEsquerre, 326.0, rack.pany.existeix).pinta()
-		new Cercle(ctx.doc, 264.0 + margeEsquerre, 326.0, !rack.pany.existeix && rack.pany.existeix != null).pinta()
+	let objFB = oAudit.instalacionsComunicacions.firmaBiometrica
 
-		new Cercle(ctx.doc, 241.0 + margeEsquerre, 342.0, rack.pany.clauAlPany).pinta()
-		new Cercle(ctx.doc, 264.0 + margeEsquerre, 342.0, !rack.pany.clauAlPany && rack.pany.clauAlPany != null).pinta()
+	ctx.doc.text(objFB.numTablets, 155.0, 219.0 - 8);
 
-		ctx.doc.text(rack.pany.estatPany, 246.0 + margeEsquerre, 365.0 - 8);
+	new Cercle(ctx.doc, 193.0, 235.0, objFB.tabletsApagades.existeix).pinta()
+	new Cercle(ctx.doc, 228.0, 235.0, !objFB.tabletsApagades.existeix && objFB.tabletsApagades.existeix != null).pinta()
+	ctx.doc.text(objFB.tabletsApagades.observacions, 336.0, 239.0 - 8);
 
-		new Cercle(ctx.doc, 241.0 + margeEsquerre, 377.0, rack.zonaPasLliure).pinta()
-		new Cercle(ctx.doc, 264.0 + margeEsquerre, 377.0, !rack.zonaPasLliure && rack.zonaPasLliure != null).pinta()
+	new Cercle(ctx.doc, 193.0, 254.0, objFB.retirarTablets.existeix).pinta()
+	new Cercle(ctx.doc, 228.0, 254.0, !objFB.retirarTablets.existeix && objFB.retirarTablets.existeix != null).pinta()
+	ctx.doc.text(objFB.retirarTablets.observacions, 336.0, 258.0 - 8);
 
 
-		/* RACK -- cablejat */
+	// --- tablets ---
+	ctx.doc.text(objFB.tablets.t1.codi, 85.0, 292.0 - 8);
+	ctx.doc.text(objFB.tablets.t1.ubicacio, 145.0, 292.0 - 8);
+	ctx.doc.text(objFB.tablets.t1.observacions, 344.0, 292.0 - 8);
 
-		new Cercle(ctx.doc, 239.5 + margeEsquerre, 411.0, rack.cablejat.aspecte == "muy deficiente").pinta()
-		new Cercle(ctx.doc, 251.0 + margeEsquerre, 411.0, rack.cablejat.aspecte == "deficiente").pinta()
-		new Cercle(ctx.doc, 261.0 + margeEsquerre, 411.0, rack.cablejat.aspecte == "mejorable").pinta()
-		new Cercle(ctx.doc, 272.0 + margeEsquerre, 411.0, rack.cablejat.aspecte == "aceptable").pinta()
-		new Cercle(ctx.doc, 283.0 + margeEsquerre, 411.0, rack.cablejat.aspecte == "correcto").pinta()
+	ctx.doc.text(objFB.tablets.t2.codi, 85.0, 306.0 - 8);
+	ctx.doc.text(objFB.tablets.t2.ubicacio, 145.0, 306.0 - 8);
+	ctx.doc.text(objFB.tablets.t2.observacions, 344.0, 306.0 - 8);
 
-		ctx.doc.text(rack.cablejat.pPanels.numPPanelActius, 234.0 + margeEsquerre, 432.0 - 8);
+	ctx.doc.text(objFB.tablets.t3.codi, 85.0, 322.0 - 8);
+	ctx.doc.text(objFB.tablets.t3.ubicacio, 145.0, 322.0 - 8);
+	ctx.doc.text(objFB.tablets.t3.observacions, 345.0, 322.0 - 8);
 
-		ctx.doc.text(rack.cablejat.pPanels.categoriesPPanel, 234.0 + margeEsquerre, 448.0 - 8);
+	ctx.doc.text(objFB.tablets.t4.codi, 85.0, 337.0 - 8);
+	ctx.doc.text(objFB.tablets.t4.ubicacio, 145.0, 337.0 - 8);
+	ctx.doc.text(objFB.tablets.t4.observacions, 344.0, 337.0 - 8);
 
-		new Cercle(ctx.doc, 239.5 + margeEsquerre, 461, rack.cablejat.estatTerminacions == "muy deficiente").pinta()
-		new Cercle(ctx.doc, 251.0 + margeEsquerre, 461, rack.cablejat.estatTerminacions == "deficiente").pinta()
-		new Cercle(ctx.doc, 261.0 + margeEsquerre, 461, rack.cablejat.estatTerminacions == "mejorable").pinta()
-		new Cercle(ctx.doc, 272.0 + margeEsquerre, 461, rack.cablejat.estatTerminacions == "aceptable").pinta()
-		new Cercle(ctx.doc, 283.0 + margeEsquerre, 461, rack.cablejat.estatTerminacions == "correcto").pinta()
+	ctx.doc.text(objFB.tablets.t5.codi, 85.0, 353.0 - 8);
+	ctx.doc.text(objFB.tablets.t5.ubicacio, 145.0, 353.0 - 8);
+	ctx.doc.text(objFB.tablets.t5.observacions, 344.0, 353.0 - 8);
 
+	ctx.doc.text(objFB.tablets.t6.codi, 85.0, 368.0 - 8);
+	ctx.doc.text(objFB.tablets.t6.ubicacio, 145.0, 368.0 - 8);
+	ctx.doc.text(objFB.tablets.t6.observacions, 344.0, 368.0 - 8);
 
-		new Cercle(ctx.doc, 241.0 + margeEsquerre, 479.0, rack.cablejat.duplicadorPorts).pinta()
-		new Cercle(ctx.doc, 264.0 + margeEsquerre, 479.0, !rack.cablejat.duplicadorPorts && rack.cablejat.duplicadorPorts != null).pinta()
+	ctx.doc.text(objFB.tablets.t7.codi, 85.0, 384.0 - 8);
+	ctx.doc.text(objFB.tablets.t7.ubicacio, 145.0, 384.0 - 8);
+	ctx.doc.text(objFB.tablets.t7.observacions, 344.0, 384.0 - 8);
 
-		new Cercle(ctx.doc, 241.0 + margeEsquerre, 495.0, rack.cablejat.cablejatObsolet).pinta()
-		new Cercle(ctx.doc, 264.0 + margeEsquerre, 495.0, !rack.cablejat.cablejatObsolet && rack.cablejat.cablejatObsolet != null).pinta()
 
+	/* GESTION DE TURNOS */
 
-		/* Rack -- electricitat */
+	let objgDt = oAudit.instalacionsComunicacions.gestioTorns
 
-		new Cercle(ctx.doc, 239.5 + margeEsquerre, 530.0, rack.electricitat.estat == "muy deficiente").pinta()
-		new Cercle(ctx.doc, 251.0 + margeEsquerre, 530.0, rack.electricitat.estat == "deficiente").pinta()
-		new Cercle(ctx.doc, 261.0 + margeEsquerre, 530.0, rack.electricitat.estat == "mejorable").pinta()
-		new Cercle(ctx.doc, 272.0 + margeEsquerre, 530.0, rack.electricitat.estat == "aceptable").pinta()
-		new Cercle(ctx.doc, 283.0 + margeEsquerre, 530.0, rack.electricitat.estat == "correcto").pinta()
 
+	new Quadrat(ctx.doc, 86.0, 461.0, !!objgDt.dispositius.totem).pinta()
+	new Quadrat(ctx.doc, 157.0, 461.0, !!objgDt.dispositius.impresores).pinta()
+	new Quadrat(ctx.doc, 300.0, 461.0, !!objgDt.dispositius.pantalles).pinta()
 
-		new Cercle(ctx.doc, 241.0 + margeEsquerre, 546.0, rack.electricitat.regletaSuministramentNet).pinta()
-		new Cercle(ctx.doc, 264.0 + margeEsquerre, 546.0, !rack.electricitat.regletaSuministramentNet && rack.electricitat.regletaSuministramentNet != null).pinta()
+	ctx.doc.text(objgDt.dispositius.observacions, 93.0, 500.0 - 8);
 
-		new Cercle(ctx.doc, 241.0 + margeEsquerre, 563.0, rack.electricitat.regletaSuministramentBrut).pinta()
-		new Cercle(ctx.doc, 264.0 + margeEsquerre, 563.0, !rack.electricitat.regletaSuministramentBrut && rack.electricitat.regletaSuministramentBrut != null).pinta()
+	new Cercle(ctx.doc, 86.0, 625.0, objgDt.revisio.avisAPacients.existeix).pinta()
+	new Cercle(ctx.doc, 121.0, 625.0, !objgDt.revisio.avisAPacients.existeix && objgDt.revisio.avisAPacients.existeix != null).pinta()
+	ctx.doc.text(objgDt.revisio.avisAPacients.observacions, 222.0, 628.0 - 8);
 
-		ctx.doc.text(rack.electricitat.observacions, 236.0 + margeEsquerre, 586.0 - 8);
+	new Cercle(ctx.doc, 86.0, 664.0, objgDt.revisio.arribadaPacient.existeix).pinta()
+	new Cercle(ctx.doc, 121.0, 664.0, !objgDt.revisio.arribadaPacient.existeix && objgDt.revisio.arribadaPacient.existeix != null).pinta()
+	ctx.doc.text(objgDt.revisio.arribadaPacient.observacions, 222.0, 667.0 - 8);
 
-		/* --- */
 
 
-		new Cercle(ctx.doc, 241.0 + margeEsquerre, 598.0, rack.ventilacio).pinta()
-		new Cercle(ctx.doc, 264.0 + margeEsquerre, 598.0, !rack.ventilacio && rack.ventilacio != null).pinta()
 
-		new Cercle(ctx.doc, 241.0 + margeEsquerre, 614.0, rack.dispositiusObsolets).pinta()
-		new Cercle(ctx.doc, 264.0 + margeEsquerre, 614.0, !rack.dispositiusObsolets && rack.dispositiusObsolets != null).pinta()
 
-		ctx.doc.text("RACK " + (index + 1) + ":     " + rack.observacions, 76, 662.0 - 8 + distanciaObs);  
 
-		// establim marge per al següent rack
-		switch (index){
-			case 0: margeEsquerre += 68.5; break;  // per al rack 2
-			case 1: margeEsquerre += 67.0; break;  // per al rack 3
-			case 2: margeEsquerre += 67.5; break;  // per al rack 4
-			case 3: margeEsquerre += 68.5; break;  // per al rack 5
-		}
-		
-		distanciaObs += 15
-		
 
-	})
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	ctx.doc.text(oAudit.instalacionsComunicacions.observacions, 67.0, 708.0 - 8);
 
 
 

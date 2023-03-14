@@ -56,20 +56,20 @@ export function frasesInforme (obj, apartat = null){
 
     /*       sala comunicacions       */
 
-    {
-      apartatInforme: "instalaciones-sala",
-      valorPropietat:  objAuditoria.instalacionsComunicacions.sala.existeix,
-      arrFrases: [
-        {
-          valorActivacioFrase: true ,
-          frase: "Se dispone de un cuarto técnico ventilado a través de una rejilla que contiene el cuadro eléctrico, la alarma contra incendios, el equipo de control de la climatización y las líneas de comunicaciones, disponiendo de cerradura en su puerta y permaneciendo habitualmente cerrado."
-        },
-        {
-          valorActivacioFrase: false ,
-          frase: "No hay una sala de comunicaciones dedicada. El rack principal se encuentra ubicado en una zona de administración."
-        }
-      ]
-    },
+    // {
+    //   apartatInforme: "instalaciones-sala",
+    //   valorPropietat:  objAuditoria.instalacionsComunicacions.sala.existeix,
+    //   arrFrases: [
+    //     {
+    //       valorActivacioFrase: true ,
+    //       frase: "Se dispone de un cuarto técnico ventilado a través de una rejilla que contiene el cuadro eléctrico, la alarma contra incendios, el equipo de control de la climatización y las líneas de comunicaciones, disponiendo de cerradura en su puerta y permaneciendo habitualmente cerrado."
+    //     },
+    //     {
+    //       valorActivacioFrase: false ,
+    //       frase: "No hay una sala de comunicaciones dedicada. El rack principal se encuentra ubicado en una zona de administración."
+    //     }
+    //   ]
+    // },
 
     {
       apartatInforme: "instalaciones-sala",
@@ -617,43 +617,43 @@ export function frasesInforme (obj, apartat = null){
         },
       ]
     },
-    {
-      apartatInforme: "LAN-APs",
-      valorPropietat: objAuditoria.instalacionsComunicacions.LAN.wifiAPs.ubicacio.salaEspera,
-      arrFrases: [
-        {
-          valorActivacioFrase: true,
-          frase: (function() {
-            if (objAuditoria.instalacionsComunicacions.LAN.wifiAPs.quantitat == 1) {
-              return "Se encuentra ubicado en la sala de espera."
-            } else {
-              return "En la sala de espera hay un punto de acceso."
-            }
-          })(),
-        },
-        {
-          valorActivacioFrase: false,
-          frase: "En la sala de espera no hay ningún punto de acceso",
-        },
-      ]
-    },
-    {
-      apartatInforme: "LAN-APs",
-      valorPropietat:  (objAuditoria.instalacionsComunicacions.LAN.wifiAPs.ubicacio.altres == null || objAuditoria.instalacionsComunicacions.LAN.wifiAPs.ubicacio.altres == ""),
-      arrFrases: [
-        {
-          valorActivacioFrase: false,
-          frase: (function() {
-            if (objAuditoria.instalacionsComunicacions.LAN.wifiAPs.quantitat == 1) {
-              if (objAuditoria.instalacionsComunicacions.LAN.wifiAPs.ubicacio.salaEspera == false)
-                return "El punto de acceso se encuentra ubicado en " + objAuditoria.instalacionsComunicacions.LAN.wifiAPs.ubicacio.altres
-            } else {
-              return "También hay un punto de acceso en " + objAuditoria.instalacionsComunicacions.LAN.wifiAPs.ubicacio.altres
-            }
-          })(),
-        },
-      ]
-    },
+    // {
+    //   apartatInforme: "LAN-APs",
+    //   valorPropietat: objAuditoria.instalacionsComunicacions.LAN.wifiAPs.ubicacio.salaEspera,
+    //   arrFrases: [
+    //     {
+    //       valorActivacioFrase: true,
+    //       frase: (function() {
+    //         if (objAuditoria.instalacionsComunicacions.LAN.wifiAPs.quantitat == 1) {
+    //           return "Se encuentra ubicado en la sala de espera."
+    //         } else {
+    //           return "En la sala de espera hay un punto de acceso."
+    //         }
+    //       })(),
+    //     },
+    //     {
+    //       valorActivacioFrase: false,
+    //       frase: "En la sala de espera no hay ningún punto de acceso",
+    //     },
+    //   ]
+    // },
+    // {
+    //   apartatInforme: "LAN-APs",
+    //   valorPropietat:  (objAuditoria.instalacionsComunicacions.LAN.wifiAPs.ubicacio.altres == null || objAuditoria.instalacionsComunicacions.LAN.wifiAPs.ubicacio.altres == ""),
+    //   arrFrases: [
+    //     {
+    //       valorActivacioFrase: false,
+    //       frase: (function() {
+    //         if (objAuditoria.instalacionsComunicacions.LAN.wifiAPs.quantitat == 1) {
+    //           if (objAuditoria.instalacionsComunicacions.LAN.wifiAPs.ubicacio.salaEspera == false)
+    //             return "El punto de acceso se encuentra ubicado en " + objAuditoria.instalacionsComunicacions.LAN.wifiAPs.ubicacio.altres
+    //         } else {
+    //           return "También hay un punto de acceso en " + objAuditoria.instalacionsComunicacions.LAN.wifiAPs.ubicacio.altres
+    //         }
+    //       })(),
+    //     },
+    //   ]
+    // },
     {
       apartatInforme: "LAN-APs",
       valorPropietat:  objAuditoria.instalacionsComunicacions.LAN.wifiAPs.APvisible.existeix,
@@ -668,20 +668,20 @@ export function frasesInforme (obj, apartat = null){
         },
       ]
     },
-    {
-      apartatInforme: "LAN-APs",
-      valorPropietat:  objAuditoria.instalacionsComunicacions.LAN.wifiAPs.coberturaPROAS.existeix,
-      arrFrases: [
-        {
-          valorActivacioFrase: true,
-          frase: "Hay cobertrua wifi suficiente en zona PROAS. " + (objAuditoria.instalacionsComunicacions.LAN.wifiAPs.coberturaPROAS.observacions || ""),
-        },
-        {
-          valorActivacioFrase: false,
-          frase: "La cobertura wifi no es suficiente en zona PROAS. " + (objAuditoria.instalacionsComunicacions.LAN.wifiAPs.coberturaPROAS.observacions || ""),
-        },
-      ]
-    },
+    // {
+    //   apartatInforme: "LAN-APs",
+    //   valorPropietat:  objAuditoria.instalacionsComunicacions.LAN.wifiAPs.coberturaPROAS.existeix,
+    //   arrFrases: [
+    //     {
+    //       valorActivacioFrase: true,
+    //       frase: "Hay cobertrua wifi suficiente en zona PROAS. " + (objAuditoria.instalacionsComunicacions.LAN.wifiAPs.coberturaPROAS.observacions || ""),
+    //     },
+    //     {
+    //       valorActivacioFrase: false,
+    //       frase: "La cobertura wifi no es suficiente en zona PROAS. " + (objAuditoria.instalacionsComunicacions.LAN.wifiAPs.coberturaPROAS.observacions || ""),
+    //     },
+    //   ]
+    // },
     {
       apartatInforme: "LAN-APs",
       valorPropietat:  objAuditoria.instalacionsComunicacions.LAN.wifiAPs.carteleriaWifi.existeix,
@@ -711,20 +711,20 @@ export function frasesInforme (obj, apartat = null){
 
     /***************     Pendrive         ***************/
 
-    {
-      apartatInforme: "instalaciones-pendrive",
-      valorPropietat: objAuditoria.instalacionsComunicacions.pendriveBIOS.existeix,
-      arrFrases: [
-        {
-          valorActivacioFrase: true,
-          frase: "El centro dispone de un pendrive de emergencia ubicado en " + (objAuditoria.instalacionsComunicacions.pendriveBIOS.ubicacio || "") + ". Costaisa periódicamente se pone en contacto con el centro para la realizar la actualización de dicho pendrive.",
-        },
-        {
-          valorActivacioFrase: false,
-          frase: "El centro no dispone de un pendrive de emergencia. ",
-        },
-      ]
-    },
+    // {
+    //   apartatInforme: "instalaciones-pendrive",
+    //   valorPropietat: objAuditoria.instalacionsComunicacions.pendriveBIOS.existeix,
+    //   arrFrases: [
+    //     {
+    //       valorActivacioFrase: true,
+    //       frase: "El centro dispone de un pendrive de emergencia ubicado en " + (objAuditoria.instalacionsComunicacions.pendriveBIOS.ubicacio || "") + ". Costaisa periódicamente se pone en contacto con el centro para la realizar la actualización de dicho pendrive.",
+    //     },
+    //     {
+    //       valorActivacioFrase: false,
+    //       frase: "El centro no dispone de un pendrive de emergencia. ",
+    //     },
+    //   ]
+    // },
 
     {
       apartatInforme: "instalaciones-pendrive",
@@ -936,67 +936,6 @@ export function frasesInforme (obj, apartat = null){
     
     /***************     SEGURETAT       ***************/
 
-    /***************     taules netes         ***************/
-
-    {
-      apartatInforme: "seguridad-mesasLimpias",
-      fraseGeneral : "Normativa de seguridad ASEPEYO (norma 3.3.2): Para prevenir la exposición al robo de información y de recursos de tratamiento de datos durante las ausencias del Usuario de su puesto de trabajo, toda la documentación debe quedar fuera del alcance de personal no autorizado y en lugares de acceso restringido."
-    },
-    {
-      apartatInforme: "seguridad-mesasLimpias",
-      fraseGeneral : "Normativa de la política de protección de datos y seguridad de la información (norma 5.9.3): Los usuarios aplicarán una política de mesas limpias basada en la digitalización de su actividad y en la eliminación del papel."
-    },
-    {
-      apartatInforme: "seguridad-mesasLimpias",
-      valorPropietat: objAuditoria.seguretatInformacio.taulesNetes.documentacioSobreTaules.existeix,
-      arrFrases: [
-        {
-          valorActivacioFrase: true,
-          frase: "Se detectan casos en los que queden documentos visibles a personas ajenas a la organización. " + (objAuditoria.seguretatInformacio.taulesNetes.documentacioSobreTaules.observacions || ""),
-        },
-        {
-          valorActivacioFrase: false,
-          frase: "No se detectan casos en los que queden documentos visibles a personas ajenas a la organización, o en caso de que el empleado haya finalizado su jornada, quede documentación en su puesto de trabajo. " + (objAuditoria.seguretatInformacio.taulesNetes.documentacioSobreTaules.observacions || ""),
-        },
-      ]
-    },
-
-
-    /***************     documentacio a impresores         ***************/
-
-    {
-      apartatInforme: "seguridad-mesasLimpias",
-      fraseGeneral : "Normativa de seguridad ASEPEYO (norma 3.3.24): En el caso de las impresoras el usuario debe asegurarse de que no quedan documentos impresos en la bandeja de salida. Si las impresoras son compartidas con otros usuarios no autorizados para acceder a la información, los responsables de cada puesto deben retirar los documentos conforme vayan siendo impresos."
-    },
-    {
-      apartatInforme: "seguridad-mesasLimpias",
-      valorPropietat: objAuditoria.seguretatInformacio.taulesNetes.documentacioImpresores.existeix,
-      arrFrases: [
-        {
-          valorActivacioFrase: true,
-          frase: "Se detecta documento 'abandonado' en impresora. " + (objAuditoria.seguretatInformacio.taulesNetes.documentacioImpresores.observacions || ""),
-        },
-        {
-          valorActivacioFrase: false,
-          frase: "No se detectan casos en los que queden documentos “abandonados” en las impresoras. " + (objAuditoria.seguretatInformacio.taulesNetes.documentacioImpresores.observacions || ""),
-        },
-      ]
-    },
-    {
-      apartatInforme: "seguridad-mesasLimpias",
-      valorPropietat: objAuditoria.seguretatInformacio.taulesNetes.documentacioPapeleres.existeix,
-      arrFrases: [
-        {
-          valorActivacioFrase: true,
-          frase: "Se encuentra documentación confidencial en papelera. " + (objAuditoria.seguretatInformacio.taulesNetes.documentacioPapeleres.observacions || ""),
-        },
-        {
-          valorActivacioFrase: false,
-          frase: "Se revisa alguna papelera y no se encuentra documentación confidencial en ella. " + (objAuditoria.seguretatInformacio.taulesNetes.documentacioPapeleres.observacions || ""),
-        },
-      ]
-    },
-
 
 
     /***************     Destrucció de documents         ***************/
@@ -1049,8 +988,6 @@ export function frasesInforme (obj, apartat = null){
     },
 
 
-
-
     /***************     Orientació pantalles         ***************/
 
     {
@@ -1086,121 +1023,6 @@ export function frasesInforme (obj, apartat = null){
       ]
     },
 
-
-
-
-    /***************     Carteleria LOPD         ***************/
-
-    {
-      apartatInforme: "seguridad-carteleria",
-      fraseGeneral : "Normativa de Letreros informativos privacidad y protección de datos (Circular nº C-082/09.5): El Reglamento General de Protección de Datos establece la obligación de informar a cualquier persona atendida en las dependencias de la Mutua, sobre el tratamiento de sus datos de carácter personal de modo expreso, preciso e inequívoco. Esto implica que debe informarse acerca de la identidad del responsable del tratamiento, la finalidad por la cual se recaban los datos, el plazo de conservación de los mismos, si existe cesión y el procedimiento para ejercitar sus derechos."
-    },
-    {
-      apartatInforme: "seguridad-carteleria",
-      valorPropietat: objAuditoria.seguretatInformacio.carteleriaLOPD.PROAS,
-      arrFrases: [
-        {
-          valorActivacioFrase: true,
-          frase: "En los puestos de trabajo de los PROAS existe carteleria LOPD. " + (objAuditoria.seguretatInformacio.carteleriaLOPD.observacionsPROAS || ""),
-        },
-        {
-          valorActivacioFrase: false,
-          frase: "Hay algún puesto PROAS que no tiene cartel LOPD. " + (objAuditoria.seguretatInformacio.carteleriaLOPD.observacionsPROAS || ""),
-        },
-      ]
-    },
-    {
-      apartatInforme: "seguridad-carteleria",
-      valorPropietat: objAuditoria.seguretatInformacio.carteleriaLOPD.CEX,
-      arrFrases: [
-        {
-          valorActivacioFrase: true,
-          frase: "Las mesas de las consultas médicas y de rehabilitació tienen carteleria LOPD. " + (objAuditoria.seguretatInformacio.carteleriaLOPD.observacionsCEX || ""),
-        },
-        {
-          valorActivacioFrase: false,
-          frase: "Hay alguna mesa de consulta médica / rehabilitación que no tiene cartel LOPD. " + (objAuditoria.seguretatInformacio.carteleriaLOPD.observacionsCEX || ""),
-        },
-      ]
-    },
-
-
-
-    /***************     Gestion de activos         ***************/
-
-    {
-      apartatInforme: "seguridad-gestionActivos",
-      valorPropietat:  objAuditoria.seguretatInformacio.materialBaixaInventari.existeix,
-      arrFrases: [
-        {
-          valorActivacioFrase: true ,
-          frase: "Durante la visita se encuentran los siguientes materiales que estan dados de baja en el inventario: " + objAuditoria.seguretatInformacio.materialBaixaInventari.observacions
-        },
-        {
-          valorActivacioFrase: false ,
-          frase: "En la visita no se encuentra material alguno que este dado de baja en el inventario" + objAuditoria.seguretatInformacio.materialBaixaInventari.observacions
-        }
-      ]
-    },
-    {
-      apartatInforme: "seguridad-gestionActivos",
-      fraseGeneral : "Normativa de seguridad ASEPEYO (norma 3.6.25): Cualquier soporte digital (CD/DVD, cinta seguridad, etc.) sin utilidad (datos no vigentes, copias históricas,soporte inutilizable, etc.) debe destruirse, de acuerdo a los procedimientos establecidos, de forma que el acceso a los datos almacenados sea imposible (p.e. rallando ambas supervicies o procediendo a su rotura). El la medida de lo posible, la destrucción debe realizarse en el centro/dependencia donde esté ubicado el soporte (in situ)."
-    },
-    {
-      apartatInforme: "seguridad-gestionActivos",
-      fraseGeneral : "Normativa de seguridad ASEPEYO (norma 3.6.26): Ningún soporte deberá ser tirado directamente a las papeleras, contenedores, etc."
-    },
-    {
-      apartatInforme: "seguridad-gestionActivos",
-      fraseGeneral : "Normativa de seguridad ASEPEYO (norma 3.6.27): El procedimiento de destrucción de las memorias externas USB se encuentra descrito en la Política de uso de dispositivos de memoria."
-    },
-    {
-      apartatInforme: "seguridad-gestionActivos",
-      valorPropietat:  objAuditoria.seguretatInformacio.suportsFisics.existeix,
-      arrFrases: [
-        {
-          valorActivacioFrase: true ,
-          frase: "Durante la visita se encuentran los siguientes soportes físicos: " + objAuditoria.seguretatInformacio.suportsFisics.observacions
-        },
-        {
-          valorActivacioFrase: false ,
-          frase: "En la visita no se encuentra soporte físico alguno. " + objAuditoria.seguretatInformacio.suportsFisics.observacions
-        }
-      ]
-    },
-    {
-      apartatInforme: "seguridad-gestionActivos",
-      fraseGeneral : "Normativa de la política de protección de datos y seguridad de la información (norma 5.9.4): Los documentos que deban utilizarse en formato papel deberán quedar guardados en un armario cerrado con llave al finalizar la jornada de trabajo."
-    },
-    {
-      apartatInforme: "seguridad-gestionActivos",
-      valorPropietat:  objAuditoria.seguretatInformacio.documentacioSensible.existeix,
-      arrFrases: [
-        {
-          valorActivacioFrase: true ,
-          frase: "Durante la visita se encuentra documentación sensibe: " + objAuditoria.seguretatInformacio.documentacioSensible.observacions
-        },
-        {
-          valorActivacioFrase: false ,
-          frase: "En la visita no se encuentra documentación sensible alguna" + objAuditoria.seguretatInformacio.documentacioSensible.observacions
-        }
-      ]
-    },
-    {
-      apartatInforme: "seguridad-gestionActivos",
-      valorPropietat:  objAuditoria.seguretatInformacio.expedientsGreus.existeix,
-      arrFrases: [
-        {
-          valorActivacioFrase: true ,
-          frase: "Durante la visita se encuentran expedientes graves  " + objAuditoria.seguretatInformacio.expedientsGreus.observacions
-        },
-        {
-          valorActivacioFrase: false ,
-          frase: "En la visita no se encuentra expediente grave alguno." + objAuditoria.seguretatInformacio.expedientsGreus.observacions
-        }
-      ]
-    },
-  
 
 
     /***************     Acceso al centro        ***************/
@@ -1318,6 +1140,105 @@ export function frasesInforme (obj, apartat = null){
       ]
     },
 
+
+    /***************     Carteleria LOPD         ***************/
+
+    {
+      apartatInforme: "seguridad-carteleria",
+      fraseGeneral : "Normativa de Letreros informativos privacidad y protección de datos (Circular nº C-082/09.5): El Reglamento General de Protección de Datos establece la obligación de informar a cualquier persona atendida en las dependencias de la Mutua, sobre el tratamiento de sus datos de carácter personal de modo expreso, preciso e inequívoco. Esto implica que debe informarse acerca de la identidad del responsable del tratamiento, la finalidad por la cual se recaban los datos, el plazo de conservación de los mismos, si existe cesión y el procedimiento para ejercitar sus derechos."
+    },
+    {
+      apartatInforme: "seguridad-carteleria",
+      valorPropietat: objAuditoria.seguretatInformacio.carteleriaLOPD.PROAS,
+      arrFrases: [
+        {
+          valorActivacioFrase: true,
+          frase: "En los puestos de trabajo de los PROAS existe carteleria LOPD. " + (objAuditoria.seguretatInformacio.carteleriaLOPD.observacionsPROAS || ""),
+        },
+        {
+          valorActivacioFrase: false,
+          frase: "Hay algún puesto PROAS que no tiene cartel LOPD. " + (objAuditoria.seguretatInformacio.carteleriaLOPD.observacionsPROAS || ""),
+        },
+      ]
+    },
+    {
+      apartatInforme: "seguridad-carteleria",
+      valorPropietat: objAuditoria.seguretatInformacio.carteleriaLOPD.CEX,
+      arrFrases: [
+        {
+          valorActivacioFrase: true,
+          frase: "Las mesas de las consultas médicas y de rehabilitació tienen carteleria LOPD. " + (objAuditoria.seguretatInformacio.carteleriaLOPD.observacionsCEX || ""),
+        },
+        {
+          valorActivacioFrase: false,
+          frase: "Hay alguna mesa de consulta médica / rehabilitación que no tiene cartel LOPD. " + (objAuditoria.seguretatInformacio.carteleriaLOPD.observacionsCEX || ""),
+        },
+      ]
+    },
+
+
+
+
+    /***************     taules netes         ***************/
+
+    {
+      apartatInforme: "seguridad-mesasLimpias",
+      fraseGeneral : "Normativa de seguridad ASEPEYO (norma 3.3.2): Para prevenir la exposición al robo de información y de recursos de tratamiento de datos durante las ausencias del Usuario de su puesto de trabajo, toda la documentación debe quedar fuera del alcance de personal no autorizado y en lugares de acceso restringido."
+    },
+    {
+      apartatInforme: "seguridad-mesasLimpias",
+      fraseGeneral : "Normativa de la política de protección de datos y seguridad de la información (norma 5.9.3): Los usuarios aplicarán una política de mesas limpias basada en la digitalización de su actividad y en la eliminación del papel."
+    },
+    {
+      apartatInforme: "seguridad-mesasLimpias",
+      valorPropietat: objAuditoria.seguretatInformacio.taulesNetes.documentacioSobreTaules.existeix,
+      arrFrases: [
+        {
+          valorActivacioFrase: true,
+          frase: "Se detectan casos en los que queden documentos visibles a personas ajenas a la organización. " + (objAuditoria.seguretatInformacio.taulesNetes.documentacioSobreTaules.observacions || ""),
+        },
+        {
+          valorActivacioFrase: false,
+          frase: "No se detectan casos en los que queden documentos visibles a personas ajenas a la organización, o en caso de que el empleado haya finalizado su jornada, quede documentación en su puesto de trabajo. " + (objAuditoria.seguretatInformacio.taulesNetes.documentacioSobreTaules.observacions || ""),
+        },
+      ]
+    },
+
+
+    /***************     documentacio a impresores         ***************/
+
+    {
+      apartatInforme: "seguridad-mesasLimpias",
+      fraseGeneral : "Normativa de seguridad ASEPEYO (norma 3.3.24): En el caso de las impresoras el usuario debe asegurarse de que no quedan documentos impresos en la bandeja de salida. Si las impresoras son compartidas con otros usuarios no autorizados para acceder a la información, los responsables de cada puesto deben retirar los documentos conforme vayan siendo impresos."
+    },
+    {
+      apartatInforme: "seguridad-mesasLimpias",
+      valorPropietat: objAuditoria.seguretatInformacio.taulesNetes.documentacioImpresores.existeix,
+      arrFrases: [
+        {
+          valorActivacioFrase: true,
+          frase: "Se detecta documento 'abandonado' en impresora. " + (objAuditoria.seguretatInformacio.taulesNetes.documentacioImpresores.observacions || ""),
+        },
+        {
+          valorActivacioFrase: false,
+          frase: "No se detectan casos en los que queden documentos “abandonados” en las impresoras. " + (objAuditoria.seguretatInformacio.taulesNetes.documentacioImpresores.observacions || ""),
+        },
+      ]
+    },
+    {
+      apartatInforme: "seguridad-mesasLimpias",
+      valorPropietat: objAuditoria.seguretatInformacio.taulesNetes.documentacioPapeleres.existeix,
+      arrFrases: [
+        {
+          valorActivacioFrase: true,
+          frase: "Se encuentra documentación confidencial en papelera. " + (objAuditoria.seguretatInformacio.taulesNetes.documentacioPapeleres.observacions || ""),
+        },
+        {
+          valorActivacioFrase: false,
+          frase: "Se revisa alguna papelera y no se encuentra documentación confidencial en ella. " + (objAuditoria.seguretatInformacio.taulesNetes.documentacioPapeleres.observacions || ""),
+        },
+      ]
+    },
 
 
 
@@ -1457,19 +1378,105 @@ export function frasesInforme (obj, apartat = null){
 
 
 
+
+
+
+
+    /***************     Gestion de activos         ***************/
+
+    {
+      apartatInforme: "seguridad-gestionActivos",
+      valorPropietat:  objAuditoria.seguretatInformacio.materialBaixaInventari.existeix,
+      arrFrases: [
+        {
+          valorActivacioFrase: true ,
+          frase: "Durante la visita se encuentran los siguientes materiales que estan dados de baja en el inventario: " + objAuditoria.seguretatInformacio.materialBaixaInventari.observacions
+        },
+        {
+          valorActivacioFrase: false ,
+          frase: "En la visita no se encuentra material alguno que este dado de baja en el inventario" + objAuditoria.seguretatInformacio.materialBaixaInventari.observacions
+        }
+      ]
+    },
+    {
+      apartatInforme: "seguridad-gestionActivos",
+      fraseGeneral : "Normativa de seguridad ASEPEYO (norma 3.6.25): Cualquier soporte digital (CD/DVD, cinta seguridad, etc.) sin utilidad (datos no vigentes, copias históricas,soporte inutilizable, etc.) debe destruirse, de acuerdo a los procedimientos establecidos, de forma que el acceso a los datos almacenados sea imposible (p.e. rallando ambas supervicies o procediendo a su rotura). El la medida de lo posible, la destrucción debe realizarse en el centro/dependencia donde esté ubicado el soporte (in situ)."
+    },
+    {
+      apartatInforme: "seguridad-gestionActivos",
+      fraseGeneral : "Normativa de seguridad ASEPEYO (norma 3.6.26): Ningún soporte deberá ser tirado directamente a las papeleras, contenedores, etc."
+    },
+    {
+      apartatInforme: "seguridad-gestionActivos",
+      fraseGeneral : "Normativa de seguridad ASEPEYO (norma 3.6.27): El procedimiento de destrucción de las memorias externas USB se encuentra descrito en la Política de uso de dispositivos de memoria."
+    },
+    {
+      apartatInforme: "seguridad-gestionActivos",
+      valorPropietat:  objAuditoria.seguretatInformacio.suportsFisics.existeix,
+      arrFrases: [
+        {
+          valorActivacioFrase: true ,
+          frase: "Durante la visita se encuentran los siguientes soportes físicos: " + objAuditoria.seguretatInformacio.suportsFisics.observacions
+        },
+        {
+          valorActivacioFrase: false ,
+          frase: "En la visita no se encuentra soporte físico alguno. " + objAuditoria.seguretatInformacio.suportsFisics.observacions
+        }
+      ]
+    },
+    {
+      apartatInforme: "seguridad-gestionActivos",
+      fraseGeneral : "Normativa de la política de protección de datos y seguridad de la información (norma 5.9.4): Los documentos que deban utilizarse en formato papel deberán quedar guardados en un armario cerrado con llave al finalizar la jornada de trabajo."
+    },
+    {
+      apartatInforme: "seguridad-gestionActivos",
+      valorPropietat:  objAuditoria.seguretatInformacio.documentacioSensible.existeix,
+      arrFrases: [
+        {
+          valorActivacioFrase: true ,
+          frase: "Durante la visita se encuentra documentación sensibe: " + objAuditoria.seguretatInformacio.documentacioSensible.observacions
+        },
+        {
+          valorActivacioFrase: false ,
+          frase: "En la visita no se encuentra documentación sensible alguna" + objAuditoria.seguretatInformacio.documentacioSensible.observacions
+        }
+      ]
+    },
+    {
+      apartatInforme: "seguridad-gestionActivos",
+      valorPropietat:  objAuditoria.seguretatInformacio.expedientsGreus.existeix,
+      arrFrases: [
+        {
+          valorActivacioFrase: true ,
+          frase: "Durante la visita se encuentran expedientes graves  " + objAuditoria.seguretatInformacio.expedientsGreus.observacions
+        },
+        {
+          valorActivacioFrase: false ,
+          frase: "En la visita no se encuentra expediente grave alguno." + objAuditoria.seguretatInformacio.expedientsGreus.observacions
+        }
+      ]
+    },
+  
+
+
+
+
+
+
+
     /***************     Seguirdad de las operaciones        ***************/
 
     {
       apartatInforme: "seguridad-seguridadOperaciones",
-      valorPropietat:  objAuditoria.seguretatInformacio.centresAlternatiusGADA.existeix,
+      valorPropietat:  objAuditoria.seguretatInformacio.GADAcentresAlternatius.existeix,
       arrFrases: [
         {
           valorActivacioFrase: true ,
-          frase: "En GADA hay informados centros alternativos en caso de cierre del centro. " + objAuditoria.seguretatInformacio.centresAlternatiusGADA.observacions
+          frase: "En GADA hay informados centros alternativos en caso de cierre del centro. " + objAuditoria.seguretatInformacio.GADAcentresAlternatius.observacions
         },
         {
           valorActivacioFrase: false ,
-          frase: "En GADA no hay informados centros alternativos en caso de cierre del centro. " + objAuditoria.seguretatInformacio.centresAlternatiusGADA.observacions
+          frase: "En GADA no hay informados centros alternativos en caso de cierre del centro. " + objAuditoria.seguretatInformacio.GADAcentresAlternatius.observacions
         },
       ]
     },
@@ -1501,48 +1508,48 @@ export function frasesInforme (obj, apartat = null){
         },
       ]
     },
-    {
-      apartatInforme: "seguridad-seguridadOperaciones",
-      valorPropietat:  objAuditoria.seguretatInformacio.pendriveEmergencia.ubicacioCorrecte.existeix,
-      arrFrases: [
-        {
-          valorActivacioFrase: true ,
-          frase: "El pendrive de emergencia se encuentra debidamente ubicado en el rack. " + objAuditoria.seguretatInformacio.pendriveEmergencia.ubicacioCorrecte.observacions
-        },
-        {
-          valorActivacioFrase: false ,
-          frase: "Durante la visita se observa que el pendrive de emergencia no está debidamente ubicado en el rack. " + objAuditoria.seguretatInformacio.pendriveEmergencia.ubicacioCorrecte.observacions
-        },
-      ]
-    },
-    {
-      apartatInforme: "seguridad-seguridadOperaciones",
-      valorPropietat:  objAuditoria.seguretatInformacio.pendriveEmergencia.ultimaVersio.existeix,
-      arrFrases: [
-        {
-          valorActivacioFrase: true ,
-          frase: "El pendrive de emergencia está actualizado. " + objAuditoria.seguretatInformacio.pendriveEmergencia.ultimaVersio.observacions
-        },
-        {
-          valorActivacioFrase: false ,
-          frase: "El pendrive de emergencia no está actualizado. " + objAuditoria.seguretatInformacio.pendriveEmergencia.ultimaVersio.observacions
-        },
-      ]
-    },
-    {
-      apartatInforme: "seguridad-seguridadOperaciones",
-      valorPropietat:  objAuditoria.seguretatInformacio.pendriveEmergencia.actualitzacio.feta,
-      arrFrases: [
-        {
-          valorActivacioFrase: true ,
-          frase: "Durante la visita se ha procedido a la actualización del pendrive de emergencia. " + objAuditoria.seguretatInformacio.pendriveEmergencia.actualitzacio.observacions
-        },
-        {
-          valorActivacioFrase: false ,
-          frase: "Se comprueba antes del día de la visita que el pendrive de emergencia ya se encuentra actualizado. " + objAuditoria.seguretatInformacio.pendriveEmergencia.actualitzacio.observacions
-        },
-      ]
-    },
+    // {
+    //   apartatInforme: "seguridad-seguridadOperaciones",
+    //   valorPropietat:  objAuditoria.seguretatInformacio.pendriveEmergencia.ubicacioCorrecte.existeix,
+    //   arrFrases: [
+    //     {
+    //       valorActivacioFrase: true ,
+    //       frase: "El pendrive de emergencia se encuentra debidamente ubicado en el rack. " + objAuditoria.seguretatInformacio.pendriveEmergencia.ubicacioCorrecte.observacions
+    //     },
+    //     {
+    //       valorActivacioFrase: false ,
+    //       frase: "Durante la visita se observa que el pendrive de emergencia no está debidamente ubicado en el rack. " + objAuditoria.seguretatInformacio.pendriveEmergencia.ubicacioCorrecte.observacions
+    //     },
+    //   ]
+    // },
+    // {
+    //   apartatInforme: "seguridad-seguridadOperaciones",
+    //   valorPropietat:  objAuditoria.seguretatInformacio.pendriveEmergencia.ultimaVersio.existeix,
+    //   arrFrases: [
+    //     {
+    //       valorActivacioFrase: true ,
+    //       frase: "El pendrive de emergencia está actualizado. " + objAuditoria.seguretatInformacio.pendriveEmergencia.ultimaVersio.observacions
+    //     },
+    //     {
+    //       valorActivacioFrase: false ,
+    //       frase: "El pendrive de emergencia no está actualizado. " + objAuditoria.seguretatInformacio.pendriveEmergencia.ultimaVersio.observacions
+    //     },
+    //   ]
+    // },
+    // {
+    //   apartatInforme: "seguridad-seguridadOperaciones",
+    //   valorPropietat:  objAuditoria.seguretatInformacio.pendriveEmergencia.actualitzacio.feta,
+    //   arrFrases: [
+    //     {
+    //       valorActivacioFrase: true ,
+    //       frase: "Durante la visita se ha procedido a la actualización del pendrive de emergencia. " + objAuditoria.seguretatInformacio.pendriveEmergencia.actualitzacio.observacions
+    //     },
+    //     {
+    //       valorActivacioFrase: false ,
+    //       frase: "Se comprueba antes del día de la visita que el pendrive de emergencia ya se encuentra actualizado. " + objAuditoria.seguretatInformacio.pendriveEmergencia.actualitzacio.observacions
+    //     },
+    //   ]
+    // },
 
 
 
@@ -1612,20 +1619,20 @@ export function frasesInforme (obj, apartat = null){
         },
       ]
     },
-    {
-      apartatInforme: "seguridad-seguridadComunicaciones",
-      valorPropietat:  objAuditoria.seguretatInformacio.puntsXarxaSalaEspera.existeix,
-      arrFrases: [
-        {
-          valorActivacioFrase: true ,
-          frase: "Durante la visita no se observan tomas de datos en las paredes de la sala de espera. " + objAuditoria.seguretatInformacio.puntsXarxaSalaEspera.observacions
-        },
-        {
-          valorActivacioFrase: false ,
-          frase: "Durante la visita se observan tomas de datos en las paredes de la sala de espera. " + objAuditoria.seguretatInformacio.puntsXarxaSalaEspera.observacions
-        },
-      ]
-    },
+    // {
+    //   apartatInforme: "seguridad-seguridadComunicaciones",
+    //   valorPropietat:  objAuditoria.seguretatInformacio.puntsXarxaSalaEspera.existeix,
+    //   arrFrases: [
+    //     {
+    //       valorActivacioFrase: true ,
+    //       frase: "Durante la visita no se observan tomas de datos en las paredes de la sala de espera. " + objAuditoria.seguretatInformacio.puntsXarxaSalaEspera.observacions
+    //     },
+    //     {
+    //       valorActivacioFrase: false ,
+    //       frase: "Durante la visita se observan tomas de datos en las paredes de la sala de espera. " + objAuditoria.seguretatInformacio.puntsXarxaSalaEspera.observacions
+    //     },
+    //   ]
+    // },
     
 
 
