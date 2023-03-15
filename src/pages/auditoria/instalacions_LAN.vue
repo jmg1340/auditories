@@ -250,7 +250,7 @@
         <!-- CLIMATIZACION -->
 
         <q-card class="col-sm-6 col q-mb-md">
-          <cmp_Titol1 titol="Climatización	" />
+          <cmp_Titol2 titol="Climatización	" />
           <q-btn
             dense
             noCaps

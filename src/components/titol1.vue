@@ -1,7 +1,7 @@
 <template>
 	
 	<q-card-section 
-			class="col-11 text-h5 text-white text-center bg-red-10 q-pa-md q-mb-md" >
+			class="col-11 text-h5 text-white text-center bg-red-10 q-mb-md" >
 			
 			<q-icon
 				v-if="help"
@@ -32,7 +32,9 @@
 </template>
 
 <style>
-
+	.q-card__section--vert{
+		padding: 3px;
+	}
 </style>
 
 <script>

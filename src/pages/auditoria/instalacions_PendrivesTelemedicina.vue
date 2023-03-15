@@ -133,7 +133,11 @@
 
 					</q-card-section>
 				</q-card> -->
+			</q-card>
 
+
+			<q-card class="col-sm-8 col q-pa-sm q-mt-lg">
+				<cmp_Titol1 titol="FIRMA BIOMÉTRICA Y GESTOR DE TURNOS" />
 
         <!-- FIRMA BIOMETRICA -->
 
@@ -314,7 +318,7 @@
 
 					<q-card-section>
             <cmp_inputSiNoObsrv
-              etiqueta="Llamada a pacientes correccta -> sale en pantalla con el tiempo adecuado:"
+              etiqueta="Llamada a pacientes correcta -> sale en pantalla con el tiempo adecuado:"
               arrCamps="['instalacionsComunicacions', 'gestioTorns', 'revisio', 'avisAPacients', 'existeix']"
               arrCampsDos="['instalacionsComunicacions', 'gestioTorns', 'revisio', 'avisAPacients','observacions']"
             />

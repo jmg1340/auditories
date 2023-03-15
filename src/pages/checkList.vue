@@ -218,7 +218,7 @@ export default {
 
 
 					ctx.fillStyle='darkblue';
-					ctx.doc.fontSize(8)	
+					ctx.doc.fontSize(10)	
 
 
 					if (/Pagina_(17|18|19|20|21)/.test(pagina)){

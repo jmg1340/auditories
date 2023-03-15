@@ -4,6 +4,25 @@
 
 		<q-card class="q-ma-md">
 			<q-card-section>
+				<div class="text-h6">FIRMA BIOMETRICA:</div>
+					<ul>
+						<li>
+							Per saber el numero de tablets que te el centre -> "analisis de Datos (Business intelligence)" a la INTRANET<br/>
+							<span class="text-italic">
+								"Apartat 'Firma Biométrica'"
+							</span><br/>
+							"Analisis uso de Tablets"
+						</li>
+						<li>
+							Es tracta de veure si al centre no hi ha cap tablet que estigui en desús (es a dir, que no estigui instalada o que estigui en un calaix, etc.):
+						</li>
+
+					</ul>
+			</q-card-section>
+		</q-card>
+
+		<q-card class="q-ma-md">
+			<q-card-section>
 				<div class="text-h6">TELEMEDICINA:</div>
 					<ul>
 						<li>

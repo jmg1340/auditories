@@ -8,6 +8,8 @@ function pintaPagina03 (ctx, oAudit){
   /* CAPÇALERA */
 	pintaCapsalera(ctx, oAudit)
 
+	ctx.doc.fontSize(12)	
+
 	/* Resta de dades */
 	ctx.doc.text(oAudit.dadesCentre.nomCentre, 130.0, 129.0 - 8);
 	ctx.doc.text(oAudit.dadesCentre.sector, 130.0, 160.0 - 8);
