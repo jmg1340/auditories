@@ -1,3 +1,5 @@
+import Vue from 'vue'
+
 export function mutCarregarAuditories ( state, arrAuditories ) {
 	state.auditories = arrAuditories
 	state.carregarAuditories = false
@@ -103,6 +105,17 @@ export function updateCamp ( state, payload ) {
 	//if (payload.valor == null) payload.valor = ""
 
 	let arr = eval(payload.arrProps)
+
+	// Si l'auditoria es va crear amb una plantilla anterior, pot ser que li faltin
+	// propietats noves: les creem (de forma reactiva) abans d'assignar el valor.
+	let objDesti = (payload.objRack !== undefined) ? payload.objRack : state.auditories[state.indexArrAuditories]
+	arr.forEach( (prop, index) => {
+		const esUltima = (index == arr.length - 1)
+		if ( !(prop in objDesti) || (!esUltima && objDesti[prop] == null) ) {
+			Vue.set(objDesti, prop, esUltima ? null : {})
+		}
+		objDesti = objDesti[prop]
+	})
 
 	console.log(`payload.valor: ${payload.valor}` )
 	console.log(` typeof payload.valor === 'boolean': ${ typeof payload.valor === 'boolean'}` )

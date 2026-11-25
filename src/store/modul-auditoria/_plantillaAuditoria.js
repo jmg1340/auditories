@@ -607,6 +607,10 @@ export default {
           existeix: null,		// true / false
           observacions: null 	// numero
         },
+        documentRegistreClaus: {
+          existeix: null,		// true / false
+          observacions: null
+        },
         codisAlarma: {
           tipus: null,		// individuals / generic
           observacions: null 	// numero

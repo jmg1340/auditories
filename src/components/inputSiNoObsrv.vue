@@ -61,6 +61,19 @@ export default {
 	},
 
 	methods : {
+		// Retorna el valor de la ruta de propietats, o null si alguna propietat no existeix
+		// (auditories creades amb una plantilla anterior)
+		llegirValor: function (arrRuta) {
+			let obj = (this.objRack !== undefined)
+				? this.objRack
+				: this.$store.state.mAuditoria.auditories[this.$store.state.mAuditoria.indexArrAuditories]
+			for (const prop of arrRuta) {
+				if (obj == null) return null
+				obj = obj[prop]
+			}
+			return (obj === undefined) ? null : obj
+		},
+
 		posarValorANull: function(){
 			this.$store.commit( 'mAuditoria/updateCamp', { arrProps: this.arrCamps, valor: null, objRack: this.objRack })
 		},
@@ -79,12 +92,7 @@ export default {
 				//debugger
 				// console.log(this.arrCamps)
 				this._arrCamps = eval(this.arrCamps)   // transforma string a array
-				// console.log("this.objRack: " + this.objRack)
-				if (this.objRack !== undefined ){
-					const valor =  eval("this.objRack['" + this._arrCamps.join("']['") + "']")
-					return  (valor == null) ? valor : valor.toString()
-				}
-				const valor =  eval("this.$store.state.mAuditoria.auditories[this.$store.state.mAuditoria.indexArrAuditories]['" + this._arrCamps.join("']['") + "']")
+				const valor = this.llegirValor(this._arrCamps)
 				return  (valor == null) ? valor : valor.toString()
 
 			},
@@ -102,11 +110,7 @@ export default {
 			get() {
 				//debugger
 				this._arrCampsDos = eval(this.arrCampsDos)   // transforma string a array
-				// console.log("this.objRack: " + this.objRack)
-				if (this.objRack !== undefined ){
-					return eval("this.objRack['" + this._arrCampsDos.join("']['") + "']")
-				}
-				return eval("this.$store.state.mAuditoria.auditories[this.$store.state.mAuditoria.indexArrAuditories]['" + this._arrCampsDos.join("']['") + "']")
+				return this.llegirValor(this._arrCampsDos)
 
 			},
 			set (value) {

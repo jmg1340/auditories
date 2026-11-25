@@ -161,6 +161,83 @@
 
 
 
+				<!-- RACKS -->
+
+				<q-card class="col-sm-6 col q-mb-md ">
+
+					<cmp_Titol2 titol="RACKS" />
+
+					<q-card-section>
+
+						<cmp_inputText etiqueta="Nº RACKS:" arrCamps="['instalacionsComunicacions', 'sala', 'numRacks']" />
+
+						<cmp_inputSiNoObsrv
+							etiqueta="Nº RACKS ADECUADO?"
+							arrCamps="['instalacionsComunicacions', 'sala', 'numRacksAdecuat', 'existeix']"
+							arrCampsDos="['instalacionsComunicacions', 'sala', 'numRacksAdecuat', 'observacions']"
+						/>
+
+					</q-card-section>
+
+					<!-- <q-card-section v-for="(rack, indexRack) in arrRacks" :key="indexRack" class="bg-grey-2"> -->
+					<q-card-section class="bg-grey-2">
+
+
+						<q-expansion-item v-for="(rack, indexRack) in arrRacks" :key="indexRack" dense class=" q-mb-sm" :header-style="{ backgroundColor: '#f7ecc3' }">
+							<template v-slot:header>
+								<!-- 								
+								<q-item-section avatar>
+									<q-avatar icon="view_array" color="warning" text-color="white" />
+								</q-item-section> 
+								-->
+
+								<q-item-section class="text-bold text-h4">
+									Rack nº {{ indexRack + 1 }}
+								</q-item-section>
+
+								<q-item-section side>
+									<div class="row items-center">
+										<q-btn
+											dense
+											round
+											icon="delete"
+											@click="eliminarRack(indexRack)"
+											class="q-ml-md"
+											color="grey-7"
+										/>
+									</div>
+								</q-item-section>
+							</template>
+
+							<cmp_rack :objRack="rack" :numRack="indexRack + 1" />
+
+						</q-expansion-item>
+
+
+
+
+<!-- 
+							<div class="text-h6 bg-indigo-10 text-white q-pa-md q-mb-sm">
+								Rack nº {{ indexRack + 1 }}
+								<q-btn
+									dense
+									round
+									icon="delete"
+									@click="eliminarRack(indexRack)"
+									class="q-ml-md"
+									color="grey-7"
+								/>
+
+							</div>
+
+							<cmp_rack :objRack="rack" :numRack="indexRack + 1" />
+ -->
+					</q-card-section>
+				</q-card>
+
+
+
+
 				<!-- SAI -->
 
 				<q-card class="col-sm-6 col q-mb-md">
@@ -191,6 +268,7 @@
 							etiqV="Sí"
 							etiqF="No"
 							arrCamps="['instalacionsComunicacions', 'sala', 'SAI', 'connexioSwitch', 'existeix']"
+							:deshabilitat="true"
 						/>
 
 
@@ -199,12 +277,13 @@
 							arrEtiquetes="['PUERTO SW1Gi26']"
 							arrArrelCamps="['instalacionsComunicacions', 'sala', 'SAI', 'connexioSwitch']"
 							arrCampsFinals="['connexioPortSW1Gi26']"
+							:deshabilitat="true"
 						/>
 
 
-						<cmp_inputText etiqueta="OTRA CONEXION - SW:" arrCamps="['instalacionsComunicacions', 'sala', 'SAI', 'connexioSwitch', 'connexio', 'SW']" />
+						<cmp_inputText etiqueta="OTRA CONEXION - SW:" arrCamps="['instalacionsComunicacions', 'sala', 'SAI', 'connexioSwitch', 'connexio', 'SW']" :deshabilitat="true"/>
 
-						<cmp_inputText etiqueta="OTRA CONEXION - PUERTO:" arrCamps="['instalacionsComunicacions', 'sala', 'SAI', 'connexioSwitch', 'connexio', 'port']" />
+						<cmp_inputText etiqueta="OTRA CONEXION - PUERTO:" arrCamps="['instalacionsComunicacions', 'sala', 'SAI', 'connexioSwitch', 'connexio', 'port']" :deshabilitat="true"/>
 
 						<q-separator />
 
@@ -415,83 +494,6 @@
 							help="elementos baja inventario"
 						/>
 
-					</q-card-section>
-				</q-card>
-
-
-
-
-				<!-- RACKS -->
-
-				<q-card class="col-sm-6 col q-mb-md ">
-
-					<cmp_Titol2 titol="RACKS" />
-
-					<q-card-section>
-
-						<cmp_inputText etiqueta="Nº RACKS:" arrCamps="['instalacionsComunicacions', 'sala', 'numRacks']" />
-
-						<cmp_inputSiNoObsrv
-							etiqueta="Nº RACKS ADECUADO?"
-							arrCamps="['instalacionsComunicacions', 'sala', 'numRacksAdecuat', 'existeix']"
-							arrCampsDos="['instalacionsComunicacions', 'sala', 'numRacksAdecuat', 'observacions']"
-						/>
-
-					</q-card-section>
-
-					<!-- <q-card-section v-for="(rack, indexRack) in arrRacks" :key="indexRack" class="bg-grey-2"> -->
-					<q-card-section class="bg-grey-2">
-
-
-						<q-expansion-item v-for="(rack, indexRack) in arrRacks" :key="indexRack" dense class=" q-mb-sm" :header-style="{ backgroundColor: '#f7ecc3' }">
-							<template v-slot:header>
-								<!-- 								
-								<q-item-section avatar>
-									<q-avatar icon="view_array" color="warning" text-color="white" />
-								</q-item-section> 
-								-->
-
-								<q-item-section class="text-bold text-h4">
-									Rack nº {{ indexRack + 1 }}
-								</q-item-section>
-
-								<q-item-section side>
-									<div class="row items-center">
-										<q-btn
-											dense
-											round
-											icon="delete"
-											@click="eliminarRack(indexRack)"
-											class="q-ml-md"
-											color="grey-7"
-										/>
-									</div>
-								</q-item-section>
-							</template>
-
-							<cmp_rack :objRack="rack" :numRack="indexRack + 1" />
-
-						</q-expansion-item>
-
-
-
-
-<!-- 
-							<div class="text-h6 bg-indigo-10 text-white q-pa-md q-mb-sm">
-								Rack nº {{ indexRack + 1 }}
-								<q-btn
-									dense
-									round
-									icon="delete"
-									@click="eliminarRack(indexRack)"
-									class="q-ml-md"
-									color="grey-7"
-								/>
-
-							</div>
-
-							<cmp_rack :objRack="rack" :numRack="indexRack + 1" />
- -->
 					</q-card-section>
 				</q-card>
 

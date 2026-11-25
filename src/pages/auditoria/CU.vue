@@ -201,12 +201,14 @@
 							etiqueta="AURICULARES REPUESTO ?"
 							arrCamps="['comunicacionsUnificades', 'auricularsRecanvi', 'existeix']"
 							arrCampsDos="['comunicacionsUnificades', 'auricularsRecanvi', 'observacions']"
-						/>
+							:deshabilitat="true"
+							/>
 
 
 						<cmp_inputText
 							etiqueta="CANTIDAD AURICULARES REPUESTO:"
 							arrCamps="['comunicacionsUnificades', 'auricularsRecanvi', 'quantitat']"
+							:deshabilitat="true"
 						/>
 
 					</q-card-section>

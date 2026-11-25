@@ -203,6 +203,23 @@ export function frasesInforme (obj, apartat = null){
 
 
 
+		/***************       RACKs       ***************/
+
+		{
+			apartatInforme: "Rack",
+			fraseGeneral : `Se observa que la electronica de red se encuentra en buen estado pero con mucha acumulación de polvo / suciedad en las bandejas, equipos electrónicos (router, switch, conversores, etc...)
+			
+			Se observan X patch panels activos con tomas sueltas las cuales podrían unificarse.
+			
+			Durante la auditoría se dejan etiquetados los switchs i router con la información de Cisco Prime.
+			
+			El cableado del rack no esta debidamente peinado ni ordenado. Sería necesario un saneamiento dado que el estado actual dificulta operar con normalidad.`
+		},
+	
+
+
+
+      
     /***************       SAI       ***************/
 
     {
@@ -404,23 +421,240 @@ export function frasesInforme (obj, apartat = null){
 
 
 
-		/***************       RACKs       ***************/
+    /***************       LAN       ***************/
 
+    /***************     Switchs         ***************/
+
+    {
+      apartatInforme: "LAN-switchs",
+      fraseGeneral : "El centro dispone de un router Cisco 2911, 2 Switchs SG300 que dan servicio al AP (Wifi Access point plata baja, y el segundo AP el la primera planta), puestos de trabajo, impresoras, y terminal de presencia."
+    },
+    {
+      apartatInforme: "LAN-switchs",
+      fraseGeneral : "La UCSE está conectada al SW01-GE0/21 (puerto 21 del switch), y es la que permite que los ordenadores arranquen en red. IMPORTANTE -> Siempre debe estar conectada en ese switch y puerto, cambiarla a otra haría que dejase de funcionar. En caso de fallo de este dispositivo se deberá utilizar el pendrive de emergencia que está situado en el sobre del rack."
+    },
+    {
+      apartatInforme: "LAN-switchs",
+      valorPropietat:  objAuditoria.instalacionsComunicacions.LAN.SWidentificats.existeix,
+      arrFrases: [
+        {
+          valorActivacioFrase: true,
+          frase: "Todos los switchs estan debidamente identificados con una etiqueta. " + (objAuditoria.instalacionsComunicacions.LAN.SWidentificats.observacions || ""),
+        },
+        {
+          valorActivacioFrase: false,
+          frase: "Hay n switchs que no tienen etiqueta identificativa. " + (objAuditoria.instalacionsComunicacions.LAN.SWidentificats.observacions || ""),
+        },
+      ]
+    },
+
+
+    /***************     Climatitzacio         ***************/
+
+    {
+      apartatInforme: "LAN-climatizacion",
+      fraseGeneral : "El ordenador de control de climatización del centro asistencial está ubicado en el cuarto técnico del cofre. Está conectada al SW01-GE0/23 (puerto 23 del switch) a través del puerto DA.3 del patch panel de enlaces. IMPORTANTE -> Siempre debe estar conectada en ese switch y puerto, cambiarlo a otro haría que dejase de funcionar."
+    },
+
+
+    /***************     Hilo musical         ***************/
+
+    {
+      apartatInforme: "instalaciones-hiloMusical",
+      valorPropietat: objAuditoria.instalacionsComunicacions.filMusical.existeix,
+      arrFrases: [
+        {
+          valorActivacioFrase: true,
+          frase: "El centro dispone de hilo musical. " + ((objAuditoria.instalacionsComunicacions.filMusical.connexioSwitchPort == null || objAuditoria.instalacionsComunicacions.filMusical.connexioSwitchPort == "") ? "" : "Esta conectado al " + objAuditoria.instalacionsComunicacions.filMusical.connexioSwitchPort + ". ") + (objAuditoria.instalacionsComunicacions.filMusical.observacions || ""),
+        },
+        {
+          valorActivacioFrase: false,
+          frase: "El centro no dispone de hilo musical. " + (objAuditoria.instalacionsComunicacions.filMusical.observacions || ""),
+        },
+      ]
+    },
+
+
+    /***************     APs Wifi         ***************/
+
+    {
+      apartatInforme: "LAN-APs",
+      fraseGeneral : "No se ha conseguido localizar la ubicación de AP, posiblemente está sobre el falso techo cerca de Admisiones, ya que hay buena cobertura de wifi en la zona de PROAS."
+    },
+    {
+      apartatInforme: "LAN-APs",
+      fraseGeneral : "El Wifi AP está conectado en el Patch-Panel de enlaces del rack, y correctamente identificado. Está “parcheado” en el SW01-GE0/22 (puerto 22 del switch). IMPORTANTE -> Siempre debe estar conectado en ese switch y puerto, cambiarlo a otro haría que dejase de funcionar."
+    },
+    {
+      apartatInforme: "LAN-APs",
+      valorPropietat:  isNaN(objAuditoria.instalacionsComunicacions.LAN.wifiAPs.quantitat),
+      arrFrases: [
+        {
+          valorActivacioFrase: false,
+          frase: "En numero de puntos de acceso wifi que hay en el centro es de " + (objAuditoria.instalacionsComunicacions.LAN.wifiAPs.quantitat || ""),
+        },
+      ]
+    },
+    // {
+    //   apartatInforme: "LAN-APs",
+    //   valorPropietat: objAuditoria.instalacionsComunicacions.LAN.wifiAPs.ubicacio.salaEspera,
+    //   arrFrases: [
+    //     {
+    //       valorActivacioFrase: true,
+    //       frase: (function() {
+    //         if (objAuditoria.instalacionsComunicacions.LAN.wifiAPs.quantitat == 1) {
+    //           return "Se encuentra ubicado en la sala de espera."
+    //         } else {
+    //           return "En la sala de espera hay un punto de acceso."
+    //         }
+    //       })(),
+    //     },
+    //     {
+    //       valorActivacioFrase: false,
+    //       frase: "En la sala de espera no hay ningún punto de acceso",
+    //     },
+    //   ]
+    // },
+    // {
+    //   apartatInforme: "LAN-APs",
+    //   valorPropietat:  (objAuditoria.instalacionsComunicacions.LAN.wifiAPs.ubicacio.altres == null || objAuditoria.instalacionsComunicacions.LAN.wifiAPs.ubicacio.altres == ""),
+    //   arrFrases: [
+    //     {
+    //       valorActivacioFrase: false,
+    //       frase: (function() {
+    //         if (objAuditoria.instalacionsComunicacions.LAN.wifiAPs.quantitat == 1) {
+    //           if (objAuditoria.instalacionsComunicacions.LAN.wifiAPs.ubicacio.salaEspera == false)
+    //             return "El punto de acceso se encuentra ubicado en " + objAuditoria.instalacionsComunicacions.LAN.wifiAPs.ubicacio.altres
+    //         } else {
+    //           return "También hay un punto de acceso en " + objAuditoria.instalacionsComunicacions.LAN.wifiAPs.ubicacio.altres
+    //         }
+    //       })(),
+    //     },
+    //   ]
+    // },
+    {
+      apartatInforme: "LAN-APs",
+      valorPropietat:  objAuditoria.instalacionsComunicacions.LAN.wifiAPs.APvisible.existeix,
+      arrFrases: [
+        {
+          valorActivacioFrase: true,
+          frase: "El punto de acceso esta visible. " + (objAuditoria.instalacionsComunicacions.LAN.wifiAPs.APvisible.observacions || ""),
+        },
+        {
+          valorActivacioFrase: false,
+          frase: "El punto de acceso no esta visible. " + (objAuditoria.instalacionsComunicacions.LAN.wifiAPs.APvisible.observacions || ""),
+        },
+      ]
+    },
+    // {
+    //   apartatInforme: "LAN-APs",
+    //   valorPropietat:  objAuditoria.instalacionsComunicacions.LAN.wifiAPs.coberturaPROAS.existeix,
+    //   arrFrases: [
+    //     {
+    //       valorActivacioFrase: true,
+    //       frase: "Hay cobertrua wifi suficiente en zona PROAS. " + (objAuditoria.instalacionsComunicacions.LAN.wifiAPs.coberturaPROAS.observacions || ""),
+    //     },
+    //     {
+    //       valorActivacioFrase: false,
+    //       frase: "La cobertura wifi no es suficiente en zona PROAS. " + (objAuditoria.instalacionsComunicacions.LAN.wifiAPs.coberturaPROAS.observacions || ""),
+    //     },
+    //   ]
+    // },
+    {
+      apartatInforme: "LAN-APs",
+      valorPropietat:  objAuditoria.instalacionsComunicacions.LAN.wifiAPs.carteleriaWifi.existeix,
+      arrFrases: [
+        {
+          valorActivacioFrase: true,
+          frase: "Se comprueba que en el centro hay carteleria wifi. " + (objAuditoria.instalacionsComunicacions.LAN.wifiAPs.carteleriaWifi.observacions || ""),
+        },
+        {
+          valorActivacioFrase: false,
+          frase: "Se comprueba que en el centro no hay carteleria wifi. " + (objAuditoria.instalacionsComunicacions.LAN.wifiAPs.carteleriaWifi.observacions || ""),
+        },
+      ]
+    },
+
+
+
+		    /***************     PENDRIVE i TELEMEDICINA       ***************/
+
+     /***************     telemedicina         ***************/
+
+     {
+      apartatInforme: "instalaciones-telemedicina",
+      fraseGeneral : frasePuntsApart(`Xavi: Ayer JLP me llamó la atención por el mensaje que estamos dando sobre la revisión que hacemos del equipo de Telemedicina. Tenemos que poner un mensaje que no de a entender que como no lo utilizan, por las causas que sean, no lo revisamos.
+			En el informe debería poner algo así:
+        - "Se verifica que todos los componentes que forman parte de la equipación de telemedicina están presentes, correctamente conectados y operativos."
+			`)
+    },
 		{
-			apartatInforme: "Rack",
-			fraseGeneral : `Se observa que la electronica de red se encuentra en buen estado pero con mucha acumulación de polvo / suciedad en las bandejas, equipos electrónicos (router, switch, conversores, etc...)
-			
-			Se observan X patch panels activos con tomas sueltas las cuales podrían unificarse.
-			
-			Durante la auditoría se dejan etiquetados los switchs i router con la información de Cisco Prime.
-			
-			El cableado del rack no esta debidamente peinado ni ordenado. Sería necesario un saneamiento dado que el estado actual dificulta operar con normalidad.`
-		},
-	
+      apartatInforme: "instalaciones-telemedicina",
+      fraseGeneral : "Se realiza con Costaisa la verificación del correcto funcionamiento del sistema de telemedicina. Las pruebas realizadas simulando una sesión de telemedicina son correctas."
+    },
+    {
+      apartatInforme: "instalaciones-telemedicina",
+      fraseGeneral : "El equipo de telemedicina está compuesto del siguiente material: ordenador Lenovo Tiny All-in-One; adaptador DP (Display Port) a HDMI; Jabra 510 (altavoz/micrófono); cámara Video Axis; televisor 32''"
+    },
+    {
+      apartatInforme: "instalaciones-telemedicina",
+      valorPropietat: objAuditoria.instalacionsComunicacions.telemedicina.existeix,
+      arrFrases: [
+        {
+          valorActivacioFrase: true,
+          frase: "El centro dispone de equipo para telemedicina. " + (objAuditoria.instalacionsComunicacions.telemedicina.observacions || ""),
+        },
+        {
+          valorActivacioFrase: false,
+          frase: "El centro no dispone de telemedicina, por lo que no procede valoración. " + (objAuditoria.instalacionsComunicacions.telemedicina.observacions || ""),
+        },
+      ]
+    },
+
+    /***************     Lector CD/DVD         ***************/
+
+    {
+      apartatInforme: "instalaciones-lectorCDExterno",
+      valorPropietat: objAuditoria.instalacionsComunicacions.LectorCDDVDExtern.existeix,
+      arrFrases: [
+        {
+          valorActivacioFrase: true,
+          frase: "El centro dispone de un lector de CD/DVD externo. " + (objAuditoria.instalacionsComunicacions.LectorCDDVDExtern.observacions || ""),
+        },
+        {
+          valorActivacioFrase: false,
+          frase: "El centro no dispone de un lector de CD/DVD externo. " + (objAuditoria.instalacionsComunicacions.LectorCDDVDExtern.observacions || ""),
+        },
+      ]
+    },
 
 
 
-      
+
+    /***************     Pendrive         ***************/
+
+    // {
+    //   apartatInforme: "instalaciones-pendrive",
+    //   valorPropietat: objAuditoria.instalacionsComunicacions.pendriveBIOS.existeix,
+    //   arrFrases: [
+    //     {
+    //       valorActivacioFrase: true,
+    //       frase: "El centro dispone de un pendrive de emergencia ubicado en " + (objAuditoria.instalacionsComunicacions.pendriveBIOS.ubicacio || "") + ". Costaisa periódicamente se pone en contacto con el centro para la realizar la actualización de dicho pendrive.",
+    //     },
+    //     {
+    //       valorActivacioFrase: false,
+    //       frase: "El centro no dispone de un pendrive de emergencia. ",
+    //     },
+    //   ]
+    // },
+
+    {
+      apartatInforme: "instalaciones-pendrive",
+      fraseGeneral : "En caso de fallo de la UCSE, el pendrive se ha de utilizar para poder iniciar los equipos de forma escalonada. Antes de la visita se confirma que está actualizado mediante ticket SS-     . El centro dispone de un manual sobre su utilización en una carpeta en el interior de rack."
+    },
+  
+
+
     /***************       AREA DE TRABAJO       ***************/
 
 
@@ -565,240 +799,6 @@ export function frasesInforme (obj, apartat = null){
     },
 
 
-
-
-
-
-    /***************       LAN       ***************/
-
-    /***************     Switchs         ***************/
-
-    {
-      apartatInforme: "LAN-switchs",
-      fraseGeneral : "El centro dispone de un router Cisco 2911, 2 Switchs SG300 que dan servicio al AP (Wifi Access point plata baja, y el segundo AP el la primera planta), puestos de trabajo, impresoras, y terminal de presencia."
-    },
-    {
-      apartatInforme: "LAN-switchs",
-      fraseGeneral : "La UCSE está conectada al SW01-GE0/21 (puerto 21 del switch), y es la que permite que los ordenadores arranquen en red. IMPORTANTE -> Siempre debe estar conectada en ese switch y puerto, cambiarla a otra haría que dejase de funcionar. En caso de fallo de este dispositivo se deberá utilizar el pendrive de emergencia que está situado en el sobre del rack."
-    },
-    {
-      apartatInforme: "LAN-switchs",
-      valorPropietat:  objAuditoria.instalacionsComunicacions.LAN.SWidentificats.existeix,
-      arrFrases: [
-        {
-          valorActivacioFrase: true,
-          frase: "Todos los switchs estan debidamente identificados con una etiqueta. " + (objAuditoria.instalacionsComunicacions.LAN.SWidentificats.observacions || ""),
-        },
-        {
-          valorActivacioFrase: false,
-          frase: "Hay n switchs que no tienen etiqueta identificativa. " + (objAuditoria.instalacionsComunicacions.LAN.SWidentificats.observacions || ""),
-        },
-      ]
-    },
-
-
-    /***************     APs Wifi         ***************/
-
-    {
-      apartatInforme: "LAN-APs",
-      fraseGeneral : "No se ha conseguido localizar la ubicación de AP, posiblemente está sobre el falso techo cerca de Admisiones, ya que hay buena cobertura de wifi en la zona de PROAS."
-    },
-    {
-      apartatInforme: "LAN-APs",
-      fraseGeneral : "El Wifi AP está conectado en el Patch-Panel de enlaces del rack, y correctamente identificado. Está “parcheado” en el SW01-GE0/22 (puerto 22 del switch). IMPORTANTE -> Siempre debe estar conectado en ese switch y puerto, cambiarlo a otro haría que dejase de funcionar."
-    },
-    {
-      apartatInforme: "LAN-APs",
-      valorPropietat:  isNaN(objAuditoria.instalacionsComunicacions.LAN.wifiAPs.quantitat),
-      arrFrases: [
-        {
-          valorActivacioFrase: false,
-          frase: "En numero de puntos de acceso wifi que hay en el centro es de " + (objAuditoria.instalacionsComunicacions.LAN.wifiAPs.quantitat || ""),
-        },
-      ]
-    },
-    // {
-    //   apartatInforme: "LAN-APs",
-    //   valorPropietat: objAuditoria.instalacionsComunicacions.LAN.wifiAPs.ubicacio.salaEspera,
-    //   arrFrases: [
-    //     {
-    //       valorActivacioFrase: true,
-    //       frase: (function() {
-    //         if (objAuditoria.instalacionsComunicacions.LAN.wifiAPs.quantitat == 1) {
-    //           return "Se encuentra ubicado en la sala de espera."
-    //         } else {
-    //           return "En la sala de espera hay un punto de acceso."
-    //         }
-    //       })(),
-    //     },
-    //     {
-    //       valorActivacioFrase: false,
-    //       frase: "En la sala de espera no hay ningún punto de acceso",
-    //     },
-    //   ]
-    // },
-    // {
-    //   apartatInforme: "LAN-APs",
-    //   valorPropietat:  (objAuditoria.instalacionsComunicacions.LAN.wifiAPs.ubicacio.altres == null || objAuditoria.instalacionsComunicacions.LAN.wifiAPs.ubicacio.altres == ""),
-    //   arrFrases: [
-    //     {
-    //       valorActivacioFrase: false,
-    //       frase: (function() {
-    //         if (objAuditoria.instalacionsComunicacions.LAN.wifiAPs.quantitat == 1) {
-    //           if (objAuditoria.instalacionsComunicacions.LAN.wifiAPs.ubicacio.salaEspera == false)
-    //             return "El punto de acceso se encuentra ubicado en " + objAuditoria.instalacionsComunicacions.LAN.wifiAPs.ubicacio.altres
-    //         } else {
-    //           return "También hay un punto de acceso en " + objAuditoria.instalacionsComunicacions.LAN.wifiAPs.ubicacio.altres
-    //         }
-    //       })(),
-    //     },
-    //   ]
-    // },
-    {
-      apartatInforme: "LAN-APs",
-      valorPropietat:  objAuditoria.instalacionsComunicacions.LAN.wifiAPs.APvisible.existeix,
-      arrFrases: [
-        {
-          valorActivacioFrase: true,
-          frase: "El punto de acceso esta visible. " + (objAuditoria.instalacionsComunicacions.LAN.wifiAPs.APvisible.observacions || ""),
-        },
-        {
-          valorActivacioFrase: false,
-          frase: "El punto de acceso no esta visible. " + (objAuditoria.instalacionsComunicacions.LAN.wifiAPs.APvisible.observacions || ""),
-        },
-      ]
-    },
-    // {
-    //   apartatInforme: "LAN-APs",
-    //   valorPropietat:  objAuditoria.instalacionsComunicacions.LAN.wifiAPs.coberturaPROAS.existeix,
-    //   arrFrases: [
-    //     {
-    //       valorActivacioFrase: true,
-    //       frase: "Hay cobertrua wifi suficiente en zona PROAS. " + (objAuditoria.instalacionsComunicacions.LAN.wifiAPs.coberturaPROAS.observacions || ""),
-    //     },
-    //     {
-    //       valorActivacioFrase: false,
-    //       frase: "La cobertura wifi no es suficiente en zona PROAS. " + (objAuditoria.instalacionsComunicacions.LAN.wifiAPs.coberturaPROAS.observacions || ""),
-    //     },
-    //   ]
-    // },
-    {
-      apartatInforme: "LAN-APs",
-      valorPropietat:  objAuditoria.instalacionsComunicacions.LAN.wifiAPs.carteleriaWifi.existeix,
-      arrFrases: [
-        {
-          valorActivacioFrase: true,
-          frase: "Se comprueba que en el centro hay carteleria wifi. " + (objAuditoria.instalacionsComunicacions.LAN.wifiAPs.carteleriaWifi.observacions || ""),
-        },
-        {
-          valorActivacioFrase: false,
-          frase: "Se comprueba que en el centro no hay carteleria wifi. " + (objAuditoria.instalacionsComunicacions.LAN.wifiAPs.carteleriaWifi.observacions || ""),
-        },
-      ]
-    },
-
-
-
-    /***************     Climatitzacio         ***************/
-
-    {
-      apartatInforme: "LAN-climatizacion",
-      fraseGeneral : "El ordenador de control de climatización del centro asistencial está ubicado en el cuarto técnico del cofre. Está conectada al SW01-GE0/23 (puerto 23 del switch) a través del puerto DA.3 del patch panel de enlaces. IMPORTANTE -> Siempre debe estar conectada en ese switch y puerto, cambiarlo a otro haría que dejase de funcionar."
-    },
-
-
-		    /***************     PENDRIVE i TELEMEDICINA       ***************/
-
-    /***************     Pendrive         ***************/
-
-    // {
-    //   apartatInforme: "instalaciones-pendrive",
-    //   valorPropietat: objAuditoria.instalacionsComunicacions.pendriveBIOS.existeix,
-    //   arrFrases: [
-    //     {
-    //       valorActivacioFrase: true,
-    //       frase: "El centro dispone de un pendrive de emergencia ubicado en " + (objAuditoria.instalacionsComunicacions.pendriveBIOS.ubicacio || "") + ". Costaisa periódicamente se pone en contacto con el centro para la realizar la actualización de dicho pendrive.",
-    //     },
-    //     {
-    //       valorActivacioFrase: false,
-    //       frase: "El centro no dispone de un pendrive de emergencia. ",
-    //     },
-    //   ]
-    // },
-
-    {
-      apartatInforme: "instalaciones-pendrive",
-      fraseGeneral : "En caso de fallo de la UCSE, el pendrive se ha de utilizar para poder iniciar los equipos de forma escalonada. Antes de la visita se confirma que está actualizado mediante ticket SS-     . El centro dispone de un manual sobre su utilización en una carpeta en el interior de rack."
-    },
-  
-
-
-    /***************     Hilo musical         ***************/
-
-    {
-      apartatInforme: "instalaciones-hiloMusical",
-      valorPropietat: objAuditoria.instalacionsComunicacions.filMusical.existeix,
-      arrFrases: [
-        {
-          valorActivacioFrase: true,
-          frase: "El centro dispone de hilo musical. " + ((objAuditoria.instalacionsComunicacions.filMusical.connexioSwitchPort == null || objAuditoria.instalacionsComunicacions.filMusical.connexioSwitchPort == "") ? "" : "Esta conectado al " + objAuditoria.instalacionsComunicacions.filMusical.connexioSwitchPort + ". ") + (objAuditoria.instalacionsComunicacions.filMusical.observacions || ""),
-        },
-        {
-          valorActivacioFrase: false,
-          frase: "El centro no dispone de hilo musical. " + (objAuditoria.instalacionsComunicacions.filMusical.observacions || ""),
-        },
-      ]
-    },
-
-
-     /***************     telemedicina         ***************/
-
-     {
-      apartatInforme: "instalaciones-telemedicina",
-      fraseGeneral : frasePuntsApart(`Xavi: Ayer JLP me llamó la atención por el mensaje que estamos dando sobre la revisión que hacemos del equipo de Telemedicina. Tenemos que poner un mensaje que no de a entender que como no lo utilizan, por las causas que sean, no lo revisamos.
-			En el informe debería poner algo así:
-        - "Se verifica que todos los componentes que forman parte de la equipación de telemedicina están presentes, correctamente conectados y operativos."
-			`)
-    },
-		{
-      apartatInforme: "instalaciones-telemedicina",
-      fraseGeneral : "Se realiza con Costaisa la verificación del correcto funcionamiento del sistema de telemedicina. Las pruebas realizadas simulando una sesión de telemedicina son correctas."
-    },
-    {
-      apartatInforme: "instalaciones-telemedicina",
-      fraseGeneral : "El equipo de telemedicina está compuesto del siguiente material: ordenador Lenovo Tiny All-in-One; adaptador DP (Display Port) a HDMI; Jabra 510 (altavoz/micrófono); cámara Video Axis; televisor 32''"
-    },
-    {
-      apartatInforme: "instalaciones-telemedicina",
-      valorPropietat: objAuditoria.instalacionsComunicacions.telemedicina.existeix,
-      arrFrases: [
-        {
-          valorActivacioFrase: true,
-          frase: "El centro dispone de equipo para telemedicina. " + (objAuditoria.instalacionsComunicacions.telemedicina.observacions || ""),
-        },
-        {
-          valorActivacioFrase: false,
-          frase: "El centro no dispone de telemedicina, por lo que no procede valoración. " + (objAuditoria.instalacionsComunicacions.telemedicina.observacions || ""),
-        },
-      ]
-    },
-
-    /***************     Lector CD/DVD         ***************/
-
-    {
-      apartatInforme: "instalaciones-lectorCDExterno",
-      valorPropietat: objAuditoria.instalacionsComunicacions.LectorCDDVDExtern.existeix,
-      arrFrases: [
-        {
-          valorActivacioFrase: true,
-          frase: "El centro dispone de un lector de CD/DVD externo. " + (objAuditoria.instalacionsComunicacions.LectorCDDVDExtern.observacions || ""),
-        },
-        {
-          valorActivacioFrase: false,
-          frase: "El centro no dispone de un lector de CD/DVD externo. " + (objAuditoria.instalacionsComunicacions.LectorCDDVDExtern.observacions || ""),
-        },
-      ]
-    },
 
 
 
@@ -1141,6 +1141,55 @@ export function frasesInforme (obj, apartat = null){
     },
 
 
+    /***************     Seguirdad física y del entorno        ***************/
+
+    {
+      apartatInforme: "seguridad-seguridadFisicaEntorno",
+      fraseGeneral : "Normativa de seguridad ASEPEYO (norma 3.1): OBJETIVO: Impedir o minimizar los accesos físicos no autorizados, daños e interferencias a los centros de tratamiento, recursos e información de la empresa."
+    },
+    {
+      apartatInforme: "seguridad-seguridadFisicaEntorno",
+      fraseGeneral : "Normativa de seguridad ASEPEYO (norma 3.1.6): Los distintos centros disponen de un área de admisión donde se efectúa el correspondiente control de acceso físico a las instalaciones. El control de acceso puede llevarse a cabo por medios propios y/o externos."
+    },
+    {
+      apartatInforme: "seguridad-seguridadFisicaEntorno",
+      fraseGeneral : "Normativa de seguridad ASEPEYO (norma 3.1.3): Todo centro de tratamiento de datos dispone de los medios mínimos de seguridad (sistemas contraincendios, sensores, alarma, etc.), con sus pertinentes revisiones periódicas (internas y externas), que evitan o minimizan las consecuencias de incidencias fortuitas o intencionadas."
+    },
+    {
+      apartatInforme: "seguridad-seguridadFisicaEntorno",
+      fraseGeneral : "Normativa de seguridad ASEPEYO (norma 3.1.4): Los códigos de alarmas deben modificarse siempre que haya cambios (desvinculaciones, cambios de centro, etc.) en los usuarios, tanto internos como externos, que tuvieran conocimiento de los mismos"
+    },
+    {
+      apartatInforme: "seguridad-seguridadFisicaEntorno",
+      valorPropietat:  objAuditoria.seguretatInformacio.alarmaIntrusio.existeix,
+      arrFrases: [
+        {
+          valorActivacioFrase: true ,
+          frase: "El centro dispone de alarma de intrusión. " + objAuditoria.seguretatInformacio.alarmaIntrusio.observacions
+        },
+        {
+          valorActivacioFrase: false ,
+          frase: "El centro no dispone de alarma de intrusión. " + objAuditoria.seguretatInformacio.alarmaIntrusio.observacions
+        }
+      ]
+    },
+    {
+      apartatInforme: "seguridad-seguridadFisicaEntorno",
+      valorPropietat:  objAuditoria.seguretatInformacio.alarmaIncendis.existeix,
+      arrFrases: [
+        {
+          valorActivacioFrase: true ,
+          frase: "El centro dispone de alarma de incendios. " + objAuditoria.seguretatInformacio.alarmaIncendis.observacions
+        },
+        {
+          valorActivacioFrase: false ,
+          frase: "El centro no dispone de alarma de incendios. " + objAuditoria.seguretatInformacio.alarmaIncendis.observacions
+        }
+      ]
+    },
+
+
+
     /***************     Carteleria LOPD         ***************/
 
     {
@@ -1243,62 +1292,18 @@ export function frasesInforme (obj, apartat = null){
 
 
 
-    /***************     Seguirdad física y del entorno        ***************/
+    /***************     Videovigilancia        ***************/
 
     {
-      apartatInforme: "seguridad-seguridadFisicaEntorno",
-      fraseGeneral : "Normativa de seguridad ASEPEYO (norma 3.1): OBJETIVO: Impedir o minimizar los accesos físicos no autorizados, daños e interferencias a los centros de tratamiento, recursos e información de la empresa."
-    },
-    {
-      apartatInforme: "seguridad-seguridadFisicaEntorno",
-      fraseGeneral : "Normativa de seguridad ASEPEYO (norma 3.1.6): Los distintos centros disponen de un área de admisión donde se efectúa el correspondiente control de acceso físico a las instalaciones. El control de acceso puede llevarse a cabo por medios propios y/o externos."
-    },
-    {
-      apartatInforme: "seguridad-seguridadFisicaEntorno",
+      apartatInforme: "seguridad-videovigilancia",
       fraseGeneral : "Normativa de seguridad ASEPEYO (norma 3.1.7): Además de la presencia de personal de control de acceso, en determinados centros de tratamiento se dispone de medidas adicionales de seguridad como CCTV (Circuito Cerrado de Televisión) o sistema de reconocimiento de matrículas."
     },
     {
-      apartatInforme: "seguridad-seguridadFisicaEntorno",
+      apartatInforme: "seguridad-videovigilancia",
       fraseGeneral : "Normativa de seguridad ASEPEYO (norma 3.1.8): En el supuesto de existencia de CCTV se cumple debidamente con lo establecido en la instrucción 01/2006 de la AEPD."
     },
     {
-      apartatInforme: "seguridad-seguridadFisicaEntorno",
-      fraseGeneral : "Normativa de seguridad ASEPEYO (norma 3.1.3): Todo centro de tratamiento de datos dispone de los medios mínimos de seguridad (sistemas contraincendios, sensores, alarma, etc.), con sus pertinentes revisiones periódicas (internas y externas), que evitan o minimizan las consecuencias de incidencias fortuitas o intencionadas."
-    },
-    {
-      apartatInforme: "seguridad-seguridadFisicaEntorno",
-      fraseGeneral : "Normativa de seguridad ASEPEYO (norma 3.1.4): Los códigos de alarmas deben modificarse siempre que haya cambios (desvinculaciones, cambios de centro, etc.) en los usuarios, tanto internos como externos, que tuvieran conocimiento de los mismos"
-    },
-    {
-      apartatInforme: "seguridad-seguridadFisicaEntorno",
-      valorPropietat:  objAuditoria.seguretatInformacio.alarmaIntrusio.existeix,
-      arrFrases: [
-        {
-          valorActivacioFrase: true ,
-          frase: "El centro dispone de alarma de intrusión. " + objAuditoria.seguretatInformacio.alarmaIntrusio.observacions
-        },
-        {
-          valorActivacioFrase: false ,
-          frase: "El centro no dispone de alarma de intrusión. " + objAuditoria.seguretatInformacio.alarmaIntrusio.observacions
-        }
-      ]
-    },
-    {
-      apartatInforme: "seguridad-seguridadFisicaEntorno",
-      valorPropietat:  objAuditoria.seguretatInformacio.alarmaIncendis.existeix,
-      arrFrases: [
-        {
-          valorActivacioFrase: true ,
-          frase: "El centro dispone de alarma de incendios. " + objAuditoria.seguretatInformacio.alarmaIncendis.observacions
-        },
-        {
-          valorActivacioFrase: false ,
-          frase: "El centro no dispone de alarma de incendios. " + objAuditoria.seguretatInformacio.alarmaIncendis.observacions
-        }
-      ]
-    },
-    {
-      apartatInforme: "seguridad-seguridadFisicaEntorno",
+      apartatInforme: "seguridad-videovigilancia",
       valorPropietat:  objAuditoria.seguretatInformacio.videovigilancia.existeix,
       arrFrases: [
         {
@@ -1312,7 +1317,7 @@ export function frasesInforme (obj, apartat = null){
       ]
     },
     {
-      apartatInforme: "seguridad-seguridadFisicaEntorno",
+      apartatInforme: "seguridad-videovigilancia",
       valorPropietat:  objAuditoria.seguretatInformacio.videovigilancia.gestioInterna.existeix,
       arrFrases: [
         {
@@ -1322,7 +1327,7 @@ export function frasesInforme (obj, apartat = null){
       ]
     },
     {
-      apartatInforme: "seguridad-seguridadFisicaEntorno",
+      apartatInforme: "seguridad-videovigilancia",
       valorPropietat:  objAuditoria.seguretatInformacio.videovigilancia.gestioExterna.existeix,
       arrFrases: [
         {
@@ -1332,7 +1337,7 @@ export function frasesInforme (obj, apartat = null){
       ]
     },
     {
-      apartatInforme: "seguridad-seguridadFisicaEntorno",
+      apartatInforme: "seguridad-videovigilancia",
       valorPropietat:  objAuditoria.seguretatInformacio.videovigilancia.gestioExterna.evidencia,
       arrFrases: [
         {
@@ -1346,7 +1351,7 @@ export function frasesInforme (obj, apartat = null){
       ]
     },
     {
-      apartatInforme: "seguridad-seguridadFisicaEntorno",
+      apartatInforme: "seguridad-videovigilancia",
       valorPropietat:  objAuditoria.seguretatInformacio.videovigilancia.retol.existeix,
       arrFrases: [
         {
@@ -1360,7 +1365,7 @@ export function frasesInforme (obj, apartat = null){
       ]
     },
     {
-      apartatInforme: "seguridad-seguridadFisicaEntorno",
+      apartatInforme: "seguridad-videovigilancia",
       valorPropietat:  objAuditoria.seguretatInformacio.videovigilancia.carteleriaActualitzada.existeix,
       arrFrases: [
         {
@@ -1384,20 +1389,6 @@ export function frasesInforme (obj, apartat = null){
 
     /***************     Gestion de activos         ***************/
 
-    {
-      apartatInforme: "seguridad-gestionActivos",
-      valorPropietat:  objAuditoria.seguretatInformacio.materialBaixaInventari.existeix,
-      arrFrases: [
-        {
-          valorActivacioFrase: true ,
-          frase: "Durante la visita se encuentran los siguientes materiales que estan dados de baja en el inventario: " + objAuditoria.seguretatInformacio.materialBaixaInventari.observacions
-        },
-        {
-          valorActivacioFrase: false ,
-          frase: "En la visita no se encuentra material alguno que este dado de baja en el inventario" + objAuditoria.seguretatInformacio.materialBaixaInventari.observacions
-        }
-      ]
-    },
     {
       apartatInforme: "seguridad-gestionActivos",
       fraseGeneral : "Normativa de seguridad ASEPEYO (norma 3.6.25): Cualquier soporte digital (CD/DVD, cinta seguridad, etc.) sin utilidad (datos no vigentes, copias históricas,soporte inutilizable, etc.) debe destruirse, de acuerdo a los procedimientos establecidos, de forma que el acceso a los datos almacenados sea imposible (p.e. rallando ambas supervicies o procediendo a su rotura). El la medida de lo posible, la destrucción debe realizarse en el centro/dependencia donde esté ubicado el soporte (in situ)."
@@ -1453,6 +1444,20 @@ export function frasesInforme (obj, apartat = null){
         {
           valorActivacioFrase: false ,
           frase: "En la visita no se encuentra expediente grave alguno." + objAuditoria.seguretatInformacio.expedientsGreus.observacions
+        }
+      ]
+    },
+    {
+      apartatInforme: "seguridad-gestionActivos",
+      valorPropietat:  objAuditoria.seguretatInformacio.materialBaixaInventari.existeix,
+      arrFrases: [
+        {
+          valorActivacioFrase: true ,
+          frase: "Durante la visita se encuentran los siguientes materiales que estan dados de baja en el inventario: " + objAuditoria.seguretatInformacio.materialBaixaInventari.observacions
+        },
+        {
+          valorActivacioFrase: false ,
+          frase: "En la visita no se encuentra material alguno que este dado de baja en el inventario" + objAuditoria.seguretatInformacio.materialBaixaInventari.observacions
         }
       ]
     },
@@ -1574,7 +1579,7 @@ export function frasesInforme (obj, apartat = null){
     },
     {
       apartatInforme: "seguridad-seguridadComunicaciones",
-      fraseGeneral : "Normativa de seguridad ASEPEYO (norma 3.1.19): Los equipos críticos (servidores, dispositivos de comunicación, etc.) disponen de sistemas de alimentación ininterrumpida (SAI) en caso de caídas de suministro eléctrico."
+      fraseGeneral : "Normativa de seguridad ASEPEYO (norma 3.1.20): Los equipos críticos (servidores, dispositivos de comunicación, etc.) disponen de sistemas de alimentación ininterrumpida (SAI) en caso de caídas de suministro eléctrico."
     },
 
     {

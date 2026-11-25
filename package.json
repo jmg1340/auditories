@@ -10,7 +10,7 @@
     "test": "echo \"No test specified\" && exit 0"
   },
   "dependencies": {
-    "@quasar/cli": "^2.0.0",
+    "@quasar/cli": "^2.5.0",
     "@quasar/extras": "^1.8.1",
     "axios": "^0.18.1",
     "canvas2pdf": "^1.0.7",
@@ -28,5 +28,9 @@
   },
   "browserslist": [
     "last 1 version, not dead, ie >= 11"
-  ]
+  ],
+  "scripts": {
+    "dev": "NODE_OPTIONS=--openssl-legacy-provider quasar dev",
+    "build": "NODE_OPTIONS=--openssl-legacy-provider quasar build"
+  }
 }

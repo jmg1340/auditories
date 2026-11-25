@@ -11,23 +11,18 @@
 					titol="Area de trabajo (Puestos de trabajo)" 
 					help="area trabajo"/>
 
-				<q-btn
+				<!-- <q-btn
 					dense
 					noCaps
 					label="Frases"
 					@click="construirFrases('AreaTrabajo-cableado')"
 					class="col q-ml-md"
 					color="grey-9"
-				/>
+				/> -->
 
 
 
-				<cmp_inputOpcionsUnicaResposta 
-					etiqueta="ESTADO CABLEADO:"
-					propOpcions="moltBe_moltMalament"
-					arrCamps="['instalacionsComunicacions', 'llocsDeTeball', 'estatCablejat']"
-					help="area trabajo cableado"
-				/>
+				
 
 				<!-- PUNTS DE XARXA -->
 
@@ -35,15 +30,24 @@
 
 					<cmp_Titol2 titol="Tomas de datos" />
 				
-					<q-btn
+					<!-- <q-btn
 						dense
 						noCaps
 						label="Frases"
 						@click="construirFrases('AreaTrabajo-tomasDatos')"
 						class="col q-ml-md"
 						color="grey-9"
-					/>
+					/> -->
+
 					<q-card-section>
+
+						<cmp_inputOpcionsUnicaResposta 
+							etiqueta="ESTADO CABLEADO:"
+							propOpcions="moltBe_moltMalament"
+							arrCamps="['instalacionsComunicacions', 'llocsDeTeball', 'estatCablejat']"
+							help="area trabajo cableado"
+						/>
+
 						<cmp_inputOpcionsUnicaResposta 
 							etiqueta="ESTADO:"
 							propOpcions="moltBe_moltMalament"

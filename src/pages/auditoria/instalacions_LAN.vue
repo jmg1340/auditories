@@ -34,6 +34,94 @@
           </q-card-section>
         </q-card>
 
+        <!-- IMPRESORES -->
+
+        <q-card class="col-sm-6 col q-mb-md">
+          <cmp_Titol2 titol="Impresoras" />
+
+          <q-card-section>
+            <cmp_inputText
+              etiqueta="Nº COLAS MULTIFUNCIÓN:"
+              arrCamps="['instalacionsComunicacions', 'LAN', 'NumCuesImpressioMTF']"
+            />
+
+            <cmp_inputText
+              etiqueta="Nº COLAS IMPRESIÓN:"
+              arrCamps="['instalacionsComunicacions', 'LAN', 'NumCuesImpressio']"
+            />
+          </q-card-section>
+        </q-card>
+
+        <!-- OTROS DISPOSITIVOS -->
+
+        <q-card class="col-sm-6 col q-mb-md">
+          <cmp_Titol2 titol="Otros dispositivos" />
+          <q-card-section>
+            <cmp_inputText
+              etiqueta="OTROS DISPOSITIVOS:"
+              arrCamps="['instalacionsComunicacions', 'LAN', 'altresDispositius']"
+            />
+          </q-card-section>
+        </q-card>
+
+        <!-- <cmp_inputText
+          etiqueta="OBSERVACIONES LAN:"
+          arrCamps="['instalacionsComunicacions', 'LAN', 'observacions']"
+        /> -->
+
+        <!-- CLIMATIZACION -->
+
+        <q-card class="col-sm-6 col q-mb-md">
+          <cmp_Titol2 titol="Climatización	" />
+          <q-btn
+            dense
+            noCaps
+            label="Frases"
+            @click="construirFrases('LAN-climatizacion')"
+            class="col q-ml-md"
+            color="grey-9"
+          />
+
+          <q-card-section>
+            <cmp_inputSiNo
+              etiqueta="PUERTO SW1Gi23? "
+              etiqV="Sí"
+              etiqF="No"
+              arrCamps="['instalacionsComunicacions', 'equipamentConexions', 'connexioPortSW1Gi23']"
+            />
+
+            <cmp_inputText
+              etiqueta="OTRA CONEXION - SW:"
+              arrCamps="['instalacionsComunicacions', 'equipamentConexions', 'altraConnexioSW']"
+            />
+            <cmp_inputText
+              etiqueta="OTRA CONEXION - Gi:"
+              arrCamps="['instalacionsComunicacions', 'equipamentConexions', 'altraConnexioGi']"
+            />
+          </q-card-section>
+					<q-card-section>
+            <cmp_inputText
+              etiqueta="Observacions:"
+              arrCamps="['instalacionsComunicacions', 'equipamentConexions', 'observacions']"
+            />
+					</q-card-section>
+        </q-card>
+
+        <!-- HILO MUSICAL -->
+
+        <q-card class="col-sm-6 col q-mb-md">
+          <cmp_Titol2 titol="HILO MUSICAL" />
+          <q-card-section>
+
+            <cmp_inputSiNoObsrv
+              etiqueta="Hilo musical:"
+              arrCamps="['instalacionsComunicacions', 'filMusical', 'existeix']"
+              arrCampsDos="['instalacionsComunicacions', 'filMusical', 'observacions']"
+            />
+
+          </q-card-section>
+        </q-card>
+
         <!-- WIFI AP -->
 
         <q-card class="col-sm-6 col q-mb-md">
@@ -211,94 +299,6 @@
 					</q-card-section>
 				</q-card>
 
-
-        <!-- IMPRESORES -->
-
-        <q-card class="col-sm-6 col q-mb-md">
-          <cmp_Titol2 titol="Impresoras" />
-
-          <q-card-section>
-            <cmp_inputText
-              etiqueta="Nº COLAS MULTIFUNCIÓN:"
-              arrCamps="['instalacionsComunicacions', 'LAN', 'NumCuesImpressioMTF']"
-            />
-
-            <cmp_inputText
-              etiqueta="Nº COLAS IMPRESIÓN:"
-              arrCamps="['instalacionsComunicacions', 'LAN', 'NumCuesImpressio']"
-            />
-          </q-card-section>
-        </q-card>
-
-        <!-- OTROS DISPOSITIVOS -->
-
-        <q-card class="col-sm-6 col q-mb-md">
-          <cmp_Titol2 titol="Otros dispositivos" />
-          <q-card-section>
-            <cmp_inputText
-              etiqueta="OTROS DISPOSITIVOS:"
-              arrCamps="['instalacionsComunicacions', 'LAN', 'altresDispositius']"
-            />
-          </q-card-section>
-        </q-card>
-
-        <!-- <cmp_inputText
-          etiqueta="OBSERVACIONES LAN:"
-          arrCamps="['instalacionsComunicacions', 'LAN', 'observacions']"
-        /> -->
-
-        <!-- CLIMATIZACION -->
-
-        <q-card class="col-sm-6 col q-mb-md">
-          <cmp_Titol2 titol="Climatización	" />
-          <q-btn
-            dense
-            noCaps
-            label="Frases"
-            @click="construirFrases('LAN-climatizacion')"
-            class="col q-ml-md"
-            color="grey-9"
-          />
-
-          <q-card-section>
-            <cmp_inputSiNo
-              etiqueta="PUERTO SW1Gi23? "
-              etiqV="Sí"
-              etiqF="No"
-              arrCamps="['instalacionsComunicacions', 'equipamentConexions', 'connexioPortSW1Gi23']"
-            />
-
-            <cmp_inputText
-              etiqueta="OTRA CONEXION - SW:"
-              arrCamps="['instalacionsComunicacions', 'equipamentConexions', 'altraConnexioSW']"
-            />
-            <cmp_inputText
-              etiqueta="OTRA CONEXION - Gi:"
-              arrCamps="['instalacionsComunicacions', 'equipamentConexions', 'altraConnexioGi']"
-            />
-          </q-card-section>
-					<q-card-section>
-            <cmp_inputText
-              etiqueta="Observacions:"
-              arrCamps="['instalacionsComunicacions', 'equipamentConexions', 'observacions']"
-            />
-					</q-card-section>
-        </q-card>
-
-        <!-- HILO MUSICAL -->
-
-        <q-card class="col-sm-6 col q-mb-md">
-          <cmp_Titol2 titol="HILO MUSICAL" />
-          <q-card-section>
-
-            <cmp_inputSiNoObsrv
-              etiqueta="Hilo musical:"
-              arrCamps="['instalacionsComunicacions', 'filMusical', 'existeix']"
-              arrCampsDos="['instalacionsComunicacions', 'filMusical', 'observacions']"
-            />
-
-          </q-card-section>
-        </q-card>
 
 
 

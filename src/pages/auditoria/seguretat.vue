@@ -8,50 +8,6 @@
 				<cmp_Titol1 titol="Seguridad de la información" />
 
 
-				<!-- MESAS LIMPIAS -->
-
-				<q-card class="col-sm-6 col q-mb-md">
-
-					<cmp_Titol2 titol="Mesas limpias" />
-					<q-btn
-						dense
-						noCaps
-						label="Frases"
-						@click="construirFrases('seguridad-mesasLimpias')"
-						class="col q-ml-md"
-						color="grey-9"
-					/>
-
-					<q-card-section>
-
-						<cmp_inputSiNoObsrv
-							etiqueta="DOCUMENTACIÓN SOBRE LAS MESAS ?"
-							arrCamps="['seguretatInformacio', 'taulesNetes', 'documentacioSobreTaules', 'existeix']"
-							arrCampsDos="['seguretatInformacio', 'taulesNetes', 'documentacioSobreTaules', 'observacions']"
-							help="seguridad - documentacion mesas"
-						/>
-
-						<cmp_inputSiNoObsrv
-							etiqueta="DOCUMENTACIÓN EN IMPRESORAS ?"
-							arrCamps="['seguretatInformacio', 'taulesNetes', 'documentacioImpresores', 'existeix']"
-							arrCampsDos="['seguretatInformacio', 'taulesNetes', 'documentacioImpresores', 'observacions']"
-							help="seguridad - documentacion impresoras"
-						/>
-
-						<cmp_inputSiNoObsrv
-							etiqueta="DOCUMENTACIÓN EN PAPELERAS ?"
-							arrCamps="['seguretatInformacio', 'taulesNetes', 'documentacioPapeleres', 'existeix']"
-							arrCampsDos="['seguretatInformacio', 'taulesNetes', 'documentacioPapeleres', 'observacions']"
-							help="seguridad - documentacion papeleras"
-						/>
-
-
-					</q-card-section>
-				</q-card>
-
-
-
-
 				<!-- DESTRUCCIO DE DOCUMENTS -->
 
 				<q-card class="col-sm-6 col q-mb-md">
@@ -140,88 +96,6 @@
 				</q-card>
 
 
-
-				<!-- CARTELERIA LOPD -->
-
-				<q-card class="col-sm-6 col q-mb-md">
-
-					<cmp_Titol2 titol="Carteleria LOPD" />
-					<q-btn
-						dense
-						noCaps
-						label="Frases"
-						@click="construirFrases('seguridad-carteleria')"
-						class="col q-ml-md"
-						color="grey-9"
-					/>
-
-					<q-card-section>
-
-						<cmp_inputSiNoObsrv
-							etiqueta="PROAS ?"
-							arrCamps="['seguretatInformacio', 'carteleriaLOPD', 'PROAS']"
-							arrCampsDos="['seguretatInformacio', 'carteleriaLOPD', 'observacionsPROAS']"
-						/>
-
-						<cmp_inputSiNoObsrv
-							etiqueta="CONSULTAS MEDICAS ?"
-							arrCamps="['seguretatInformacio', 'carteleriaLOPD', 'CEX']"
-							arrCampsDos="['seguretatInformacio', 'carteleriaLOPD', 'observacionsCEX']"
-						/>
-
-					</q-card-section>
-				</q-card>
-
-
-				<!-- GESTION DE ACTIVOS -->
-
-				<q-card class="col-sm-6 col q-mb-md">
-
-					<cmp_Titol2 titol="Gestión de activos" />
-					<q-btn
-						dense
-						noCaps
-						label="Frases"
-						@click="construirFrases('seguridad-gestionActivos')"
-						class="col q-ml-md"
-						color="grey-9"
-					/>
-
-					<q-card-section>
-
-						<cmp_inputSiNoObsrv
-							etiqueta="MATERIAL BAJA INVENTARIO ?"
-							arrCamps="['seguretatInformacio', 'materialBaixaInventari', 'existeix']"
-							arrCampsDos="['seguretatInformacio', 'materialBaixaInventari', 'observacions']"
-							help="gestion activos - material baja inventario"
-						/>
-
-						<cmp_inputSiNoObsrv
-							etiqueta="EXISTENCIA DE SOPORTES FISICOS (BACKUP) ?"
-							arrCamps="['seguretatInformacio', 'suportsFisics', 'existeix']"
-							arrCampsDos="['seguretatInformacio', 'suportsFisics', 'observacions']"
-							help="gestion activos - soportes fisicos"
-						/>
-
-						<cmp_inputSiNoObsrv
-							etiqueta="CUSTODIA DOCUMENTACIÓN SENSIBLE ?"
-							arrCamps="['seguretatInformacio', 'documentacioSensible', 'existeix']"
-							arrCampsDos="['seguretatInformacio', 'documentacioSensible', 'observacions']"
-							help="gestion activos - documentacion sensible"
-						/>
-
-						<cmp_inputSiNoObsrv
-							etiqueta="EXPEDIENTES GRAVES ?"
-							arrCamps="['seguretatInformacio', 'expedientsGreus', 'existeix']"
-							arrCampsDos="['seguretatInformacio', 'expedientsGreus', 'observacions']"
-							help="gestion activos - expedientes graves"
-						/>
-
-					</q-card-section>
-				</q-card>
-
-
-
 				<!-- CONTROL ACCESOS -->
 
 				<q-card class="col-sm-6 col q-mb-md">
@@ -245,17 +119,23 @@
 							help="seguridad - llaves personal interno"
 						/>
 
+						<cmp_inputSiNoObsrv
+							etiqueta="DOCUMENTO REGISTRO LLAVES ?"
+							arrCamps="['seguretatInformacio', 'accesAlCentre', 'personalIntern', 'documentRegistreClaus', 'existeix']"
+							arrCampsDos="['seguretatInformacio', 'accesAlCentre', 'personalIntern', 'documentRegistreClaus', 'observacions']"
+						/>
+
 						<cmp_inputOpcionsUnicaResposta
 							etiqueta="CODIGOS ALARMA PERS. INTERNO:"
 							propOpcions="codisAlarma"
 							arrCamps="['seguretatInformacio', 'accesAlCentre', 'personalIntern', 'codisAlarma', 'tipus']"
-							:deshabilitat="true"
+							:deshabilitat="false"
 						/>
 
 						<cmp_inputText
 							etiqueta="OBSERVACIONES CODIGOS ALARMA PERS. INTERNO:"
 							arrCamps="['seguretatInformacio', 'accesAlCentre', 'personalIntern', 'codisAlarma', 'observacions']"
-							:deshabilitat="true"
+							:deshabilitat="false"
 						/>
 <!--
 						<cmp_inputSiNoObsrv
@@ -299,7 +179,6 @@
 
 
 
-
 				<!-- SEGURIDAD FISICA Y DEL ENTORNO -->
 
 				<q-card class="col-sm-6 col q-mb-md">
@@ -328,66 +207,6 @@
 							arrCampsDos="['seguretatInformacio', 'alarmaIncendis', 'observacions']"
 						/>
 
-						<q-card class="col-sm-6 col q-mb-md">
-
-							<cmp_Titol2 titol="Videovigilancia" />
-							<q-card-section>
-								<cmp_inputSiNoObsrv
-									etiqueta="EXISTE VIDEOVIGILANCIA?"
-									arrCamps="['seguretatInformacio', 'videovigilancia', 'existeix']"
-									arrCampsDos="['seguretatInformacio', 'videovigilancia', 'observacions']"
-								/>
-
-								<cmp_inputSiNoObsrv
-									etiqueta="GESTIÓN INTERNA?"
-									arrCamps="['seguretatInformacio', 'videovigilancia', 'gestioInterna', 'existeix']"
-									arrCampsDos="['seguretatInformacio', 'videovigilancia', 'gestioInterna', 'observacions']"
-								/>
-
-								<cmp_inputText
-									etiqueta="GEST.INT. PERSONAL CON ACCESO:"
-									arrCamps="['seguretatInformacio', 'videovigilancia', 'gestioInterna', 'gravacioImatges', 'personalAmbAcces']"
-								/>
-
-								<cmp_inputText
-									etiqueta="GEST.INT. TIEMPO RETENCIÓN IMAGENES:"
-									arrCamps="['seguretatInformacio', 'videovigilancia', 'gestioInterna', 'gravacioImatges', 'periodeConservacio']"
-									help="videovigilancia tiempo retencion"
-								/>
-
-
-								<cmp_inputSiNoObsrv
-									etiqueta="GESTIÓN EXTERNA?"
-									arrCamps="['seguretatInformacio', 'videovigilancia', 'gestioExterna', 'existeix']"
-									arrCampsDos="['seguretatInformacio', 'videovigilancia', 'gestioExterna', 'observacionsExistencia']"
-								/>
-
-								<cmp_inputText
-									etiqueta="GEST.EXT. TIEMPO RETENCIÓN IMAGENES:"
-									arrCamps="['seguretatInformacio', 'videovigilancia', 'gestioExterna', 'periodeConservacio']"
-								/>
-
-								<cmp_inputSiNoObsrv
-									etiqueta="EVIDENCIA?"
-									arrCamps="['seguretatInformacio', 'videovigilancia', 'gestioExterna', 'evidencia']"
-									arrCampsDos="['seguretatInformacio', 'videovigilancia', 'gestioExterna', 'observacionsEvidencia']"
-									help="videovigilancia evidencia"
-								/>
-
-								<cmp_inputSiNoObsrv
-									etiqueta="LETRERO INFORMATIVO?"
-									arrCamps="['seguretatInformacio', 'videovigilancia', 'retol', 'existeix']"
-									arrCampsDos="['seguretatInformacio', 'videovigilancia', 'retol', 'observacions']"
-								/>
-
-								<cmp_inputSiNoObsrv
-									etiqueta="CARTELERIA ACTUALIZADA?"
-									arrCamps="['seguretatInformacio', 'videovigilancia', 'carteleriaActualitzada', 'existeix']"
-									arrCampsDos="['seguretatInformacio', 'videovigilancia', 'carteleriaActualitzada', 'observacions']"
-								/>
-							</q-card-section>
-
-						</q-card>
 
 
 					</q-card-section>
@@ -395,6 +214,206 @@
 
 
 
+
+
+
+
+				<!-- CARTELERIA LOPD -->
+
+				<q-card class="col-sm-6 col q-mb-md">
+
+					<cmp_Titol2 titol="Carteleria LOPD" />
+					<q-btn
+						dense
+						noCaps
+						label="Frases"
+						@click="construirFrases('seguridad-carteleria')"
+						class="col q-ml-md"
+						color="grey-9"
+					/>
+
+					<q-card-section>
+
+						<cmp_inputSiNoObsrv
+							etiqueta="PROAS ?"
+							arrCamps="['seguretatInformacio', 'carteleriaLOPD', 'PROAS']"
+							arrCampsDos="['seguretatInformacio', 'carteleriaLOPD', 'observacionsPROAS']"
+						/>
+
+						<cmp_inputSiNoObsrv
+							etiqueta="CONSULTAS MEDICAS ?"
+							arrCamps="['seguretatInformacio', 'carteleriaLOPD', 'CEX']"
+							arrCampsDos="['seguretatInformacio', 'carteleriaLOPD', 'observacionsCEX']"
+						/>
+
+					</q-card-section>
+				</q-card>
+
+
+				<!-- MESAS LIMPIAS -->
+
+				<q-card class="col-sm-6 col q-mb-md">
+
+					<cmp_Titol2 titol="Mesas limpias" />
+					<q-btn
+						dense
+						noCaps
+						label="Frases"
+						@click="construirFrases('seguridad-mesasLimpias')"
+						class="col q-ml-md"
+						color="grey-9"
+					/>
+
+					<q-card-section>
+
+						<cmp_inputSiNoObsrv
+							etiqueta="DOCUMENTACIÓN SOBRE LAS MESAS ?"
+							arrCamps="['seguretatInformacio', 'taulesNetes', 'documentacioSobreTaules', 'existeix']"
+							arrCampsDos="['seguretatInformacio', 'taulesNetes', 'documentacioSobreTaules', 'observacions']"
+							help="seguridad - documentacion mesas"
+						/>
+
+						<cmp_inputSiNoObsrv
+							etiqueta="DOCUMENTACIÓN EN IMPRESORAS ?"
+							arrCamps="['seguretatInformacio', 'taulesNetes', 'documentacioImpresores', 'existeix']"
+							arrCampsDos="['seguretatInformacio', 'taulesNetes', 'documentacioImpresores', 'observacions']"
+							help="seguridad - documentacion impresoras"
+						/>
+
+						<cmp_inputSiNoObsrv
+							etiqueta="DOCUMENTACIÓN EN PAPELERAS ?"
+							arrCamps="['seguretatInformacio', 'taulesNetes', 'documentacioPapeleres', 'existeix']"
+							arrCampsDos="['seguretatInformacio', 'taulesNetes', 'documentacioPapeleres', 'observacions']"
+							help="seguridad - documentacion papeleras"
+						/>
+
+
+					</q-card-section>
+				</q-card>
+
+
+
+
+				<!-- VIDEOVIGILANCIA -->
+
+				<q-card class="col-sm-6 col q-mb-md">
+
+					<cmp_Titol2 titol="Videovigilancia" />
+					<q-btn
+						dense
+						noCaps
+						label="Frases"
+						@click="construirFrases('seguridad-videovigilancia')"
+						class="col q-ml-md"
+						color="grey-9"
+					/>
+
+					<q-card-section>
+						<cmp_inputSiNoObsrv
+							etiqueta="EXISTE VIDEOVIGILANCIA?"
+							arrCamps="['seguretatInformacio', 'videovigilancia', 'existeix']"
+							arrCampsDos="['seguretatInformacio', 'videovigilancia', 'observacions']"
+						/>
+
+						<cmp_inputSiNoObsrv
+							etiqueta="GESTIÓN INTERNA?"
+							arrCamps="['seguretatInformacio', 'videovigilancia', 'gestioInterna', 'existeix']"
+							arrCampsDos="['seguretatInformacio', 'videovigilancia', 'gestioInterna', 'observacions']"
+						/>
+
+						<cmp_inputText
+							etiqueta="GEST.INT. PERSONAL CON ACCESO:"
+							arrCamps="['seguretatInformacio', 'videovigilancia', 'gestioInterna', 'gravacioImatges', 'personalAmbAcces']"
+						/>
+
+						<cmp_inputText
+							etiqueta="GEST.INT. TIEMPO RETENCIÓN IMAGENES:"
+							arrCamps="['seguretatInformacio', 'videovigilancia', 'gestioInterna', 'gravacioImatges', 'periodeConservacio']"
+							help="videovigilancia tiempo retencion"
+						/>
+
+
+						<cmp_inputSiNoObsrv
+							etiqueta="GESTIÓN EXTERNA?"
+							arrCamps="['seguretatInformacio', 'videovigilancia', 'gestioExterna', 'existeix']"
+							arrCampsDos="['seguretatInformacio', 'videovigilancia', 'gestioExterna', 'observacionsExistencia']"
+						/>
+
+						<cmp_inputText
+							etiqueta="GEST.EXT. TIEMPO RETENCIÓN IMAGENES:"
+							arrCamps="['seguretatInformacio', 'videovigilancia', 'gestioExterna', 'periodeConservacio']"
+						/>
+
+						<cmp_inputSiNoObsrv
+							etiqueta="EVIDENCIA?"
+							arrCamps="['seguretatInformacio', 'videovigilancia', 'gestioExterna', 'evidencia']"
+							arrCampsDos="['seguretatInformacio', 'videovigilancia', 'gestioExterna', 'observacionsEvidencia']"
+							help="videovigilancia evidencia"
+						/>
+
+						<cmp_inputSiNoObsrv
+							etiqueta="LETRERO INFORMATIVO?"
+							arrCamps="['seguretatInformacio', 'videovigilancia', 'retol', 'existeix']"
+							arrCampsDos="['seguretatInformacio', 'videovigilancia', 'retol', 'observacions']"
+						/>
+
+						<cmp_inputSiNoObsrv
+							etiqueta="CARTELERIA ACTUALIZADA?"
+							arrCamps="['seguretatInformacio', 'videovigilancia', 'carteleriaActualitzada', 'existeix']"
+							arrCampsDos="['seguretatInformacio', 'videovigilancia', 'carteleriaActualitzada', 'observacions']"
+						/>
+					</q-card-section>
+
+				</q-card>
+
+
+
+				<!-- GESTION DE ACTIVOS -->
+
+				<q-card class="col-sm-6 col q-mb-md">
+
+					<cmp_Titol2 titol="Gestión de activos" />
+					<q-btn
+						dense
+						noCaps
+						label="Frases"
+						@click="construirFrases('seguridad-gestionActivos')"
+						class="col q-ml-md"
+						color="grey-9"
+					/>
+
+					<q-card-section>
+
+						<cmp_inputSiNoObsrv
+							etiqueta="EXISTENCIA DE SOPORTES FISICOS (BACKUP) ?"
+							arrCamps="['seguretatInformacio', 'suportsFisics', 'existeix']"
+							arrCampsDos="['seguretatInformacio', 'suportsFisics', 'observacions']"
+							help="gestion activos - soportes fisicos"
+						/>
+
+						<cmp_inputSiNoObsrv
+							etiqueta="CUSTODIA DOCUMENTACIÓN SENSIBLE ?"
+							arrCamps="['seguretatInformacio', 'documentacioSensible', 'existeix']"
+							arrCampsDos="['seguretatInformacio', 'documentacioSensible', 'observacions']"
+							help="gestion activos - documentacion sensible"
+						/>
+
+						<cmp_inputSiNoObsrv
+							etiqueta="EXPEDIENTES GRAVES ?"
+							arrCamps="['seguretatInformacio', 'expedientsGreus', 'existeix']"
+							arrCampsDos="['seguretatInformacio', 'expedientsGreus', 'observacions']"
+							help="gestion activos - expedientes graves"
+						/>
+
+						<cmp_inputSiNoObsrv
+							etiqueta="MATERIAL BAJA INVENTARIO ?"
+							arrCamps="['seguretatInformacio', 'materialBaixaInventari', 'existeix']"
+							arrCampsDos="['seguretatInformacio', 'materialBaixaInventari', 'observacions']"
+							help="gestion activos - material baja inventario"
+						/>
+
+					</q-card-section>
+				</q-card>
 
 
 

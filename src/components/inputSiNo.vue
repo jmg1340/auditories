@@ -42,7 +42,7 @@ import {frasesHelp} from "../statics/js/_biblia.js"
 export default {
 	name: 'PageIndex',
 
-	props: ['etiqueta', 'arrCamps', 'etiqV', 'etiqF', 'objRack', 'help'],
+	props: ['etiqueta', 'arrCamps', 'etiqV', 'etiqF', 'objRack', 'help', 'deshabilitat'],
 
 	components: { cmp_frasesHelp },
 
@@ -52,6 +52,7 @@ export default {
 
 	data () {
 	  	return {
+				desactivat: false,
 	  		_arrCamps: null,
 				arrFrases: null,
 				alertaHelp: false

@@ -6,9 +6,10 @@
 		<cmp_instalacionsSala /> -->
 
 
-		<cmp_instalacionsLlocsTreball />
 		<cmp_instalacionsLAN /> 
 		<cmp_instalacionsPendrivesTelemedicina />
+		<cmp_instalacionsLlocsTreball />
+		<cmp_instalacionsFirmaGestorTorns />
 
 	</div>
 	
@@ -27,6 +28,7 @@
 import cmp_instalacionsLlocsTreball from "./instalacions_llocsTreball"
 import cmp_instalacionsLAN from "./instalacions_LAN"
 import cmp_instalacionsPendrivesTelemedicina from "./instalacions_PendrivesTelemedicina"
+import cmp_instalacionsFirmaGestorTorns from "./instalacions_FirmaGestorTorns"
 
 export default {
 	name: 'PageInstalacions',
@@ -36,7 +38,8 @@ export default {
 		// cmp_instalacionsSala,
 		cmp_instalacionsLlocsTreball,
 		cmp_instalacionsLAN,
-		cmp_instalacionsPendrivesTelemedicina
+		cmp_instalacionsPendrivesTelemedicina,
+		cmp_instalacionsFirmaGestorTorns
 	},
 
 	created () {

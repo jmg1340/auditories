@@ -106,41 +106,45 @@ function pintaPagina09 (ctx, oAudit){
 
 
 
-
+	/* -- Acceso al centro */
 	let objAPI = oAudit.seguretatInformacio.accesAlCentre.personalIntern
 
 	new Cercle(ctx.doc,228.0, 634.0, objAPI.usuarisAmbClaus.existeix).pinta()
 	new Cercle(ctx.doc, 264.0, 634.0, !objAPI.usuarisAmbClaus.existeix && objAPI.usuarisAmbClaus.existeix != null).pinta()
 	ctx.doc.text(objAPI.usuarisAmbClaus.observacions, 370.0, 637.0 - 8);	
 
-	new Cercle(ctx.doc, 228.0, 653.0, objAPI.codisAlarma.tipus == "individuales").pinta()
-	new Cercle(ctx.doc, 264.0, 653.0, objAPI.codisAlarma.tipus == "generico").pinta()
-	ctx.doc.text(objAPI.codisAlarma.observacions, 370.0, 657.0 - 8);	
+	new Cercle(ctx.doc,228.0, 653.0, objAPI.documentRegistreClaus.existeix).pinta()
+	new Cercle(ctx.doc, 264.0, 653.0, !objAPI.documentRegistreClaus.existeix && objAPI.documentRegistreClaus.existeix != null).pinta()
+	ctx.doc.text(objAPI.documentRegistreClaus.observacions, 370.0, 658.0 - 8);	
+
+	new Cercle(ctx.doc, 228.0, 671.0, objAPI.codisAlarma.tipus == "individuales").pinta()
+	new Cercle(ctx.doc, 310.0, 671.0, objAPI.codisAlarma.tipus == "generico").pinta()
+	ctx.doc.text(objAPI.codisAlarma.observacions, 370.0, 676.0- 8);	
 
 
 	let objAPE = oAudit.seguretatInformacio.accesAlCentre.personalExtern
 
-	new Cercle(ctx.doc, 229.0, 689.0, objAPE.usuarisAmbClaus.existeix).pinta()
-	new Cercle(ctx.doc, 264.0, 689.0, !objAPE.usuarisAmbClaus.existeix && objAPE.usuarisAmbClaus.existeix != null).pinta()
-	ctx.doc.text(objAPE.usuarisAmbClaus.observacions, 370.0, 693.0 - 8);	
+	new Cercle(ctx.doc, 228.0, 708.0, objAPE.usuarisAmbClaus.existeix).pinta()
+	new Cercle(ctx.doc, 264.0, 708.0, !objAPE.usuarisAmbClaus.existeix && objAPE.usuarisAmbClaus.existeix != null).pinta()
+	ctx.doc.text(objAPE.usuarisAmbClaus.observacions, 370.0, 713.0 - 8);	
 
-	new Cercle(ctx.doc, 229.0, 708.0, objAPE.codisAlarma.tipus == "individuales").pinta()
-	new Cercle(ctx.doc, 264.0, 708.0, objAPE.codisAlarma.tipus == "generico").pinta()
-	ctx.doc.text(objAPE.codisAlarma.observacions, 370.0, 713.0- 8);	
+	new Cercle(ctx.doc, 228.0, 726.0, objAPE.codisAlarma.tipus == "individuales").pinta()
+	new Cercle(ctx.doc, 310.0, 726.0, objAPE.codisAlarma.tipus == "generico").pinta()
+	ctx.doc.text(objAPE.codisAlarma.observacions, 370.0, 731.0- 8);	
 
 
 
 
 	let objAFH = oAudit.seguretatInformacio.accesAlCentre.accesForaHorariHabitual
 
-	new Cercle(ctx.doc, 228.0, 727.0, objAFH.existeix).pinta()
-	new Cercle(ctx.doc, 264.0, 728.0, !objAFH.existeix && objAFH.existeix != null).pinta()
-	ctx.doc.text(objAFH.observacions, 370.0, 731.0 - 8);	
+	new Cercle(ctx.doc, 228.0, 746.0, objAFH.existeix).pinta()
+	new Cercle(ctx.doc, 264.0, 746.0, !objAFH.existeix && objAFH.existeix != null).pinta()
+	ctx.doc.text(objAFH.observacions, 370.0, 751.0 - 8);	
 
 
 
 
 
-	ctx.doc.text(oAudit.seguretatInformacio.accesAlCentre.observacions, 66.0, 763.0 - 8);
+	ctx.doc.text(oAudit.seguretatInformacio.accesAlCentre.observacions, 90.0, 785.0 - 8);
 
 }

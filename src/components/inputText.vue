@@ -33,7 +33,7 @@
 
 </template>
 
-<style>
+<style scope>
 	.borde {
 		border: 2px solid red;
 	}

@@ -31,7 +31,7 @@
 
 </template>
 
-<style>
+<style scope>
 	.q-card__section--vert{
 		padding: 3px;
 	}

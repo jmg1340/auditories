@@ -90,7 +90,7 @@
             arrCamps="['accionsMillora', 'observacions', 'CU', 'enviarAuricularsReservaEvolve65']"
           />
 
-          <cmp_inputCheckBox
+          <!-- <cmp_inputCheckBox
             etiqueta="Enviar cascos reserva Jabra930:"
             arrCamps="['accionsMillora', 'observacions', 'CU', 'enviarAuricularsReservaJabra930']"
           />
@@ -98,7 +98,7 @@
           <cmp_inputCheckBox
             etiqueta="Enviar auriculares de reserva:"
             arrCamps="['accionsMillora', 'observacions', 'CU', 'enviarAuricularsReserva']"
-          />
+          /> -->
 
           <cmp_inputCheckBox
             etiqueta="Enviar altavoz:"
