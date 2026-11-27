@@ -22,28 +22,28 @@ function pintaPagina05 (ctx, oAudit){
 	new Cercle(ctx.doc, 300.0, 71.0, !objSala.climatitzacio.existeix && objSala.climatitzacio.existeix != null).pinta()
 	ctx.doc.text(objSala.climatitzacio.observacions, 415.0, 75.0 - 8);
 
-	new Cercle(ctx.doc, 264.0, 90.0, objSala.ventilacio.existeix).pinta()
-	new Cercle(ctx.doc, 300.0, 90.0, !objSala.ventilacio.existeix && objSala.ventilacio.existeix != null).pinta()
-	ctx.doc.text(objSala.ventilacio.observacions, 415.0, 95.0 - 8);
+	new Cercle(ctx.doc, 264.0, 86.0, objSala.ventilacio.existeix).pinta()
+	new Cercle(ctx.doc, 300.0, 86.0, !objSala.ventilacio.existeix && objSala.ventilacio.existeix != null).pinta()
+	ctx.doc.text(objSala.ventilacio.observacions, 415.0, 91.0 - 8);
 
-	new Cercle(ctx.doc, 265.0, 110.0, objSala.latiguillos.existeix).pinta()
-	new Cercle(ctx.doc, 300.0, 110.0, !objSala.latiguillos.existeix && objSala.latiguillos.existeix != null).pinta()
-	ctx.doc.text(objSala.latiguillos.observacions, 415.0, 114.0 - 8);
+	new Cercle(ctx.doc, 265.0, 122.0, objSala.latiguillos.existeix).pinta()
+	new Cercle(ctx.doc, 300.0, 122.0, !objSala.latiguillos.existeix && objSala.latiguillos.existeix != null).pinta()
+	ctx.doc.text(objSala.latiguillos.observacions, 415.0, 126.0 - 8);
 
-	new Cercle(ctx.doc, 265.0, 129.0, objSala.elementsBaixaInventari.existeix).pinta()
-	new Cercle(ctx.doc, 300.0, 129.0, !objSala.elementsBaixaInventari.existeix && objSala.elementsBaixaInventari.existeix != null).pinta()
-	ctx.doc.text(objSala.elementsBaixaInventari.observacions, 415.0, 133.0 - 8);
+	new Cercle(ctx.doc, 265.0, 137.0, objSala.elementsBaixaInventari.existeix).pinta()
+	new Cercle(ctx.doc, 300.0, 137.0, !objSala.elementsBaixaInventari.existeix && objSala.elementsBaixaInventari.existeix != null).pinta()
+	ctx.doc.text(objSala.elementsBaixaInventari.observacions, 415.0, 142.0 - 8);
 
 
 
 	/* RACKS */
 
-	ctx.doc.text(objSala.numRacks, 121.0, 170.0 - 8);
+	ctx.doc.text(objSala.numRacks, 121.0, 178.0 - 8);
 
-	new Cercle(ctx.doc, 193.0, 185.0, objSala.numRacksAdecuat.existeix).pinta()
-	new Cercle(ctx.doc, 229.0, 185.0, !objSala.numRacksAdecuat.existeix && objSala.numRacksAdecuat.existeix != null).pinta()
+	new Cercle(ctx.doc, 193.0, 193.0, objSala.numRacksAdecuat.existeix).pinta()
+	new Cercle(ctx.doc, 229.0, 193.0, !objSala.numRacksAdecuat.existeix && objSala.numRacksAdecuat.existeix != null).pinta()
 	// new Quadrat(ctx.doc, 293.0, 221.0, !!objSala.numRacksAdecuats.observacions).pinta() // !! converteix un string a boolean; "" es false;
-	ctx.doc.text(objSala.numRacksAdecuat.observacions, 337.0, 189.0 - 8);
+	ctx.doc.text(objSala.numRacksAdecuat.observacions, 337.0, 197.0 - 8);
 
 
 
@@ -191,7 +191,7 @@ function pintaPagina05 (ctx, oAudit){
 
 	new Cercle(ctx.doc, 228.0, 760.0, objPtsX.suficientsPunts.existeix).pinta()
 	new Cercle(ctx.doc, 264.0, 760.0, !objPtsX.suficientsPunts.existeix && objPtsX.suficientsPunts.existeix != null).pinta()
-	ctx.doc.text(objPtsX.suficientsPunts.observacions, 375.0, 763.0 - 8);
+	ctx.doc.text(objPtsX.suficientsPunts.observacions, 375.0, 764.0 - 8);
 
 
 	new Cercle(ctx.doc, 228.0, 779.0, objPtsX.miniSwitchs.existeix).pinta()

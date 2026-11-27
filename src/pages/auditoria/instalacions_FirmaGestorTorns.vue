@@ -204,6 +204,20 @@
         </q-card>
 
 
+        <!-- CARTELERIA DIGITAL -->
+
+        <q-card class="col-sm-6 col q-mb-md">
+          <cmp_Titol2 titol="CARTELERIA DIGITAL" />
+					<q-card-section>
+            <cmp_inputSiNoObsrv
+              etiqueta="Cartelería digital:"
+              arrCamps="['instalacionsComunicacions', 'cartelleriaDigital', 'existeix']"
+              arrCampsDos="['instalacionsComunicacions', 'cartelleriaDigital', 'observacions']"
+            />
+					</q-card-section>
+        </q-card>
+
+
 			</q-card>
 
 

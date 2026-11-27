@@ -254,6 +254,20 @@
 					/>
 
 					<q-card-section>
+						<cmp_inputOpcionsMultipleResposta
+							etiqueta="TIPO:"
+							arrEtiquetes="['SAI', 'Regleta protegida']"
+							arrArrelCamps="['instalacionsComunicacions', 'sala', 'SAI', 'tipus']"
+							arrCampsFinals="['SAI', 'RegletaProtegida']"
+						/>
+
+						<cmp_inputText
+							etiqueta="OBSERVACIONES TIPO:"
+							arrCamps="['instalacionsComunicacions', 'sala', 'SAI', 'tipus', 'observacions']"
+						/>
+
+						<q-separator />
+
 						<cmp_inputOpcionsUnicaResposta
 							etiqueta="ESTADO SAI:"
 							propOpcions="moltBe_moltMalament"

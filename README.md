@@ -115,7 +115,7 @@ Les auditories desades abans del canvi es poden posar al dia amb **Exportar → 
 
 ### Generació del PDF (v.14)
 
-`checkList.vue` crea un document A4 amb `canvas2pdf` + `pdfkit` + `blob-stream`. Per a cada pàgina, posa de fons la imatge `paginesJPG/Pagina_XX.jpg` i crida la funció global `pintaPaginaXX(ctx, auditoria)`, que escriu textos i marques en coordenades fixes. El resultat es mostra en un `iframe`. Aquests scripts són globals perquè es carreguen des de `index.template.html`.
+`checkList.vue` crea un document A4 amb `canvas2pdf` + `pdfkit` + `blob-stream`. Per a cada pàgina, posa de fons la imatge `paginesJPG/paginaXX.jpg` i crida la funció global `pintaPaginaXX(ctx, auditoria)`, que escriu textos i marques en coordenades fixes. El resultat es mostra en un `iframe`. Aquests scripts són globals perquè es carreguen des de `index.template.html`.
 
 ### Persistència
 

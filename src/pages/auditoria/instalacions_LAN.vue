@@ -4,6 +4,42 @@
       <q-card class="col-sm-8 col q-pa-sm">
         <cmp_Titol1 titol="LAN" />
 
+        <!-- EQUIPOS -->
+
+        <q-card class="col-sm-6 col q-mb-md">
+          <cmp_Titol2 titol="Equipos" />
+
+          <q-card-section>
+            <cmp_inputOpcionsMultipleResposta
+              etiqueta="NFS:"
+              arrEtiquetes="['NFS - Cisco 2911', 'NFS - E TINY', 'NFS - E RASPBERRY']"
+              arrArrelCamps="['instalacionsComunicacions', 'LAN', 'equips']"
+              arrCampsFinals="['NFS_Cisco2911', 'NFS_Tiny', 'NFS_RaspBerry']"
+            />
+
+            <cmp_inputOpcionsMultipleResposta
+              etiqueta="SWITCHS:"
+              arrEtiquetes="['SWITCH1', 'SWITCH2', 'SWITCH3', 'SWITCH4', 'SWITCH5']"
+              arrArrelCamps="['instalacionsComunicacions', 'LAN', 'equips']"
+              arrCampsFinals="['Switch1', 'Switch2', 'Switch3', 'Switch4', 'Switch5']"
+            />
+
+            <cmp_inputOpcionsMultipleResposta
+              etiqueta="C.M.:"
+              arrEtiquetes="['C.M. PPAL', 'C.M. BACKUP']"
+              arrArrelCamps="['instalacionsComunicacions', 'LAN', 'equips']"
+              arrCampsFinals="['CM_Pal', 'CM_Bkp']"
+            />
+
+            <cmp_inputOpcionsMultipleResposta
+              etiqueta="ROUTERS:"
+              arrEtiquetes="['ROUTER Cisco 1100X-6G', 'ROUTER Cisco 1121-4P', 'ROUTER Cisco ASR920', 'ROUTER MIKROTIK 4G']"
+              arrArrelCamps="['instalacionsComunicacions', 'LAN', 'equips']"
+              arrCampsFinals="['RouterCisco1100', 'RouterCisco1121', 'RouterCiscoASR920', 'RouterMikrotik']"
+            />
+          </q-card-section>
+        </q-card>
+
         <!-- SWITCHS -->
 
         <q-card class="col-sm-6 col q-mb-md">
@@ -30,36 +66,6 @@
             <cmp_inputText
               etiqueta="OBSERVACIONES:"
               arrCamps="['instalacionsComunicacions', 'LAN', 'SWidentificats', 'observacions']"
-            />
-          </q-card-section>
-        </q-card>
-
-        <!-- IMPRESORES -->
-
-        <q-card class="col-sm-6 col q-mb-md">
-          <cmp_Titol2 titol="Impresoras" />
-
-          <q-card-section>
-            <cmp_inputText
-              etiqueta="Nº COLAS MULTIFUNCIÓN:"
-              arrCamps="['instalacionsComunicacions', 'LAN', 'NumCuesImpressioMTF']"
-            />
-
-            <cmp_inputText
-              etiqueta="Nº COLAS IMPRESIÓN:"
-              arrCamps="['instalacionsComunicacions', 'LAN', 'NumCuesImpressio']"
-            />
-          </q-card-section>
-        </q-card>
-
-        <!-- OTROS DISPOSITIVOS -->
-
-        <q-card class="col-sm-6 col q-mb-md">
-          <cmp_Titol2 titol="Otros dispositivos" />
-          <q-card-section>
-            <cmp_inputText
-              etiqueta="OTROS DISPOSITIVOS:"
-              arrCamps="['instalacionsComunicacions', 'LAN', 'altresDispositius']"
             />
           </q-card-section>
         </q-card>

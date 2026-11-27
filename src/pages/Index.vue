@@ -88,6 +88,8 @@ export default {
 
 	  		filter: "",
 			pagination: {
+				sortBy: 'data',
+				descending: true,	// més recents primer
 				page: 1,
 				rowsPerPage: 15 // 0 means all rows
 			},
@@ -98,8 +100,14 @@ export default {
 					required: true,
 					label: 'FECHA',
 					align: 'center',
-					field: 'data',
+					field: row => row.dadesCentre.data,
 					sortable: true,
+					// normalitza YYYY-MM-DD / YYYY/MM/DD; les auditories sense data es consideren les més noves
+					sort: (a, b) => {
+						const A = a ? String(a).replace(/-/g, '/') : '9999/99/99'
+						const B = b ? String(b).replace(/-/g, '/') : '9999/99/99'
+						return A < B ? -1 : (A > B ? 1 : 0)
+					},
 					//classes: 'my-class',
 					style: 'width: 20%'
 				},
@@ -109,7 +117,7 @@ export default {
 					required: true,
 					label: 'CENTRO',
 					align: 'left',
-					field: row => row.nomCentre,
+					field: row => row.dadesCentre.nomCentre,
 					sortable: true,
 					//classes: 'my-class',
 					style: 'width: 50pxx'

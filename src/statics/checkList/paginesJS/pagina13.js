@@ -74,4 +74,5 @@ function pintaPagina13 (ctx, oAudit){
 
 
 
+	new Quadrat(ctx.doc, 314.0, 293.0, oAudit.accionsMillora.NC.imprimirPCN).pinta()
 }

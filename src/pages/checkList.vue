@@ -54,67 +54,67 @@ export default {
 
 
 			this.comptador = 1
-			this.construirPagina(ctx, "Pagina_01")
+			this.construirPagina(ctx, "pagina01")
 			.then ( () => {
 				this.comptador = 2
-				return this.construirPagina(ctx, "Pagina_02")})
+				return this.construirPagina(ctx, "pagina02")})
 			.then ( () => {
 				this.comptador = 3
-				return this.construirPagina(ctx, "Pagina_03")})
+				return this.construirPagina(ctx, "pagina03")})
 			.then ( () => {
 				this.comptador = 4
-				return this.construirPagina(ctx, "Pagina_04")})
+				return this.construirPagina(ctx, "pagina04")})
 			.then ( () => {
 				this.comptador = 5
-				return this.construirPagina(ctx, "Pagina_05")})
+				return this.construirPagina(ctx, "pagina05")})
 			.then ( () => {
 				this.comptador = 6
-				return this.construirPagina(ctx, "Pagina_06")})
+				return this.construirPagina(ctx, "pagina06")})
 			.then ( () => {
 				this.comptador = 7
-				return this.construirPagina(ctx, "Pagina_07")})
+				return this.construirPagina(ctx, "pagina07")})
 			.then ( () => {
 				this.comptador = 8
-				return this.construirPagina(ctx, "Pagina_08")})
+				return this.construirPagina(ctx, "pagina08")})
 			.then ( () => {
 				this.comptador = 9
-				return this.construirPagina(ctx, "Pagina_09")})
+				return this.construirPagina(ctx, "pagina09")})
 			.then ( () => {
 				this.comptador = 10
-				return this.construirPagina(ctx, "Pagina_10")})
+				return this.construirPagina(ctx, "pagina10")})
 			.then ( () => {
 				this.comptador = 11
-				return this.construirPagina(ctx, "Pagina_11")})
+				return this.construirPagina(ctx, "pagina11")})
 			.then ( () => {
 				this.comptador = 12
-				return this.construirPagina(ctx, "Pagina_12")})
+				return this.construirPagina(ctx, "pagina12")})
 			.then ( () => {
 				this.comptador = 13
-				return this.construirPagina(ctx, "Pagina_13")})
+				return this.construirPagina(ctx, "pagina13")})
 			.then ( () => {
 				this.comptador = 14
-				return this.construirPagina(ctx, "Pagina_14")})
+				return this.construirPagina(ctx, "pagina14")})
 			.then ( () => {
 				this.comptador = 15
-				return this.construirPagina(ctx, "Pagina_15")})
+				return this.construirPagina(ctx, "pagina15")})
 			// .then ( () => {
 			// 	this.comptador = 16
-			// 	return this.construirPagina(ctx, "Pagina_16")})
+			// 	return this.construirPagina(ctx, "pagina16")})
 			// .then ( () => {
 			// 	this.comptador = 17
-			// 	return this.construirPagina(ctx, "Pagina_17")})
+			// 	return this.construirPagina(ctx, "pagina17")})
 			// .then ( () => {
 			// 	this.comptador = 18
-			// 	return this.construirPagina(ctx, "Pagina_18")})
+			// 	return this.construirPagina(ctx, "pagina18")})
 			// .then ( () => {
 			// 	this.comptador = 19
-			// 	return this.construirPagina(ctx, "Pagina_19")})
+			// 	return this.construirPagina(ctx, "pagina19")})
 			// .then ( () => {
 			// 	this.comptador = 20
-			// 	return this.construirPagina(ctx, "Pagina_20")})
+			// 	return this.construirPagina(ctx, "pagina20")})
 			// .then ( () => {
 			// 	this.comptador = 21
-			// 	return this.construirPagina(ctx, "Pagina_21")})
+			// 	return this.construirPagina(ctx, "pagina21")})
 			.then (() => {
 				ctx.end()
 				this.missatgeVisible = false
@@ -127,27 +127,27 @@ export default {
 
 /* 
 			const pagines = [
-				"Pagina_01",
-				"Pagina_02",
-				"Pagina_03",
-				"Pagina_04",
-				"Pagina_05",
-				"Pagina_06",
-				"Pagina_07",
-				"Pagina_08",
-				"Pagina_09",
-				"Pagina_10",
-				"Pagina_11",
-				"Pagina_12",
-				"Pagina_13",
-				"Pagina_14",
-				"Pagina_15",
-				"Pagina_16",
-				"Pagina_17",
-				"Pagina_18",
-				"Pagina_19",
-				"Pagina_20",
-				"Pagina_21",
+				"pagina01",
+				"pagina02",
+				"pagina03",
+				"pagina04",
+				"pagina05",
+				"pagina06",
+				"pagina07",
+				"pagina08",
+				"pagina09",
+				"pagina10",
+				"pagina11",
+				"pagina12",
+				"pagina13",
+				"pagina14",
+				"pagina15",
+				"pagina16",
+				"pagina17",
+				"pagina18",
+				"pagina19",
+				"pagina20",
+				"pagina21",
 			]
 
 			let arrPromeses = pagines.map((item, index) => this.construirPagina(ctx, item, index))
@@ -204,7 +204,7 @@ export default {
 				.then( (background) => {
 					console.log(pagina, "comença carregarBackground.then")
 
-					if (pagina !== "Pagina_01")
+					if (pagina !== "pagina01")
 						ctx.doc.addPage( {
 							size: 'A4',
 							margins: {
@@ -213,7 +213,7 @@ export default {
 								left: 0,
 								right: 0
 							},
-							layout: /Pagina_(17|18|19|20|21)/.test(pagina) ? "landscape" : "portrait",
+							layout: /pagina(17|18|19|20|21)/.test(pagina) ? "landscape" : "portrait",
 						})
 
 
@@ -221,7 +221,7 @@ export default {
 					ctx.doc.fontSize(10)	
 
 
-					if (/Pagina_(17|18|19|20|21)/.test(pagina)){
+					if (/pagina(17|18|19|20|21)/.test(pagina)){
 						ctx.drawImage(background, 0, 0, 841.89, 595.28);
 					}else{
 						ctx.drawImage(background, 0, 0, 595.28, 841.89);
@@ -232,27 +232,27 @@ export default {
 					const oAudit = that.$store.state.mAuditoria.auditories[that.$store.state.mAuditoria.indexArrAuditories]
 
 					switch (pagina){
-						case "Pagina_01": pintaPagina01(ctx, oAudit); break;
-						case "Pagina_02": pintaCapsalera(ctx, oAudit); break;
-						case "Pagina_03": pintaPagina03(ctx, oAudit); break;
-						case "Pagina_04": pintaPagina04(ctx, oAudit); break;
-						case "Pagina_05": pintaPagina05(ctx, oAudit); break;
-						case "Pagina_06": pintaPagina06(ctx, oAudit); break;
-						case "Pagina_07": pintaPagina07(ctx, oAudit); break;
-						case "Pagina_08": pintaPagina08(ctx, oAudit); break;
-						case "Pagina_09": pintaPagina09(ctx, oAudit); break;
-						case "Pagina_10": pintaPagina10(ctx, oAudit); break;
-						case "Pagina_11": pintaPagina11(ctx, oAudit); break;
-						case "Pagina_12": pintaPagina12(ctx, oAudit); break;
-						case "Pagina_13": pintaPagina13(ctx, oAudit); break;
-						case "Pagina_14": pintaCapsalera(ctx, oAudit); break;
-						case "Pagina_15": pintaCapsalera(ctx, oAudit); break;
-						// case "Pagina_16": pintaCapsalera(ctx, oAudit); break;
-						// case "Pagina_17": pintaCapsalera(ctx, oAudit); break;
-						// case "Pagina_18": pintaCapsalera(ctx, oAudit); break;
-						// case "Pagina_19": pintaCapsalera(ctx, oAudit); break;
-						// case "Pagina_20": pintaCapsalera(ctx, oAudit); break;
-						// case "Pagina_21": pintaCapsalera(ctx, oAudit); break;
+						case "pagina01": pintaPagina01(ctx, oAudit); break;
+						case "pagina02": pintaCapsalera(ctx, oAudit); break;
+						case "pagina03": pintaPagina03(ctx, oAudit); break;
+						case "pagina04": pintaPagina04(ctx, oAudit); break;
+						case "pagina05": pintaPagina05(ctx, oAudit); break;
+						case "pagina06": pintaPagina06(ctx, oAudit); break;
+						case "pagina07": pintaPagina07(ctx, oAudit); break;
+						case "pagina08": pintaPagina08(ctx, oAudit); break;
+						case "pagina09": pintaPagina09(ctx, oAudit); break;
+						case "pagina10": pintaPagina10(ctx, oAudit); break;
+						case "pagina11": pintaPagina11(ctx, oAudit); break;
+						case "pagina12": pintaPagina12(ctx, oAudit); break;
+						case "pagina13": pintaPagina13(ctx, oAudit); break;
+						case "pagina14": pintaCapsalera(ctx, oAudit); break;
+						case "pagina15": pintaCapsalera(ctx, oAudit); break;
+						// case "pagina16": pintaCapsalera(ctx, oAudit); break;
+						// case "pagina17": pintaCapsalera(ctx, oAudit); break;
+						// case "pagina18": pintaCapsalera(ctx, oAudit); break;
+						// case "pagina19": pintaCapsalera(ctx, oAudit); break;
+						// case "pagina20": pintaCapsalera(ctx, oAudit); break;
+						// case "pagina21": pintaCapsalera(ctx, oAudit); break;
 					}
 					
 					console.log(pagina, "acaba carregarBackground.then")

@@ -117,24 +117,27 @@ function pintaPagina07 (ctx, oAudit){
 
 	ctx.doc.text(objgDt.dispositius.observacions, 93.0, 500.0 - 8);
 
-	new Cercle(ctx.doc, 86.0, 625.0, objgDt.revisio.avisAPacients.existeix).pinta()
-	new Cercle(ctx.doc, 121.0, 625.0, !objgDt.revisio.avisAPacients.existeix && objgDt.revisio.avisAPacients.existeix != null).pinta()
-	ctx.doc.text(objgDt.revisio.avisAPacients.observacions, 222.0, 628.0 - 8);
+	new Cercle(ctx.doc, 86.0, 544.0, objgDt.revisio.avisAPacients.existeix).pinta()
+	new Cercle(ctx.doc, 121.0, 544.0, !objgDt.revisio.avisAPacients.existeix && objgDt.revisio.avisAPacients.existeix != null).pinta()
+	ctx.doc.text(objgDt.revisio.avisAPacients.observacions, 222.0, 549.0 - 8);
 
-	new Cercle(ctx.doc, 86.0, 664.0, objgDt.revisio.arribadaPacient.existeix).pinta()
-	new Cercle(ctx.doc, 121.0, 664.0, !objgDt.revisio.arribadaPacient.existeix && objgDt.revisio.arribadaPacient.existeix != null).pinta()
-	ctx.doc.text(objgDt.revisio.arribadaPacient.observacions, 222.0, 667.0 - 8);
-
-
-
-
-
+	new Cercle(ctx.doc, 85.0, 583.0, objgDt.revisio.arribadaPacient.existeix).pinta()
+	new Cercle(ctx.doc, 86.0, 659.0, oAudit.instalacionsComunicacions.cartelleriaDigital.existeix).pinta()
+	new Cercle(ctx.doc, 121.0, 583.0, !objgDt.revisio.arribadaPacient.existeix && objgDt.revisio.arribadaPacient.existeix != null).pinta()
+	ctx.doc.text(objgDt.revisio.arribadaPacient.observacions, 222.0, 589.0 - 8);
+	new Cercle(ctx.doc, 121.0, 659.0, !oAudit.instalacionsComunicacions.cartelleriaDigital.existeix && oAudit.instalacionsComunicacions.cartelleriaDigital.existeix != null).pinta()
+	ctx.doc.text(oAudit.instalacionsComunicacions.cartelleriaDigital.observacions, 225.0, 664.0 - 8);
 
 
 
 
 
-	ctx.doc.text(oAudit.instalacionsComunicacions.observacions, 67.0, 708.0 - 8);
+
+
+
+
+
+	ctx.doc.text(oAudit.instalacionsComunicacions.observacions, 67.0, 744.0 - 8);
 
 
 

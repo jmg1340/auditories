@@ -193,6 +193,11 @@
             arrCamps="['accionsMillora', 'NC', 'docsSensibles']"
           />
 
+          <cmp_inputCheckBox
+            etiqueta="Imprimir documentación PCN:"
+            arrCamps="['accionsMillora', 'NC', 'imprimirPCN']"
+          />
+
           <!-- <cmp_inputText etiqueta="Otros:" arrCamps="['accionsMillora', 'NC', 'altres']" /> -->
         </q-card-section>
       </q-card>

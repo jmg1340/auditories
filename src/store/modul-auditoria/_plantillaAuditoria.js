@@ -68,6 +68,11 @@ export default {
       },
 
       SAI : {
+				tipus: {
+					SAI: null,
+					RegletaProtegida: null,
+					observacions: ""
+				},
         estatSAI: null,	// valor 1 - 5
         connexioSwitch: {
           existeix: null,
@@ -195,7 +200,7 @@ export default {
 							SenseVerificar: false
 						}
 					},
-				}
+				},
       },
 
       aspecteSala: null,	// valor 1 - 5
@@ -270,7 +275,22 @@ export default {
     },
 
     LAN : {
-
+      equips: {
+      	NFS_Cisco2911: null,
+      	NFS_Tiny: null,
+      	NFS_RaspBerry: null,
+      	Switch1: null,
+      	Switch2: null,
+      	Switch3: null,
+      	Switch4: null,
+      	Switch5: null,
+      	CM_Pal: null,
+      	CM_Bkp: null,
+      	RouterCisco1100: null,
+      	RouterCisco1121: null,
+      	RouterCiscoASR920: null,
+      	RouterMikrotik: null
+      },
       SWidentificats: {  // estan identificats ?
         existeix: null,		// true / false
         observacions: null
@@ -336,12 +356,6 @@ export default {
 				},
       },
 
-
-
-
-      NumCuesImpressio: null,
-      NumCuesImpressioMTF: null,
-      altresDispositius: null,
     },
 		
 		
@@ -453,7 +467,11 @@ export default {
 
 
 
-    observacions: null
+    observacions: null,
+    cartelleriaDigital: {
+    	existeix: null,
+    	observacions: null
+    }
 
   },
 
@@ -823,6 +841,7 @@ export default {
       carteleriaLOPD: false,
       suportsBackup: false,
       docsSensibles: false,
+      imprimirPCN: false,
       // altres: null
     }
   }
